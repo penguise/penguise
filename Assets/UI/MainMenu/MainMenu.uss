@@ -1,0 +1,22 @@
+:root {
+}
+
+.main-menu {
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-button {
+    width: 240px;
+    height: 48px;
+    margin-top: 12px;
+    font-size: 20px;
+}
+
+.game-title {
+    font-size: 48px;
+    -unity-font-style: bold;
+    color: rgb(255, 255, 255);
+    margin-bottom: 24px;
+}

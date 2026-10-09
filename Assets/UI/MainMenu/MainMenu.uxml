@@ -1,0 +1,8 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/MainMenu/MainMenu.uss?fileID=7433441132597879392&amp;guid=26c1dbc2509d6a4498dd38ead07b6b9d&amp;type=3#MainMenu"/>
+    <ui:VisualElement name="main-menu" class="main-menu">
+        <ui:Label text="Penguise" name="game-title" class="game-title"/>
+        <ui:Button text="Oda Kur" name="create-room-button" class="menu-button"/>
+        <ui:Button text="Odaya Katıl" name="join-room-button" class="menu-button"/>
+    </ui:VisualElement>
+</ui:UXML>
