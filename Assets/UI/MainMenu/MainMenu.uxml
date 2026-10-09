@@ -2,7 +2,15 @@
     <Style src="project://database/Assets/UI/MainMenu/MainMenu.uss?fileID=7433441132597879392&amp;guid=26c1dbc2509d6a4498dd38ead07b6b9d&amp;type=3#MainMenu"/>
     <ui:VisualElement name="main-menu" class="main-menu">
         <ui:Label text="Penguise" name="game-title" class="game-title"/>
-        <ui:Button text="Oda Kur" name="create-room-button" class="menu-button"/>
-        <ui:Button text="Odaya Katıl" name="join-room-button" class="menu-button"/>
+        <ui:Button text="Oda Kur" name="create-room-button" class="menu-button">
+            <Bindings>
+                <UnityEngine.Localization.LocalizedString property="text" table="GUID:c9ae84aa9c15cc347b5ddc0e6b4fd3be" entry="Id(174394982400)"/>
+            </Bindings>
+        </ui:Button>
+        <ui:Button text="Odaya Katıl" name="join-room-button" class="menu-button">
+            <Bindings>
+                <UnityEngine.Localization.LocalizedString property="text" table="GUID:c9ae84aa9c15cc347b5ddc0e6b4fd3be" entry="Id(256674643968)"/>
+            </Bindings>
+        </ui:Button>
     </ui:VisualElement>
 </ui:UXML>
