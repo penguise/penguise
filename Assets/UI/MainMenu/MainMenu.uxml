@@ -3,19 +3,19 @@
     <ui:VisualElement name="main-menu" class="main-menu">
         <ui:VisualElement name="menu-content" class="menu-content">
             <ui:Label text="Penguise" name="game-title" class="game-title"/>
-            <ui:Button text="Oda Kur" name="create-room-button" class="menu-button">
+            <ui:Button name="create-room-button" class="menu-button">
                 <Bindings>
                     <UnityEngine.Localization.LocalizedString property="text" table="GUID:c9ae84aa9c15cc347b5ddc0e6b4fd3be" entry="Id(174394982400)"/>
                 </Bindings>
             </ui:Button>
-            <ui:Button text="Odaya Katıl" name="join-room-button" class="menu-button">
+            <ui:Button name="join-room-button" class="menu-button">
                 <Bindings>
                     <UnityEngine.Localization.LocalizedString property="text" table="GUID:c9ae84aa9c15cc347b5ddc0e6b4fd3be" entry="Id(256674643968)"/>
                 </Bindings>
             </ui:Button>
         </ui:VisualElement>
         <ui:VisualElement name="language-panel" class="language-panel">
-            <ui:DropdownField label="Language" choices="English,Türkçe" index="0" name="language-dropdown" class="language-dropdown">
+            <ui:DropdownField name="language-dropdown" class="language-dropdown">
                 <Bindings>
                     <UnityEngine.Localization.LocalizedString property="label" table="GUID:c9ae84aa9c15cc347b5ddc0e6b4fd3be" entry="Id(9107876626432)"/>
                 </Bindings>
