@@ -23,6 +23,10 @@ MonoBehaviour:
     m_Key: menu.join_room
     m_Metadata:
       m_Items: []
+  - m_Id: 9107876626432
+    m_Key: menu.language
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
