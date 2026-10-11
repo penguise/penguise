@@ -70,6 +70,30 @@ MonoBehaviour:
     m_Localized: Something went wrong. Please try again.
     m_Metadata:
       m_Items: []
+  - m_Id: 700781183385600
+    m_Localized: Creating...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 700781208551424
+    m_Localized: Joining...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 703599764062208
+    m_Localized: Room not found. Check the code; the room may have closed.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 703599785033728
+    m_Localized: Could not connect. Please try again.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 703599785033729
+    m_Localized: Too many attempts. Wait a moment and try again.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 703599785033730
+    m_Localized: Could not join the room. Check the code or try again.
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

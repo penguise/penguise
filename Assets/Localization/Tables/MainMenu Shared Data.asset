@@ -67,6 +67,30 @@ MonoBehaviour:
     m_Key: room_dialog.error_status
     m_Metadata:
       m_Items: []
+  - m_Id: 700781183385600
+    m_Key: room_dialog.creating_button
+    m_Metadata:
+      m_Items: []
+  - m_Id: 700781208551424
+    m_Key: room_dialog.joining_button
+    m_Metadata:
+      m_Items: []
+  - m_Id: 703599764062208
+    m_Key: room_dialog.not_found_error
+    m_Metadata:
+      m_Items: []
+  - m_Id: 703599785033728
+    m_Key: room_dialog.connection_error
+    m_Metadata:
+      m_Items: []
+  - m_Id: 703599785033729
+    m_Key: room_dialog.rate_limit_error
+    m_Metadata:
+      m_Items: []
+  - m_Id: 703599785033730
+    m_Key: room_dialog.join_error
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

@@ -70,6 +70,30 @@ MonoBehaviour:
     m_Localized: "Bir hata olu\u015Ftu. L\xFCtfen tekrar deneyin."
     m_Metadata:
       m_Items: []
+  - m_Id: 700781183385600
+    m_Localized: "Olu\u015Fturuluyor..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 700781208551424
+    m_Localized: "Kat\u0131l\u0131n\u0131yor..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 703599764062208
+    m_Localized: "Oda bulunamad\u0131. Kodu kontrol edin; oda kapanm\u0131\u015F olabilir."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 703599785033728
+    m_Localized: "Ba\u011Flant\u0131 kurulamad\u0131. L\xFCtfen tekrar deneyin."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 703599785033729
+    m_Localized: "\xC7ok fazla deneme yap\u0131ld\u0131. Biraz bekleyip tekrar deneyin."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 703599785033730
+    m_Localized: "Odaya kat\u0131l\u0131namad\u0131. Kodu kontrol edin veya tekrar deneyin."
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
