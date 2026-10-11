@@ -30,6 +30,46 @@ MonoBehaviour:
     m_Localized: Language
     m_Metadata:
       m_Items: []
+  - m_Id: 618598825476096
+    m_Localized: Create Room
+    m_Metadata:
+      m_Items: []
+  - m_Id: 618726932103168
+    m_Localized: Join Room
+    m_Metadata:
+      m_Items: []
+  - m_Id: 618837858861056
+    m_Localized: Enter room name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 618895719284736
+    m_Localized: Enter room code
+    m_Metadata:
+      m_Items: []
+  - m_Id: 618966951149568
+    m_Localized: Create
+    m_Metadata:
+      m_Items: []
+  - m_Id: 619097188483072
+    m_Localized: Join
+    m_Metadata:
+      m_Items: []
+  - m_Id: 619146727407616
+    m_Localized: Cancel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 628849733812224
+    m_Localized: Room created. Please wait.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 628849758978048
+    m_Localized: Joined the room. Please wait.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 628849758978049
+    m_Localized: Something went wrong. Please try again.
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

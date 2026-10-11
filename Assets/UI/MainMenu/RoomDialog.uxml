@@ -1,0 +1,16 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/MainMenu/RoomDialog.uss?fileID=7433441132597879392&amp;guid=8b0ad738a4a49254baacad2d6b59f294&amp;type=3#RoomDialog"/>
+    <ui:VisualElement name="room-dialog" class="room-dialog">
+        <ui:Label text="" name="dialog-title" class="dialog-title"/>
+        <ui:TextField placeholder-text="" hide-placeholder-on-focus="false" name="room-input" class="room-input"/>
+        <ui:Label text="" name="dialog-status" class="dialog-status room-dialog-hidden"/>
+        <ui:VisualElement name="dialog-actions" class="dialog-actions">
+            <ui:Button text="" name="cancel-button" class="dialog-button">
+                <Bindings>
+                    <UnityEngine.Localization.LocalizedString property="text" table="GUID:c9ae84aa9c15cc347b5ddc0e6b4fd3be" entry="Id(619146727407616)"/>
+                </Bindings>
+            </ui:Button>
+            <ui:Button text="" name="confirm-button" class="dialog-button"/>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

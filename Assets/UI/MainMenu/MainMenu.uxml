@@ -1,4 +1,5 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <ui:Template name="RoomDialog" src="project://database/Assets/UI/MainMenu/RoomDialog.uxml?fileID=9197481963319205126&amp;guid=871bf8ca72621b047b10b1b37f07bf51&amp;type=3#RoomDialog"/>
     <Style src="project://database/Assets/UI/MainMenu/MainMenu.uss?fileID=7433441132597879392&amp;guid=26c1dbc2509d6a4498dd38ead07b6b9d&amp;type=3#MainMenu"/>
     <ui:VisualElement name="main-menu" class="main-menu">
         <ui:VisualElement name="menu-content" class="menu-content">
@@ -20,6 +21,9 @@
                     <UnityEngine.Localization.LocalizedString property="label" table="GUID:c9ae84aa9c15cc347b5ddc0e6b4fd3be" entry="Id(9107876626432)"/>
                 </Bindings>
             </ui:DropdownField>
+        </ui:VisualElement>
+        <ui:VisualElement name="room-dialog-overlay" class="room-dialog-overlay room-dialog-hidden">
+            <ui:Instance template="RoomDialog" name="room-dialog-instance" class="room-dialog-instance"/>
         </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>

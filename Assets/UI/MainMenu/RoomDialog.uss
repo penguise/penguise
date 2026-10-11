@@ -1,0 +1,63 @@
+:root {
+}
+
+.room-dialog {
+    flex-grow: 0;
+    width: 100%;
+    padding-top: 24px;
+    padding-right: 24px;
+    padding-bottom: 24px;
+    padding-left: 24px;
+    background-color: rgb(32, 41, 56);
+}
+
+.dialog-actions {
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    margin-top: 24px;
+}
+
+.dialog-title {
+    font-size: 28px;
+    -unity-font-style: bold;
+    color: rgb(255, 255, 255);
+    margin-bottom: 20px;
+}
+
+.room-input {
+    font-size: 18px;
+    color: rgb(32, 41, 56);
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.dialog-status {
+    font-size: 16px;
+    white-space: normal;
+    margin-top: 12px;
+}
+
+.dialog-status-success {
+    color: rgb(74, 222, 128);
+}
+
+.dialog-status-error {
+    color: rgb(248, 113, 113);
+}
+
+.room-dialog-hidden {
+    display: none;
+}
+
+.dialog-button {
+    flex-grow: 1;
+    width: 0;
+    height: 40px;
+    font-size: 16px;
+    margin-left: 8px;
+}
+
+#cancel-button {
+    margin-left: 0;
+}

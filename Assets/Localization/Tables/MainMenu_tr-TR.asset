@@ -30,6 +30,46 @@ MonoBehaviour:
     m_Localized: Dil
     m_Metadata:
       m_Items: []
+  - m_Id: 618598825476096
+    m_Localized: Oda Kur
+    m_Metadata:
+      m_Items: []
+  - m_Id: 618726932103168
+    m_Localized: "Odaya Kat\u0131l"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 618837858861056
+    m_Localized: "Oda ad\u0131n\u0131 girin"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 618895719284736
+    m_Localized: Oda kodunu girin
+    m_Metadata:
+      m_Items: []
+  - m_Id: 618966951149568
+    m_Localized: "Olu\u015Ftur"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 619097188483072
+    m_Localized: "Kat\u0131l"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 619146727407616
+    m_Localized: "\u0130ptal"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 628849733812224
+    m_Localized: "Oda olu\u015Fturuldu. L\xFCtfen bekleyin."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 628849758978048
+    m_Localized: "Odaya kat\u0131l\u0131nd\u0131. L\xFCtfen bekleyin."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 628849758978049
+    m_Localized: "Bir hata olu\u015Ftu. L\xFCtfen tekrar deneyin."
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

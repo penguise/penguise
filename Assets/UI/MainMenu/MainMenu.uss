@@ -39,3 +39,24 @@
     align-items: center;
     justify-content: center;
 }
+
+.room-dialog-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.745);
+    backdrop-filter: blur(5);
+}
+
+.room-dialog-instance {
+    width: 400px;
+    max-width: 90%;
+}
+
+.room-dialog-hidden {
+    display: none;
+}
