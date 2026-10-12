@@ -40,6 +40,9 @@ public class RoomDialogController : MonoBehaviour
     {
         UnregisterCallbacks();
 
+        if (RoomSessionManager.Instance != null)
+            sessionManager = RoomSessionManager.Instance;
+
         if (sessionManager == null)
         {
             Debug.LogError("Room session manager is not assigned.", this);
