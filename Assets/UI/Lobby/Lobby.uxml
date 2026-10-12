@@ -1,0 +1,31 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/Lobby/Lobby.uss?fileID=7433441132597879392&amp;guid=553f1a9ae471bd547a61c9062e3af855&amp;type=3#Lobby"/>
+    <ui:VisualElement name="lobby-root" class="lobby-root">
+        <ui:VisualElement name="lobby-panel" class="lobby-panel">
+            <ui:VisualElement name="room-info" class="lobby-card room-info">
+                <ui:Label name="room-name" class="room-name"/>
+                <ui:VisualElement class="room-code-actions">
+                    <ui:Label name="room-code" class="room-code"/>
+                    <ui:Button name="copy-code-button" class="lobby-control copy-code-button"/>
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="players-card" class="lobby-card players-card">
+                <ui:Label name="players-title" class="players-title"/>
+                <ui:ScrollView name="player-list" class="player-list" mode="Vertical" horizontal-scroller-visibility="Hidden" vertical-scroller-visibility="Auto"/>
+            </ui:VisualElement>
+            <ui:Label name="lobby-status" class="lobby-status lobby-hidden"/>
+            <ui:VisualElement name="lobby-actions" class="lobby-actions">
+                <ui:Button name="leave-room-button" class="lobby-control lobby-button">
+                    <Bindings>
+                        <UnityEngine.Localization.LocalizedString property="text" table="GUID:dbfc1296fd35b6f478376c3806be4304" entry="Id(3997188097)"/>
+                    </Bindings>
+                </ui:Button>
+                <ui:Button name="start-game-button" class="lobby-control lobby-button start-game-button">
+                    <Bindings>
+                        <UnityEngine.Localization.LocalizedString property="text" table="GUID:dbfc1296fd35b6f478376c3806be4304" entry="Id(3997188098)"/>
+                    </Bindings>
+                </ui:Button>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

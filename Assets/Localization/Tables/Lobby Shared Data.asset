@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: Lobby Shared Data
+  m_EditorClassIdentifier: Unity.Localization::UnityEngine.Localization.Tables.SharedTableData
+  m_TableCollectionName: Lobby
+  m_TableCollectionNameGuidString: dbfc1296fd35b6f478376c3806be4304
+  m_Entries:
+  - m_Id: 3967827968
+    m_Key: lobby.room_name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3997188096
+    m_Key: lobby.room_code
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3997188097
+    m_Key: lobby.leave_room
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3997188098
+    m_Key: lobby.start_game
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2376995979264
+    m_Key: lobby.player
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2377025339392
+    m_Key: lobby.player_host
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2377025339393
+    m_Key: lobby.no_session
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2377025339394
+    m_Key: lobby.leaving
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2377025339395
+    m_Key: lobby.leave_error
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9094048006144
+    m_Key: lobby.players
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9094085754880
+    m_Key: lobby.copy_code
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9094089949184
+    m_Key: lobby.copied
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9094094143488
+    m_Key: lobby.copy_error
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9094094143489
+    m_Key: lobby.you
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9094094143490
+    m_Key: lobby.host
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 85976577477968460
+  references:
+    version: 2
+    RefIds:
+    - rid: 85976577477968460
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1791748014822

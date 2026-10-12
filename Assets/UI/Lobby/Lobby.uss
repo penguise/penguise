@@ -1,0 +1,172 @@
+.lobby-root {
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+}
+
+.lobby-panel {
+    width: 100%;
+    max-width: 720px;
+    max-height: 620px;
+    min-height: 0;
+    flex-grow: 1;
+}
+
+.lobby-card {
+    padding: 20px;
+    background-color: rgb(32, 41, 56);
+}
+
+.room-info {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.room-name {
+    flex-grow: 1;
+    width: 240px;
+    min-width: 0;
+    color: white;
+    font-size: 20px;
+    -unity-font-style: bold;
+    white-space: normal;
+    margin: 4px 12px 4px 0;
+}
+
+.room-code-actions {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 320px;
+    max-width: 100%;
+    min-width: 0;
+}
+
+.room-code {
+    flex-grow: 1;
+    flex-shrink: 1;
+    min-width: 0;
+    color: rgb(220, 228, 240);
+    font-size: 16px;
+    white-space: normal;
+    margin: 4px 8px 4px 0;
+}
+
+.copy-code-button {
+    min-width: 104px;
+    margin: 4px 0;
+}
+
+.players-card {
+    flex-grow: 1;
+    min-height: 0;
+    margin-top: 16px;
+}
+
+.players-title {
+    flex-shrink: 0;
+    color: white;
+    font-size: 20px;
+    -unity-font-style: bold;
+    margin-bottom: 16px;
+}
+
+.player-list {
+    flex-grow: 1;
+    min-height: 0;
+}
+
+.player-row {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    min-height: 48px;
+    padding: 8px 12px;
+    margin-bottom: 8px;
+    background-color: rgb(42, 54, 72);
+}
+
+.player-row-self {
+    background-color: rgb(43, 70, 100);
+}
+
+.player-name {
+    flex-grow: 1;
+    color: white;
+    font-size: 18px;
+    white-space: normal;
+}
+
+.player-badge {
+    color: rgb(222, 234, 249);
+    font-size: 14px;
+    padding: 4px 8px;
+    margin-left: 8px;
+    background-color: rgb(54, 72, 94);
+}
+
+.lobby-actions {
+    flex-direction: row;
+    flex-shrink: 0;
+    margin-top: 16px;
+}
+
+.lobby-control {
+    height: 44px;
+    flex-shrink: 0;
+    font-size: 16px;
+    color: white;
+    background-color: rgb(52, 65, 83);
+    border-width: 1px;
+    border-color: rgb(78, 96, 120);
+    border-radius: 0;
+}
+
+.lobby-control:hover {
+    background-color: rgb(65, 81, 104);
+}
+
+.lobby-control:active {
+    background-color: rgb(42, 54, 72);
+}
+
+.lobby-control:focus {
+    border-color: rgb(160, 203, 255);
+}
+
+.lobby-button {
+    flex-grow: 1;
+    width: 0;
+    margin: 0;
+}
+
+.start-game-button {
+    margin-left: 12px;
+    background-color: rgb(51, 105, 173);
+    border-color: rgb(81, 141, 215);
+}
+
+.start-game-button:hover {
+    background-color: rgb(64, 124, 197);
+}
+
+.lobby-control:disabled {
+    color: rgb(165, 179, 198);
+    background-color: rgb(40, 53, 71);
+    border-color: rgb(57, 74, 96);
+}
+
+.lobby-status {
+    flex-shrink: 0;
+    color: rgb(248, 113, 113);
+    font-size: 16px;
+    white-space: normal;
+    margin-top: 12px;
+}
+
+.lobby-hidden {
+    display: none;
+}

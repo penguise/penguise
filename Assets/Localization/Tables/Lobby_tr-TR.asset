@@ -1,0 +1,99 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Lobby_tr-TR
+  m_EditorClassIdentifier: Unity.Localization::UnityEngine.Localization.Tables.StringTable
+  m_LocaleId:
+    m_Code: tr-TR
+  m_SharedData: {fileID: 11400000, guid: dbfc1296fd35b6f478376c3806be4304, type: 2}
+  m_Metadata:
+    m_Items:
+    - rid: 85976577477968504
+  m_TableData:
+  - m_Id: 3967827968
+    m_Localized: "Oda ad\u0131: {name}"
+    m_Metadata:
+      m_Items:
+      - rid: 85976577477968504
+  - m_Id: 3997188096
+    m_Localized: 'Oda kodu: {code}'
+    m_Metadata:
+      m_Items:
+      - rid: 85976577477968504
+  - m_Id: 3997188097
+    m_Localized: "Odadan \xC7\u0131k"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3997188098
+    m_Localized: "Oyunu Ba\u015Flat"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2376995979264
+    m_Localized: Oyuncu {number}
+    m_Metadata:
+      m_Items:
+      - rid: 85976577477968504
+  - m_Id: 2377025339392
+    m_Localized: Oyuncu {number} (Kurucu)
+    m_Metadata:
+      m_Items:
+      - rid: 85976577477968504
+  - m_Id: 2377025339393
+    m_Localized: Aktif oda yok
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2377025339394
+    m_Localized: "\xC7\u0131k\u0131l\u0131yor..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2377025339395
+    m_Localized: "Odadan \xE7\u0131k\u0131lamad\u0131. L\xFCtfen tekrar deneyin."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9094048006144
+    m_Localized: "Oyuncular \xB7 {count}/{capacity}"
+    m_Metadata:
+      m_Items:
+      - rid: 85976577477968504
+  - m_Id: 9094085754880
+    m_Localized: Kopyala
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9094089949184
+    m_Localized: "Kopyaland\u0131"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9094094143488
+    m_Localized: "Oda kodu kopyalanamad\u0131. L\xFCtfen tekrar deneyin."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9094094143489
+    m_Localized: Sen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9094094143490
+    m_Localized: Kurucu
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds:
+    - rid: 85976577477968504
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 
+        m_SharedEntries:
+        - id: 3997188096
+        - id: 2376995979264
+        - id: 2377025339392
+        - id: 3967827968
+        - id: 9094048006144

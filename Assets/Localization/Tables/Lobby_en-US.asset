@@ -1,0 +1,99 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Lobby_en-US
+  m_EditorClassIdentifier: Unity.Localization::UnityEngine.Localization.Tables.StringTable
+  m_LocaleId:
+    m_Code: en-US
+  m_SharedData: {fileID: 11400000, guid: dbfc1296fd35b6f478376c3806be4304, type: 2}
+  m_Metadata:
+    m_Items:
+    - rid: 85976577477968505
+  m_TableData:
+  - m_Id: 3967827968
+    m_Localized: 'Room name: {name}'
+    m_Metadata:
+      m_Items:
+      - rid: 85976577477968505
+  - m_Id: 3997188096
+    m_Localized: 'Room code: {code}'
+    m_Metadata:
+      m_Items:
+      - rid: 85976577477968505
+  - m_Id: 3997188097
+    m_Localized: Leave Room
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3997188098
+    m_Localized: Start Game
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2376995979264
+    m_Localized: Player {number}
+    m_Metadata:
+      m_Items:
+      - rid: 85976577477968505
+  - m_Id: 2377025339392
+    m_Localized: Player {number} (Host)
+    m_Metadata:
+      m_Items:
+      - rid: 85976577477968505
+  - m_Id: 2377025339393
+    m_Localized: No active room
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2377025339394
+    m_Localized: Leaving...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2377025339395
+    m_Localized: Could not leave the room. Please try again.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9094048006144
+    m_Localized: "Players \xB7 {count}/{capacity}"
+    m_Metadata:
+      m_Items:
+      - rid: 85976577477968505
+  - m_Id: 9094085754880
+    m_Localized: Copy
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9094089949184
+    m_Localized: Copied
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9094094143488
+    m_Localized: Could not copy the room code. Please try again.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9094094143489
+    m_Localized: You
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9094094143490
+    m_Localized: Host
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds:
+    - rid: 85976577477968505
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 
+        m_SharedEntries:
+        - id: 3997188096
+        - id: 2376995979264
+        - id: 2377025339392
+        - id: 3967827968
+        - id: 9094048006144
