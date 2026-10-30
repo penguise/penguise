@@ -49,7 +49,10 @@
     align-items: center;
     justify-content: center;
     background-color: rgba(0, 0, 0, 0.745);
-    backdrop-filter: blur(5);
+}
+
+.room-dialog-blurred {
+    filter: blur(5px);
 }
 
 .room-dialog-instance {

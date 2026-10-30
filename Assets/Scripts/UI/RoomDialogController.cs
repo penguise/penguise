@@ -9,6 +9,7 @@ using UnityEngine.UIElements;
 public class RoomDialogController : MonoBehaviour
 {
     private const string HiddenClass = "room-dialog-hidden";
+    private const string BlurredClass = "room-dialog-blurred";
     private const string TableName = "MainMenu";
     private readonly LocalizedString placeholder = new LocalizedString();
 
@@ -124,6 +125,8 @@ public class RoomDialogController : MonoBehaviour
         ClearStatus();
         menuContent.SetEnabled(false);
         languagePanel.SetEnabled(false);
+        menuContent.AddToClassList(BlurredClass);
+        languagePanel.AddToClassList(BlurredClass);
         overlay.RemoveFromClassList(HiddenClass);
         input.Focus();
     }
@@ -131,6 +134,8 @@ public class RoomDialogController : MonoBehaviour
     private void Close()
     {
         overlay?.AddToClassList(HiddenClass);
+        menuContent?.RemoveFromClassList(BlurredClass);
+        languagePanel?.RemoveFromClassList(BlurredClass);
         menuContent?.SetEnabled(true);
         languagePanel?.SetEnabled(true);
         opener?.Focus();
