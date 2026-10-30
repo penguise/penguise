@@ -89,6 +89,90 @@ MonoBehaviour:
     m_Metadata:
       m_Items:
       - rid: 85976577477968505
+  - m_Id: 6727745069400064
+    m_Localized: Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6727745115537408
+    m_Localized: Save name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6727745115537409
+    m_Localized: Choose a color
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6727745115537410
+    m_Localized: Red
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6727745115537411
+    m_Localized: Orange
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6727745115537412
+    m_Localized: Yellow
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6727745115537413
+    m_Localized: Green
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6727745115537414
+    m_Localized: Blue
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6727745115537415
+    m_Localized: Purple
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6727745115537416
+    m_Localized: Pink
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6727745115537417
+    m_Localized: Brown
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6727745115537418
+    m_Localized: Selected
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6727745115537419
+    m_Localized: Taken
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6727745115537420
+    m_Localized: Available
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6727745115537421
+    m_Localized: That color was just taken. Choose another available color.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6727745115537422
+    m_Localized: "Use 1\u201324 characters. Blank names, formatting tags and control characters are not allowed."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6727745115537423
+    m_Localized: "Waiting for the host\u2026"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6727745115537424
+    m_Localized: "Loading player profile\u2026"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6727745115537425
+    m_Localized: Match started. Names and colors are locked.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6727745115537426
+    m_Localized: The host could not confirm the change. Check your connection and try again.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6727745115537427
+    m_Localized: "Wait for 4\u20138 connected players before starting."
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:

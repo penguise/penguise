@@ -79,6 +79,90 @@ MonoBehaviour:
     m_Key: lobby.start_requirement
     m_Metadata:
       m_Items: []
+  - m_Id: 6727745069400064
+    m_Key: lobby.name_label
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6727745115537408
+    m_Key: lobby.save_name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6727745115537409
+    m_Key: lobby.color_label
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6727745115537410
+    m_Key: lobby.color.red
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6727745115537411
+    m_Key: lobby.color.orange
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6727745115537412
+    m_Key: lobby.color.yellow
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6727745115537413
+    m_Key: lobby.color.green
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6727745115537414
+    m_Key: lobby.color.blue
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6727745115537415
+    m_Key: lobby.color.purple
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6727745115537416
+    m_Key: lobby.color.pink
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6727745115537417
+    m_Key: lobby.color.brown
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6727745115537418
+    m_Key: lobby.color_selected
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6727745115537419
+    m_Key: lobby.color_taken
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6727745115537420
+    m_Key: lobby.color_free
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6727745115537421
+    m_Key: lobby.color_conflict
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6727745115537422
+    m_Key: lobby.invalid_name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6727745115537423
+    m_Key: lobby.profile_pending
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6727745115537424
+    m_Key: lobby.profile_syncing
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6727745115537425
+    m_Key: lobby.profile_locked
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6727745115537426
+    m_Key: lobby.profile_error
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6727745115537427
+    m_Key: lobby.start_error
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

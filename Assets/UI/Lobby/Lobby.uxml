@@ -9,6 +9,15 @@
                     <ui:Button name="copy-code-button" class="lobby-control copy-code-button"/>
                 </ui:VisualElement>
             </ui:VisualElement>
+            <ui:VisualElement name="profile-card" class="lobby-card profile-card">
+                <ui:VisualElement class="profile-name-row">
+                    <ui:TextField name="player-name-input" class="player-name-input" max-length="24"/>
+                    <ui:Button name="save-name-button" class="lobby-control save-name-button"/>
+                </ui:VisualElement>
+                <ui:Label name="color-title" class="color-title"/>
+                <ui:VisualElement name="color-picker" class="color-picker"/>
+                <ui:Label name="profile-status" class="profile-status lobby-hidden"/>
+            </ui:VisualElement>
             <ui:VisualElement name="players-card" class="lobby-card players-card">
                 <ui:Label name="players-title" class="players-title"/>
                 <ui:ScrollView name="player-list" class="player-list" mode="Vertical" horizontal-scroller-visibility="Hidden" vertical-scroller-visibility="Auto"/>

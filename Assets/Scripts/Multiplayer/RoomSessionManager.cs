@@ -5,7 +5,7 @@ using Unity.Services.Multiplayer;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-[RequireComponent(typeof(NetworkManager), typeof(MultiplayerBootstrap))]
+[RequireComponent(typeof(NetworkManager), typeof(MultiplayerBootstrap), typeof(LobbyProfiles))]
 public class RoomSessionManager : MonoBehaviour
 {
     public const string LobbyScene = "Lobby";
@@ -17,11 +17,18 @@ public class RoomSessionManager : MonoBehaviour
 
     public ISession ActiveSession { get; private set; }
     public bool IsBusy { get; private set; }
+    public LobbyProfiles Profiles { get; private set; }
     public bool CanStartGame =>
         !IsBusy
         && !returningToMenu
         && ActiveSession != null
         && ActiveSession.IsHost
+        && Profiles != null
+        && Profiles.IsConnected
+        && !Profiles.IsPending
+        && !Profiles.Roster.IsLocked
+        && Profiles.Roster.Players.Count == ActiveSession.Players.Count
+        && Profiles.Roster.Players.Count == GetComponent<NetworkManager>().ConnectedClientsIds.Count
         && ActiveSession.Players.Count >= MinPlayers
         && ActiveSession.Players.Count <= MaxPlayers;
 
@@ -35,6 +42,7 @@ public class RoomSessionManager : MonoBehaviour
             return;
         }
         Instance = this;
+        Profiles = GetComponent<LobbyProfiles>() ?? gameObject.AddComponent<LobbyProfiles>();
         DontDestroyOnLoad(gameObject);
     }
 
@@ -53,6 +61,7 @@ public class RoomSessionManager : MonoBehaviour
         try
         {
             await GetComponent<MultiplayerBootstrap>().InitializeAsync();
+            await UnityEngine.Localization.Settings.LocalizationSettings.InitializationOperation.Task;
             if (create)
             {
                 var options = new SessionOptions

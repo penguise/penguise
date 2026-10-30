@@ -89,6 +89,90 @@ MonoBehaviour:
     m_Metadata:
       m_Items:
       - rid: 85976577477968504
+  - m_Id: 6727745069400064
+    m_Localized: "\u0130sim"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6727745115537408
+    m_Localized: "\u0130smi kaydet"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6727745115537409
+    m_Localized: "Bir renk se\xE7"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6727745115537410
+    m_Localized: "K\u0131rm\u0131z\u0131"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6727745115537411
+    m_Localized: Turuncu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6727745115537412
+    m_Localized: "Sar\u0131"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6727745115537413
+    m_Localized: "Ye\u015Fil"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6727745115537414
+    m_Localized: Mavi
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6727745115537415
+    m_Localized: Mor
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6727745115537416
+    m_Localized: Pembe
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6727745115537417
+    m_Localized: Kahverengi
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6727745115537418
+    m_Localized: "Se\xE7ili"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6727745115537419
+    m_Localized: Dolu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6727745115537420
+    m_Localized: "Bo\u015F"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6727745115537421
+    m_Localized: "Bu renk az \xF6nce ba\u015Fka bir oyuncu taraf\u0131ndan se\xE7ildi. Bo\u015F bir renk se\xE7."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6727745115537422
+    m_Localized: "1\u201324 karakter kullan. Bo\u015F isim, bi\xE7imlendirme etiketi ve kontrol karakteri kullan\u0131lamaz."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6727745115537423
+    m_Localized: "Host onay\u0131 bekleniyor\u2026"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6727745115537424
+    m_Localized: "Oyuncu profili y\xFCkleniyor\u2026"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6727745115537425
+    m_Localized: "Ma\xE7 ba\u015Flad\u0131. \u0130simler ve renkler sabitlendi."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6727745115537426
+    m_Localized: "Host de\u011Fi\u015Fikli\u011Fi onaylayamad\u0131. Ba\u011Flant\u0131n\u0131 kontrol edip tekrar dene."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6727745115537427
+    m_Localized: "Ba\u015Flatmak i\xE7in 4\u20138 oyuncunun ba\u011Flanmas\u0131n\u0131 bekle."
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:
