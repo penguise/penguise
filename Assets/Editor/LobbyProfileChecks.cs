@@ -102,9 +102,28 @@ public static class LobbyProfileChecks
         }
         try
         {
+            // Force a first-use table load, as in a fresh WebGL page before Lobby opens.
+            await UnityEngine.Localization.Settings.LocalizationSettings.InitializationOperation.Task;
+            UnityEngine.Localization.Settings.LocalizationSettings.StringDatabase.ReleaseTable("Lobby");
+            await manager.Profiles.PrepareDefaultNamesAsync();
             host.NetworkConfig.EnableSceneManagement = false;
             transport.SetConnectionData("127.0.0.1", 17891, "127.0.0.1");
             Require(host.StartHost(), "Loopback host did not start.");
+            Require(manager.Profiles.Roster.TryGet(host.LocalClientId, out var hostProfile)
+                && LobbyRoster.TryNormalizeName(hostProfile.Name, out _) && hostProfile.Color == LobbyColor.Red,
+                "The host must immediately receive a valid default name and a reserved color.");
+            ProfileResult? hostResult = null;
+            manager.Profiles.RequestCompleted += OnHostResult;
+            void OnHostResult(ProfileResult result) => hostResult = result;
+            try
+            {
+                manager.Profiles.RequestChange("Host", LobbyColor.Brown);
+                Require(hostResult == ProfileResult.Accepted, "The host must be able to edit its own profile.");
+            }
+            finally
+            {
+                manager.Profiles.RequestCompleted -= OnHostResult;
+            }
             for (int i = 0; i < 3; i++)
             {
                 var go = new GameObject("Lobby check client " + i);
@@ -126,6 +145,12 @@ public static class LobbyProfileChecks
             var first = clients[0].GetComponent<LobbyProfiles>();
             var second = clients[1].GetComponent<LobbyProfiles>();
             await WaitFor(() => first.Roster.Players.Count == 4 && second.Roster.Players.Count == 4);
+            foreach (var client in clients)
+            {
+                var peer = client.GetComponent<LobbyProfiles>();
+                await WaitFor(() => peer.Roster.TryGet(host.LocalClientId, out var seen)
+                    && seen.Name == "Host" && seen.Color == LobbyColor.Brown);
+            }
             ProfileResult? firstResult = null;
             ProfileResult? secondResult = null;
             first.RequestCompleted += result => firstResult = result;
@@ -157,7 +182,7 @@ public static class LobbyProfileChecks
             loser.RequestChange("Other", LobbyColor.Pink);
             await WaitFor(() => !loser.IsPending && loser.Roster.TryGet(loser.LocalClientId, out var p) && p.Color == LobbyColor.Pink);
             Require(!manager.Profiles.Roster.TryLock(), "A disconnect below four must prevent starting.");
-            return "PASS: loopback host + 3 clients; simultaneous claim has one winner and one conflict; names/colors synchronized; change and disconnect free colors.";
+            return "PASS: cold table loaded asynchronously; host default profile created, editable and visible to all 3 clients; simultaneous claim has one winner and one conflict; change and disconnect free colors.";
         }
         finally
         {

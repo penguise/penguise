@@ -64,6 +64,7 @@ public class RoomSessionManager : MonoBehaviour
             await UnityEngine.Localization.Settings.LocalizationSettings.InitializationOperation.Task;
             if (create)
             {
+                await Profiles.PrepareDefaultNamesAsync();
                 var options = new SessionOptions
                 {
                     Name = value.Trim(),

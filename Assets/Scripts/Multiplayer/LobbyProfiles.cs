@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using Unity.Collections;
 using Unity.Netcode;
 using UnityEngine;
@@ -23,6 +24,7 @@ public sealed class LobbyProfiles : MonoBehaviour
     private bool registered;
     private uint requestId;
     private float requestDeadline;
+    private string[] defaultNames;
 
     private void Awake()
     {
@@ -72,12 +74,26 @@ public sealed class LobbyProfiles : MonoBehaviour
         }
     }
 
-    private static string DefaultName(int number)
+    public async Task PrepareDefaultNamesAsync()
     {
-        var text = new LocalizedString("Lobby", "lobby.player");
-        text.Add("number", new IntVariable { Value = number });
-        return text.GetLocalizedString();
+        var names = new string[LobbyRoster.ColorCount];
+        for (int i = 0; i < names.Length; i++)
+        {
+            var text = new LocalizedString("Lobby", "lobby.player");
+            text.Add("number", new IntVariable { Value = i + 1 });
+            var operation = text.GetLocalizedStringAsync();
+            var name = await operation.Task;
+            if (operation.Status != UnityEngine.ResourceManagement.AsyncOperations.AsyncOperationStatus.Succeeded
+                || !LobbyRoster.TryNormalizeName(name, out names[i]))
+                throw new InvalidOperationException("Could not prepare localized lobby player names.", operation.OperationException);
+        }
+        defaultNames = names;
     }
+
+    // Connection callbacks must never trigger synchronous Addressables loading on WebGL.
+    private string DefaultName(int number) => defaultNames != null
+        ? defaultNames[number - 1]
+        : throw new InvalidOperationException("Prepare lobby player names before starting the host.");
 
     private void OnDisconnected(ulong clientId)
     {
