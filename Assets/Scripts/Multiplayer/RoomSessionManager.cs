@@ -10,14 +10,20 @@ public class RoomSessionManager : MonoBehaviour
 {
     public const string LobbyScene = "Lobby";
     public const string MenuScene = "MainMenu";
+    public const int MinPlayers = 4;
+    public const int MaxPlayers = 8;
     public static RoomSessionManager Instance { get; private set; }
     public event Action SessionChanged;
 
-    [SerializeField, Min(2)]
-    private int maxPlayers = 2;
-
     public ISession ActiveSession { get; private set; }
     public bool IsBusy { get; private set; }
+    public bool CanStartGame =>
+        !IsBusy
+        && !returningToMenu
+        && ActiveSession != null
+        && ActiveSession.IsHost
+        && ActiveSession.Players.Count >= MinPlayers
+        && ActiveSession.Players.Count <= MaxPlayers;
 
     private bool returningToMenu;
 
@@ -52,7 +58,7 @@ public class RoomSessionManager : MonoBehaviour
                 var options = new SessionOptions
                 {
                     Name = value.Trim(),
-                    MaxPlayers = maxPlayers,
+                    MaxPlayers = MaxPlayers,
                     IsPrivate = true,
                 }.WithRelayNetwork();
                 ActiveSession = await MultiplayerService.Instance.CreateSessionAsync(options);

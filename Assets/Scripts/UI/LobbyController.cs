@@ -25,6 +25,7 @@ public class LobbyController : MonoBehaviour
     private Label status;
     private ScrollView playerList;
     private Label playersTitle;
+    private Label startRequirement;
     private Button copyButton;
     private Button leaveButton;
     private Button startButton;
@@ -53,6 +54,7 @@ public class LobbyController : MonoBehaviour
         status = root.Q<Label>("lobby-status");
         playerList = root.Q<ScrollView>("player-list");
         playersTitle = root.Q<Label>("players-title");
+        startRequirement = root.Q<Label>("start-requirement");
         copyButton = root.Q<Button>("copy-code-button");
         leaveButton = root.Q<Button>("leave-room-button");
         startButton = root.Q<Button>("start-game-button");
@@ -62,6 +64,7 @@ public class LobbyController : MonoBehaviour
             || status == null
             || playerList == null
             || playersTitle == null
+            || startRequirement == null
             || copyButton == null
             || leaveButton == null
             || startButton == null
@@ -78,6 +81,9 @@ public class LobbyController : MonoBehaviour
         playersText.Add("count", playerCount);
         playersText.Add("capacity", playerCapacity);
         playersTitle.SetBinding(nameof(Label.text), playersText);
+        var requirementText = new LocalizedString(TableName, "lobby.start_requirement");
+        requirementText.Add("minimum", new IntVariable { Value = RoomSessionManager.MinPlayers });
+        startRequirement.SetBinding(nameof(Label.text), requirementText);
         ResetCopyFeedback();
         copyButton.clicked += OnCopyCode;
         leaveButton.clicked += OnLeave;
@@ -107,11 +113,15 @@ public class LobbyController : MonoBehaviour
         roomCodeValue.Value = session?.Code ?? string.Empty;
         roomNameValue.Value = session?.Name ?? string.Empty;
         playerCount.Value = session?.Players.Count ?? 0;
-        playerCapacity.Value = session?.MaxPlayers ?? 0;
+        playerCapacity.Value = RoomSessionManager.MaxPlayers;
         copyButton.SetEnabled(session != null && !leaving && !copying);
         leaveButton.SetEnabled(!leaving);
-        startButton.SetEnabled(false);
+        startButton.SetEnabled(!leaving && manager != null && manager.CanStartGame);
         startButton.EnableInClassList(HiddenClass, session == null || !session.IsHost);
+        startRequirement.EnableInClassList(
+            HiddenClass,
+            session == null || session.Players.Count >= RoomSessionManager.MinPlayers
+        );
 
         if (session == null)
         {
@@ -207,6 +217,7 @@ public class LobbyController : MonoBehaviour
         if (leaving)
             return;
         leaving = true;
+        startButton.SetEnabled(false);
         copyButton.SetEnabled(false);
         leaveButton.SetEnabled(false);
         leaveButton.SetBinding(
@@ -246,6 +257,7 @@ public class LobbyController : MonoBehaviour
                 );
                 leaveButton.SetEnabled(true);
                 copyButton.SetEnabled(session != null && !copying);
+                startButton.SetEnabled(manager != null && manager.CanStartGame);
             }
         }
     }

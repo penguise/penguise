@@ -159,6 +159,14 @@
     border-color: rgb(57, 74, 96);
 }
 
+.start-requirement {
+    flex-shrink: 0;
+    color: rgb(220, 228, 240);
+    font-size: 16px;
+    white-space: normal;
+    margin-top: 12px;
+}
+
 .lobby-status {
     flex-shrink: 0;
     color: rgb(248, 113, 113);

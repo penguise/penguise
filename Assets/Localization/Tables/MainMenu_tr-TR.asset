@@ -91,7 +91,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 703599785033730
-    m_Localized: "Odaya kat\u0131l\u0131namad\u0131. Kodu kontrol edin veya tekrar deneyin."
+    m_Localized: "Odaya kat\u0131l\u0131namad\u0131. Oda dolu olabilir (8/8). Kodu kontrol et veya tekrar dene."
     m_Metadata:
       m_Items: []
   references:

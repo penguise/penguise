@@ -609,7 +609,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba92921201d7adb4ebdb0929058014bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RoomSessionManager
-  maxPlayers: 2
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

@@ -13,6 +13,7 @@
                 <ui:Label name="players-title" class="players-title"/>
                 <ui:ScrollView name="player-list" class="player-list" mode="Vertical" horizontal-scroller-visibility="Hidden" vertical-scroller-visibility="Auto"/>
             </ui:VisualElement>
+            <ui:Label name="start-requirement" class="start-requirement lobby-hidden"/>
             <ui:Label name="lobby-status" class="lobby-status lobby-hidden"/>
             <ui:VisualElement name="lobby-actions" class="lobby-actions">
                 <ui:Button name="leave-room-button" class="lobby-control lobby-button">

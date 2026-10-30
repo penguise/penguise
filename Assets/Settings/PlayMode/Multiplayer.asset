@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 15024, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: Two Players
+  m_Name: Multiplayer
   m_EditorClassIdentifier: UnityEditor.MultiplayerModule.dll::Unity.Multiplayer.PlayMode.Editor.OrchestratedScenario
   m_Description: 
   m_EnableEditors: 1
@@ -32,6 +32,8 @@ MonoBehaviour:
     m_InstanceItems:
     - rid: 85976577477968197
     - rid: 85976577477968199
+    - rid: 85976997742248171
+    - rid: 85976997742248173
   references:
     version: 2
     RefIds:
@@ -57,5 +59,31 @@ MonoBehaviour:
           RoleMask: 1
           PlayerInstanceIndex: 1
           StreamLogsToMainEditor: 1
+          LogsColor: {r: 0.3643, g: 0.581, b: 0.8679, a: 1}
+        m_Decorators: []
+    - rid: 85976997742248171
+      type: {class: 'InstanceItem`2[[Unity.Multiplayer.PlayMode.Editor.CloneEditorController, UnityEditor.MultiplayerModule],[Unity.Multiplayer.PlayMode.Editor.CloneEditorController/InstanceSettings, UnityEditor.MultiplayerModule]]', ns: Unity.Multiplayer.PlayMode.Editor, asm: UnityEditor.MultiplayerModule}
+      data:
+        m_Id: 2291dccfd051487a9dc2c162cf690dcc
+        m_Name: Player 3
+        m_RunMode: 0
+        m_Settings:
+          PlayerTag: 
+          RoleMask: 1
+          PlayerInstanceIndex: 2
+          StreamLogsToMainEditor: 0
+          LogsColor: {r: 0.3643, g: 0.581, b: 0.8679, a: 1}
+        m_Decorators: []
+    - rid: 85976997742248173
+      type: {class: 'InstanceItem`2[[Unity.Multiplayer.PlayMode.Editor.CloneEditorController, UnityEditor.MultiplayerModule],[Unity.Multiplayer.PlayMode.Editor.CloneEditorController/InstanceSettings, UnityEditor.MultiplayerModule]]', ns: Unity.Multiplayer.PlayMode.Editor, asm: UnityEditor.MultiplayerModule}
+      data:
+        m_Id: c740ad75a6454c1290e8151a4acecfad
+        m_Name: Player 4
+        m_RunMode: 0
+        m_Settings:
+          PlayerTag: 
+          RoleMask: 1
+          PlayerInstanceIndex: 3
+          StreamLogsToMainEditor: 0
           LogsColor: {r: 0.3643, g: 0.581, b: 0.8679, a: 1}
         m_Decorators: []

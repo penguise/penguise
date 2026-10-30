@@ -84,6 +84,11 @@ MonoBehaviour:
     m_Localized: Host
     m_Metadata:
       m_Items: []
+  - m_Id: 6707464321908736
+    m_Localized: At least {minimum} players are required to start.
+    m_Metadata:
+      m_Items:
+      - rid: 85976577477968505
   references:
     version: 2
     RefIds:
@@ -97,3 +102,4 @@ MonoBehaviour:
         - id: 2377025339392
         - id: 3967827968
         - id: 9094048006144
+        - id: 6707464321908736

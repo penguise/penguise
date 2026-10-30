@@ -91,7 +91,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 703599785033730
-    m_Localized: Could not join the room. Check the code or try again.
+    m_Localized: Could not join the room. It may be full (8/8). Check the code or try again.
     m_Metadata:
       m_Items: []
   references:
