@@ -66,6 +66,24 @@ public static class LobbyProfileChecks
         Check(roster.Change(20, "Second", LobbyColor.Purple) == ProfileResult.Accepted
             && roster.Change(10, "First", LobbyColor.Purple) == ProfileResult.ColorTaken,
             "The host must decide by arrival order, independently of player identity.");
+        roster.Clear();
+        roster.Join(0, DefaultName);
+        Check(roster.Change(0, "Player 1", LobbyColor.Green) == ProfileResult.Accepted,
+            "The host can change only its color before anyone else joins.");
+        for (ulong id = 1; id < 8; id++)
+        {
+            Check(roster.Join(id, DefaultName) && roster.TryGet(id, out var player)
+                && player.Name == DefaultName((int)id + 1),
+                "Default names must follow independent slots even when the host frees Red.");
+        }
+        Check(roster.TryGet(1, out var secondPlayer) && secondPlayer.Color == LobbyColor.Red,
+            "The second player can use Red while keeping the name Player 2.");
+        roster.Leave(2);
+        Check(roster.Join(80, DefaultName) && roster.TryGet(80, out var replacement)
+            && replacement.Name == "Player 3", "A departure frees the name slot without renumbering others.");
+        roster.Clear();
+        Check(roster.Join(81, DefaultName) && roster.TryGet(81, out var newHost)
+            && newHost.Name == "Player 1", "A new room resets name slots.");
         return $"PASS: {checks} lobby profile checks.";
     }
 
@@ -117,7 +135,7 @@ public static class LobbyProfileChecks
             void OnHostResult(ProfileResult result) => hostResult = result;
             try
             {
-                manager.Profiles.RequestChange("Host", LobbyColor.Brown);
+                manager.Profiles.RequestChange(hostProfile.Name, LobbyColor.Brown);
                 Require(hostResult == ProfileResult.Accepted, "The host must be able to edit its own profile.");
             }
             finally
@@ -145,11 +163,14 @@ public static class LobbyProfileChecks
             var first = clients[0].GetComponent<LobbyProfiles>();
             var second = clients[1].GetComponent<LobbyProfiles>();
             await WaitFor(() => first.Roster.Players.Count == 4 && second.Roster.Players.Count == 4);
+            var defaultNames = new HashSet<string>();
+            foreach (var player in manager.Profiles.Roster.Players)
+                Require(defaultNames.Add(player.Name), "Changing only the host color must not duplicate default names.");
             foreach (var client in clients)
             {
                 var peer = client.GetComponent<LobbyProfiles>();
                 await WaitFor(() => peer.Roster.TryGet(host.LocalClientId, out var seen)
-                    && seen.Name == "Host" && seen.Color == LobbyColor.Brown);
+                    && seen.Name == hostProfile.Name && seen.Color == LobbyColor.Brown);
             }
             ProfileResult? firstResult = null;
             ProfileResult? secondResult = null;

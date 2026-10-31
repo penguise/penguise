@@ -32,6 +32,7 @@ public sealed class LobbyRoster
     public const int MaxNameLength = 24;
     public const int ColorCount = 8;
     private readonly List<LobbyPlayer> players = new List<LobbyPlayer>();
+    private readonly Dictionary<ulong, int> defaultNameNumbers = new Dictionary<ulong, int>();
     public IReadOnlyList<LobbyPlayer> Players { get; }
     public bool IsLocked { get; private set; }
 
@@ -63,10 +64,15 @@ public sealed class LobbyRoster
             return true;
         if (IsLocked || players.Count >= ColorCount)
             return false;
+        int number = 1;
+        // Keep the default-name slot independent of editable names and colors until departure.
+        while (defaultNameNumbers.ContainsValue(number))
+            number++;
         for (byte color = 0; color < ColorCount; color++)
             if (!IsTaken((LobbyColor)color, clientId))
             {
-                players.Add(new LobbyPlayer(clientId, defaultName(color + 1), (LobbyColor)color));
+                players.Add(new LobbyPlayer(clientId, defaultName(number), (LobbyColor)color));
+                defaultNameNumbers.Add(clientId, number);
                 return true;
             }
         return false;
@@ -76,7 +82,10 @@ public sealed class LobbyRoster
     {
         // A started match keeps its participant identities and presentation snapshot.
         if (!IsLocked)
+        {
             players.RemoveAll(player => player.ClientId == clientId);
+            defaultNameNumbers.Remove(clientId);
+        }
     }
 
     public ProfileResult Change(ulong clientId, string name, LobbyColor color)
@@ -137,6 +146,7 @@ public sealed class LobbyRoster
     public void Clear()
     {
         players.Clear();
+        defaultNameNumbers.Clear();
         IsLocked = false;
     }
 }
