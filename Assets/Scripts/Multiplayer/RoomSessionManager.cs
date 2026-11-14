@@ -19,6 +19,7 @@ public class RoomSessionManager : MonoBehaviour
     public ISession ActiveSession { get; private set; }
     public bool IsBusy { get; private set; }
     public LobbyProfiles Profiles { get; private set; }
+    public MatchChat Chat { get; private set; }
     public bool CanStartGame => !IsBusy && IsReadyToStart;
 
     // Start eligibility apart from pending room operations, so StartMatchAsync can re-check it
@@ -47,6 +48,9 @@ public class RoomSessionManager : MonoBehaviour
         }
         Instance = this;
         Profiles = GetComponent<LobbyProfiles>() ?? gameObject.AddComponent<LobbyProfiles>();
+        Chat = GetComponent<MatchChat>();
+        if (Chat == null)
+            Chat = gameObject.AddComponent<MatchChat>();
         DontDestroyOnLoad(gameObject);
     }
 

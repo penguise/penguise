@@ -491,6 +491,7 @@ GameObject:
   - component: {fileID: 1984650341}
   - component: {fileID: 1984650342}
   - component: {fileID: 1984650343}
+  - component: {fileID: 1984650344}
   m_Layer: 0
   m_Name: NetworkManager
   m_TagString: Untagged
@@ -622,6 +623,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3859b189860a1244da230245504e69bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LobbyProfiles
+--- !u!114 &1984650344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1984650337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a55edf16768b21438af1ea8fa377f3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MatchChat
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
