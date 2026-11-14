@@ -2,30 +2,39 @@ using UnityEngine;
 using UnityEngine.Localization;
 using UnityEngine.UIElements;
 
-// Chat panel presentation with a local preview: a submitted message appears in this client's list
-// as if sent by a random displayed player. Nothing is sent over the network yet; networked sending,
-// host validation, and per-hand clearing replace the preview later.
+// Match chat panel: sends through MatchChat (host-validated, relayed to every participant) and shows
+// the shared history; authors' names and colors come from the match roster. Without a live
+// connection (e.g. Game opened directly in the Editor) the panel stays read-only.
 [RequireComponent(typeof(PanelRenderer))]
 public sealed class ChatPanelController : MonoBehaviour
 {
     private const string TableName = "Game";
-    // UI-side cap only; the host-validated limit is decided with the networked chat.
-    private const int MaxMessageLength = 200;
-    private const int MaxMessages = 100;
-    [SerializeField, HideInInspector] private GameLayout layout;
+    private const string HiddenClass = "chat-hidden";
     private readonly LocalizedString placeholder = new LocalizedString(TableName, "chat.placeholder");
+    private readonly LocalizedString statusText = new LocalizedString();
     private PanelRenderer panel;
     private TextField input;
     private Button send;
     private ScrollView messages;
     private Label empty;
+    private Label status;
     private string placeholderText = string.Empty;
+    private MatchChat chat;
 
     private void OnEnable()
     {
         panel = GetComponent<PanelRenderer>();
+        var manager = Application.isPlaying ? RoomSessionManager.Instance : null;
+        if (manager != null && manager.Profiles.IsConnected)
+        {
+            chat = manager.Chat;
+            chat.MessageAdded += OnMessageAdded;
+            chat.Cleared += RenderHistory;
+            chat.SendRejected += ShowStatus;
+        }
         panel.RegisterUIReloadCallback(OnUIReload);
         placeholder.StringChanged += UpdatePlaceholder;
+        statusText.StringChanged += UpdateStatus;
     }
 
     private void OnUIReload(PanelRenderer renderer, VisualElement root, int version)
@@ -33,10 +42,11 @@ public sealed class ChatPanelController : MonoBehaviour
         UnregisterInputCallbacks();
         var title = root.Q<Label>("chat-title");
         empty = root.Q<Label>("chat-empty");
+        status = root.Q<Label>("chat-status");
         messages = root.Q<ScrollView>("chat-messages");
         send = root.Q<Button>("chat-send-button");
         input = root.Q<TextField>("chat-input");
-        if (title == null || empty == null || messages == null || send == null || input == null)
+        if (title == null || empty == null || status == null || messages == null || send == null || input == null)
         {
             Debug.LogError("Chat UI elements were not found.", this);
             return;
@@ -51,18 +61,25 @@ public sealed class ChatPanelController : MonoBehaviour
         title.SetBinding(nameof(Label.text), new LocalizedString(TableName, "chat.title"));
         empty.SetBinding(nameof(Label.text), new LocalizedString(TableName, "chat.empty"));
         send.SetBinding(nameof(Button.text), new LocalizedString(TableName, "chat.send"));
-        input.maxLength = MaxMessageLength;
+        input.maxLength = ChatRules.MaxLength;
         input.Query<TextElement>().ForEach(element => element.enableRichText = false);
         input.textEdition.placeholder = placeholderText;
         input.RegisterValueChangedCallback(OnInputChanged);
         input.RegisterCallback<KeyDownEvent>(OnInputKeyDown, TrickleDown.TrickleDown);
         send.clicked += Submit;
+        HideStatus();
+        RenderHistory();
         UpdateSendButton();
     }
 
-    private void OnInputChanged(ChangeEvent<string> change) => UpdateSendButton();
+    private void OnInputChanged(ChangeEvent<string> change)
+    {
+        HideStatus();
+        UpdateSendButton();
+    }
 
-    private void UpdateSendButton() => send.SetEnabled(!string.IsNullOrWhiteSpace(input.value));
+    private void UpdateSendButton() => send.SetEnabled(chat != null && chat.IsAvailable
+        && !string.IsNullOrWhiteSpace(input.value));
 
     private void OnInputKeyDown(KeyDownEvent evt)
     {
@@ -74,24 +91,51 @@ public sealed class ChatPanelController : MonoBehaviour
 
     private void Submit()
     {
-        var text = input.value?.Trim();
-        if (string.IsNullOrEmpty(text))
+        if (chat == null || input == null || string.IsNullOrWhiteSpace(input.value))
             return;
-        var players = layout != null ? layout.DisplayedPlayers : null;
-        if (players == null || players.Count == 0)
+        var result = chat.Send(input.value);
+        if (result != ChatResult.Accepted)
+        {
+            // Keep the text so the player can fix or resend it.
+            ShowStatus(result);
             return;
-        AddMessage(players[Random.Range(0, players.Count)], text);
+        }
         input.value = string.Empty;
         input.Focus();
     }
 
-    private void AddMessage(LobbyPlayer author, string text)
+    private void OnMessageAdded(ChatMessage message)
     {
-        empty.AddToClassList("chat-hidden");
+        if (messages == null)
+            return;
+        AddMessage(message);
+        // Bounded history: drop the oldest rows (the empty hint is the first child).
+        while (messages.contentContainer.childCount > MatchChat.MaxHistory + 1)
+            messages.contentContainer.RemoveAt(1);
+    }
+
+    private void RenderHistory()
+    {
+        if (messages == null || chat == null)
+            return;
+        while (messages.contentContainer.childCount > 1)
+            messages.contentContainer.RemoveAt(1);
+        empty.RemoveFromClassList(HiddenClass);
+        foreach (var message in chat.Messages)
+            AddMessage(message);
+    }
+
+    private void AddMessage(ChatMessage message)
+    {
+        var profiles = RoomSessionManager.Instance.Profiles;
+        if (!profiles.Roster.TryGet(message.SenderId, out var author))
+            return;
+        empty.AddToClassList(HiddenClass);
         string color = author.Color.ToString().ToLowerInvariant();
 
         var row = new VisualElement();
         row.AddToClassList("chat-message");
+        row.EnableInClassList("chat-message-self", message.SenderId == profiles.LocalClientId);
         var avatar = new PenguinBadge(GameLayout.PlayerColor(author.Color));
         avatar.AddToClassList("chat-message-avatar");
         row.Add(avatar);
@@ -101,15 +145,12 @@ public sealed class ChatPanelController : MonoBehaviour
         name.AddToClassList("chat-message-author");
         name.AddToClassList("chat-tag-" + color);
         column.Add(name);
-        var body = new Label(text) { enableRichText = false };
+        var body = new Label(message.Text) { enableRichText = false };
         body.AddToClassList("chat-message-text");
         column.Add(body);
         row.Add(column);
 
         messages.Add(row);
-        // Bounded history: drop the oldest messages (the empty hint is the first child).
-        while (messages.contentContainer.childCount > MaxMessages + 1)
-            messages.contentContainer.RemoveAt(1);
         row.RegisterCallback<GeometryChangedEvent>(ScrollToNewest);
     }
 
@@ -119,6 +160,28 @@ public sealed class ChatPanelController : MonoBehaviour
         // Next tick, after the scroll range includes the new row: snap to the very bottom.
         messages.schedule.Execute(() => messages.verticalScroller.value = messages.verticalScroller.highValue);
     }
+
+    private void ShowStatus(ChatResult result)
+    {
+        if (status == null)
+            return;
+        string key = result switch
+        {
+            ChatResult.RateLimited => "chat.error.rate_limited",
+            ChatResult.Invalid => "chat.error.invalid",
+            _ => "chat.error.unavailable",
+        };
+        statusText.SetReference(TableName, key);
+        status.RemoveFromClassList(HiddenClass);
+    }
+
+    private void UpdateStatus(string value)
+    {
+        if (status != null)
+            status.text = value;
+    }
+
+    private void HideStatus() => status?.AddToClassList(HiddenClass);
 
     private void UpdatePlaceholder(string value)
     {
@@ -141,6 +204,14 @@ public sealed class ChatPanelController : MonoBehaviour
     private void OnDisable()
     {
         placeholder.StringChanged -= UpdatePlaceholder;
+        statusText.StringChanged -= UpdateStatus;
+        if (chat != null)
+        {
+            chat.MessageAdded -= OnMessageAdded;
+            chat.Cleared -= RenderHistory;
+            chat.SendRejected -= ShowStatus;
+            chat = null;
+        }
         UnregisterInputCallbacks();
         panel.UnregisterUIReloadCallback(OnUIReload);
     }

@@ -5,6 +5,7 @@
         <ui:ScrollView name="chat-messages" class="chat-messages" mode="Vertical" horizontal-scroller-visibility="Hidden" vertical-scroller-visibility="Auto">
             <ui:Label name="chat-empty" class="chat-empty"/>
         </ui:ScrollView>
+        <ui:Label name="chat-status" class="chat-status chat-hidden"/>
         <ui:VisualElement name="chat-input-row" class="chat-input-row">
             <ui:TextField name="chat-input" class="chat-input"/>
             <ui:Button name="chat-send-button" class="chat-send-button"/>

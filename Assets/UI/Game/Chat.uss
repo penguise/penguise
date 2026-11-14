@@ -164,6 +164,21 @@
     border-top-left-radius: 3px;
 }
 
+/* The local player's own messages, matching the lobby's own-row highlight. */
+.chat-message-self .chat-message-text {
+    background-color: rgb(255, 243, 220);
+    border-color: rgb(245, 154, 35);
+}
+
+.chat-status {
+    flex-shrink: 0;
+    color: rgb(190, 40, 40);
+    font-size: 14px;
+    -unity-font-style: bold;
+    white-space: normal;
+    margin: 8px 2px 0 2px;
+}
+
 .chat-input-row {
     flex-direction: row;
     flex-shrink: 0;

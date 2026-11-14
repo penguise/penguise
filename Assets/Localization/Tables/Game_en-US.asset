@@ -34,6 +34,18 @@ MonoBehaviour:
     m_Localized: Send
     m_Metadata:
       m_Items: []
+  - m_Id: 15606539632640
+    m_Localized: Messages can't be empty or contain special control characters.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15606573187072
+    m_Localized: You're sending too fast. Wait a few seconds.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15606573187073
+    m_Localized: Chat isn't available right now.
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

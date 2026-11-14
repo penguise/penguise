@@ -205,7 +205,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4a4121c02b4e7f4ea99001564acfb43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ChatPanelController
-  layout: {fileID: 556460176}
 --- !u!1931382934 &637054108
 PanelRenderer:
   m_ObjectHideFlags: 0

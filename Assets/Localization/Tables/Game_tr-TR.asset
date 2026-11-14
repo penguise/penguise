@@ -34,6 +34,18 @@ MonoBehaviour:
     m_Localized: "G\xF6nder"
     m_Metadata:
       m_Items: []
+  - m_Id: 15606539632640
+    m_Localized: "Mesaj bo\u015F olamaz ve \xF6zel kontrol karakterleri i\xE7eremez."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15606573187072
+    m_Localized: "\xC7ok h\u0131zl\u0131 g\xF6nderiyorsun. Birka\xE7 saniye bekle."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15606573187073
+    m_Localized: "Sohbet \u015Fu an kullan\u0131lam\u0131yor."
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

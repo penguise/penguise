@@ -31,6 +31,18 @@ MonoBehaviour:
     m_Key: chat.send
     m_Metadata:
       m_Items: []
+  - m_Id: 15606539632640
+    m_Key: chat.error.invalid
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15606573187072
+    m_Key: chat.error.rate_limited
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15606573187073
+    m_Key: chat.error.unavailable
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
