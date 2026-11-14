@@ -58,6 +58,9 @@ public sealed class GameLayout : MonoBehaviour
     private static readonly Color DayBackground = new Color(0.863f, 0.929f, 0.957f);
     private static readonly Color DayNameColor = new Color32(32, 55, 73, 255);
     private static readonly Color NightNameColor = new Color32(236, 241, 250, 255);
+    private readonly List<LobbyPlayer> displayedPlayers = new List<LobbyPlayer>();
+    // Players currently drawn: the session roster, or Editor mock players in LobbyColor order.
+    public IReadOnlyList<LobbyPlayer> DisplayedPlayers => displayedPlayers;
     private readonly List<Light2D> windowLights = new List<Light2D>();
     private readonly List<TextMesh> nameLabels = new List<TextMesh>();
 
@@ -468,6 +471,7 @@ public sealed class GameLayout : MonoBehaviour
         }
 
         rosterDirty = false;
+        displayedPlayers.Clear();
         windowLights.Clear();
         nameLabels.Clear();
         renderedCharacterGap = characterGap;
@@ -476,7 +480,11 @@ public sealed class GameLayout : MonoBehaviour
         generated.SetParent(transform, false);
 #if UNITY_EDITOR
         if (!Application.isPlaying)
+        {
             generated.gameObject.tag = "EditorOnly";
+            // Edit-mode layouts are regenerated on load, so keep them out of the scene file.
+            generated.gameObject.hideFlags = HideFlags.DontSave;
+        }
 #endif
         var session = Application.isPlaying ? RoomSessionManager.Instance : null;
         var players = session != null ? session.Profiles.Roster.Players : null;
@@ -512,6 +520,7 @@ public sealed class GameLayout : MonoBehaviour
 
             // Mock layouts use the lobby's default order (first free color per join).
             LobbyColor color = players != null ? players[i].Color : (LobbyColor)i;
+            displayedPlayers.Add(players != null ? players[i] : new LobbyPlayer((ulong)i, "Player " + (i + 1), color));
             var clothes = new GameObject("Outfit").AddComponent<SpriteRenderer>();
             clothes.transform.SetParent(penguin.transform, false);
             clothes.sprite = outfit;
@@ -536,6 +545,11 @@ public sealed class GameLayout : MonoBehaviour
             renderer.sharedMaterial = nameFont.material;
             renderer.sortingOrder = 4;
         }
+#if UNITY_EDITOR
+        if (!Application.isPlaying)
+            foreach (Transform part in generated.GetComponentsInChildren<Transform>(true))
+                part.gameObject.hideFlags = HideFlags.DontSave;
+#endif
         ApplyLighting();
     }
 
