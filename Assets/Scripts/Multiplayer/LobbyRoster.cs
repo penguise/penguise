@@ -112,6 +112,18 @@ public sealed class LobbyRoster
         return true;
     }
 
+    // Reverts a match start that never reached gameplay. Players who left while the roster was
+    // frozen are removed now, freeing their colors and name slots.
+    public void Unlock(Func<ulong, bool> isConnected)
+    {
+        if (!IsLocked)
+            return;
+        IsLocked = false;
+        foreach (var player in players.ToArray())
+            if (!isConnected(player.ClientId))
+                Leave(player.ClientId);
+    }
+
     public static bool TryNormalizeName(string value, out string normalized)
     {
         normalized = value?.Trim();

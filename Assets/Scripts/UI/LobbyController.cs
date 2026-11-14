@@ -38,6 +38,7 @@ public class LobbyController : MonoBehaviour
     private string lastConfirmedName;
     private string profileStatusKey;
     private bool leaving;
+    private bool starting;
     private bool copying;
     private IVisualElementScheduledItem copyFeedbackReset;
 
@@ -169,8 +170,8 @@ public class LobbyController : MonoBehaviour
         playerCount.Value = session?.Players.Count ?? 0;
         playerCapacity.Value = RoomSessionManager.MaxPlayers;
         copyButton.SetEnabled(session != null && !leaving && !copying);
-        leaveButton.SetEnabled(!leaving);
-        startButton.SetEnabled(!leaving && manager != null && manager.CanStartGame);
+        leaveButton.SetEnabled(!leaving && !starting);
+        startButton.SetEnabled(!leaving && !starting && manager != null && manager.CanStartGame);
         startButton.EnableInClassList(HiddenClass, session == null || !session.IsHost);
         startRequirement.EnableInClassList(
             HiddenClass,
@@ -220,7 +221,8 @@ public class LobbyController : MonoBehaviour
             return;
         LobbyPlayer self = default;
         var hasProfile = profiles != null && profiles.Roster.TryGet(profiles.LocalClientId, out self);
-        var editable = hasProfile && profiles.IsConnected && !profiles.IsPending && !profiles.Roster.IsLocked && !leaving;
+        var editable = hasProfile && profiles.IsConnected && !profiles.IsPending && !profiles.Roster.IsLocked
+            && !leaving && !starting;
         if (hasProfile && (lastConfirmedName == null || playerNameInput.value == lastConfirmedName))
             playerNameInput.SetValueWithoutNotify(self.Name);
         if (hasProfile)
@@ -299,10 +301,36 @@ public class LobbyController : MonoBehaviour
         profileStatus.RemoveFromClassList(HiddenClass);
     }
 
-    private void OnStartMatch()
+    private async void OnStartMatch()
     {
-        if (!leaving && profiles != null && !profiles.TryStartMatch())
+        if (leaving || starting || manager == null)
+            return;
+        if (!manager.CanStartGame)
+        {
             ShowProfileStatus("lobby.start_error");
+            return;
+        }
+        starting = true;
+        startButton.SetBinding(nameof(Button.text), new LocalizedString(TableName, "lobby.starting"));
+        profileStatus.AddToClassList(HiddenClass);
+        RenderSession();
+        try
+        {
+            // On success NGO replaces this scene with Game for every player; keep the pending
+            // state until then.
+            await manager.StartMatchAsync();
+        }
+        catch (Exception exception)
+        {
+            Debug.LogException(exception, this);
+            starting = false;
+            if (this != null && isActiveAndEnabled)
+            {
+                startButton.SetBinding(nameof(Button.text), new LocalizedString(TableName, "lobby.start_game"));
+                ShowProfileStatus("lobby.start_failed");
+                RenderSession();
+            }
+        }
     }
 
     private void UnregisterProfileCallbacks()

@@ -163,6 +163,14 @@ MonoBehaviour:
     m_Key: lobby.start_error
     m_Metadata:
       m_Items: []
+  - m_Id: 12290053145378816
+    m_Key: lobby.starting
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12290053246042112
+    m_Key: lobby.start_failed
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

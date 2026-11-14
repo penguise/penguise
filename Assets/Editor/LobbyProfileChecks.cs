@@ -5,12 +5,10 @@ using Unity.Netcode;
 using Unity.Netcode.Transports.UTP;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public static class LobbyProfileChecks
 {
-    [MenuItem("Tools/Penguise/Check Lobby Profiles")]
-    public static void CheckFromMenu() => UnityEngine.Debug.Log(Run());
-
     public static string Run()
     {
         int checks = 0;
@@ -58,6 +56,11 @@ public static class LobbyProfileChecks
         roster.Leave(0);
         Check(roster.Players.Count == 8 && roster.TryGet(0, out _), "Match snapshot survives disconnects.");
         Check(!roster.Join(9, DefaultName), "Late joiners cannot alter a locked match.");
+        roster.Unlock(id => id != 0);
+        Check(!roster.IsLocked && roster.Players.Count == 7 && !roster.TryGet(0, out _),
+            "A cancelled start reopens the lobby and drops players who left meanwhile.");
+        Check(roster.Change(1, "Reopened", LobbyColor.Red) == ProfileResult.Accepted,
+            "A cancelled start frees the departed player's color.");
         roster.Clear();
         Check(!roster.IsLocked && roster.Players.Count == 0, "The next session starts clean.");
         // Reverse arrival order must also accept exactly one claimant.
@@ -218,6 +221,93 @@ public static class LobbyProfileChecks
                 await Awaitable.NextFrameAsync();
             host.NetworkConfig.EnableSceneManagement = oldSceneManagement;
             transport.ConnectionData = oldConnection;
+        }
+    }
+
+    // Play mode from MainMenu with no active room. A loopback host (no Relay) with three roster-only
+    // peers loads Game through NGO scene management, as StartMatchAsync does after locking the
+    // session; the layout must mirror the lobby roster and follow late profile changes.
+    public static async Task<string> RunGameTransitionAsync()
+    {
+        var manager = RoomSessionManager.Instance;
+        if (!EditorApplication.isPlaying || manager == null || manager.ActiveSession != null)
+            throw new InvalidOperationException("Run in Play mode from MainMenu with no active room.");
+        var host = manager.GetComponent<NetworkManager>();
+        if (host.IsListening)
+            throw new InvalidOperationException("A network session is already running.");
+        var transport = host.GetComponent<UnityTransport>();
+        var oldConnection = transport.ConnectionData;
+        async Task WaitFor(Func<bool> condition)
+        {
+            var deadline = Time.realtimeSinceStartup + 15f;
+            while (!condition())
+            {
+                if (Time.realtimeSinceStartup >= deadline)
+                    throw new TimeoutException("Game transition check timed out.");
+                await Awaitable.NextFrameAsync();
+            }
+        }
+        void Require(bool condition, string message)
+        {
+            if (!condition)
+                throw new InvalidOperationException(message);
+        }
+        void RequireLayout(GameLayout layout, IReadOnlyList<LobbyPlayer> players)
+        {
+            var root = layout.transform.Find("Layout");
+            Require(root != null && root.childCount == players.Count * 2, "One igloo and one penguin per roster player.");
+            for (int i = 0; i < players.Count; i++)
+            {
+                var character = root.Find("Character " + (i + 1));
+                Require(character != null, $"Character {i + 1} exists.");
+                Require(character.GetComponentInChildren<TextMesh>().text == players[i].Name,
+                    $"Character {i + 1} shows the lobby name.");
+                Require(character.Find("Outfit").GetComponent<SpriteRenderer>().color == GameLayout.PlayerColor(players[i].Color),
+                    $"Character {i + 1} wears the lobby color.");
+            }
+        }
+        try
+        {
+            await manager.Profiles.PrepareDefaultNamesAsync();
+            Require(host.NetworkConfig.EnableSceneManagement, "The Game transition needs NGO scene management.");
+            transport.SetConnectionData("127.0.0.1", 17892, "127.0.0.1");
+            Require(host.StartHost(), "Loopback host did not start.");
+            var roster = manager.Profiles.Roster;
+            string[] peerNames = { "Deniz", "Ece", "Kaan" };
+            LobbyColor[] peerColors = { LobbyColor.Blue, LobbyColor.Pink, LobbyColor.Green };
+            for (int i = 0; i < peerNames.Length; i++)
+            {
+                ulong id = 100 + (ulong)i;
+                Require(roster.Join(id, _ => "Peer"), "Roster-only peer joins.");
+                Require(roster.Change(id, peerNames[i], peerColors[i]) == ProfileResult.Accepted, "Peer profile accepted.");
+            }
+            Require(roster.Players.Count == 4, "Four players before the transition.");
+
+            var status = host.SceneManager.LoadScene(RoomSessionManager.GameScene, LoadSceneMode.Single);
+            Require(status == SceneEventProgressStatus.Started, $"Game scene loading started ({status}).");
+            await WaitFor(() => SceneManager.GetActiveScene().name == RoomSessionManager.GameScene);
+            GameLayout layout = null;
+            await WaitFor(() => (layout = UnityEngine.Object.FindAnyObjectByType<GameLayout>()) != null
+                && layout.transform.Find("Layout") != null
+                && layout.transform.Find("Layout").childCount == roster.Players.Count * 2);
+            await Awaitable.NextFrameAsync();
+            RequireLayout(layout, roster.Players);
+
+            // A profile snapshot that lands after the scene load must redraw the match.
+            manager.Profiles.RequestChange("Late Host", LobbyColor.Purple);
+            await WaitFor(() => layout.transform.Find("Layout")?.Find("Character 1")?
+                .GetComponentInChildren<TextMesh>().text == "Late Host");
+            RequireLayout(layout, roster.Players);
+            Require(roster.TryLock(), "The four-player roster freezes for the match.");
+            return "PASS: NGO loaded Game for the host; 4 penguins mirror lobby order, names and colors; a late profile change redrew the layout.";
+        }
+        finally
+        {
+            host.Shutdown();
+            while (host.ShutdownInProgress)
+                await Awaitable.NextFrameAsync();
+            transport.ConnectionData = oldConnection;
+            await SceneManager.LoadSceneAsync(RoomSessionManager.MenuScene);
         }
     }
 }

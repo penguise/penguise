@@ -173,6 +173,14 @@ MonoBehaviour:
     m_Localized: "Ba\u015Flatmak i\xE7in 4\u20138 oyuncunun ba\u011Flanmas\u0131n\u0131 bekle."
     m_Metadata:
       m_Items: []
+  - m_Id: 12290053145378816
+    m_Localized: "Ba\u015Flat\u0131l\u0131yor..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12290053246042112
+    m_Localized: "Ma\xE7 ba\u015Flat\u0131lamad\u0131. Ba\u011Flant\u0131n\u0131 kontrol edip tekrar dene."
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:

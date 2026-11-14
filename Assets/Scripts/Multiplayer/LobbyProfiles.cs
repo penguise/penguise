@@ -192,13 +192,23 @@ public sealed class LobbyProfiles : MonoBehaviour
             CompleteRequest(ProfileResult.Unavailable);
     }
 
+    // Host only: freezes names and colors for the match and shares the final snapshot.
     public bool TryStartMatch()
     {
         var manager = RoomSessionManager.Instance;
-        if (!network.IsServer || manager == null || !manager.CanStartGame || !Roster.TryLock())
+        if (!network.IsServer || manager == null || !manager.IsReadyToStart || !Roster.TryLock())
             return false;
         BroadcastSnapshot();
         return true;
+    }
+
+    // Host only: reopens the lobby after a start that failed before the Game scene loaded.
+    public void CancelMatchStart()
+    {
+        if (!network.IsServer || !Roster.IsLocked)
+            return;
+        Roster.Unlock(network.ConnectedClients.ContainsKey);
+        BroadcastSnapshot();
     }
 
     private void BroadcastSnapshot()

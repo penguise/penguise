@@ -10,6 +10,7 @@ public class RoomSessionManager : MonoBehaviour
 {
     public const string LobbyScene = "Lobby";
     public const string MenuScene = "MainMenu";
+    public const string GameScene = "Game";
     public const int MinPlayers = 4;
     public const int MaxPlayers = 8;
     public static RoomSessionManager Instance { get; private set; }
@@ -18,9 +19,12 @@ public class RoomSessionManager : MonoBehaviour
     public ISession ActiveSession { get; private set; }
     public bool IsBusy { get; private set; }
     public LobbyProfiles Profiles { get; private set; }
-    public bool CanStartGame =>
-        !IsBusy
-        && !returningToMenu
+    public bool CanStartGame => !IsBusy && IsReadyToStart;
+
+    // Start eligibility apart from pending room operations, so StartMatchAsync can re-check it
+    // after its own asynchronous session update.
+    public bool IsReadyToStart =>
+        !returningToMenu
         && ActiveSession != null
         && ActiveSession.IsHost
         && Profiles != null
@@ -103,6 +107,54 @@ public class RoomSessionManager : MonoBehaviour
         }
     }
 
+    // Host only: closes the room to new joins, freezes the roster, and moves every connected
+    // player into the Game scene through NGO scene management. Reverts both locks on failure.
+    public async Task StartMatchAsync()
+    {
+        if (!CanStartGame)
+            throw new InvalidOperationException("The match cannot start yet.");
+
+        IsBusy = true;
+        SessionChanged?.Invoke();
+        var host = ActiveSession.AsHost();
+        bool sessionLocked = false;
+        try
+        {
+            host.IsLocked = true;
+            await host.SavePropertiesAsync();
+            sessionLocked = true;
+            if (!Profiles.TryStartMatch())
+                throw new InvalidOperationException("The players changed while the match was starting.");
+            var status = GetComponent<NetworkManager>().SceneManager.LoadScene(GameScene, LoadSceneMode.Single);
+            if (status != SceneEventProgressStatus.Started)
+            {
+                Profiles.CancelMatchStart();
+                throw new InvalidOperationException($"Game scene loading failed: {status}.");
+            }
+        }
+        catch
+        {
+            host.IsLocked = false;
+            if (sessionLocked && ActiveSession != null)
+            {
+                try
+                {
+                    await host.SavePropertiesAsync();
+                }
+                catch (Exception unlockError)
+                {
+                    Debug.LogException(unlockError, this);
+                }
+            }
+            throw;
+        }
+        finally
+        {
+            IsBusy = false;
+            SessionChanged?.Invoke();
+        }
+    }
+
     public async Task LeaveRoomAsync()
     {
         if (IsBusy)
@@ -138,7 +190,8 @@ public class RoomSessionManager : MonoBehaviour
     private async void OnSessionEnded()
     {
         ClearSession();
-        if (IsBusy || SceneManager.GetActiveScene().name != LobbyScene)
+        var scene = SceneManager.GetActiveScene().name;
+        if (IsBusy || (scene != LobbyScene && scene != GameScene))
             return;
         try
         {

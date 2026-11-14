@@ -173,6 +173,14 @@ MonoBehaviour:
     m_Localized: "Wait for 4\u20138 connected players before starting."
     m_Metadata:
       m_Items: []
+  - m_Id: 12290053145378816
+    m_Localized: Starting...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12290053246042112
+    m_Localized: The match could not start. Check your connection and try again.
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:
