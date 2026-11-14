@@ -22,6 +22,12 @@ MonoBehaviour:
     - Locale-en-US
     - Preload
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8cbd7e3fa8ce7a84385a09da7f99b3f7
+    m_Address: Game_en-US
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en-US
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: e5dc1b7218af76e48964b6c229597a4d
     m_Address: Lobby_en-US
     m_ReadOnly: 1

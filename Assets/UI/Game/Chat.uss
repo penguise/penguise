@@ -1,0 +1,234 @@
+/* Ice slab with a snow cap, a wooden title sign, and snow speech bubbles. Flat fills only. */
+.chat-panel {
+    position: absolute;
+    left: 24px;
+    top: 24px;
+    bottom: 24px;
+    width: 20%;
+    min-width: 280px;
+    max-width: 440px;
+    padding: 30px 12px 12px 12px;
+    background-color: rgb(227, 244, 252);
+    border-width: 4px;
+    border-bottom-width: 9px;
+    border-color: rgb(43, 93, 138);
+    border-radius: 22px;
+}
+
+/* Drawn by SnowCap; overhangs the slab's top edge. */
+.chat-snow-cap {
+    position: absolute;
+    left: -14px;
+    right: -14px;
+    top: -20px;
+    height: 48px;
+}
+
+/* Wooden sign, slightly crooked. */
+.chat-title {
+    flex-shrink: 0;
+    align-self: center;
+    min-width: 60%;
+    margin: 0 0 14px 0;
+    padding: 5px 18px 6px 18px;
+    color: rgb(255, 244, 222);
+    font-size: 20px;
+    -unity-font-style: bold;
+    -unity-text-align: middle-center;
+    background-color: rgb(176, 116, 61);
+    border-width: 3px;
+    border-bottom-width: 6px;
+    border-color: rgb(110, 67, 32);
+    border-radius: 10px;
+    rotate: -2deg;
+}
+
+/* Carved into the slab: a heavier top edge reads as depth. */
+.chat-messages {
+    flex-grow: 1;
+    min-height: 0;
+    background-color: rgb(191, 225, 243);
+    border-width: 3px;
+    border-top-width: 5px;
+    border-color: rgb(127, 181, 217);
+    border-top-color: rgb(96, 152, 196);
+    border-radius: 14px;
+}
+
+.chat-messages .unity-scroll-view__content-container {
+    padding: 8px;
+}
+
+.chat-messages .unity-scroller--vertical {
+    width: 8px;
+    min-width: 8px;
+    margin: 6px 4px 6px 0;
+    border-width: 0;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.chat-messages .unity-scroller__low-button,
+.chat-messages .unity-scroller__high-button {
+    display: none;
+}
+
+.chat-messages .unity-scroller__slider {
+    flex-grow: 1;
+    min-width: 8px;
+    width: 8px;
+    margin: 0;
+}
+
+.chat-messages .unity-base-slider__tracker {
+    background-color: rgb(160, 204, 230);
+    border-width: 0;
+    border-radius: 4px;
+}
+
+.chat-messages .unity-base-slider__dragger {
+    left: 0;
+    width: 8px;
+    background-color: rgb(43, 93, 138);
+    border-width: 0;
+    border-radius: 4px;
+}
+
+.chat-messages .unity-base-slider__dragger:hover {
+    background-color: rgb(29, 59, 92);
+}
+
+.chat-empty {
+    color: rgb(62, 108, 146);
+    font-size: 14px;
+    white-space: normal;
+    -unity-text-align: middle-center;
+    margin-top: 8px;
+}
+
+.chat-hidden {
+    display: none;
+}
+
+.chat-message {
+    flex-direction: row;
+    margin-bottom: 8px;
+}
+
+/* Drawn by PenguinBadge in the author's player color. */
+.chat-message-avatar {
+    width: 34px;
+    height: 34px;
+    flex-shrink: 0;
+    margin-right: 6px;
+}
+
+.chat-message-body {
+    flex-grow: 1;
+    flex-shrink: 1;
+    min-width: 0;
+    align-items: flex-start;
+}
+
+.chat-message-author {
+    max-width: 100%;
+    font-size: 12px;
+    -unity-font-style: bold;
+    padding: 1px 8px 2px 8px;
+    margin: 0 0 3px 0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Name tags in the exact player colors; keep in sync with GameLayout.PlayerColor. Text is dark or white, whichever reads on that color. */
+.chat-tag-red { background-color: #e53935; color: white; }
+.chat-tag-orange { background-color: #fb8c00; color: rgb(29, 43, 58); }
+.chat-tag-yellow { background-color: #fdd835; color: rgb(29, 43, 58); }
+.chat-tag-green { background-color: #43a047; color: white; }
+.chat-tag-blue { background-color: #1e88e5; color: white; }
+.chat-tag-purple { background-color: #8e24aa; color: white; }
+.chat-tag-pink { background-color: #ec6fa9; color: rgb(29, 43, 58); }
+.chat-tag-brown { background-color: #8d6e63; color: white; }
+
+/* Snow bubble: the tight top-left corner points at the author, the thick bottom edge is shade. */
+.chat-message-text {
+    max-width: 100%;
+    color: rgb(29, 59, 92);
+    font-size: 15px;
+    white-space: normal;
+    padding: 5px 10px 6px 10px;
+    margin: 0;
+    background-color: white;
+    border-bottom-width: 3px;
+    border-color: rgb(150, 198, 228);
+    border-radius: 12px;
+    border-top-left-radius: 3px;
+}
+
+.chat-input-row {
+    flex-direction: row;
+    flex-shrink: 0;
+    height: 46px;
+    margin-top: 12px;
+}
+
+.chat-input {
+    flex-grow: 1;
+    flex-shrink: 1;
+    min-width: 0;
+    margin: 0 8px 0 0;
+    font-size: 16px;
+    --unity-cursor-color: rgb(29, 59, 92);
+    --unity-selection-color: rgb(160, 204, 230);
+}
+
+.chat-input .unity-text-field__input {
+    color: rgb(29, 59, 92);
+    background-color: white;
+    padding: 0 12px;
+    border-width: 3px;
+    border-color: rgb(43, 93, 138);
+    border-radius: 14px;
+    -unity-text-align: middle-left;
+}
+
+.chat-input:focus .unity-text-field__input {
+    border-color: rgb(245, 154, 35);
+}
+
+/* Beak-orange key: the thick bottom edge is its side face, and pressing sinks the top onto it. */
+.chat-send-button {
+    flex-shrink: 0;
+    min-width: 88px;
+    height: 46px;
+    margin: 0;
+    padding: 0 14px;
+    font-size: 16px;
+    -unity-font-style: bold;
+    color: rgb(74, 42, 6);
+    background-color: rgb(245, 154, 35);
+    border-width: 3px;
+    border-bottom-width: 7px;
+    border-color: rgb(166, 92, 10);
+    border-radius: 14px;
+}
+
+.chat-send-button:hover {
+    background-color: rgb(255, 181, 77);
+}
+
+.chat-send-button:active {
+    height: 42px;
+    margin-top: 4px;
+    border-bottom-width: 3px;
+    background-color: rgb(245, 154, 35);
+}
+
+.chat-send-button:focus {
+    border-color: rgb(166, 92, 10);
+}
+
+.chat-send-button:disabled {
+    color: rgb(118, 143, 163);
+    background-color: rgb(201, 220, 232);
+    border-color: rgb(150, 176, 195);
+}

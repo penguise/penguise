@@ -1,0 +1,13 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="Chat.uss"/>
+    <ui:VisualElement name="chat-panel" class="chat-panel">
+        <ui:Label name="chat-title" class="chat-title"/>
+        <ui:ScrollView name="chat-messages" class="chat-messages" mode="Vertical" horizontal-scroller-visibility="Hidden" vertical-scroller-visibility="Auto">
+            <ui:Label name="chat-empty" class="chat-empty"/>
+        </ui:ScrollView>
+        <ui:VisualElement name="chat-input-row" class="chat-input-row">
+            <ui:TextField name="chat-input" class="chat-input"/>
+            <ui:Button name="chat-send-button" class="chat-send-button"/>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
