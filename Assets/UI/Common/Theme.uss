@@ -1,0 +1,174 @@
+/* Shared Penguise look for MainMenu and Lobby: ice slabs, snow caps, wooden signs, chunky keys.
+   Flat fills only (no gradients, no image assets). The Game chat panel (Chat.uss) uses the same
+   palette; keep the two in step. Screen stylesheets add layout on top of these classes. */
+
+/* Sky behind SnowBackdrop's drawn hills and snowfall. */
+.pg-backdrop {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(110, 184, 232);
+}
+
+/* Ice slab: the thick bottom edge is its side face. */
+.pg-slab {
+    color: rgb(29, 59, 92);
+    background-color: rgb(227, 244, 252);
+    border-width: 4px;
+    border-bottom-width: 9px;
+    border-color: rgb(43, 93, 138);
+    border-radius: 22px;
+}
+
+/* SnowCap element as the last child of a slab or sign; overhangs its top edge. */
+.pg-snow-cap {
+    position: absolute;
+    left: -14px;
+    right: -14px;
+    top: -20px;
+    height: 48px;
+}
+
+/* Wooden sign, slightly crooked. */
+.pg-sign {
+    color: rgb(255, 244, 222);
+    -unity-font-style: bold;
+    -unity-text-align: middle-center;
+    background-color: rgb(176, 116, 61);
+    border-width: 3px;
+    border-bottom-width: 6px;
+    border-color: rgb(110, 67, 32);
+    border-radius: 10px;
+    rotate: -2deg;
+}
+
+/* Carved into a slab: a heavier top edge reads as depth. */
+.pg-inset {
+    background-color: rgb(191, 225, 243);
+    border-width: 3px;
+    border-top-width: 5px;
+    border-color: rgb(127, 181, 217);
+    border-top-color: rgb(96, 152, 196);
+    border-radius: 14px;
+}
+
+/* Key button. Fixed 48px tall so pressing can sink the face onto its bottom edge without moving
+   the layout; do not give a key its own margin-top. */
+.pg-key {
+    height: 48px;
+    margin-top: 0;
+    padding: 0 16px;
+    font-size: 18px;
+    -unity-font-style: bold;
+    color: rgb(29, 59, 92);
+    background-color: rgb(244, 251, 255);
+    border-width: 3px;
+    border-bottom-width: 7px;
+    border-color: rgb(43, 93, 138);
+    border-radius: 14px;
+}
+
+.pg-key:hover:enabled {
+    background-color: white;
+    border-color: rgb(29, 59, 92);
+}
+
+.pg-key:active:enabled {
+    height: 44px;
+    margin-top: 4px;
+    border-bottom-width: 3px;
+}
+
+.pg-key:focus:enabled {
+    border-color: rgb(29, 59, 92);
+}
+
+.pg-key:disabled {
+    color: rgb(118, 143, 163);
+    background-color: rgb(201, 220, 232);
+    border-color: rgb(150, 176, 195);
+}
+
+/* Beak-orange key for the main action. */
+.pg-key-primary {
+    color: rgb(74, 42, 6);
+    background-color: rgb(245, 154, 35);
+    border-color: rgb(166, 92, 10);
+}
+
+.pg-key-primary:hover:enabled {
+    background-color: rgb(255, 181, 77);
+    border-color: rgb(166, 92, 10);
+}
+
+.pg-key-primary:focus:enabled {
+    border-color: rgb(120, 64, 4);
+}
+
+/* Text field. */
+.pg-field {
+    color: rgb(29, 59, 92);
+    --unity-cursor-color: rgb(29, 59, 92);
+    --unity-selection-color: rgb(160, 204, 230);
+}
+
+.pg-field > .unity-base-field__label {
+    color: rgb(29, 59, 92);
+    -unity-font-style: bold;
+}
+
+.pg-field .unity-text-field__input {
+    min-height: 44px;
+    color: rgb(29, 59, 92);
+    background-color: white;
+    padding: 0 12px;
+    border-width: 3px;
+    border-color: rgb(43, 93, 138);
+    border-radius: 14px;
+    -unity-text-align: middle-left;
+}
+
+.pg-field:focus .unity-text-field__input {
+    border-color: rgb(245, 154, 35);
+}
+
+/* Slim scrollbar for a ScrollView. */
+.pg-scroll .unity-scroller--vertical {
+    width: 8px;
+    min-width: 8px;
+    margin: 6px 4px 6px 4px;
+    border-width: 0;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.pg-scroll .unity-scroller__low-button,
+.pg-scroll .unity-scroller__high-button {
+    display: none;
+}
+
+.pg-scroll .unity-scroller__slider {
+    flex-grow: 1;
+    min-width: 8px;
+    width: 8px;
+    margin: 0;
+}
+
+.pg-scroll .unity-base-slider__tracker {
+    background-color: rgb(160, 204, 230);
+    border-width: 0;
+    border-radius: 4px;
+}
+
+.pg-scroll .unity-base-slider__dragger {
+    left: 0;
+    width: 8px;
+    background-color: rgb(43, 93, 138);
+    border-width: 0;
+    border-radius: 4px;
+}
+
+.pg-scroll .unity-base-slider__dragger:hover {
+    background-color: rgb(29, 59, 92);
+}

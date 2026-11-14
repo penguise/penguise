@@ -2,20 +2,21 @@
     flex-grow: 1;
     align-items: center;
     justify-content: center;
-    padding: 24px;
+    padding: 36px 24px 24px 24px;
 }
 
+/* One ice slab holding every section. */
 .lobby-panel {
     width: 100%;
     max-width: 720px;
     max-height: 900px;
     min-height: 0;
     flex-grow: 1;
+    padding: 30px 14px 14px 14px;
 }
 
 .lobby-card {
-    padding: 20px;
-    background-color: rgb(32, 41, 56);
+    padding: 12px 14px;
 }
 
 .room-info {
@@ -29,7 +30,6 @@
     flex-grow: 1;
     width: 240px;
     min-width: 0;
-    color: white;
     font-size: 20px;
     -unity-font-style: bold;
     white-space: normal;
@@ -49,29 +49,118 @@
     flex-grow: 1;
     flex-shrink: 1;
     min-width: 0;
-    color: rgb(220, 228, 240);
     font-size: 16px;
+    -unity-font-style: bold;
     white-space: normal;
     margin: 4px 8px 4px 0;
 }
 
+.lobby-control {
+    flex-shrink: 0;
+    font-size: 16px;
+}
+
 .copy-code-button {
     min-width: 104px;
-    margin: 4px 0;
+    margin: 0;
+}
+
+.profile-card {
+    flex-shrink: 0;
+    margin-top: 12px;
+}
+
+.profile-name-row {
+    flex-direction: row;
+    align-items: center;
+    height: 48px;
+}
+
+.player-name-input {
+    flex-grow: 1;
+    flex-shrink: 1;
+    min-width: 0;
+    font-size: 16px;
+    margin: 0 8px 0 0;
+}
+
+.player-name-input > .unity-base-field__label {
+    min-width: 56px;
+}
+
+.save-name-button {
+    min-width: 100px;
+    margin: 0;
+}
+
+.color-title {
+    font-size: 16px;
+    -unity-font-style: bold;
+    margin-top: 10px;
+}
+
+.color-picker {
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+/* Snow tile per color; the penguin badge wears the color. */
+.color-option {
+    width: 23%;
+    flex-grow: 1;
+    min-height: 60px;
+    align-items: center;
+    justify-content: center;
+    color: rgb(29, 59, 92);
+    background-color: white;
+    border-width: 3px;
+    border-bottom-width: 5px;
+    border-color: rgb(150, 198, 228);
+    border-radius: 12px;
+    margin: 6px 6px 0 0;
+    padding: 4px;
+    font-size: 14px;
+    -unity-font-style: bold;
+}
+
+.color-option:hover:enabled { background-color: white; border-color: rgb(43, 93, 138); }
+.color-option:focus:enabled { border-color: rgb(43, 93, 138); }
+.color-option:active:enabled { background-color: rgb(227, 244, 252); }
+.color-selected,
+.color-selected:hover:enabled,
+.color-selected:focus:enabled { border-color: rgb(245, 154, 35); background-color: rgb(255, 243, 220); }
+.color-taken { opacity: 0.5; }
+.color-state { font-size: 12px; -unity-font-style: normal; color: rgb(62, 108, 146); }
+.color-heading { flex-direction: row; align-items: center; }
+
+/* Drawn by PenguinBadge in the player color. */
+.color-avatar {
+    width: 28px;
+    height: 28px;
+    flex-shrink: 0;
+    margin-right: 6px;
+}
+
+.profile-status {
+    color: rgb(166, 92, 10);
+    font-size: 14px;
+    -unity-font-style: bold;
+    white-space: normal;
+    margin-top: 8px;
 }
 
 .players-card {
     flex-grow: 1;
     min-height: 0;
-    margin-top: 16px;
+    margin-top: 12px;
 }
 
 .players-title {
     flex-shrink: 0;
-    color: white;
-    font-size: 20px;
-    -unity-font-style: bold;
-    margin-bottom: 16px;
+    align-self: flex-start;
+    font-size: 18px;
+    padding: 4px 16px 5px 16px;
+    margin: 0 0 12px 0;
 }
 
 .player-list {
@@ -79,62 +168,76 @@
     min-height: 0;
 }
 
+/* Snow bubble per player. */
 .player-row {
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
-    min-height: 48px;
-    padding: 8px 12px;
+    min-height: 50px;
+    padding: 6px 12px;
     margin-bottom: 8px;
-    background-color: rgb(42, 54, 72);
+    background-color: white;
+    border-width: 0;
+    border-bottom-width: 3px;
+    border-color: rgb(150, 198, 228);
+    border-radius: 12px;
 }
 
 .player-row-self {
-    background-color: rgb(43, 70, 100);
+    background-color: rgb(255, 243, 220);
+    border-color: rgb(245, 154, 35);
+}
+
+.player-avatar {
+    width: 34px;
+    height: 34px;
+    flex-shrink: 0;
+    margin-right: 10px;
 }
 
 .player-name {
     flex-grow: 1;
-    color: white;
     font-size: 18px;
+    -unity-font-style: bold;
     white-space: normal;
 }
 
 .player-badge {
-    color: rgb(222, 234, 249);
-    font-size: 14px;
-    padding: 4px 8px;
+    color: white;
+    font-size: 13px;
+    -unity-font-style: bold;
+    padding: 3px 10px;
     margin-left: 8px;
-    background-color: rgb(54, 72, 94);
+    background-color: rgb(43, 93, 138);
+    border-radius: 10px;
+}
+
+.start-requirement {
+    flex-shrink: 0;
+    font-size: 16px;
+    -unity-font-style: bold;
+    white-space: normal;
+    margin-top: 12px;
+}
+
+.lobby-status {
+    flex-shrink: 0;
+    color: rgb(190, 40, 40);
+    font-size: 16px;
+    -unity-font-style: bold;
+    white-space: normal;
+    margin-top: 12px;
+}
+
+.lobby-hidden {
+    display: none;
 }
 
 .lobby-actions {
     flex-direction: row;
     flex-shrink: 0;
-    margin-top: 16px;
-}
-
-.lobby-control {
-    height: 44px;
-    flex-shrink: 0;
-    font-size: 16px;
-    color: white;
-    background-color: rgb(52, 65, 83);
-    border-width: 1px;
-    border-color: rgb(78, 96, 120);
-    border-radius: 0;
-}
-
-.lobby-control:hover {
-    background-color: rgb(65, 81, 104);
-}
-
-.lobby-control:active {
-    background-color: rgb(42, 54, 72);
-}
-
-.lobby-control:focus {
-    border-color: rgb(160, 203, 255);
+    height: 48px;
+    margin-top: 14px;
 }
 
 .lobby-button {
@@ -145,130 +248,4 @@
 
 .start-game-button {
     margin-left: 12px;
-    background-color: rgb(51, 105, 173);
-    border-color: rgb(81, 141, 215);
-}
-
-.start-game-button:hover {
-    background-color: rgb(64, 124, 197);
-}
-
-.lobby-control:disabled {
-    color: rgb(165, 179, 198);
-    background-color: rgb(40, 53, 71);
-    border-color: rgb(57, 74, 96);
-}
-
-.start-requirement {
-    flex-shrink: 0;
-    color: rgb(220, 228, 240);
-    font-size: 16px;
-    white-space: normal;
-    margin-top: 12px;
-}
-
-.lobby-status {
-    flex-shrink: 0;
-    color: rgb(248, 113, 113);
-    font-size: 16px;
-    white-space: normal;
-    margin-top: 12px;
-}
-
-.lobby-hidden {
-    display: none;
-}
-
-.profile-card {
-    flex-shrink: 0;
-    padding: 12px 20px;
-    margin-top: 12px;
-}
-
-.profile-name-row {
-    flex-direction: row;
-    align-items: center;
-}
-
-.player-name-input {
-    flex-grow: 1;
-    flex-shrink: 1;
-    min-width: 0;
-    color: white;
-    font-size: 16px;
-    margin-right: 8px;
-}
-
-.player-name-input > .unity-base-field__label {
-    min-width: 56px;
-}
-
-.player-name-input .unity-text-field__input {
-    color: white;
-    background-color: rgb(42, 54, 72);
-    padding: 8px;
-    border-width: 1px;
-    border-color: rgb(78, 96, 120);
-}
-
-.save-name-button {
-    min-width: 100px;
-}
-
-.color-title {
-    color: white;
-    font-size: 16px;
-    margin-top: 8px;
-}
-
-.color-picker {
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
-.color-option {
-    width: 23%;
-    flex-grow: 1;
-    min-height: 56px;
-    align-items: center;
-    color: white;
-    background-color: rgb(42, 54, 72);
-    border-width: 2px;
-    border-color: rgb(78, 96, 120);
-    border-radius: 0;
-    margin: 4px 4px 0 0;
-    padding: 4px;
-    font-size: 14px;
-}
-
-.color-option:hover { border-color: white; }
-.color-option:focus { border-color: rgb(160, 203, 255); }
-.color-selected { border-color: white; background-color: rgb(43, 70, 100); }
-.color-taken { opacity: 0.5; }
-.color-state { font-size: 12px; color: rgb(220, 228, 240); }
-.color-heading { flex-direction: row; align-items: center; }
-
-.color-swatch {
-    width: 16px;
-    height: 16px;
-    flex-shrink: 0;
-    margin: 2px 8px 2px 0;
-    border-width: 1px;
-    border-color: rgba(255, 255, 255, 0.6);
-}
-
-.color-red { background-color: #e53935; }
-.color-orange { background-color: #fb8c00; }
-.color-yellow { background-color: #fdd835; }
-.color-green { background-color: #43a047; }
-.color-blue { background-color: #1e88e5; }
-.color-purple { background-color: #8e24aa; }
-.color-pink { background-color: #ec6fa9; }
-.color-brown { background-color: #8d6e63; }
-
-.profile-status {
-    color: rgb(248, 205, 130);
-    font-size: 14px;
-    white-space: normal;
-    margin-top: 8px;
 }

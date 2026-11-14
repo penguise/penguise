@@ -119,9 +119,8 @@ public class LobbyController : MonoBehaviour
             var button = new Button(() => OnSelectColor(color));
             button.name = "color-" + color.ToString().ToLowerInvariant();
             button.AddToClassList("color-option");
-            var swatch = new VisualElement();
-            swatch.AddToClassList("color-swatch");
-            swatch.AddToClassList("color-" + color.ToString().ToLowerInvariant());
+            var swatch = new PenguinBadge(GameLayout.PlayerColor(color));
+            swatch.AddToClassList("color-avatar");
             var heading = new VisualElement();
             heading.AddToClassList("color-heading");
             heading.Add(swatch);
@@ -199,9 +198,8 @@ public class LobbyController : MonoBehaviour
             row.AddToClassList("player-row");
             var isSelf = player.ClientId == profiles.LocalClientId;
             row.EnableInClassList("player-row-self", isSelf);
-            var swatch = new VisualElement();
-            swatch.AddToClassList("color-swatch");
-            swatch.AddToClassList("color-" + player.Color.ToString().ToLowerInvariant());
+            var swatch = new PenguinBadge(GameLayout.PlayerColor(player.Color));
+            swatch.AddToClassList("player-avatar");
             row.Add(swatch);
             var name = new Label(player.Name) { enableRichText = false };
             name.AddToClassList("player-name");

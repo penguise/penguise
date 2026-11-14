@@ -1,43 +1,62 @@
-:root {
-}
-
 .main-menu {
     flex-grow: 1;
     align-items: stretch;
     justify-content: flex-start;
 }
 
-.menu-button {
-    width: 240px;
-    height: 48px;
-    margin-top: 12px;
-    font-size: 20px;
+.menu-content {
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+}
+
+.title-sign {
+    padding: 10px 44px 12px 44px;
+    margin-bottom: 44px;
+    border-width: 4px;
+    border-bottom-width: 9px;
+    border-radius: 16px;
 }
 
 .game-title {
-    font-size: 48px;
-    -unity-font-style: bold;
-    color: rgb(255, 255, 255);
-    margin-bottom: 24px;
+    font-size: 64px;
+    padding: 0;
+    margin: 0;
 }
 
-.language-dropdown {
-    width: 240px;
+.menu-button {
+    width: 280px;
+    margin-bottom: 14px;
+    font-size: 20px;
+}
+
+.language-label {
+    color: rgb(29, 59, 92);
+    font-size: 15px;
+    -unity-font-style: bold;
+    margin-bottom: 6px;
+}
+
+.language-options {
+    flex-direction: row;
+    height: 44px;
+}
+
+.language-button {
+    width: 130px;
+    height: 44px;
+    margin: 0 5px;
     font-size: 16px;
-    flex-direction: column;
-    align-items: stretch;
+}
+
+.language-button:active:enabled {
+    height: 40px;
 }
 
 .language-panel {
     position: relative;
     align-items: center;
     padding-bottom: 24px;
-}
-
-.menu-content {
-    flex-grow: 1;
-    align-items: center;
-    justify-content: center;
 }
 
 .room-dialog-overlay {
@@ -48,7 +67,7 @@
     bottom: 0;
     align-items: center;
     justify-content: center;
-    background-color: rgba(0, 0, 0, 0.745);
+    background-color: rgba(13, 30, 52, 0.7);
 }
 
 .room-dialog-blurred {
@@ -56,7 +75,7 @@
 }
 
 .room-dialog-instance {
-    width: 400px;
+    width: 420px;
     max-width: 90%;
 }
 

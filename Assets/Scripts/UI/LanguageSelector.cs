@@ -6,11 +6,14 @@ using UnityEngine.Localization.Settings;
 using UnityEngine.ResourceManagement.AsyncOperations;
 using UnityEngine.UIElements;
 
+// One themed key per available locale (no native dropdown popup); the selected locale's key is highlighted.
 [RequireComponent(typeof(PanelRenderer))]
 public class LanguageSelector : MonoBehaviour
 {
+    private const string SelectedClass = "pg-key-primary";
     private PanelRenderer panel;
-    private DropdownField languageDropdown;
+    private VisualElement languageOptions;
+    private readonly List<Button> buttons = new List<Button>();
     private List<Locale> locales;
     private bool isInitialized;
 
@@ -36,71 +39,71 @@ public class LanguageSelector : MonoBehaviour
         isInitialized = true;
         LocalizationSettings.SelectedLocaleChanged += OnLocaleChanged;
 
-        ConfigureDropdown();
+        BuildButtons();
     }
 
     private void OnUIReload(PanelRenderer renderer, VisualElement root, int version)
     {
-        if (languageDropdown != null)
-        {
-            languageDropdown.UnregisterValueChangedCallback(OnLanguageChanged);
-        }
+        languageOptions = root.Q<VisualElement>("language-options");
 
-        languageDropdown = root.Q<DropdownField>("language-dropdown");
-
-        if (languageDropdown == null)
+        if (languageOptions == null)
         {
-            Debug.LogError("Language dropdown was not found.");
+            Debug.LogError("Language options were not found.");
             return;
         }
 
-        languageDropdown.SetEnabled(false);
+        buttons.Clear();
+        languageOptions.Clear();
 
         if (isInitialized)
         {
-            ConfigureDropdown();
+            BuildButtons();
         }
     }
 
-    private void ConfigureDropdown()
+    private void BuildButtons()
     {
-        if (languageDropdown == null)
+        if (languageOptions == null)
         {
             return;
         }
 
-        var choices = new List<string>();
+        buttons.Clear();
+        languageOptions.Clear();
 
         foreach (var locale in locales)
         {
-            choices.Add(locale.Identifier.CultureInfo?.NativeName ?? locale.LocaleName);
+            var selected = locale;
+            var button = new Button(() => LocalizationSettings.SelectedLocale = selected)
+            {
+                text = DisplayName(locale)
+            };
+            button.AddToClassList("pg-key");
+            button.AddToClassList("language-button");
+            languageOptions.Add(button);
+            buttons.Add(button);
         }
 
-        languageDropdown.choices = choices;
         OnLocaleChanged(LocalizationSettings.SelectedLocale);
-
-        languageDropdown.UnregisterValueChangedCallback(OnLanguageChanged);
-        languageDropdown.RegisterValueChangedCallback(OnLanguageChanged);
-
-        languageDropdown.SetEnabled(locales.Count > 0);
     }
 
-    private void OnLanguageChanged(ChangeEvent<string> evt)
+    // Language name in its own language without the region: "Türkçe", "English".
+    private static string DisplayName(Locale locale)
     {
-        if (evt.target != languageDropdown)
+        var culture = locale.Identifier.CultureInfo;
+
+        if (culture == null)
         {
-            return;
+            return locale.LocaleName;
         }
 
-        int index = languageDropdown.index;
-
-        if (index < 0 || index >= locales.Count)
+        if (!culture.IsNeutralCulture && culture.Parent != null && !string.IsNullOrEmpty(culture.Parent.Name))
         {
-            return;
+            culture = culture.Parent;
         }
 
-        var selectedLocale = locales[index];
-        LocalizationSettings.SelectedLocale = selectedLocale;
+        string name = culture.NativeName;
+        return name.Length > 0 ? char.ToUpper(name[0], culture) + name.Substring(1) : locale.LocaleName;
     }
 
     private void OnLocaleChanged(Locale locale)
@@ -108,27 +111,15 @@ public class LanguageSelector : MonoBehaviour
         // The startup selector records the locale before this event is raised.
         PlayerPrefs.Save();
 
-        if (languageDropdown == null)
+        for (int i = 0; i < buttons.Count; i++)
         {
-            return;
-        }
-
-        int index = locales.IndexOf(locale);
-
-        if (index >= 0)
-        {
-            languageDropdown.SetValueWithoutNotify(languageDropdown.choices[index]);
+            buttons[i].EnableInClassList(SelectedClass, locales[i] == locale);
         }
     }
 
     private void OnDestroy()
     {
         LocalizationSettings.SelectedLocaleChanged -= OnLocaleChanged;
-
-        if (languageDropdown != null)
-        {
-            languageDropdown.UnregisterValueChangedCallback(OnLanguageChanged);
-        }
 
         if (panel != null)
         {
