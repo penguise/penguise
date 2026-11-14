@@ -142,6 +142,7 @@ MonoBehaviour:
   m_Light2DPrefilteringMode: 2
   m_Light2DKeptVariantCombos:
   - USE_ADDITIVE_BLENDING,USE_SHAPE_LIGHT_TYPE_0
+  - USE_SHADOW_MAP,USE_ADDITIVE_BLENDING,USE_SHAPE_LIGHT_TYPE_0
   m_ShaderVariantLogLevel: 0
   m_ShadowCascades: 0
   m_Textures:
