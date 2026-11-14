@@ -1,0 +1,1120 @@
+fileFormatVersion: 2
+guid: c0a5ea179e5aa7347ae7ab00c9be3c22
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2605421875397535091
+    second: Igloo_0
+  - first:
+      213: -7840340246008533632
+    second: Igloo_1
+  - first:
+      213: 5499134079721066891
+    second: Igloo_2
+  - first:
+      213: 3746861511868152010
+    second: Igloo_3
+  - first:
+      213: 4405131862188523927
+    second: Igloo_4
+  - first:
+      213: -5537502755816187053
+    second: Igloo_5
+  - first:
+      213: -2566844323310320160
+    second: Igloo_6
+  - first:
+      213: 8956346177623804729
+    second: Igloo_7
+  - first:
+      213: 6609068163302375290
+    second: Igloo_8
+  - first:
+      213: -8567563332446254416
+    second: Igloo_9
+  - first:
+      213: -2295764512504231451
+    second: Igloo_10
+  - first:
+      213: -6836128898723209690
+    second: Igloo_11
+  - first:
+      213: 2984175372066207191
+    second: Igloo_12
+  - first:
+      213: -1228798327584993140
+    second: Igloo_13
+  - first:
+      213: 2139785937052439287
+    second: Igloo_14
+  - first:
+      213: -5330371737172639945
+    second: Igloo_15
+  - first:
+      213: 1990521680914448833
+    second: Igloo_16
+  - first:
+      213: 9219005076805208962
+    second: Igloo_17
+  - first:
+      213: 6718662863504746327
+    second: Igloo_18
+  - first:
+      213: -1912833172776526565
+    second: Igloo_19
+  - first:
+      213: -945969014045773
+    second: Igloo_20
+  - first:
+      213: -4697509232444481711
+    second: Igloo_21
+  - first:
+      213: -2737285460314907870
+    second: Igloo_22
+  - first:
+      213: 8511671225479949509
+    second: Igloo_23
+  - first:
+      213: 1149159362426562949
+    second: Igloo_24
+  - first:
+      213: 7720284754780355471
+    second: Igloo_25
+  - first:
+      213: -3671692045513728569
+    second: Igloo_26
+  - first:
+      213: 5109015266916945068
+    second: Igloo_27
+  - first:
+      213: 5940141268783460881
+    second: Igloo_28
+  - first:
+      213: 3024801398568910504
+    second: Igloo_29
+  - first:
+      213: -5228739975681622724
+    second: Igloo_30
+  - first:
+      213: -5370469221271632583
+    second: Igloo_31
+  - first:
+      213: 6524290558765290269
+    second: Igloo_32
+  - first:
+      213: -935991739393388916
+    second: Igloo_33
+  - first:
+      213: 3540365118646973489
+    second: Igloo_34
+  - first:
+      213: -376127980035771225
+    second: Igloo_35
+  - first:
+      213: 7137374649046903262
+    second: Igloo_36
+  - first:
+      213: -3136780410655639481
+    second: Igloo_37
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 9
+  spritePivot: {x: 0.5095694, y: 0.16507177}
+  spritePixelsToUnits: 300
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 512
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Igloo_0
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 0
+        width: 1177
+        height: 1222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8ad5e2cb9ea7dbd0800000000000000
+      internalID: -2605421875397535091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Igloo_1
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 1085
+        width: 92
+        height: 147
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08d667e0614813390800000000000000
+      internalID: -7840340246008533632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Igloo_2
+      rect:
+        serializedVersion: 2
+        x: 547
+        y: 1068
+        width: 17
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b81d4025f49d05c40800000000000000
+      internalID: 5499134079721066891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Igloo_3
+      rect:
+        serializedVersion: 2
+        x: 643
+        y: 1067
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac8fb7d71b68ff330800000000000000
+      internalID: 3746861511868152010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Igloo_4
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 1068
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 791808ad61c222d30800000000000000
+      internalID: 4405131862188523927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Igloo_5
+      rect:
+        serializedVersion: 2
+        x: 907
+        y: 1055
+        width: 27
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35b54d02596d623b0800000000000000
+      internalID: -5537502755816187053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Igloo_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 781
+        width: 71
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e54c5b00bcb06cd0800000000000000
+      internalID: -2566844323310320160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Igloo_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 680
+        width: 73
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93bc1b255655b4c70800000000000000
+      internalID: 8956346177623804729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Igloo_8
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 793
+        width: 60
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7f3bf96a7028bb50800000000000000
+      internalID: 6609068163302375290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Igloo_9
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 765
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ba01e2ca86e91980800000000000000
+      internalID: -8567563332446254416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Igloo_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 604
+        width: 41
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e9cc30e65ec320e0800000000000000
+      internalID: -2295764512504231451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Igloo_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 347
+        width: 67
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62e12d86cf03121a0800000000000000
+      internalID: -6836128898723209690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Igloo_12
+      rect:
+        serializedVersion: 2
+        x: 820
+        y: 176
+        width: 41
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d5b977a0bbe96920800000000000000
+      internalID: 2984175372066207191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Igloo_13
+      rect:
+        serializedVersion: 2
+        x: 930
+        y: 178
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c80d3b77e6e62fee0800000000000000
+      internalID: -1228798327584993140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Igloo_14
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 97
+        width: 102
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f2136109fb02bd10800000000000000
+      internalID: 2139785937052439287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Igloo_15
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 150
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73ffa058527b606b0800000000000000
+      internalID: -5330371737172639945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Igloo_16
+      rect:
+        serializedVersion: 2
+        x: 822
+        y: 138
+        width: 31
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c18e9c2ce0cf9b10800000000000000
+      internalID: 1990521680914448833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Igloo_17
+      rect:
+        serializedVersion: 2
+        x: 852
+        y: 146
+        width: 33
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28b4f71e54c70ff70800000000000000
+      internalID: 9219005076805208962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Igloo_18
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 126
+        width: 31
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7572fc0074c7d3d50800000000000000
+      internalID: 6718662863504746327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Igloo_19
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 115
+        width: 9
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1d521e2d504475e0800000000000000
+      internalID: -1912833172776526565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Igloo_20
+      rect:
+        serializedVersion: 2
+        x: 866
+        y: 106
+        width: 19
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b303fc65a3acfff0800000000000000
+      internalID: -945969014045773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Igloo_21
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 77
+        width: 28
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15f5707dd381fceb0800000000000000
+      internalID: -4697509232444481711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Igloo_22
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 95
+        width: 21
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22b96196065330ad0800000000000000
+      internalID: -2737285460314907870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Igloo_23
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 79
+        width: 15
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5cc65aff1e78f1670800000000000000
+      internalID: 8511671225479949509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Igloo_24
+      rect:
+        serializedVersion: 2
+        x: 922
+        y: 79
+        width: 10
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 589efb30a52a2ff00800000000000000
+      internalID: 1149159362426562949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Igloo_25
+      rect:
+        serializedVersion: 2
+        x: 930
+        y: 85
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8bfb85a416f32b60800000000000000
+      internalID: 7720284754780355471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Igloo_26
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 81
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7cdd68eb9878b0dc0800000000000000
+      internalID: -3671692045513728569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Igloo_27
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 79
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cacc1a8015ed6e640800000000000000
+      internalID: 5109015266916945068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Igloo_28
+      rect:
+        serializedVersion: 2
+        x: 659
+        y: 59
+        width: 7
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 112f971030f9f6250800000000000000
+      internalID: 5940141268783460881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Igloo_29
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 34
+        width: 9
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8aefdcd88d04af920800000000000000
+      internalID: 3024801398568910504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Igloo_30
+      rect:
+        serializedVersion: 2
+        x: 619
+        y: 29
+        width: 33
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3dbc96f1b8cf67b0800000000000000
+      internalID: -5228739975681622724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Igloo_31
+      rect:
+        serializedVersion: 2
+        x: 699
+        y: 47
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9358fec72b24875b0800000000000000
+      internalID: -5370469221271632583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Igloo_32
+      rect:
+        serializedVersion: 2
+        x: 713
+        y: 49
+        width: 14
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d13d3ae22bfea8a50800000000000000
+      internalID: 6524290558765290269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Igloo_33
+      rect:
+        serializedVersion: 2
+        x: 538
+        y: 15
+        width: 36
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8ec1ccd870b203f0800000000000000
+      internalID: -935991739393388916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Igloo_34
+      rect:
+        serializedVersion: 2
+        x: 659
+        y: 31
+        width: 7
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 134f2285157e12130800000000000000
+      internalID: 3540365118646973489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Igloo_35
+      rect:
+        serializedVersion: 2
+        x: 802
+        y: 33
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a4f1ef4899b7caf0800000000000000
+      internalID: -376127980035771225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Igloo_36
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 17
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed9a1598d6c0d0360800000000000000
+      internalID: 7137374649046903262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Igloo_37
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 23
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 748777cf5dae774d0800000000000000
+      internalID: -3136780410655639481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Igloo_0: -2605421875397535091
+      Igloo_1: -7840340246008533632
+      Igloo_10: -2295764512504231451
+      Igloo_11: -6836128898723209690
+      Igloo_12: 2984175372066207191
+      Igloo_13: -1228798327584993140
+      Igloo_14: 2139785937052439287
+      Igloo_15: -5330371737172639945
+      Igloo_16: 1990521680914448833
+      Igloo_17: 9219005076805208962
+      Igloo_18: 6718662863504746327
+      Igloo_19: -1912833172776526565
+      Igloo_2: 5499134079721066891
+      Igloo_20: -945969014045773
+      Igloo_21: -4697509232444481711
+      Igloo_22: -2737285460314907870
+      Igloo_23: 8511671225479949509
+      Igloo_24: 1149159362426562949
+      Igloo_25: 7720284754780355471
+      Igloo_26: -3671692045513728569
+      Igloo_27: 5109015266916945068
+      Igloo_28: 5940141268783460881
+      Igloo_29: 3024801398568910504
+      Igloo_3: 3746861511868152010
+      Igloo_30: -5228739975681622724
+      Igloo_31: -5370469221271632583
+      Igloo_32: 6524290558765290269
+      Igloo_33: -935991739393388916
+      Igloo_34: 3540365118646973489
+      Igloo_35: -376127980035771225
+      Igloo_36: 7137374649046903262
+      Igloo_37: -3136780410655639481
+      Igloo_4: 4405131862188523927
+      Igloo_5: -5537502755816187053
+      Igloo_6: -2566844323310320160
+      Igloo_7: 8956346177623804729
+      Igloo_8: 6609068163302375290
+      Igloo_9: -8567563332446254416
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
