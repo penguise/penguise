@@ -98,6 +98,7 @@ public static class GameLayoutChecks
                 // Runs move the penguins, so they go last.
                 for (int i = 1; i <= count; i++)
                     CheckRun(root, i, count);
+                CheckIdle(root, count);
             }
         }
         finally
@@ -163,7 +164,8 @@ public static class GameLayoutChecks
         var mask = root.Find("Doorway " + slot)?.GetComponent<SpriteMask>();
         Require(runner != null && runner.Current == PenguinRunner.State.Idle && runner.Door != null
             && runner.Door.transform.parent == igloo, $"Penguin {label} has an idle runner bound to its own door");
-        Sprite idleBody = body.sprite, idleOutfit = outfit.sprite;
+        // The still pose the runner restores on the slot (the idle animation then takes over).
+        Sprite idleBody = (Sprite)Field(runner, "idleBody"), idleOutfit = (Sprite)Field(runner, "idleClothes");
         bool idleFlip = body.flipX;
         Color idleColor = outfit.color;
         Vector3 slotPosition = character.localPosition;
@@ -272,6 +274,82 @@ public static class GameLayoutChecks
         Require(runner.Current == PenguinRunner.State.Idle && Vector3.Distance(character.localPosition, slotPosition) < 1e-4f
             && runner.Door.Open < 1e-4f && body.sprite == idleBody, $"Run {label} turned around ends on its slot, door closed");
     }
+
+    // Idle: frames share the still pose's size and pivot, every penguin starts at its own breath phase and
+    // speed, clips only change at the end of a clip, every clip turns up, the idle stands aside while the
+    // penguin runs and resumes on the slot, and switching it off shows the still pose.
+    private static void CheckIdle(Transform root, int count)
+    {
+        Require(PenguinIdle.FirstFrame(PenguinIdle.Clip.Look) + PenguinIdle.FrameCount(PenguinIdle.Clip.Look)
+            == PenguinIdle.TotalFrames, "Idle clip table covers the idle sheets");
+        var phases = new System.Collections.Generic.HashSet<int>();
+        var seen = new System.Collections.Generic.HashSet<PenguinIdle.Clip>();
+        for (int slot = 1; slot <= count; slot++)
+        {
+            string label = $"{slot}/{count}";
+            var character = root.Find("Character " + slot);
+            var idle = character.GetComponent<PenguinIdle>();
+            var runner = character.GetComponent<PenguinRunner>();
+            var body = character.GetComponent<SpriteRenderer>();
+            var outfit = character.Find("Outfit").GetComponent<SpriteRenderer>();
+            var frames = (Sprite[])Field(idle, "bodyFrames");
+            var outfitFrames = (Sprite[])Field(idle, "clothesFrames");
+            var rest = (Sprite)Field(idle, "restBody");
+            idle.Advance(0f);   // the run checks above moved the penguin without ticking its idle
+            Require(idle != null && idle.Playing && idle.IsActive && frames.Length == PenguinIdle.TotalFrames
+                && outfitFrames.Length == PenguinIdle.TotalFrames, $"Penguin {label} idles on its slot");
+            Require(Array.IndexOf(frames, body.sprite) >= 0 && Array.IndexOf(outfitFrames, outfit.sprite)
+                == Array.IndexOf(frames, body.sprite), $"Idle {label} shows matching body and outfit frames");
+            if (slot == 1)
+                foreach (Sprite frame in frames)
+                    Require((frame.bounds.size - rest.bounds.size).magnitude < 1e-4f
+                        && (frame.bounds.center - rest.bounds.center).magnitude < 1e-4f,
+                        "Idle frames share the still pose's size and pivot");
+            Require(idle.Speed >= PenguinIdle.MinSpeed && idle.Speed <= PenguinIdle.MaxSpeed, $"Idle {label} speed in range");
+            phases.Add(Mathf.FloorToInt(idle.ClipTime * PenguinIdle.FramesPerSecond));
+
+            // Two minutes in frame steps: the clip only changes when the previous one has run out.
+            PenguinIdle.Clip clip = idle.CurrentClip;
+            float time = idle.ClipTime;
+            for (int k = 0; k < 1800; k++)
+            {
+                idle.Advance(1f / PenguinIdle.FramesPerSecond);
+                if (idle.CurrentClip != clip || idle.ClipTime < time)
+                    Require(time + idle.Speed / PenguinIdle.FramesPerSecond >= PenguinIdle.Duration(clip) - 1e-3f,
+                        $"Idle {label} changes clip only at the end of one");
+                clip = idle.CurrentClip;
+                time = idle.ClipTime;
+                seen.Add(clip);
+                int index = Array.IndexOf(frames, body.sprite);
+                Require(index >= PenguinIdle.FirstFrame(clip) && index < PenguinIdle.FirstFrame(clip) + PenguinIdle.FrameCount(clip)
+                    && outfit.sprite == outfitFrames[index], $"Idle {label} shows a frame of its current clip");
+            }
+
+            // Running takes over the sprites; back on the slot the idle resumes from the top of a breath.
+            runner.RunIntoIgloo(1.1f);
+            runner.Tick(0.3f);
+            idle.Advance(0.1f);
+            Require(!idle.IsActive && Array.IndexOf(frames, body.sprite) < 0, $"Idle {label} stands aside while running");
+            runner.RunOutOfIgloo(1.1f);
+            for (int k = 0; k < 200 && runner.IsRunning; k++)
+                runner.Tick(0.05f);
+            idle.Advance(0.05f);
+            Require(idle.IsActive && idle.CurrentClip == PenguinIdle.Clip.Breathe
+                && body.sprite == frames[PenguinIdle.FirstFrame(PenguinIdle.Clip.Breathe)], $"Idle {label} resumes on its slot");
+
+            idle.Playing = false;
+            Require(!idle.IsActive && body.sprite == rest, $"Idle {label} off shows the still pose");
+            idle.Playing = true;
+            idle.Advance(0f);
+            Require(idle.IsActive, $"Idle {label} turns back on");
+        }
+        Require(phases.Count > 1, $"Idle phases differ between the {count} penguins");
+        Require(seen.Count == Enum.GetValues(typeof(PenguinIdle.Clip)).Length, "Every idle clip plays");
+    }
+
+    private static object Field(object target, string name) =>
+        target.GetType().GetField(name, System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance)
+            .GetValue(target);
 
     private static bool Approximately(Matrix4x4 a, Matrix4x4 b)
     {

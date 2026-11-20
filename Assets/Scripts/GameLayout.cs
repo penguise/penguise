@@ -18,6 +18,9 @@ public sealed class GameLayout : MonoBehaviour
     // Run cycle frames for the penguin and its outfit (PenguinRun/PenguinOutfitRun sheets, same pivot).
     [SerializeField, HideInInspector] private Sprite[] runFrames;
     [SerializeField, HideInInspector] private Sprite[] runOutfitFrames;
+    // Idle clips back to back (PenguinIdle0..3 / PenguinOutfitIdle0..3 sheets, same pivot), see PenguinIdle.
+    [SerializeField, HideInInspector] private Sprite[] idleFrames;
+    [SerializeField, HideInInspector] private Sprite[] idleOutfitFrames;
     // Igloo doorway opening, pivot on the door hinge: masks penguins once they pass the door plane.
     [SerializeField, HideInInspector] private Sprite doorway;
     [SerializeField, HideInInspector] private Material spriteMaterial;
@@ -62,6 +65,9 @@ public sealed class GameLayout : MonoBehaviour
     [SerializeField] private bool runIntoIgloos;
     // Ground speed in layout units per second; the run cycle keeps pace (0.55 matches the art's stride).
     [SerializeField, Range(0.3f, 3f)] private float runSpeed = 1.1f;
+    // Idle animation of penguins standing on their slots (breathing plus random fidgets); off shows the
+    // still pose. Also animates in Edit mode.
+    [SerializeField] private bool idleAnimation = true;
     public float CharacterGap => characterGap;
     public float IglooGap => iglooGap;
     private int renderedCount;
@@ -70,6 +76,8 @@ public sealed class GameLayout : MonoBehaviour
     public IReadOnlyList<IglooDoor> Doors => doors;
     private readonly List<PenguinRunner> runners = new List<PenguinRunner>();
     public IReadOnlyList<PenguinRunner> Runners => runners;
+    private readonly List<PenguinIdle> idles = new List<PenguinIdle>();
+    public IReadOnlyList<PenguinIdle> Idles => idles;
     private bool renderedRun;
 
     public void RunIntoIgloo(int slot)
@@ -469,23 +477,32 @@ public sealed class GameLayout : MonoBehaviour
         ApplyLighting();
         ApplyDoors();
 #if UNITY_EDITOR
-        // Edit-mode Update only follows scene changes; apply the run toggle on the next Editor tick.
+        // Edit-mode Update only follows scene changes; apply the toggles on the next Editor tick.
         if (!Application.isPlaying)
         {
-            UnityEditor.EditorApplication.update -= ApplyRunSettingOnce;
-            UnityEditor.EditorApplication.update += ApplyRunSettingOnce;
+            UnityEditor.EditorApplication.update -= ApplySettingsOnce;
+            UnityEditor.EditorApplication.update += ApplySettingsOnce;
         }
 #endif
     }
 
 #if UNITY_EDITOR
-    private void ApplyRunSettingOnce()
+    private void ApplySettingsOnce()
     {
-        UnityEditor.EditorApplication.update -= ApplyRunSettingOnce;
-        if (this != null && !Application.isPlaying)
-            ApplyRunSetting();
+        UnityEditor.EditorApplication.update -= ApplySettingsOnce;
+        if (this == null || Application.isPlaying)
+            return;
+        ApplyRunSetting();
+        ApplyIdleSetting();
     }
 #endif
+
+    private void ApplyIdleSetting()
+    {
+        foreach (PenguinIdle idle in idles)
+            if (idle != null)
+                idle.Playing = idleAnimation;
+    }
 
     // Inspector run toggle: on sends every penguin into its igloo, off brings them back out to their slots
     // (a penguin still on its way turns around).
@@ -544,6 +561,7 @@ public sealed class GameLayout : MonoBehaviour
 
         AlignWithBackground();
         ApplyRunSetting();
+        ApplyIdleSetting();
 
         if (layoutCamera != null && background != null)
         {
@@ -559,6 +577,8 @@ public sealed class GameLayout : MonoBehaviour
         if (igloo == null || doorFront == null || doorBack == null || character == null || outfit == null
             || doorway == null || runFrames == null || runFrames.Length != PenguinRunner.RunFrames
             || runOutfitFrames == null || runOutfitFrames.Length != PenguinRunner.RunFrames
+            || idleFrames == null || idleFrames.Length != PenguinIdle.TotalFrames
+            || idleOutfitFrames == null || idleOutfitFrames.Length != PenguinIdle.TotalFrames
             || spriteMaterial == null || nameFont == null)
             return;
         for (int i = transform.childCount - 1; i >= 0; i--)
@@ -578,6 +598,7 @@ public sealed class GameLayout : MonoBehaviour
         nameLabels.Clear();
         doors.Clear();
         runners.Clear();
+        idles.Clear();
         renderedRun = false;
         renderedCharacterGap = characterGap;
         renderedIglooGap = iglooGap;
@@ -696,6 +717,12 @@ public sealed class GameLayout : MonoBehaviour
             points[0] = foot;
             runner.SetPath(points, lengths, pathMasked, shades, clearIndex);
             runners.Add(runner);
+
+            // Each penguin gets its own random breath phase, speed and clip order.
+            var idle = penguin.gameObject.AddComponent<PenguinIdle>();
+            idle.Setup(penguin, clothes, runner, idleFrames, idleOutfitFrames,
+                unchecked(System.Environment.TickCount * 31 + i * 7919), idleAnimation);
+            idles.Add(idle);
         }
 #if UNITY_EDITOR
         if (!Application.isPlaying)
