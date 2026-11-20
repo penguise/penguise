@@ -183,6 +183,41 @@ def frame_at(th, ph):
     t2 = norm(add(dome(th, ph + 0.5), mul(p, -1)))
     return p, n, t1, t2
 
+WINDOW_R_OUT, WINDOW_R_IN, WINDOW_R_GLASS, WINDOW_DEPTH, WINDOW_LIFT = 104.0, 70.0, 70.0, 18.0, 5.0
+# Pane, inner glow and shine colors: lit by the lamp inside (the igloo art), or with the lamp off.
+WINDOW_GLASS = {
+    True: ("#FFC447", "#FFDD80", "#FFF7DB"),
+    False: ("#2C4762", "#375A7C", "#8FB2D0"),
+}
+
+def window_glass(lit=True):
+    """The pane seen through the window hole (draw inside the win-hole clip): pane, inner glow, shines."""
+    wp, wn, wt1, wt2 = frame_at(*find_window())
+    pane, glow, shine_c = WINDOW_GLASS[lit]
+    glass_c = add(wp, mul(wn, -WINDOW_DEPTH))
+    glass = [proj(q) for q in ring3(glass_c, wt1, wt2, WINDOW_R_GLASS)]
+    el = [f'<path d="{poly_path(glass)}" fill="{pane}" stroke="{INK}" stroke-width="4"/>']
+    inner = [proj(q) for q in ring3(add(glass_c, mul(wt1, -8), mul(wt2, -6)), wt1, wt2, 50)]
+    el.append(f'<path d="{poly_path(inner)}" fill="{glow}"/>')
+    shine = [proj(q) for q in ring3(add(glass_c, mul(wt1, 28), mul(wt2, 30)), wt1, wt2, 13, 36)]
+    el.append(f'<path d="{poly_path(shine)}" fill="{shine_c}"/>')
+    shine2 = [proj(q) for q in ring3(add(glass_c, mul(wt1, 44), mul(wt2, 6)), wt1, wt2, 6, 24)]
+    el.append(f'<path d="{poly_path(shine2)}" fill="{shine_c}"/>')
+    return el
+
+def window_hole():
+    """The window opening (the clip for window_glass) in canvas pixels."""
+    wp, wn, wt1, wt2 = frame_at(*find_window())
+    return [proj(q) for q in ring3(add(wp, mul(wn, WINDOW_LIFT)), wt1, wt2, WINDOW_R_IN)]
+
+def window_overlay(lit=False):
+    """Full-canvas SVG holding only the window pane, e.g. the lamp-off pane laid over the igloo art."""
+    hole = window_hole()
+    return (f'<svg xmlns="http://www.w3.org/2000/svg" width="{W_CANVAS}" height="{W_CANVAS}" viewBox="0 0 {W_CANVAS} {W_CANVAS}">\n'
+            f'<defs><clipPath id="win-hole"><path d="{poly_path(hole)}"/></clipPath></defs>\n'
+            f'<g stroke-linejoin="round" stroke-linecap="round"><g clip-path="url(#win-hole)">\n'
+            + "\n".join(window_glass(lit)) + '\n</g></g>\n</svg>\n')
+
 def ring3(c, u, v, r, k=72, a0=0.0, a1=360.0):
     return [add(c, mul(u, r * math.cos(math.radians(lerp(a0, a1, i / k)))), mul(v, r * math.sin(math.radians(lerp(a0, a1, i / k)))))
             for i in range(k + 1)]
@@ -369,13 +404,11 @@ def build(door_beta=0.0):
     el.append('</g>')
 
     # ---------------- window
-    lift = mul(wn, 5)
+    lift = mul(wn, WINDOW_LIFT)
     c_front = add(wp, lift)
-    R_OUT, R_IN, R_GLASS, DEPTH = 104.0, 70.0, 70.0, 18.0
+    R_OUT, R_IN = WINDOW_R_OUT, WINDOW_R_IN
     ring_o = [proj(q) for q in ring3(c_front, wt1, wt2, R_OUT)]
     ring_i = [proj(q) for q in ring3(c_front, wt1, wt2, R_IN)]
-    glass_c = add(wp, mul(wn, -DEPTH))
-    glass = [proj(q) for q in ring3(glass_c, wt1, wt2, R_GLASS)]
     defs.append(f'<clipPath id="win-ring"><path d="{poly_path(ring_o)} {poly_path(list(reversed(ring_i)))}" clip-rule="evenodd"/></clipPath>')
     defs.append(f'<clipPath id="win-hole"><path d="{poly_path(ring_i)}"/></clipPath>')
     el.append('<g id="window">')
@@ -394,13 +427,7 @@ def build(door_beta=0.0):
         el.append(f'<path d="{line(rpt(a, R_IN), rpt(a, R_OUT))}" stroke="{SEAM}" stroke-width="{SEAM_W}"/>')
     el.append('<g clip-path="url(#win-hole)">')
     el.append(f'<path d="{poly_path(ring_i)}" fill="#6E9CC2"/>')                 # recess wall
-    el.append(f'<path d="{poly_path(glass)}" fill="#FFC447" stroke="{INK}" stroke-width="4"/>')
-    inner = [proj(q) for q in ring3(add(glass_c, mul(wt1, -8), mul(wt2, -6)), wt1, wt2, 50)]
-    el.append(f'<path d="{poly_path(inner)}" fill="#FFDD80"/>')
-    shine = [proj(q) for q in ring3(add(glass_c, mul(wt1, 28), mul(wt2, 30)), wt1, wt2, 13, 36)]
-    el.append(f'<path d="{poly_path(shine)}" fill="#FFF7DB"/>')
-    shine2 = [proj(q) for q in ring3(add(glass_c, mul(wt1, 44), mul(wt2, 6)), wt1, wt2, 6, 24)]
-    el.append(f'<path d="{poly_path(shine2)}" fill="#FFF7DB"/>')
+    el.extend(window_glass(lit=True))
     el.append('</g>')
     el.append(f'<path d="{poly_path(ring_i)}" fill="none" stroke="{INK}" stroke-width="{DETAIL_W}"/>')
     el.append(f'<path d="{poly_path(ring_o)}" fill="none" stroke="{INK}" stroke-width="{DETAIL_W}"/>')
