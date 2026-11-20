@@ -1,0 +1,1081 @@
+fileFormatVersion: 2
+guid: 6fab9cbcea5a198468caceb9d97ba518
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1750587732436706957
+    second: PenguinFaint_0
+  - first:
+      213: 2942786275503414184
+    second: PenguinFaint_1
+  - first:
+      213: -1684142434213994980
+    second: PenguinFaint_2
+  - first:
+      213: -9102617976044938542
+    second: PenguinFaint_3
+  - first:
+      213: -4976122454650009600
+    second: PenguinFaint_4
+  - first:
+      213: -5005259034458022251
+    second: PenguinFaint_5
+  - first:
+      213: -7465040060994172583
+    second: PenguinFaint_6
+  - first:
+      213: 3505185204004791871
+    second: PenguinFaint_7
+  - first:
+      213: -225340456192967428
+    second: PenguinFaint_8
+  - first:
+      213: 6082876902182383597
+    second: PenguinFaint_9
+  - first:
+      213: 7187236583331891048
+    second: PenguinFaint_10
+  - first:
+      213: -5081775423040233777
+    second: PenguinFaint_11
+  - first:
+      213: 6485463591464278128
+    second: PenguinFaint_12
+  - first:
+      213: 4300154968608335536
+    second: PenguinFaint_13
+  - first:
+      213: 2075950448671001202
+    second: PenguinFaint_14
+  - first:
+      213: 580827776447737198
+    second: PenguinFaint_15
+  - first:
+      213: 6037343429435481559
+    second: PenguinFaint_16
+  - first:
+      213: -7611147171992608685
+    second: PenguinFaint_17
+  - first:
+      213: -8958078713910029340
+    second: PenguinFaint_18
+  - first:
+      213: 8608122972815702796
+    second: PenguinFaint_19
+  - first:
+      213: 8876159746101577635
+    second: PenguinFaint_20
+  - first:
+      213: 4721729009514084020
+    second: PenguinFaint_21
+  - first:
+      213: 6283386522328847238
+    second: PenguinFaint_22
+  - first:
+      213: 8278470385056008316
+    second: PenguinFaint_23
+  - first:
+      213: 6980830033294171375
+    second: PenguinFaint_24
+  - first:
+      213: 2509093728170967575
+    second: PenguinFaint_25
+  - first:
+      213: 3461200445018936171
+    second: PenguinFaint_26
+  - first:
+      213: 4890372372970481970
+    second: PenguinFaint_27
+  - first:
+      213: -2459491059607243948
+    second: PenguinFaint_28
+  - first:
+      213: 6662328245353684920
+    second: PenguinFaint_29
+  - first:
+      213: 3523687336483061141
+    second: PenguinFaint_30
+  - first:
+      213: -2427555846839295148
+    second: PenguinFaint_31
+  - first:
+      213: -8109184765917729257
+    second: PenguinFaint_32
+  - first:
+      213: -4794694271404662963
+    second: PenguinFaint_33
+  - first:
+      213: 2213151703515195607
+    second: PenguinFaint_34
+  - first:
+      213: 3089095007418145037
+    second: PenguinFaint_35
+  - first:
+      213: -8206801245720990339
+    second: PenguinFaint_36
+  - first:
+      213: 4609160076338570219
+    second: PenguinFaint_37
+  - first:
+      213: 4825237863914179534
+    second: PenguinFaint_38
+  - first:
+      213: -3826947528003308530
+    second: PenguinFaint_39
+  - first:
+      213: 3952348542313740423
+    second: PenguinFaint_40
+  - first:
+      213: 8019626431331262744
+    second: PenguinFaint_41
+  - first:
+      213: -2457134653500924667
+    second: PenguinFaint_42
+  - first:
+      213: 5766504064086799114
+    second: PenguinFaint_43
+  - first:
+      213: -8542827928152202977
+    second: PenguinFaint_44
+  - first:
+      213: 2596584766659119911
+    second: PenguinFaint_45
+  - first:
+      213: 2776008551568489455
+    second: PenguinFaint_46
+  - first:
+      213: -8176241754763332513
+    second: PenguinFaint_47
+  - first:
+      213: -8848586815793399978
+    second: PenguinFaint_48
+  - first:
+      213: -1764267818554008476
+    second: PenguinFaint_49
+  - first:
+      213: -1137881497417413567
+    second: PenguinFaint_50
+  - first:
+      213: 6257214458006485254
+    second: PenguinFaint_51
+  - first:
+      213: -3164340764513086555
+    second: PenguinFaint_52
+  - first:
+      213: 1513535746606757644
+    second: PenguinFaint_53
+  - first:
+      213: 4165806398415227189
+    second: PenguinFaint_54
+  - first:
+      213: -4067769346897134704
+    second: PenguinFaint_55
+  - first:
+      213: 6034696607648714361
+    second: PenguinFaint_56
+  - first:
+      213: -5178263158037551233
+    second: PenguinFaint_57
+  - first:
+      213: 6474802794843428326
+    second: PenguinFaint_58
+  - first:
+      213: 7659880458647393767
+    second: PenguinFaint_59
+  - first:
+      213: -5684431260670389768
+    second: PenguinFaint_60
+  - first:
+      213: 6924647137207138274
+    second: PenguinFaint_61
+  - first:
+      213: -8928063654105557681
+    second: PenguinFaint_62
+  - first:
+      213: -5931645676060232549
+    second: PenguinFaint_63
+  - first:
+      213: -2164991484243589817
+    second: PenguinFaint_64
+  - first:
+      213: -6345505785548439067
+    second: PenguinFaint_65
+  - first:
+      213: 946415646577114909
+    second: PenguinFaint_66
+  - first:
+      213: 6675849681414174590
+    second: PenguinFaint_67
+  - first:
+      213: -2233499013159452230
+    second: PenguinFaint_68
+  - first:
+      213: -5443583575798769552
+    second: PenguinFaint_69
+  - first:
+      213: 7691879853427768288
+    second: PenguinFaint_70
+  - first:
+      213: 5492161737275449602
+    second: PenguinFaint_71
+  - first:
+      213: -8167559040109206115
+    second: PenguinFaint_72
+  - first:
+      213: -1713617796970940579
+    second: PenguinFaint_73
+  - first:
+      213: -3895106230152111667
+    second: PenguinFaint_74
+  - first:
+      213: 6994305075968960128
+    second: PenguinFaint_75
+  - first:
+      213: 2119942230907049006
+    second: PenguinFaint_76
+  - first:
+      213: -4395430764160893983
+    second: PenguinFaint_77
+  - first:
+      213: -2480654567048651116
+    second: PenguinFaint_78
+  - first:
+      213: 5063374521446640120
+    second: PenguinFaint_79
+  - first:
+      213: 4068149913417858748
+    second: PenguinFaint_80
+  - first:
+      213: -151312390129779117
+    second: PenguinFaint_81
+  - first:
+      213: 7672226578321846845
+    second: PenguinFaint_82
+  - first:
+      213: -3358263260515133977
+    second: PenguinFaint_83
+  - first:
+      213: -8950698093832569647
+    second: PenguinFaint_84
+  - first:
+      213: -7300354319171925591
+    second: PenguinFaint_85
+  - first:
+      213: 3143593904306830897
+    second: PenguinFaint_86
+  - first:
+      213: -1713944639750405079
+    second: PenguinFaint_87
+  - first:
+      213: 9009760627161932742
+    second: PenguinFaint_88
+  - first:
+      213: -3416693807167337275
+    second: PenguinFaint_89
+  - first:
+      213: 6094146822179883294
+    second: PenguinFaint_90
+  - first:
+      213: 230428319738605934
+    second: PenguinFaint_91
+  - first:
+      213: 1143948313240611453
+    second: PenguinFaint_92
+  - first:
+      213: 149891086850434239
+    second: PenguinFaint_93
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 312.5
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PenguinFaint_00
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1475
+        width: 343
+        height: 295
+      alignment: 9
+      pivot: {x: 0.559767, y: 0.010169}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4786451f1c5237f4ebccc80770ead49f
+      internalID: -206422368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinFaint_01
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 1475
+        width: 343
+        height: 295
+      alignment: 9
+      pivot: {x: 0.559767, y: 0.010169}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49bf84fabcc1f5c40956a2bc53f75d71
+      internalID: -1954104088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinFaint_02
+      rect:
+        serializedVersion: 2
+        x: 686
+        y: 1475
+        width: 343
+        height: 295
+      alignment: 9
+      pivot: {x: 0.559767, y: 0.010169}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86f7ef7dce852bb4b9b9a3ec24f75c1e
+      internalID: 212923748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinFaint_03
+      rect:
+        serializedVersion: 2
+        x: 1029
+        y: 1475
+        width: 343
+        height: 295
+      alignment: 9
+      pivot: {x: 0.559767, y: 0.010169}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb91f8ff9cc710942919920c3dc0a88b
+      internalID: 655560188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinFaint_04
+      rect:
+        serializedVersion: 2
+        x: 1372
+        y: 1475
+        width: 343
+        height: 295
+      alignment: 9
+      pivot: {x: 0.559767, y: 0.010169}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47fa57d3aee20c946a55e3305363ae19
+      internalID: 86209145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinFaint_05
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1180
+        width: 343
+        height: 295
+      alignment: 9
+      pivot: {x: 0.559767, y: 0.010169}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74ac8a98c0a80b64bbf07166e8826eaf
+      internalID: 1585753971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinFaint_06
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 1180
+        width: 343
+        height: 295
+      alignment: 9
+      pivot: {x: 0.559767, y: 0.010169}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 813a6ac692394014a8a9d3f4d75cfb8a
+      internalID: 1328099900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinFaint_07
+      rect:
+        serializedVersion: 2
+        x: 686
+        y: 1180
+        width: 343
+        height: 295
+      alignment: 9
+      pivot: {x: 0.559767, y: 0.010169}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b579ce3a7e15a7d4ca115602945f70d7
+      internalID: 1101561126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinFaint_08
+      rect:
+        serializedVersion: 2
+        x: 1029
+        y: 1180
+        width: 343
+        height: 295
+      alignment: 9
+      pivot: {x: 0.559767, y: 0.010169}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 194593b4ee991564da62a791a4720e18
+      internalID: 1007455526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinFaint_09
+      rect:
+        serializedVersion: 2
+        x: 1372
+        y: 1180
+        width: 343
+        height: 295
+      alignment: 9
+      pivot: {x: 0.559767, y: 0.010169}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7230767e3e9ce140b8293dc76967adf
+      internalID: 1866727900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinFaint_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 885
+        width: 343
+        height: 295
+      alignment: 9
+      pivot: {x: 0.559767, y: 0.010169}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb41e98a0715a514797e551b5b21aa99
+      internalID: 7187236583331891048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinFaint_11
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 885
+        width: 343
+        height: 295
+      alignment: 9
+      pivot: {x: 0.559767, y: 0.010169}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6df799bcd2df774681938d91669fd66
+      internalID: -5081775423040233777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinFaint_12
+      rect:
+        serializedVersion: 2
+        x: 686
+        y: 885
+        width: 343
+        height: 295
+      alignment: 9
+      pivot: {x: 0.559767, y: 0.010169}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bad803ed7b22a4e4a827c49b07abe6e0
+      internalID: 6485463591464278128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinFaint_13
+      rect:
+        serializedVersion: 2
+        x: 1029
+        y: 885
+        width: 343
+        height: 295
+      alignment: 9
+      pivot: {x: 0.559767, y: 0.010169}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbae1eea99f5c984da56e58058a3f067
+      internalID: 4300154968608335536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinFaint_14
+      rect:
+        serializedVersion: 2
+        x: 1372
+        y: 885
+        width: 343
+        height: 295
+      alignment: 9
+      pivot: {x: 0.559767, y: 0.010169}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52980fc925edfb040a73b42dbd91b12b
+      internalID: 2075950448671001202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinFaint_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 590
+        width: 343
+        height: 295
+      alignment: 9
+      pivot: {x: 0.559767, y: 0.010169}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bd6e9852d58b9045ac94ecd7e9d6bcd
+      internalID: 580827776447737198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinFaint_16
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 590
+        width: 343
+        height: 295
+      alignment: 9
+      pivot: {x: 0.559767, y: 0.010169}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85d121a2efe5e1a42bbb311c92c86852
+      internalID: 6037343429435481559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinFaint_17
+      rect:
+        serializedVersion: 2
+        x: 686
+        y: 590
+        width: 343
+        height: 295
+      alignment: 9
+      pivot: {x: 0.559767, y: 0.010169}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80ac98acf8ae5f849bf59ff0deb8a7bc
+      internalID: -7611147171992608685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinFaint_18
+      rect:
+        serializedVersion: 2
+        x: 1029
+        y: 590
+        width: 343
+        height: 295
+      alignment: 9
+      pivot: {x: 0.559767, y: 0.010169}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48ecb4afd7feae949a9b946262e56708
+      internalID: -8958078713910029340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinFaint_19
+      rect:
+        serializedVersion: 2
+        x: 1372
+        y: 590
+        width: 343
+        height: 295
+      alignment: 9
+      pivot: {x: 0.559767, y: 0.010169}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c72cf06bdd29f241ac57d0e47c675c1
+      internalID: 8608122972815702796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinFaint_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 295
+        width: 343
+        height: 295
+      alignment: 9
+      pivot: {x: 0.559767, y: 0.010169}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d904d0e29e414a44c8e7997f8f0deab3
+      internalID: 8876159746101577635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinFaint_21
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 295
+        width: 343
+        height: 295
+      alignment: 9
+      pivot: {x: 0.559767, y: 0.010169}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc6d8845411029a48811764cfb5f798a
+      internalID: 4721729009514084020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinFaint_22
+      rect:
+        serializedVersion: 2
+        x: 686
+        y: 295
+        width: 343
+        height: 295
+      alignment: 9
+      pivot: {x: 0.559767, y: 0.010169}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 657a1fb6e3b77d54e8b99b090902d542
+      internalID: 6283386522328847238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinFaint_23
+      rect:
+        serializedVersion: 2
+        x: 1029
+        y: 295
+        width: 343
+        height: 295
+      alignment: 9
+      pivot: {x: 0.559767, y: 0.010169}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e49cbf79ba7fcde40818499f0106690e
+      internalID: 8278470385056008316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinFaint_24
+      rect:
+        serializedVersion: 2
+        x: 1372
+        y: 295
+        width: 343
+        height: 295
+      alignment: 9
+      pivot: {x: 0.559767, y: 0.010169}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60407cf39a195ee4ca6c46c13dcd5b68
+      internalID: 6980830033294171375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinFaint_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 343
+        height: 295
+      alignment: 9
+      pivot: {x: 0.559767, y: 0.010169}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fa3b503084c0f94aa0c7e4e1343cb17
+      internalID: 2509093728170967575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinFaint_26
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 0
+        width: 343
+        height: 295
+      alignment: 9
+      pivot: {x: 0.559767, y: 0.010169}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f41cb9fafc620e64990615e36c9bc029
+      internalID: 3461200445018936171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinFaint_27
+      rect:
+        serializedVersion: 2
+        x: 686
+        y: 0
+        width: 343
+        height: 295
+      alignment: 9
+      pivot: {x: 0.559767, y: 0.010169}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cedb93cecaf7244b82eba802937a066
+      internalID: 4890372372970481970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinFaint_28
+      rect:
+        serializedVersion: 2
+        x: 1029
+        y: 0
+        width: 343
+        height: 295
+      alignment: 9
+      pivot: {x: 0.559767, y: 0.010169}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f34459f1dc6b1aa43ba031f0dcf45356
+      internalID: -2459491059607243948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 8f092f706720bae46b70916c090a5ae6
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      PenguinFaint_00: -206422368
+      PenguinFaint_01: -1954104088
+      PenguinFaint_02: 212923748
+      PenguinFaint_03: 655560188
+      PenguinFaint_04: 86209145
+      PenguinFaint_05: 1585753971
+      PenguinFaint_06: 1328099900
+      PenguinFaint_07: 1101561126
+      PenguinFaint_08: 1007455526
+      PenguinFaint_09: 1866727900
+      PenguinFaint_10: 7187236583331891048
+      PenguinFaint_11: -5081775423040233777
+      PenguinFaint_12: 6485463591464278128
+      PenguinFaint_13: 4300154968608335536
+      PenguinFaint_14: 2075950448671001202
+      PenguinFaint_15: 580827776447737198
+      PenguinFaint_16: 6037343429435481559
+      PenguinFaint_17: -7611147171992608685
+      PenguinFaint_18: -8958078713910029340
+      PenguinFaint_19: 8608122972815702796
+      PenguinFaint_20: 8876159746101577635
+      PenguinFaint_21: 4721729009514084020
+      PenguinFaint_22: 6283386522328847238
+      PenguinFaint_23: 8278470385056008316
+      PenguinFaint_24: 6980830033294171375
+      PenguinFaint_25: 2509093728170967575
+      PenguinFaint_26: 3461200445018936171
+      PenguinFaint_27: 4890372372970481970
+      PenguinFaint_28: -2459491059607243948
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

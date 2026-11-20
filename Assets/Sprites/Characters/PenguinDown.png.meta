@@ -1,0 +1,1281 @@
+fileFormatVersion: 2
+guid: dea665e7e064ab7479867e6067236f6d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3098363258301640357
+    second: PenguinDown_0
+  - first:
+      213: -3244169764590161693
+    second: PenguinDown_1
+  - first:
+      213: 8183673350251992239
+    second: PenguinDown_2
+  - first:
+      213: -5719023168068681178
+    second: PenguinDown_3
+  - first:
+      213: 7959293694246865744
+    second: PenguinDown_4
+  - first:
+      213: -2059522415525924254
+    second: PenguinDown_5
+  - first:
+      213: -4414141711134709394
+    second: PenguinDown_6
+  - first:
+      213: -1042770251925394370
+    second: PenguinDown_7
+  - first:
+      213: 4933409737307875015
+    second: PenguinDown_8
+  - first:
+      213: 4675321224964562863
+    second: PenguinDown_9
+  - first:
+      213: 35245785671871824
+    second: PenguinDown_10
+  - first:
+      213: 2810775349952611063
+    second: PenguinDown_11
+  - first:
+      213: 5467969748200017926
+    second: PenguinDown_12
+  - first:
+      213: 7709993645207493696
+    second: PenguinDown_13
+  - first:
+      213: -7546920901638733629
+    second: PenguinDown_14
+  - first:
+      213: -6187157494961795914
+    second: PenguinDown_15
+  - first:
+      213: -3059700665988335542
+    second: PenguinDown_16
+  - first:
+      213: -6985547543166387478
+    second: PenguinDown_17
+  - first:
+      213: -7591609541678001289
+    second: PenguinDown_18
+  - first:
+      213: 3048460771107191335
+    second: PenguinDown_19
+  - first:
+      213: -4809847784427861686
+    second: PenguinDown_20
+  - first:
+      213: -6694954528497306917
+    second: PenguinDown_21
+  - first:
+      213: -4373512312347836075
+    second: PenguinDown_22
+  - first:
+      213: -1383594478193114541
+    second: PenguinDown_23
+  - first:
+      213: 1101821260262570919
+    second: PenguinDown_24
+  - first:
+      213: -8092236023184736644
+    second: PenguinDown_25
+  - first:
+      213: 2247769879998240896
+    second: PenguinDown_26
+  - first:
+      213: -7969770215077680625
+    second: PenguinDown_27
+  - first:
+      213: 2334850453793555571
+    second: PenguinDown_28
+  - first:
+      213: -5831914434772324028
+    second: PenguinDown_29
+  - first:
+      213: -4084900702812459458
+    second: PenguinDown_30
+  - first:
+      213: 6163633619148866078
+    second: PenguinDown_31
+  - first:
+      213: 7479163414970224174
+    second: PenguinDown_32
+  - first:
+      213: -2719195791760213789
+    second: PenguinDown_33
+  - first:
+      213: 4412259432304302895
+    second: PenguinDown_34
+  - first:
+      213: -5256300545333582036
+    second: PenguinDown_35
+  - first:
+      213: 3530617994836425419
+    second: PenguinDown_36
+  - first:
+      213: -548328488478628139
+    second: PenguinDown_37
+  - first:
+      213: 6192877696181147645
+    second: PenguinDown_38
+  - first:
+      213: -7726209283854012724
+    second: PenguinDown_39
+  - first:
+      213: -2571827590803682870
+    second: PenguinDown_40
+  - first:
+      213: 7676676380852186299
+    second: PenguinDown_41
+  - first:
+      213: -6345776512298738604
+    second: PenguinDown_42
+  - first:
+      213: -8016673545306799332
+    second: PenguinDown_43
+  - first:
+      213: -7499227784803769330
+    second: PenguinDown_44
+  - first:
+      213: 9151239819710654673
+    second: PenguinDown_45
+  - first:
+      213: 4987418348220018709
+    second: PenguinDown_46
+  - first:
+      213: 2674751782447253953
+    second: PenguinDown_47
+  - first:
+      213: 408046570084675628
+    second: PenguinDown_48
+  - first:
+      213: 76307195852526957
+    second: PenguinDown_49
+  - first:
+      213: -3567401727057338504
+    second: PenguinDown_50
+  - first:
+      213: 3804790935651192468
+    second: PenguinDown_51
+  - first:
+      213: -1753916188129400713
+    second: PenguinDown_52
+  - first:
+      213: -8429049809428668176
+    second: PenguinDown_53
+  - first:
+      213: -3177320498651985589
+    second: PenguinDown_54
+  - first:
+      213: 6725907965647419919
+    second: PenguinDown_55
+  - first:
+      213: 5494899973286577574
+    second: PenguinDown_56
+  - first:
+      213: -6247682389419901505
+    second: PenguinDown_57
+  - first:
+      213: 1182298583108066253
+    second: PenguinDown_58
+  - first:
+      213: -4201451515644482328
+    second: PenguinDown_59
+  - first:
+      213: -1292391710769949666
+    second: PenguinDown_60
+  - first:
+      213: 7213367426285649295
+    second: PenguinDown_61
+  - first:
+      213: 5589186126719824865
+    second: PenguinDown_62
+  - first:
+      213: 6442711008392568324
+    second: PenguinDown_63
+  - first:
+      213: 3521709813397086865
+    second: PenguinDown_64
+  - first:
+      213: 5435688657174073903
+    second: PenguinDown_65
+  - first:
+      213: -406557860441637579
+    second: PenguinDown_66
+  - first:
+      213: -5021471915517802713
+    second: PenguinDown_67
+  - first:
+      213: 7500127337113817144
+    second: PenguinDown_68
+  - first:
+      213: -1841024671016449875
+    second: PenguinDown_69
+  - first:
+      213: 8420659951770675908
+    second: PenguinDown_70
+  - first:
+      213: 6414700966097776992
+    second: PenguinDown_71
+  - first:
+      213: 1386185712178267995
+    second: PenguinDown_72
+  - first:
+      213: -3958882058116356470
+    second: PenguinDown_73
+  - first:
+      213: 4163947934333329615
+    second: PenguinDown_74
+  - first:
+      213: -2116258597927906623
+    second: PenguinDown_75
+  - first:
+      213: 1313195541510912712
+    second: PenguinDown_76
+  - first:
+      213: -4913219756911950046
+    second: PenguinDown_77
+  - first:
+      213: 4639065494173562400
+    second: PenguinDown_78
+  - first:
+      213: 8671848782235723982
+    second: PenguinDown_79
+  - first:
+      213: 8893214796709805013
+    second: PenguinDown_80
+  - first:
+      213: -2385263641824664987
+    second: PenguinDown_81
+  - first:
+      213: -4141381558288289433
+    second: PenguinDown_82
+  - first:
+      213: -3989962892345124216
+    second: PenguinDown_83
+  - first:
+      213: 6655917143812737727
+    second: PenguinDown_84
+  - first:
+      213: -2889647816141579174
+    second: PenguinDown_85
+  - first:
+      213: -5794301666709942625
+    second: PenguinDown_86
+  - first:
+      213: -3136712866108856531
+    second: PenguinDown_87
+  - first:
+      213: -2739333192327012360
+    second: PenguinDown_88
+  - first:
+      213: -651975897258923182
+    second: PenguinDown_89
+  - first:
+      213: -8309179943220650265
+    second: PenguinDown_90
+  - first:
+      213: 6697538942059245678
+    second: PenguinDown_91
+  - first:
+      213: 977072284689005517
+    second: PenguinDown_92
+  - first:
+      213: 5788045962125047196
+    second: PenguinDown_93
+  - first:
+      213: -5115863358001656681
+    second: PenguinDown_94
+  - first:
+      213: -8424277566567631973
+    second: PenguinDown_95
+  - first:
+      213: 1833950759392615415
+    second: PenguinDown_96
+  - first:
+      213: 1125390855356687161
+    second: PenguinDown_97
+  - first:
+      213: 3573966872346116259
+    second: PenguinDown_98
+  - first:
+      213: -3559904404627256993
+    second: PenguinDown_99
+  - first:
+      213: 794592831578503299
+    second: PenguinDown_100
+  - first:
+      213: -1548855667518206759
+    second: PenguinDown_101
+  - first:
+      213: -4359483743585770083
+    second: PenguinDown_102
+  - first:
+      213: -2965416319181961726
+    second: PenguinDown_103
+  - first:
+      213: -3436479942812144117
+    second: PenguinDown_104
+  - first:
+      213: -1361582577501447445
+    second: PenguinDown_105
+  - first:
+      213: -2620715405933145892
+    second: PenguinDown_106
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 312.5
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PenguinDown_00
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 975
+        width: 263
+        height: 195
+      alignment: 9
+      pivot: {x: 0.737643, y: 0.015385}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0399d9b79fe2de54ab3c96e07c352c2c
+      internalID: -1513657412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinDown_01
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 975
+        width: 263
+        height: 195
+      alignment: 9
+      pivot: {x: 0.737643, y: 0.015385}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ae1107e5617c284f805830d2eddcc5e
+      internalID: -2045732722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinDown_02
+      rect:
+        serializedVersion: 2
+        x: 526
+        y: 975
+        width: 263
+        height: 195
+      alignment: 9
+      pivot: {x: 0.737643, y: 0.015385}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56c19f5ab45669b47a9005944d8b9030
+      internalID: -204168948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinDown_03
+      rect:
+        serializedVersion: 2
+        x: 789
+        y: 975
+        width: 263
+        height: 195
+      alignment: 9
+      pivot: {x: 0.737643, y: 0.015385}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 109e4a7d1173c4e44bc1449d24acc722
+      internalID: -1408135369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinDown_04
+      rect:
+        serializedVersion: 2
+        x: 1052
+        y: 975
+        width: 263
+        height: 195
+      alignment: 9
+      pivot: {x: 0.737643, y: 0.015385}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bdc4eb2bfc89f64bbf3afe9a04b7238
+      internalID: 990040297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinDown_05
+      rect:
+        serializedVersion: 2
+        x: 1315
+        y: 975
+        width: 263
+        height: 195
+      alignment: 9
+      pivot: {x: 0.737643, y: 0.015385}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67f1836a4f2807848800ca50edbf786c
+      internalID: 818479186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinDown_06
+      rect:
+        serializedVersion: 2
+        x: 1578
+        y: 975
+        width: 263
+        height: 195
+      alignment: 9
+      pivot: {x: 0.737643, y: 0.015385}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 438ae9cb6f12d174ca5c62bc742e2596
+      internalID: 898319862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinDown_07
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 780
+        width: 263
+        height: 195
+      alignment: 9
+      pivot: {x: 0.737643, y: 0.015385}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ace36e94e8d4474a8349c87080200d8
+      internalID: -1903337061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinDown_08
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 780
+        width: 263
+        height: 195
+      alignment: 9
+      pivot: {x: 0.737643, y: 0.015385}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddc66669dcebff0478f922fe8bde6851
+      internalID: -1612637186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinDown_09
+      rect:
+        serializedVersion: 2
+        x: 526
+        y: 780
+        width: 263
+        height: 195
+      alignment: 9
+      pivot: {x: 0.737643, y: 0.015385}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cb83ce3eaeb90d41b3fcd02531b3d53
+      internalID: 1619412002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinDown_10
+      rect:
+        serializedVersion: 2
+        x: 789
+        y: 780
+        width: 263
+        height: 195
+      alignment: 9
+      pivot: {x: 0.737643, y: 0.015385}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d319706ce1b5744bb2e3c6199444668
+      internalID: 35245785671871824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinDown_11
+      rect:
+        serializedVersion: 2
+        x: 1052
+        y: 780
+        width: 263
+        height: 195
+      alignment: 9
+      pivot: {x: 0.737643, y: 0.015385}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 357628272db95d44a92be91adc48b827
+      internalID: 2810775349952611063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinDown_12
+      rect:
+        serializedVersion: 2
+        x: 1315
+        y: 780
+        width: 263
+        height: 195
+      alignment: 9
+      pivot: {x: 0.737643, y: 0.015385}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9eaf52bed96e9b449ecbc328e30815e
+      internalID: 5467969748200017926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinDown_13
+      rect:
+        serializedVersion: 2
+        x: 1578
+        y: 780
+        width: 263
+        height: 195
+      alignment: 9
+      pivot: {x: 0.737643, y: 0.015385}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36bab12c29b5e714f9d3c3eb596485fe
+      internalID: 7709993645207493696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinDown_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 585
+        width: 263
+        height: 195
+      alignment: 9
+      pivot: {x: 0.737643, y: 0.015385}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8230b657c9c539f4997135fd66d0e9e9
+      internalID: -7546920901638733629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinDown_15
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 585
+        width: 263
+        height: 195
+      alignment: 9
+      pivot: {x: 0.737643, y: 0.015385}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c27acc79bf3fd5243a291c9e467e1488
+      internalID: -6187157494961795914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinDown_16
+      rect:
+        serializedVersion: 2
+        x: 526
+        y: 585
+        width: 263
+        height: 195
+      alignment: 9
+      pivot: {x: 0.737643, y: 0.015385}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7095648e1fd144247a70c5c86a6bc0d6
+      internalID: -3059700665988335542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinDown_17
+      rect:
+        serializedVersion: 2
+        x: 789
+        y: 585
+        width: 263
+        height: 195
+      alignment: 9
+      pivot: {x: 0.737643, y: 0.015385}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71a1604a5960ed649b999e99e70507c4
+      internalID: -6985547543166387478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinDown_18
+      rect:
+        serializedVersion: 2
+        x: 1052
+        y: 585
+        width: 263
+        height: 195
+      alignment: 9
+      pivot: {x: 0.737643, y: 0.015385}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94d5cab00d9481549b8193d1b4fde503
+      internalID: -7591609541678001289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinDown_19
+      rect:
+        serializedVersion: 2
+        x: 1315
+        y: 585
+        width: 263
+        height: 195
+      alignment: 9
+      pivot: {x: 0.737643, y: 0.015385}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59cc8ee9a98510249add7e0466ada276
+      internalID: 3048460771107191335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinDown_20
+      rect:
+        serializedVersion: 2
+        x: 1578
+        y: 585
+        width: 263
+        height: 195
+      alignment: 9
+      pivot: {x: 0.737643, y: 0.015385}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25554629b192bf545939f4a12316567c
+      internalID: -4809847784427861686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinDown_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 390
+        width: 263
+        height: 195
+      alignment: 9
+      pivot: {x: 0.737643, y: 0.015385}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0edcdc36d97d24d448f78b8c49f56eff
+      internalID: -6694954528497306917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinDown_22
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 390
+        width: 263
+        height: 195
+      alignment: 9
+      pivot: {x: 0.737643, y: 0.015385}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ce9bdafd3fdffd40adb3237cef8a08d
+      internalID: -4373512312347836075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinDown_23
+      rect:
+        serializedVersion: 2
+        x: 526
+        y: 390
+        width: 263
+        height: 195
+      alignment: 9
+      pivot: {x: 0.737643, y: 0.015385}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 582e79ca9d922c44c90c9f369750bd8a
+      internalID: -1383594478193114541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinDown_24
+      rect:
+        serializedVersion: 2
+        x: 789
+        y: 390
+        width: 263
+        height: 195
+      alignment: 9
+      pivot: {x: 0.737643, y: 0.015385}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9b1d9f9826e67b44b76382dff9428ec
+      internalID: 1101821260262570919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinDown_25
+      rect:
+        serializedVersion: 2
+        x: 1052
+        y: 390
+        width: 263
+        height: 195
+      alignment: 9
+      pivot: {x: 0.737643, y: 0.015385}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec9be491b26dfb349a6f4305ec54ed64
+      internalID: -8092236023184736644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinDown_26
+      rect:
+        serializedVersion: 2
+        x: 1315
+        y: 390
+        width: 263
+        height: 195
+      alignment: 9
+      pivot: {x: 0.737643, y: 0.015385}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dffe6f384976781478320e726b1dcabe
+      internalID: 2247769879998240896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinDown_27
+      rect:
+        serializedVersion: 2
+        x: 1578
+        y: 390
+        width: 263
+        height: 195
+      alignment: 9
+      pivot: {x: 0.737643, y: 0.015385}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6b2faf3027bac64dbd9ddbe760c58da
+      internalID: -7969770215077680625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinDown_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 195
+        width: 263
+        height: 195
+      alignment: 9
+      pivot: {x: 0.737643, y: 0.015385}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58e7fad5712f93f498f254d71b706f74
+      internalID: 2334850453793555571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinDown_29
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 195
+        width: 263
+        height: 195
+      alignment: 9
+      pivot: {x: 0.737643, y: 0.015385}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3eba6e5f7662978469bd74579483fd6c
+      internalID: -5831914434772324028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinDown_30
+      rect:
+        serializedVersion: 2
+        x: 526
+        y: 195
+        width: 263
+        height: 195
+      alignment: 9
+      pivot: {x: 0.737643, y: 0.015385}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eed137310ab01054396eafd10931d689
+      internalID: -4084900702812459458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinDown_31
+      rect:
+        serializedVersion: 2
+        x: 789
+        y: 195
+        width: 263
+        height: 195
+      alignment: 9
+      pivot: {x: 0.737643, y: 0.015385}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59b70f734086b914f9bc5769817c04c6
+      internalID: 6163633619148866078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinDown_32
+      rect:
+        serializedVersion: 2
+        x: 1052
+        y: 195
+        width: 263
+        height: 195
+      alignment: 9
+      pivot: {x: 0.737643, y: 0.015385}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f60e4b88fec877b4d94fd5ddc9821aaa
+      internalID: 7479163414970224174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinDown_33
+      rect:
+        serializedVersion: 2
+        x: 1315
+        y: 195
+        width: 263
+        height: 195
+      alignment: 9
+      pivot: {x: 0.737643, y: 0.015385}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b41a56164a1508d43b198ec0d795919e
+      internalID: -2719195791760213789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinDown_34
+      rect:
+        serializedVersion: 2
+        x: 1578
+        y: 195
+        width: 263
+        height: 195
+      alignment: 9
+      pivot: {x: 0.737643, y: 0.015385}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76571bfabc198d24ebc593488d51def4
+      internalID: 4412259432304302895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinDown_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 263
+        height: 195
+      alignment: 9
+      pivot: {x: 0.737643, y: 0.015385}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0810554e2aa842b4fbad270e6bdfe92c
+      internalID: -5256300545333582036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 32117e934c01bdc49a127ffbe198a7d4
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      PenguinDown_00: -1513657412
+      PenguinDown_01: -2045732722
+      PenguinDown_02: -204168948
+      PenguinDown_03: -1408135369
+      PenguinDown_04: 990040297
+      PenguinDown_05: 818479186
+      PenguinDown_06: 898319862
+      PenguinDown_07: -1903337061
+      PenguinDown_08: -1612637186
+      PenguinDown_09: 1619412002
+      PenguinDown_10: 35245785671871824
+      PenguinDown_11: 2810775349952611063
+      PenguinDown_12: 5467969748200017926
+      PenguinDown_13: 7709993645207493696
+      PenguinDown_14: -7546920901638733629
+      PenguinDown_15: -6187157494961795914
+      PenguinDown_16: -3059700665988335542
+      PenguinDown_17: -6985547543166387478
+      PenguinDown_18: -7591609541678001289
+      PenguinDown_19: 3048460771107191335
+      PenguinDown_20: -4809847784427861686
+      PenguinDown_21: -6694954528497306917
+      PenguinDown_22: -4373512312347836075
+      PenguinDown_23: -1383594478193114541
+      PenguinDown_24: 1101821260262570919
+      PenguinDown_25: -8092236023184736644
+      PenguinDown_26: 2247769879998240896
+      PenguinDown_27: -7969770215077680625
+      PenguinDown_28: 2334850453793555571
+      PenguinDown_29: -5831914434772324028
+      PenguinDown_30: -4084900702812459458
+      PenguinDown_31: 6163633619148866078
+      PenguinDown_32: 7479163414970224174
+      PenguinDown_33: -2719195791760213789
+      PenguinDown_34: 4412259432304302895
+      PenguinDown_35: -5256300545333582036
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,954 @@
+fileFormatVersion: 2
+guid: 1f69c3a346fbacd498bdc82e7aaed219
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3449402137740421273
+    second: PenguinDizzy_0
+  - first:
+      213: -4118347971110291300
+    second: PenguinDizzy_1
+  - first:
+      213: -5081715106300520853
+    second: PenguinDizzy_2
+  - first:
+      213: 3693791189775972359
+    second: PenguinDizzy_3
+  - first:
+      213: 4139716416932061948
+    second: PenguinDizzy_4
+  - first:
+      213: -695558649646771185
+    second: PenguinDizzy_5
+  - first:
+      213: 7886058535346815300
+    second: PenguinDizzy_6
+  - first:
+      213: -319618664472023047
+    second: PenguinDizzy_7
+  - first:
+      213: 1654302751335856123
+    second: PenguinDizzy_8
+  - first:
+      213: -4501240376090872631
+    second: PenguinDizzy_9
+  - first:
+      213: 7765263174010709199
+    second: PenguinDizzy_10
+  - first:
+      213: 1066850659208436002
+    second: PenguinDizzy_11
+  - first:
+      213: 3814895493320427926
+    second: PenguinDizzy_12
+  - first:
+      213: -1215629917872827515
+    second: PenguinDizzy_13
+  - first:
+      213: 5225623467008765657
+    second: PenguinDizzy_14
+  - first:
+      213: -9090577074869814216
+    second: PenguinDizzy_15
+  - first:
+      213: 6172631289722600998
+    second: PenguinDizzy_16
+  - first:
+      213: 361635676169035349
+    second: PenguinDizzy_17
+  - first:
+      213: -148553028487978467
+    second: PenguinDizzy_18
+  - first:
+      213: -3245944112970757185
+    second: PenguinDizzy_19
+  - first:
+      213: -6461082661639614710
+    second: PenguinDizzy_20
+  - first:
+      213: 7832619710484001721
+    second: PenguinDizzy_21
+  - first:
+      213: 8634110856017781130
+    second: PenguinDizzy_22
+  - first:
+      213: 666932360750831825
+    second: PenguinDizzy_23
+  - first:
+      213: 5639915969326704454
+    second: PenguinDizzy_24
+  - first:
+      213: 2248338411802011818
+    second: PenguinDizzy_25
+  - first:
+      213: -3184570227369090808
+    second: PenguinDizzy_26
+  - first:
+      213: 1994403306388095697
+    second: PenguinDizzy_27
+  - first:
+      213: -4492832836396363769
+    second: PenguinDizzy_28
+  - first:
+      213: 7607672878019071543
+    second: PenguinDizzy_29
+  - first:
+      213: 4301286158082961061
+    second: PenguinDizzy_30
+  - first:
+      213: 5209806167585348613
+    second: PenguinDizzy_31
+  - first:
+      213: -9116737515145443682
+    second: PenguinDizzy_32
+  - first:
+      213: 6723991560551197289
+    second: PenguinDizzy_33
+  - first:
+      213: 1010535146195369792
+    second: PenguinDizzy_34
+  - first:
+      213: 1806300716563901844
+    second: PenguinDizzy_35
+  - first:
+      213: -6943384217275387419
+    second: PenguinDizzy_36
+  - first:
+      213: -1507723650564663290
+    second: PenguinDizzy_37
+  - first:
+      213: 553843173131695053
+    second: PenguinDizzy_38
+  - first:
+      213: -6795664508920773672
+    second: PenguinDizzy_39
+  - first:
+      213: -2104655405646196552
+    second: PenguinDizzy_40
+  - first:
+      213: -6165320389646449695
+    second: PenguinDizzy_41
+  - first:
+      213: 8803064304973355710
+    second: PenguinDizzy_42
+  - first:
+      213: -1175169647112457899
+    second: PenguinDizzy_43
+  - first:
+      213: -3636348967161068181
+    second: PenguinDizzy_44
+  - first:
+      213: -8490186887140302591
+    second: PenguinDizzy_45
+  - first:
+      213: -6265861032042202070
+    second: PenguinDizzy_46
+  - first:
+      213: -4822631895617247311
+    second: PenguinDizzy_47
+  - first:
+      213: -7228260714384654940
+    second: PenguinDizzy_48
+  - first:
+      213: 8273407268812052252
+    second: PenguinDizzy_49
+  - first:
+      213: 517145899903863467
+    second: PenguinDizzy_50
+  - first:
+      213: 6378279004814435030
+    second: PenguinDizzy_51
+  - first:
+      213: -3600338401800774265
+    second: PenguinDizzy_52
+  - first:
+      213: 4817641417586024080
+    second: PenguinDizzy_53
+  - first:
+      213: -5311891471681780905
+    second: PenguinDizzy_54
+  - first:
+      213: 5360979347473399423
+    second: PenguinDizzy_55
+  - first:
+      213: -6007494970755488009
+    second: PenguinDizzy_56
+  - first:
+      213: -5186876507628207664
+    second: PenguinDizzy_57
+  - first:
+      213: -5224568921543065302
+    second: PenguinDizzy_58
+  - first:
+      213: -4734436394270941317
+    second: PenguinDizzy_59
+  - first:
+      213: -751159195684950198
+    second: PenguinDizzy_60
+  - first:
+      213: -6610184943539402491
+    second: PenguinDizzy_61
+  - first:
+      213: 1084309763020910379
+    second: PenguinDizzy_62
+  - first:
+      213: -3784532255852536760
+    second: PenguinDizzy_63
+  - first:
+      213: -6534459734114925354
+    second: PenguinDizzy_64
+  - first:
+      213: -217690535450949611
+    second: PenguinDizzy_65
+  - first:
+      213: 4325716036828099331
+    second: PenguinDizzy_66
+  - first:
+      213: 6305366584808143913
+    second: PenguinDizzy_67
+  - first:
+      213: 4819832460448557230
+    second: PenguinDizzy_68
+  - first:
+      213: -8041550516399158671
+    second: PenguinDizzy_69
+  - first:
+      213: 532768585792399099
+    second: PenguinDizzy_70
+  - first:
+      213: -3852407422750877561
+    second: PenguinDizzy_71
+  - first:
+      213: -8794331741567351321
+    second: PenguinDizzy_72
+  - first:
+      213: 7517961352504990965
+    second: PenguinDizzy_73
+  - first:
+      213: 7691444714420799452
+    second: PenguinDizzy_74
+  - first:
+      213: 799138773784926929
+    second: PenguinDizzy_75
+  - first:
+      213: -7042465277820076947
+    second: PenguinDizzy_76
+  - first:
+      213: 1918910510211620330
+    second: PenguinDizzy_77
+  - first:
+      213: 8998645958092207980
+    second: PenguinDizzy_78
+  - first:
+      213: 6453941998377336301
+    second: PenguinDizzy_79
+  - first:
+      213: -2490227236129248008
+    second: PenguinDizzy_80
+  - first:
+      213: -885490930972088579
+    second: PenguinDizzy_81
+  - first:
+      213: 238446789693898188
+    second: PenguinDizzy_82
+  - first:
+      213: -7589517448083419991
+    second: PenguinDizzy_83
+  - first:
+      213: 8304643542822012367
+    second: PenguinDizzy_84
+  - first:
+      213: 8727418017494203462
+    second: PenguinDizzy_85
+  - first:
+      213: -9112816226049155980
+    second: PenguinDizzy_86
+  - first:
+      213: -1361634623690710722
+    second: PenguinDizzy_87
+  - first:
+      213: 7986473271122348354
+    second: PenguinDizzy_88
+  - first:
+      213: -3625015374750086573
+    second: PenguinDizzy_89
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 312.5
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PenguinDizzy_00
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 570
+        width: 252
+        height: 285
+      alignment: 9
+      pivot: {x: 0.484127, y: 0.010526}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04d999a6f9095954a85abde1e05062b0
+      internalID: 643791118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinDizzy_01
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 570
+        width: 252
+        height: 285
+      alignment: 9
+      pivot: {x: 0.484127, y: 0.010526}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 751bb5adf3a0d654b80997fa3250b625
+      internalID: 82445072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinDizzy_02
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 570
+        width: 252
+        height: 285
+      alignment: 9
+      pivot: {x: 0.484127, y: 0.010526}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 068d71625a6833d4b9ce7fe618b55528
+      internalID: -1782337478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinDizzy_03
+      rect:
+        serializedVersion: 2
+        x: 756
+        y: 570
+        width: 252
+        height: 285
+      alignment: 9
+      pivot: {x: 0.484127, y: 0.010526}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7144d1fe47056f54db06a4b00d2a3198
+      internalID: -1528076059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinDizzy_04
+      rect:
+        serializedVersion: 2
+        x: 1008
+        y: 570
+        width: 252
+        height: 285
+      alignment: 9
+      pivot: {x: 0.484127, y: 0.010526}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f695a2d8a36ef744b88eb202b85d580
+      internalID: 645396775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinDizzy_05
+      rect:
+        serializedVersion: 2
+        x: 1260
+        y: 570
+        width: 252
+        height: 285
+      alignment: 9
+      pivot: {x: 0.484127, y: 0.010526}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 142b914867babfb46b6d6f38fbb1319e
+      internalID: 66325826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinDizzy_06
+      rect:
+        serializedVersion: 2
+        x: 1512
+        y: 570
+        width: 252
+        height: 285
+      alignment: 9
+      pivot: {x: 0.484127, y: 0.010526}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a1499d8e64cd994ea8cd035ef20fa6f
+      internalID: -2093937887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinDizzy_07
+      rect:
+        serializedVersion: 2
+        x: 1764
+        y: 570
+        width: 252
+        height: 285
+      alignment: 9
+      pivot: {x: 0.484127, y: 0.010526}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cb705a51e1f2bc44b5bfbd28b60df62
+      internalID: -441123178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinDizzy_08
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 285
+        width: 252
+        height: 285
+      alignment: 9
+      pivot: {x: 0.484127, y: 0.010526}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40e20aad7a0de8a4a8e8d7252d2de7be
+      internalID: -414393048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinDizzy_09
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 285
+        width: 252
+        height: 285
+      alignment: 9
+      pivot: {x: 0.484127, y: 0.010526}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76581c75c2c6a6743bd4d801720d50e5
+      internalID: -1890935340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinDizzy_10
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 285
+        width: 252
+        height: 285
+      alignment: 9
+      pivot: {x: 0.484127, y: 0.010526}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac661a92999e6c548a06ba0304aa83f9
+      internalID: 7765263174010709199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinDizzy_11
+      rect:
+        serializedVersion: 2
+        x: 756
+        y: 285
+        width: 252
+        height: 285
+      alignment: 9
+      pivot: {x: 0.484127, y: 0.010526}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b6f18aa167104b439e9a6c9913055b6
+      internalID: 1066850659208436002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinDizzy_12
+      rect:
+        serializedVersion: 2
+        x: 1008
+        y: 285
+        width: 252
+        height: 285
+      alignment: 9
+      pivot: {x: 0.484127, y: 0.010526}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 549ba4dcc5334ee45a456cecf914a4e4
+      internalID: 3814895493320427926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinDizzy_13
+      rect:
+        serializedVersion: 2
+        x: 1260
+        y: 285
+        width: 252
+        height: 285
+      alignment: 9
+      pivot: {x: 0.484127, y: 0.010526}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4dae431b37b3f4f42a8d610da10966cb
+      internalID: -1215629917872827515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinDizzy_14
+      rect:
+        serializedVersion: 2
+        x: 1512
+        y: 285
+        width: 252
+        height: 285
+      alignment: 9
+      pivot: {x: 0.484127, y: 0.010526}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d2c72a936ec63e41bbf47d2004f1324
+      internalID: 5225623467008765657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinDizzy_15
+      rect:
+        serializedVersion: 2
+        x: 1764
+        y: 285
+        width: 252
+        height: 285
+      alignment: 9
+      pivot: {x: 0.484127, y: 0.010526}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c98a9c5eb1693c45861d40b67e61370
+      internalID: -9090577074869814216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinDizzy_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 252
+        height: 285
+      alignment: 9
+      pivot: {x: 0.484127, y: 0.010526}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c15cee124f4d31b4aa211bc93a6e4d3b
+      internalID: 6172631289722600998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinDizzy_17
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 0
+        width: 252
+        height: 285
+      alignment: 9
+      pivot: {x: 0.484127, y: 0.010526}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6a097d8397641b4eb22a958cfdf8c04
+      internalID: 361635676169035349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinDizzy_18
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 0
+        width: 252
+        height: 285
+      alignment: 9
+      pivot: {x: 0.484127, y: 0.010526}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a50723227adc0248a2355b4b9889f3c
+      internalID: -148553028487978467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinDizzy_19
+      rect:
+        serializedVersion: 2
+        x: 756
+        y: 0
+        width: 252
+        height: 285
+      alignment: 9
+      pivot: {x: 0.484127, y: 0.010526}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5691eec5142bf144e80194d9eaef32e7
+      internalID: -3245944112970757185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinDizzy_20
+      rect:
+        serializedVersion: 2
+        x: 1008
+        y: 0
+        width: 252
+        height: 285
+      alignment: 9
+      pivot: {x: 0.484127, y: 0.010526}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0d8a5a2237fedd47a0f03855fd34737
+      internalID: -6461082661639614710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinDizzy_21
+      rect:
+        serializedVersion: 2
+        x: 1260
+        y: 0
+        width: 252
+        height: 285
+      alignment: 9
+      pivot: {x: 0.484127, y: 0.010526}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8c1db98b69fa4743a158d6f7bc9211d
+      internalID: 7832619710484001721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinDizzy_22
+      rect:
+        serializedVersion: 2
+        x: 1512
+        y: 0
+        width: 252
+        height: 285
+      alignment: 9
+      pivot: {x: 0.484127, y: 0.010526}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0f52a79c4e16274aba7277b38b9c1fb
+      internalID: 8634110856017781130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinDizzy_23
+      rect:
+        serializedVersion: 2
+        x: 1764
+        y: 0
+        width: 252
+        height: 285
+      alignment: 9
+      pivot: {x: 0.484127, y: 0.010526}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7f7401e6e298d24db826a84a1045085
+      internalID: 666932360750831825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: f60a19726b59be042a428727e265350c
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      PenguinDizzy_00: 643791118
+      PenguinDizzy_01: 82445072
+      PenguinDizzy_02: -1782337478
+      PenguinDizzy_03: -1528076059
+      PenguinDizzy_04: 645396775
+      PenguinDizzy_05: 66325826
+      PenguinDizzy_06: -2093937887
+      PenguinDizzy_07: -441123178
+      PenguinDizzy_08: -414393048
+      PenguinDizzy_09: -1890935340
+      PenguinDizzy_10: 7765263174010709199
+      PenguinDizzy_11: 1066850659208436002
+      PenguinDizzy_12: 3814895493320427926
+      PenguinDizzy_13: -1215629917872827515
+      PenguinDizzy_14: 5225623467008765657
+      PenguinDizzy_15: -9090577074869814216
+      PenguinDizzy_16: 6172631289722600998
+      PenguinDizzy_17: 361635676169035349
+      PenguinDizzy_18: -148553028487978467
+      PenguinDizzy_19: -3245944112970757185
+      PenguinDizzy_20: -6461082661639614710
+      PenguinDizzy_21: 7832619710484001721
+      PenguinDizzy_22: 8634110856017781130
+      PenguinDizzy_23: 666932360750831825
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

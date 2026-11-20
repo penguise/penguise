@@ -1,0 +1,1176 @@
+fileFormatVersion: 2
+guid: 66080a5f06b5cab4b8ba0d5b909b60c0
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3311559872445161394
+    second: PenguinOutfitDown_0
+  - first:
+      213: 4270784294719474285
+    second: PenguinOutfitDown_1
+  - first:
+      213: 2903574125643049501
+    second: PenguinOutfitDown_2
+  - first:
+      213: -1885786026379225574
+    second: PenguinOutfitDown_3
+  - first:
+      213: -4747352395262251948
+    second: PenguinOutfitDown_4
+  - first:
+      213: 1287852528169112237
+    second: PenguinOutfitDown_5
+  - first:
+      213: 7372946229093076854
+    second: PenguinOutfitDown_6
+  - first:
+      213: -8737044557000901505
+    second: PenguinOutfitDown_7
+  - first:
+      213: -5496527661458938088
+    second: PenguinOutfitDown_8
+  - first:
+      213: 8297177242675659086
+    second: PenguinOutfitDown_9
+  - first:
+      213: -6564735561242836445
+    second: PenguinOutfitDown_10
+  - first:
+      213: -7231818741778251448
+    second: PenguinOutfitDown_11
+  - first:
+      213: 8234769126728701723
+    second: PenguinOutfitDown_12
+  - first:
+      213: -4032655293898789353
+    second: PenguinOutfitDown_13
+  - first:
+      213: -6349989313372386311
+    second: PenguinOutfitDown_14
+  - first:
+      213: 238043335327293167
+    second: PenguinOutfitDown_15
+  - first:
+      213: -480628711176496138
+    second: PenguinOutfitDown_16
+  - first:
+      213: 1106950205647859655
+    second: PenguinOutfitDown_17
+  - first:
+      213: 1343828386581150243
+    second: PenguinOutfitDown_18
+  - first:
+      213: 3546332924548678864
+    second: PenguinOutfitDown_19
+  - first:
+      213: -7265295716673468037
+    second: PenguinOutfitDown_20
+  - first:
+      213: -1802005817243650457
+    second: PenguinOutfitDown_21
+  - first:
+      213: 6403971331422848895
+    second: PenguinOutfitDown_22
+  - first:
+      213: -3943344881821112997
+    second: PenguinOutfitDown_23
+  - first:
+      213: 1788315730442174576
+    second: PenguinOutfitDown_24
+  - first:
+      213: -1980961507479203871
+    second: PenguinOutfitDown_25
+  - first:
+      213: -3874622420667798003
+    second: PenguinOutfitDown_26
+  - first:
+      213: 2605624128299661881
+    second: PenguinOutfitDown_27
+  - first:
+      213: 4288274590400273841
+    second: PenguinOutfitDown_28
+  - first:
+      213: -3365861379067606515
+    second: PenguinOutfitDown_29
+  - first:
+      213: -1630859742219356252
+    second: PenguinOutfitDown_30
+  - first:
+      213: -7988959676317178466
+    second: PenguinOutfitDown_31
+  - first:
+      213: 1859112728738643916
+    second: PenguinOutfitDown_32
+  - first:
+      213: -8620120884031890572
+    second: PenguinOutfitDown_33
+  - first:
+      213: -1727216319134116604
+    second: PenguinOutfitDown_34
+  - first:
+      213: -2355143610449189465
+    second: PenguinOutfitDown_35
+  - first:
+      213: 5975952087747483788
+    second: PenguinOutfitDown_36
+  - first:
+      213: -3972068035196094157
+    second: PenguinOutfitDown_37
+  - first:
+      213: -6250715906199243375
+    second: PenguinOutfitDown_38
+  - first:
+      213: 5116589784756569674
+    second: PenguinOutfitDown_39
+  - first:
+      213: -6331140712744570007
+    second: PenguinOutfitDown_40
+  - first:
+      213: 7031394950266685527
+    second: PenguinOutfitDown_41
+  - first:
+      213: -3251597267823952759
+    second: PenguinOutfitDown_42
+  - first:
+      213: -8167203232760220508
+    second: PenguinOutfitDown_43
+  - first:
+      213: -8050597844262392071
+    second: PenguinOutfitDown_44
+  - first:
+      213: -9200676574377249572
+    second: PenguinOutfitDown_45
+  - first:
+      213: -8758098711736473402
+    second: PenguinOutfitDown_46
+  - first:
+      213: -5953206820739735456
+    second: PenguinOutfitDown_47
+  - first:
+      213: 7037405738089370593
+    second: PenguinOutfitDown_48
+  - first:
+      213: 3571537893599346426
+    second: PenguinOutfitDown_49
+  - first:
+      213: -8022217499905611950
+    second: PenguinOutfitDown_50
+  - first:
+      213: -4127247086792665518
+    second: PenguinOutfitDown_51
+  - first:
+      213: -8922109893818641698
+    second: PenguinOutfitDown_52
+  - first:
+      213: 2560680913917541069
+    second: PenguinOutfitDown_53
+  - first:
+      213: -8934387844984371984
+    second: PenguinOutfitDown_54
+  - first:
+      213: 2672417526395683746
+    second: PenguinOutfitDown_55
+  - first:
+      213: 7281449686308883214
+    second: PenguinOutfitDown_56
+  - first:
+      213: 7887939901963660197
+    second: PenguinOutfitDown_57
+  - first:
+      213: 301489237580925009
+    second: PenguinOutfitDown_58
+  - first:
+      213: -6092303743094177711
+    second: PenguinOutfitDown_59
+  - first:
+      213: 7407536343704069543
+    second: PenguinOutfitDown_60
+  - first:
+      213: -4183796990668155908
+    second: PenguinOutfitDown_61
+  - first:
+      213: 3302300356734801005
+    second: PenguinOutfitDown_62
+  - first:
+      213: -6712557860965719434
+    second: PenguinOutfitDown_63
+  - first:
+      213: -8010552089956771879
+    second: PenguinOutfitDown_64
+  - first:
+      213: -4419472013416958300
+    second: PenguinOutfitDown_65
+  - first:
+      213: -198133871388822586
+    second: PenguinOutfitDown_66
+  - first:
+      213: 4127545776658968525
+    second: PenguinOutfitDown_67
+  - first:
+      213: 1372008108456298795
+    second: PenguinOutfitDown_68
+  - first:
+      213: 195259312608564594
+    second: PenguinOutfitDown_69
+  - first:
+      213: 2034057359348966297
+    second: PenguinOutfitDown_70
+  - first:
+      213: 414335402248420909
+    second: PenguinOutfitDown_71
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 312.5
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PenguinOutfitDown_00
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 975
+        width: 263
+        height: 195
+      alignment: 9
+      pivot: {x: 0.737643, y: 0.015385}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 161ecc6c3db351846b7a73df395537cf
+      internalID: 19984874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitDown_01
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 975
+        width: 263
+        height: 195
+      alignment: 9
+      pivot: {x: 0.737643, y: 0.015385}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 722d436fe080784428fe8b6cc0486c3e
+      internalID: 1963073297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitDown_02
+      rect:
+        serializedVersion: 2
+        x: 526
+        y: 975
+        width: 263
+        height: 195
+      alignment: 9
+      pivot: {x: 0.737643, y: 0.015385}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0d5aaf797645cd47b72a4b1087059b3
+      internalID: 1439467319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitDown_03
+      rect:
+        serializedVersion: 2
+        x: 789
+        y: 975
+        width: 263
+        height: 195
+      alignment: 9
+      pivot: {x: 0.737643, y: 0.015385}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c8a2af68336be642aa461c936f5e4bc
+      internalID: -1620176209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitDown_04
+      rect:
+        serializedVersion: 2
+        x: 1052
+        y: 975
+        width: 263
+        height: 195
+      alignment: 9
+      pivot: {x: 0.737643, y: 0.015385}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb5e9bf6ea70f334c98fabf4bfaa5be5
+      internalID: 1290588622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitDown_05
+      rect:
+        serializedVersion: 2
+        x: 1315
+        y: 975
+        width: 263
+        height: 195
+      alignment: 9
+      pivot: {x: 0.737643, y: 0.015385}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfdc9d7a93d0ec24fba1b907a9952cea
+      internalID: 307603663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitDown_06
+      rect:
+        serializedVersion: 2
+        x: 1578
+        y: 975
+        width: 263
+        height: 195
+      alignment: 9
+      pivot: {x: 0.737643, y: 0.015385}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da08adc9df2f29942b819226648da6b8
+      internalID: 909195748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitDown_07
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 780
+        width: 263
+        height: 195
+      alignment: 9
+      pivot: {x: 0.737643, y: 0.015385}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91c44440c1ee49d489df5db6efb3e9dc
+      internalID: -1121919096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitDown_08
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 780
+        width: 263
+        height: 195
+      alignment: 9
+      pivot: {x: 0.737643, y: 0.015385}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6094cf6e10b09a248af908725ef81c53
+      internalID: -1841959128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitDown_09
+      rect:
+        serializedVersion: 2
+        x: 526
+        y: 780
+        width: 263
+        height: 195
+      alignment: 9
+      pivot: {x: 0.737643, y: 0.015385}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 126a261a7d4d58443be6a861cafb6ecd
+      internalID: 1794842016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitDown_10
+      rect:
+        serializedVersion: 2
+        x: 789
+        y: 780
+        width: 263
+        height: 195
+      alignment: 9
+      pivot: {x: 0.737643, y: 0.015385}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60d08091d8fed0a42a6c682c413a47a5
+      internalID: -6564735561242836445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitDown_11
+      rect:
+        serializedVersion: 2
+        x: 1052
+        y: 780
+        width: 263
+        height: 195
+      alignment: 9
+      pivot: {x: 0.737643, y: 0.015385}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 394bc27a78cf67f43ab8e64f6c687d26
+      internalID: -7231818741778251448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitDown_12
+      rect:
+        serializedVersion: 2
+        x: 1315
+        y: 780
+        width: 263
+        height: 195
+      alignment: 9
+      pivot: {x: 0.737643, y: 0.015385}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7288b794c4cc4e944896e9d48872180b
+      internalID: 8234769126728701723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitDown_13
+      rect:
+        serializedVersion: 2
+        x: 1578
+        y: 780
+        width: 263
+        height: 195
+      alignment: 9
+      pivot: {x: 0.737643, y: 0.015385}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae800ce1c12ecca448e5229898060ad1
+      internalID: -4032655293898789353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitDown_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 585
+        width: 263
+        height: 195
+      alignment: 9
+      pivot: {x: 0.737643, y: 0.015385}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2182c728cca52864ba1935aec8952b27
+      internalID: -6349989313372386311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitDown_15
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 585
+        width: 263
+        height: 195
+      alignment: 9
+      pivot: {x: 0.737643, y: 0.015385}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f1e5e30795b01a4d813883766644e7d
+      internalID: 238043335327293167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitDown_16
+      rect:
+        serializedVersion: 2
+        x: 526
+        y: 585
+        width: 263
+        height: 195
+      alignment: 9
+      pivot: {x: 0.737643, y: 0.015385}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b61df8d547eff14eb7863894dea3147
+      internalID: -480628711176496138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitDown_17
+      rect:
+        serializedVersion: 2
+        x: 789
+        y: 585
+        width: 263
+        height: 195
+      alignment: 9
+      pivot: {x: 0.737643, y: 0.015385}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b98969770a2cf9468bb01873f2ccbe7
+      internalID: 1106950205647859655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitDown_18
+      rect:
+        serializedVersion: 2
+        x: 1052
+        y: 585
+        width: 263
+        height: 195
+      alignment: 9
+      pivot: {x: 0.737643, y: 0.015385}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e84212e7fad34d47b01d02604058575
+      internalID: 1343828386581150243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitDown_19
+      rect:
+        serializedVersion: 2
+        x: 1315
+        y: 585
+        width: 263
+        height: 195
+      alignment: 9
+      pivot: {x: 0.737643, y: 0.015385}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 153647a70cda14346b10d9663f9bef28
+      internalID: 3546332924548678864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitDown_20
+      rect:
+        serializedVersion: 2
+        x: 1578
+        y: 585
+        width: 263
+        height: 195
+      alignment: 9
+      pivot: {x: 0.737643, y: 0.015385}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2b297416b52a83408cfb248e1f64037
+      internalID: -7265295716673468037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitDown_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 390
+        width: 263
+        height: 195
+      alignment: 9
+      pivot: {x: 0.737643, y: 0.015385}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f416932613b10e44b772831511668e2
+      internalID: -1802005817243650457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitDown_22
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 390
+        width: 263
+        height: 195
+      alignment: 9
+      pivot: {x: 0.737643, y: 0.015385}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cee62a3394b674d4794c50bae17c1dde
+      internalID: 6403971331422848895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitDown_23
+      rect:
+        serializedVersion: 2
+        x: 526
+        y: 390
+        width: 263
+        height: 195
+      alignment: 9
+      pivot: {x: 0.737643, y: 0.015385}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a05b4092e2c305409e7008c5e9ec411
+      internalID: -3943344881821112997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitDown_24
+      rect:
+        serializedVersion: 2
+        x: 789
+        y: 390
+        width: 263
+        height: 195
+      alignment: 9
+      pivot: {x: 0.737643, y: 0.015385}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4d8d790a90de7a42b9759333f8f87ed
+      internalID: 1788315730442174576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitDown_25
+      rect:
+        serializedVersion: 2
+        x: 1052
+        y: 390
+        width: 263
+        height: 195
+      alignment: 9
+      pivot: {x: 0.737643, y: 0.015385}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 064602e32fb8b3a46bf9c1a0145801cd
+      internalID: -1980961507479203871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitDown_26
+      rect:
+        serializedVersion: 2
+        x: 1315
+        y: 390
+        width: 263
+        height: 195
+      alignment: 9
+      pivot: {x: 0.737643, y: 0.015385}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52e48c230e264e844a47c7c198d2ef89
+      internalID: -3874622420667798003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitDown_27
+      rect:
+        serializedVersion: 2
+        x: 1578
+        y: 390
+        width: 263
+        height: 195
+      alignment: 9
+      pivot: {x: 0.737643, y: 0.015385}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17fbded4b43407449b0206b8c1496423
+      internalID: 2605624128299661881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitDown_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 195
+        width: 263
+        height: 195
+      alignment: 9
+      pivot: {x: 0.737643, y: 0.015385}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9543d0c61debdc84f947c92843fb7216
+      internalID: 4288274590400273841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitDown_29
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 195
+        width: 263
+        height: 195
+      alignment: 9
+      pivot: {x: 0.737643, y: 0.015385}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e772d62f9604264483f56a346c0a64c
+      internalID: -3365861379067606515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitDown_30
+      rect:
+        serializedVersion: 2
+        x: 526
+        y: 195
+        width: 263
+        height: 195
+      alignment: 9
+      pivot: {x: 0.737643, y: 0.015385}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2f667c9d1c1c9341a76cd7da56d353f
+      internalID: -1630859742219356252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitDown_31
+      rect:
+        serializedVersion: 2
+        x: 789
+        y: 195
+        width: 263
+        height: 195
+      alignment: 9
+      pivot: {x: 0.737643, y: 0.015385}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 579493063f4cb3241aef050e9aa9621d
+      internalID: -7988959676317178466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitDown_32
+      rect:
+        serializedVersion: 2
+        x: 1052
+        y: 195
+        width: 263
+        height: 195
+      alignment: 9
+      pivot: {x: 0.737643, y: 0.015385}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84f614ab4275090408b109ba6a6fc77d
+      internalID: 1859112728738643916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitDown_33
+      rect:
+        serializedVersion: 2
+        x: 1315
+        y: 195
+        width: 263
+        height: 195
+      alignment: 9
+      pivot: {x: 0.737643, y: 0.015385}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f6ca09b07a61f04286637cc98b4c7b9
+      internalID: -8620120884031890572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitDown_34
+      rect:
+        serializedVersion: 2
+        x: 1578
+        y: 195
+        width: 263
+        height: 195
+      alignment: 9
+      pivot: {x: 0.737643, y: 0.015385}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b15af446e3524374186a2e3b549e59cf
+      internalID: -1727216319134116604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitDown_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 263
+        height: 195
+      alignment: 9
+      pivot: {x: 0.737643, y: 0.015385}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b552037198322cc408d3d4a3df15dbb3
+      internalID: -2355143610449189465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: debe08379ce41324683f412907d32c6c
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      PenguinOutfitDown_00: 19984874
+      PenguinOutfitDown_01: 1963073297
+      PenguinOutfitDown_02: 1439467319
+      PenguinOutfitDown_03: -1620176209
+      PenguinOutfitDown_04: 1290588622
+      PenguinOutfitDown_05: 307603663
+      PenguinOutfitDown_06: 909195748
+      PenguinOutfitDown_07: -1121919096
+      PenguinOutfitDown_08: -1841959128
+      PenguinOutfitDown_09: 1794842016
+      PenguinOutfitDown_10: -6564735561242836445
+      PenguinOutfitDown_11: -7231818741778251448
+      PenguinOutfitDown_12: 8234769126728701723
+      PenguinOutfitDown_13: -4032655293898789353
+      PenguinOutfitDown_14: -6349989313372386311
+      PenguinOutfitDown_15: 238043335327293167
+      PenguinOutfitDown_16: -480628711176496138
+      PenguinOutfitDown_17: 1106950205647859655
+      PenguinOutfitDown_18: 1343828386581150243
+      PenguinOutfitDown_19: 3546332924548678864
+      PenguinOutfitDown_20: -7265295716673468037
+      PenguinOutfitDown_21: -1802005817243650457
+      PenguinOutfitDown_22: 6403971331422848895
+      PenguinOutfitDown_23: -3943344881821112997
+      PenguinOutfitDown_24: 1788315730442174576
+      PenguinOutfitDown_25: -1980961507479203871
+      PenguinOutfitDown_26: -3874622420667798003
+      PenguinOutfitDown_27: 2605624128299661881
+      PenguinOutfitDown_28: 4288274590400273841
+      PenguinOutfitDown_29: -3365861379067606515
+      PenguinOutfitDown_30: -1630859742219356252
+      PenguinOutfitDown_31: -7988959676317178466
+      PenguinOutfitDown_32: 1859112728738643916
+      PenguinOutfitDown_33: -8620120884031890572
+      PenguinOutfitDown_34: -1727216319134116604
+      PenguinOutfitDown_35: -2355143610449189465
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
