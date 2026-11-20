@@ -120,13 +120,206 @@ public static class IglooGround
         var clear = Ground(820f, -10f, 0f);
         clear.DoorClear = true;
         path.Add(clear);
+        AddThreshold(path);
+        return path;
+    }
+
+    // From in front of the door over the sill to deep in the tunnel.
+    private static void AddThreshold(List<Waypoint> path)
+    {
         path.Add(Ground(640f, 0f, 0f));
         path.Add(Ground(590f, 0f, SillHeight));
         path.Add(Inside(TunnelFront, SillHeight, 0f));
         path.Add(Inside(522f, SillHeight, 0.2f));
         path.Add(Inside(500f, 0f, 0.3f));
         path.Add(Inside(330f, 0f, 1f));
+    }
+
+    // Visit approach points in front of the door, from straight ahead to its left: outside the open leaf's
+    // swing (hinge near d 568, s 125, leaf 200 long, swinging out to the right) and the dome clearance,
+    // so from each one the way to the door is straight.
+    private static readonly Vector2[] FrontApproaches =
+    {
+        new Vector2(900f, -40f), new Vector2(850f, -150f), new Vector2(760f, -250f),
+    };
+
+    // Visit approaches of an igloo into its tunnel: from the right around the open leaf's tip (as Route
+    // does), and straight to the door from each front point. A visit takes whichever is shortest.
+    private static List<List<Waypoint>> Approaches()
+    {
+        List<Waypoint> right = Route(Vector2.zero, new Vector2(1000f, 0f), 1f);
+        right.RemoveAt(0);
+        var approaches = new List<List<Waypoint>> { right };
+        foreach (Vector2 point in FrontApproaches)
+        {
+            Waypoint clear = Ground(point.x, point.y, 0f);
+            clear.DoorClear = true;
+            var path = new List<Waypoint> { clear };
+            AddThreshold(path);
+            approaches.Add(path);
+        }
+        return approaches;
+    }
+
+    // Ground clearance a visit keeps from the two igloos whose doors it uses (dome, tunnel and threshold)
+    // and from every other dome; route corners sit a little outside, every 10 degrees.
+    private const float VisitStep = 10f * Mathf.Deg2Rad;
+    private const float NodeMargin = 15f;
+
+    // Route on the ground from igloo `from` to the tunnel of igloo `to`. `domes` are every igloo's dome
+    // center as screen offsets (canvas pixels) from `from`'s dome center, which the result's Pixels are
+    // relative to too; Frame is the ground point in one frame shared by every igloo. `start` null leaves
+    // from deep in `from`'s tunnel (its door approach backwards); otherwise it starts at that ground point
+    // (screen offset, e.g. the penguin's slot). In between it takes the shortest way around every dome
+    // (Clearance from both igloos, NeighborClearance from the others), turning only at points whose screen
+    // offset lies in `area`. `obstacles` are more round ground areas to keep out of (screen offset of the
+    // center, ground radius; e.g. the ice hole). Null when no such way exists.
+    public static List<Waypoint> PathBetween(Vector2? start, int from, int to, IReadOnlyList<Vector2> domes, Rect area,
+        IReadOnlyList<(Vector2 Center, float Radius)> obstacles = null)
+    {
+        int extra = obstacles?.Count ?? 0;
+        var centers = new Vector2[domes.Count + extra];
+        var radii = new float[centers.Length];
+        for (int i = 0; i < domes.Count; i++)
+        {
+            centers[i] = ToFrame(domes[i]);
+            radii[i] = i == from || i == to ? Clearance : NeighborClearance;
+        }
+        for (int i = 0; i < extra; i++)
+        {
+            centers[domes.Count + i] = ToFrame(obstacles[i].Center);
+            radii[domes.Count + i] = obstacles[i].Radius;
+        }
+
+        // Nodes: sources (leaving), targets (arriving), then corners around every dome.
+        var nodes = new List<Vector2>();
+        var startCost = new List<float>();
+        var lead = new List<List<Waypoint>>();
+        if (start.HasValue)
+        {
+            nodes.Add(ToFrame(start.Value));
+            startCost.Add(0f);
+            lead.Add(new List<Waypoint> { new Waypoint { Pixels = start.Value, Frame = ToFrame(start.Value) } });
+        }
+        else
+            foreach (List<Waypoint> leave in Approaches())
+            {
+                leave.Reverse();
+                nodes.Add(leave[leave.Count - 1].Frame);
+                startCost.Add(Length(leave));
+                lead.Add(leave);
+            }
+        int sources = nodes.Count;
+        var tails = new List<List<Waypoint>>();
+        foreach (List<Waypoint> arrive in Approaches())
+        {
+            for (int k = 0; k < arrive.Count; k++)
+            {
+                Waypoint point = arrive[k];
+                point.Frame += (Vector3)centers[to];
+                point.Pixels += domes[to];
+                arrive[k] = point;
+            }
+            nodes.Add(arrive[0].Frame);
+            tails.Add(arrive);
+        }
+        int endpoints = nodes.Count;
+        for (int i = 0; i < centers.Length; i++)
+        {
+            float radius = radii[i] + NodeMargin;
+            for (float angle = 0f; angle < 2f * Mathf.PI - 1e-3f; angle += VisitStep)
+            {
+                Vector2 node = centers[i] + radius * new Vector2(Mathf.Cos(angle), Mathf.Sin(angle));
+                Vector2 screen = ToScreen(node.x, node.y, 0f);
+                if (area.Contains(screen) && Within(node, centers, radii) < 0)
+                    nodes.Add(node);
+            }
+        }
+
+        // Dijkstra over straight segments that keep clear of every dome. A start inside a clearance (a slot
+        // close to its own igloo) only moves away from the domes around it.
+        int n = nodes.Count;
+        var cost = new float[n];
+        var previous = new int[n];
+        var done = new bool[n];
+        for (int i = 0; i < n; i++)
+        {
+            cost[i] = i < sources ? startCost[i] : float.PositiveInfinity;
+            previous[i] = -1;
+        }
+        while (true)
+        {
+            int current = -1;
+            for (int i = 0; i < n; i++)
+                if (!done[i] && !float.IsInfinity(cost[i]) && (current < 0 || cost[i] < cost[current]))
+                    current = i;
+            if (current < 0)
+                break;
+            done[current] = true;
+            for (int next = 0; next < n; next++)
+            {
+                if (done[next] || next < sources)
+                    continue;
+                float total = cost[current] + Vector2.Distance(nodes[current], nodes[next]);
+                if (total >= cost[next] || !Clear(nodes[current], nodes[next], current < endpoints, next < endpoints,
+                        centers, radii))
+                    continue;
+                cost[next] = total;
+                previous[next] = current;
+            }
+        }
+
+        int best = -1;
+        float bestCost = float.PositiveInfinity;
+        for (int t = 0; t < tails.Count; t++)
+        {
+            float total = cost[sources + t] + Length(tails[t]);
+            if (total < bestCost)
+            {
+                bestCost = total;
+                best = t;
+            }
+        }
+        if (best < 0)
+            return null;
+
+        var middle = new List<int>();
+        int step = previous[sources + best];
+        while (step >= sources)
+        {
+            middle.Add(step);
+            step = previous[step];
+        }
+        middle.Reverse();
+        var path = new List<Waypoint>(lead[step]);
+        foreach (int i in middle)
+            path.Add(new Waypoint { Pixels = ToScreen(nodes[i].x, nodes[i].y, 0f), Frame = nodes[i] });
+        path.AddRange(tails[best]);
         return path;
+    }
+
+    private static bool Clear(Vector2 a, Vector2 b, bool aEnd, bool bEnd, Vector2[] centers, float[] radii)
+    {
+        for (int i = 0; i < centers.Length; i++)
+        {
+            float limit = radii[i];
+            if (aEnd)
+                limit = Mathf.Min(limit, (a - centers[i]).magnitude);
+            if (bEnd)
+                limit = Mathf.Min(limit, (b - centers[i]).magnitude);
+            if (SegmentDistance(a - centers[i], b - centers[i]) < limit - 0.5f)
+                return false;
+        }
+        return true;
+    }
+
+    // First dome whose clearance holds `point`, or -1.
+    private static int Within(Vector2 point, Vector2[] centers, float[] radii)
+    {
+        for (int i = 0; i < centers.Length; i++)
+            if ((point - centers[i]).magnitude < radii[i])
+                return i;
+        return -1;
     }
 
     private static Waypoint Ground(float d, float s, float h) =>
@@ -141,6 +334,8 @@ public static class IglooGround
     private static float SegmentDistance(Vector2 a, Vector2 b)
     {
         Vector2 ab = b - a;
+        if (ab.sqrMagnitude < 1e-6f)
+            return a.magnitude;
         float t = Mathf.Clamp01(Vector2.Dot(-a, ab) / ab.sqrMagnitude);
         return (a + ab * t).magnitude;
     }

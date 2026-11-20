@@ -707,6 +707,7 @@ MonoBehaviour:
   runIntoIgloos: 0
   runSpeed: 2
   idleAnimation: 1
+  playAs: 1
 --- !u!4 &556460177
 Transform:
   m_ObjectHideFlags: 0

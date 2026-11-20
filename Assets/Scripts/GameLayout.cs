@@ -68,6 +68,10 @@ public sealed class GameLayout : MonoBehaviour
     // Idle animation of penguins standing on their slots (breathing plus random fidgets); off shows the
     // still pose. Also animates in Edit mode.
     [SerializeField] private bool idleAnimation = true;
+    // Preview: the slot (1-based, 0 off) played as "us". In Play mode, clicking another igloo sends that
+    // penguin on a visit (out of its own igloo, or from its slot, into the clicked one, a short wait, then
+    // back into its own igloo); clicking its own igloo runs it in or out. Runtime code uses Visit(slot, target).
+    [SerializeField, Range(0, 8)] private int playAs;
     public float CharacterGap => characterGap;
     public float IglooGap => iglooGap;
     private int renderedCount;
@@ -102,6 +106,146 @@ public sealed class GameLayout : MonoBehaviour
     {
         for (int i = 0; i < runners.Count; i++)
             RunOutOfIgloo(i);
+    }
+
+    // Seconds a visitor stays inside the igloo it visits.
+    public const float VisitMinSeconds = 2f, VisitMaxSeconds = 3f;
+    // Ground area (reference units) where visit routes may turn: on screen, right of the chat panel, with
+    // room for the penguin above its feet.
+    public static readonly Rect WalkArea = Rect.MinMaxRect(-5.2f, -5.3f, 9.3f, 4.6f);
+    // Ice hole in the background art (reference units) and the ground radius visit routes keep from it
+    // (its snow rim plus half a penguin).
+    public static readonly Vector2 IceHole = new Vector2(1.95f, -0.12f);
+    public const float IceHoleClearance = 1.1f;
+
+    private Vector2[] iglooPositions, feet, iglooOutline;
+    private Vector2 domeCenter;
+    private float unitsPerPixel;
+    private readonly Dictionary<(int, int, bool), PenguinRunner.Route> visitRoutes =
+        new Dictionary<(int, int, bool), PenguinRunner.Route>();
+
+    // Sends the penguin of `slot` into igloo `target`: out of its own igloo when inside (or from its slot
+    // when standing there), a wait of 2-3 s, then back into its own igloo. False if it is busy, the slots
+    // are invalid or no route keeps clear of the igloos.
+    public bool Visit(int slot, int target)
+    {
+        if (slot < 0 || slot >= runners.Count || target < 0 || target >= runners.Count || slot == target
+            || runners[slot] == null)
+            return false;
+        PenguinRunner runner = runners[slot];
+        bool inside = runner.Current == PenguinRunner.State.Inside;
+        if (!inside && runner.Current != PenguinRunner.State.Idle)
+            return false;
+        PenguinRunner.Route back = VisitRoute(slot, target, false);
+        PenguinRunner.Route visit = inside ? back : VisitRoute(slot, target, true);
+        if (back == null || visit == null)
+        {
+            Debug.LogWarning($"No route from igloo {slot + 1} to igloo {target + 1}.", this);
+            return false;
+        }
+        return runner.Visit(visit, inside ? null : back, runSpeed, Random.Range(VisitMinSeconds, VisitMaxSeconds));
+    }
+
+    // Route from igloo `slot` (its tunnel, or its penguin's slot) into igloo `target`'s tunnel; cached until
+    // the next rebuild.
+    public PenguinRunner.Route VisitRoute(int slot, int target, bool fromSlot)
+    {
+        if (iglooPositions == null || slot < 0 || slot >= iglooPositions.Length || target < 0
+            || target >= iglooPositions.Length || slot == target || doors.Count != iglooPositions.Length)
+            return null;
+        if (visitRoutes.TryGetValue((slot, target, fromSlot), out PenguinRunner.Route cached))
+            return cached;
+        Vector2 origin = iglooPositions[slot] + domeCenter;
+        var domes = new List<Vector2>();
+        foreach (Vector2 position in iglooPositions)
+            domes.Add((position - iglooPositions[slot]) / unitsPerPixel);
+        Rect area = Rect.MinMaxRect((WalkArea.xMin - origin.x) / unitsPerPixel, (WalkArea.yMin - origin.y) / unitsPerPixel,
+            (WalkArea.xMax - origin.x) / unitsPerPixel, (WalkArea.yMax - origin.y) / unitsPerPixel);
+        Vector2? start = fromSlot ? (feet[slot] - origin) / unitsPerPixel : (Vector2?)null;
+        var hole = new[] { ((IceHole - origin) / unitsPerPixel, IceHoleClearance / unitsPerPixel) };
+        List<IglooGround.Waypoint> path = IglooGround.PathBetween(start, slot, target, domes, area, hole);
+        PenguinRunner.Route route = path == null ? null
+            : MakeRoute(path, origin, fromSlot ? null : doors[slot], doors[target], fromSlot ? feet[slot] : (Vector2?)null);
+        visitRoutes[(slot, target, fromSlot)] = route;
+        return route;
+    }
+
+    // Ground waypoints (canvas pixels around `origin`) as a route in layout units.
+    private PenguinRunner.Route MakeRoute(List<IglooGround.Waypoint> path, Vector2 origin, IglooDoor startDoor,
+        IglooDoor endDoor, Vector2? firstPoint)
+    {
+        var route = new PenguinRunner.Route
+        {
+            Points = new Vector2[path.Count],
+            Distances = new float[path.Count],
+            Masked = new bool[path.Count],
+            Shades = new float[path.Count],
+            StartDoor = startDoor,
+            EndDoor = endDoor,
+        };
+        int firstClear = -1, lastClear = -1;
+        for (int k = 0; k < path.Count; k++)
+        {
+            if (path[k].DoorClear)
+            {
+                if (firstClear < 0)
+                    firstClear = k;
+                lastClear = k;
+            }
+            route.Points[k] = origin + path[k].Pixels * unitsPerPixel;
+            route.Distances[k] = k == 0 ? 0f
+                : route.Distances[k - 1] + Vector3.Distance(path[k - 1].Frame, path[k].Frame) * unitsPerPixel;
+            route.Masked[k] = path[k].Masked;
+            route.Shades[k] = path[k].Shade;
+        }
+        if (firstPoint.HasValue)
+            route.Points[0] = firstPoint.Value;
+        route.StartClear = startDoor != null && firstClear >= 0 ? route.Distances[firstClear] : 0f;
+        route.EndClear = lastClear >= 0 ? route.Distances[lastClear] : 0f;
+        return route;
+    }
+
+    // Front-most igloo whose silhouette holds `point` (layout units), or -1.
+    public int IglooAt(Vector2 point)
+    {
+        if (iglooPositions == null || iglooOutline == null)
+            return -1;
+        int hit = -1;
+        for (int i = 0; i < iglooPositions.Length; i++)
+        {
+            Vector2 local = point - iglooPositions[i];
+            bool positive = false, negative = false;
+            for (int k = 0; k < iglooOutline.Length; k++)
+            {
+                float side = Cross(iglooOutline[k], iglooOutline[(k + 1) % iglooOutline.Length], local);
+                positive |= side > 0f;
+                negative |= side < 0f;
+            }
+            if (!(positive && negative) && (hit < 0 || iglooPositions[i].y < iglooPositions[hit].y))
+                hit = i;
+        }
+        return hit;
+    }
+
+    // Play-mode preview input for the Play As slot.
+    private void HandleClick()
+    {
+        if (!Application.isPlaying || playAs < 1 || playAs > runners.Count || layoutCamera == null || generated == null)
+            return;
+        var pointer = UnityEngine.InputSystem.Pointer.current;
+        if (pointer == null || !pointer.press.wasPressedThisFrame)
+            return;
+        Vector3 world = layoutCamera.ScreenToWorldPoint(pointer.position.ReadValue());
+        int target = IglooAt(generated.InverseTransformPoint(world));
+        int slot = playAs - 1;
+        if (target < 0 || runners[slot] == null)
+            return;
+        if (target != slot)
+            Visit(slot, target);
+        else if (runners[slot].Current == PenguinRunner.State.Inside)
+            runners[slot].RunOutOfIgloo(runSpeed);
+        else
+            runners[slot].RunIntoIgloo(runSpeed);
     }
 
     // Window glow: texture fractions (y up) of the igloo art's round window, plus light shape and color.
@@ -562,6 +706,7 @@ public sealed class GameLayout : MonoBehaviour
         AlignWithBackground();
         ApplyRunSetting();
         ApplyIdleSetting();
+        HandleClick();
 
         if (layoutCamera != null && background != null)
         {
@@ -599,6 +744,8 @@ public sealed class GameLayout : MonoBehaviour
         doors.Clear();
         runners.Clear();
         idles.Clear();
+        visitRoutes.Clear();
+        iglooPositions = feet = null;
         renderedRun = false;
         renderedCharacterGap = characterGap;
         renderedIglooGap = iglooGap;
@@ -620,13 +767,17 @@ public sealed class GameLayout : MonoBehaviour
         if (count < 4 || count > 8)
             return;
         AlignWithBackground();
-        Vector2[] iglooOutline = IglooOutline(igloo);
+        iglooOutline = IglooOutline(igloo);
         float[] angles = SlotAngles(count, iglooGap, iglooOutline);
-        Vector2 domeCenter = IglooPoint(IglooGround.DomeCenter);
-        float unitsPerPixel = 1f / IglooCanvasPixelsPerUnit(igloo);
-        var iglooPositions = new Vector2[count];
+        domeCenter = IglooPoint(IglooGround.DomeCenter);
+        unitsPerPixel = 1f / IglooCanvasPixelsPerUnit(igloo);
+        iglooPositions = new Vector2[count];
+        feet = new Vector2[count];
         for (int i = 0; i < count; i++)
+        {
             iglooPositions[i] = IglooPosition(angles[i], iglooGap, iglooOutline);
+            feet[i] = FootPosition(angles[i], characterGap);
+        }
         for (int i = 0; i < count; i++)
         {
             // The igloo import sets its size (pixels per unit) and a base pivot, so place it unscaled.
@@ -693,29 +844,13 @@ public sealed class GameLayout : MonoBehaviour
             mask.sprite = doorway;
 
             var runner = penguin.gameObject.AddComponent<PenguinRunner>();
-            runner.Setup(penguin, clothes, renderer, runFrames, runOutfitFrames, door);
+            runner.Setup(penguin, clothes, renderer, runFrames, runOutfitFrames);
             var otherDomes = new List<Vector2>();
             for (int other = 0; other < count; other++)
                 if (other != i)
                     otherDomes.Add((iglooPositions[other] - iglooPosition) / unitsPerPixel);
             var route = IglooGround.PathToDoor((foot - iglooPosition - domeCenter) / unitsPerPixel, otherDomes);
-            var points = new Vector2[route.Count];
-            var lengths = new float[route.Count];
-            var pathMasked = new bool[route.Count];
-            var shades = new float[route.Count];
-            int clearIndex = 0;
-            for (int k = 0; k < route.Count; k++)
-            {
-                if (route[k].DoorClear)
-                    clearIndex = k;
-                points[k] = iglooPosition + domeCenter + route[k].Pixels * unitsPerPixel;
-                lengths[k] = k == 0 ? 0f
-                    : lengths[k - 1] + Vector3.Distance(route[k - 1].Frame, route[k].Frame) * unitsPerPixel;
-                pathMasked[k] = route[k].Masked;
-                shades[k] = route[k].Shade;
-            }
-            points[0] = foot;
-            runner.SetPath(points, lengths, pathMasked, shades, clearIndex);
+            runner.SetHome(MakeRoute(route, iglooPosition + domeCenter, null, door, foot));
             runners.Add(runner);
 
             // Each penguin gets its own random breath phase, speed and clip order.

@@ -229,17 +229,31 @@ public static class GameLayoutChecks
         bool doorOpenedOut = false, maskedOut = false, closingWhileClear = true;
         seconds = 0f;
         runner.RunOutOfIgloo(1.1f);
-        Require(runner.Current == PenguinRunner.State.RunningOut && body.enabled && outfit.enabled
-            && body.maskInteraction == SpriteMaskInteraction.VisibleInsideMask,
-            $"Run out {label} starts visible inside the tunnel, behind the doorway mask");
-        float previousOpen = runner.Door.Open;
+        Require(runner.Current == PenguinRunner.State.RunningOut && runner.WaitingForDoor && !body.enabled
+            && !outfit.enabled, $"Run out {label} waits hidden at the tunnel end while its closed door opens");
+        bool appearedOpen = true, wasVisible = false;
+        float previousOpen = runner.Door.Open, waited = 0f;
         while (runner.IsRunning && seconds < 30f)
         {
             runner.Tick(0.05f);
-            seconds += 0.05f;
+            // Time spent waiting for the door is not part of the run.
+            if (runner.WaitingForDoor)
+                waited += 0.05f;
+            else
+                seconds += 0.05f;
             doorOpenedOut |= runner.Door.Open > 0.999f;
             if (!runner.IsRunning)
                 break;
+            if (!body.enabled)
+                continue;
+            if (!wasVisible)
+            {
+                // It shows up still in the tunnel, behind the doorway mask, once the door is fully open.
+                Require(body.maskInteraction == SpriteMaskInteraction.VisibleInsideMask,
+                    $"Run out {label} shows up inside the tunnel, behind the doorway mask");
+                appearedOpen = runner.Door.Open > 0.999f;
+            }
+            wasVisible = true;
             Require(body.sprite != outfit.sprite && body.flipX == outfit.flipX && outfit.sortingOrder == body.sortingOrder + 1
                 && body.sortingOrder == PenguinRunner.DepthOrder(character.localPosition.y),
                 $"Run out {label} keeps the outfit on the body and sorts by depth");
@@ -254,6 +268,8 @@ public static class GameLayoutChecks
         }
         Require(runner.Current == PenguinRunner.State.Idle && Mathf.Abs(seconds - runner.PathLength / 1.1f) < 0.1f,
             $"Run out {label} reaches its slot in {seconds:F2} s at 1.1 units/s");
+        Require(appearedOpen && waited <= PenguinRunner.DoorSeconds + 0.1f,
+            $"Run out {label} shows up in the tunnel only once the door is fully open, after {waited:F2} s");
         Require(doorOpenedOut && maskedOut && closingWhileClear && runner.Door.Open < 1e-4f,
             $"Run out {label} opens the door, leaves through the doorway and the door is closed on arrival");
         Require(Vector3.Distance(character.localPosition, slotPosition) < 1e-4f && body.sprite == idleBody
