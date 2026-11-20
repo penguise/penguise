@@ -1,0 +1,1988 @@
+fileFormatVersion: 2
+guid: ea151b0cf8b16aa44a9221c89d682905
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1987984771851500678
+    second: PenguinOutfitIdle2_0
+  - first:
+      213: 772841361104877179
+    second: PenguinOutfitIdle2_1
+  - first:
+      213: 2141240327425090773
+    second: PenguinOutfitIdle2_2
+  - first:
+      213: 414990242720495621
+    second: PenguinOutfitIdle2_3
+  - first:
+      213: 551420889898302610
+    second: PenguinOutfitIdle2_4
+  - first:
+      213: 1761503074821722051
+    second: PenguinOutfitIdle2_5
+  - first:
+      213: -4100727513828235759
+    second: PenguinOutfitIdle2_6
+  - first:
+      213: -6677344653100973377
+    second: PenguinOutfitIdle2_7
+  - first:
+      213: -3132546404912416092
+    second: PenguinOutfitIdle2_8
+  - first:
+      213: -8747346093861893552
+    second: PenguinOutfitIdle2_9
+  - first:
+      213: -4964760652671061278
+    second: PenguinOutfitIdle2_10
+  - first:
+      213: -7540124737333224081
+    second: PenguinOutfitIdle2_11
+  - first:
+      213: -8902685205159395384
+    second: PenguinOutfitIdle2_12
+  - first:
+      213: 1224718112625722937
+    second: PenguinOutfitIdle2_13
+  - first:
+      213: -5201893209808648181
+    second: PenguinOutfitIdle2_14
+  - first:
+      213: 3342587036226259021
+    second: PenguinOutfitIdle2_15
+  - first:
+      213: -599175878835590299
+    second: PenguinOutfitIdle2_16
+  - first:
+      213: -9096314240183567173
+    second: PenguinOutfitIdle2_17
+  - first:
+      213: 4671154790311155309
+    second: PenguinOutfitIdle2_18
+  - first:
+      213: -143792675869525705
+    second: PenguinOutfitIdle2_19
+  - first:
+      213: -7091177603532493195
+    second: PenguinOutfitIdle2_20
+  - first:
+      213: 2490769775186406751
+    second: PenguinOutfitIdle2_21
+  - first:
+      213: -2571129436395748843
+    second: PenguinOutfitIdle2_22
+  - first:
+      213: -7238269265897365625
+    second: PenguinOutfitIdle2_23
+  - first:
+      213: -8297398600353741522
+    second: PenguinOutfitIdle2_24
+  - first:
+      213: -7783292354116641603
+    second: PenguinOutfitIdle2_25
+  - first:
+      213: 5901390480840390212
+    second: PenguinOutfitIdle2_26
+  - first:
+      213: -1156545652979724205
+    second: PenguinOutfitIdle2_27
+  - first:
+      213: -4459770706395210913
+    second: PenguinOutfitIdle2_28
+  - first:
+      213: 4298098958944889061
+    second: PenguinOutfitIdle2_29
+  - first:
+      213: -4491264672533634515
+    second: PenguinOutfitIdle2_30
+  - first:
+      213: -6773207824596443432
+    second: PenguinOutfitIdle2_31
+  - first:
+      213: -5391476882153852582
+    second: PenguinOutfitIdle2_32
+  - first:
+      213: -2112899903272443585
+    second: PenguinOutfitIdle2_33
+  - first:
+      213: 4241346128866896300
+    second: PenguinOutfitIdle2_34
+  - first:
+      213: 767109056987773934
+    second: PenguinOutfitIdle2_35
+  - first:
+      213: 1567633935059995587
+    second: PenguinOutfitIdle2_36
+  - first:
+      213: -2069770233547668360
+    second: PenguinOutfitIdle2_37
+  - first:
+      213: 8160226558969295862
+    second: PenguinOutfitIdle2_38
+  - first:
+      213: -6948858130007702645
+    second: PenguinOutfitIdle2_39
+  - first:
+      213: -6265373824844917203
+    second: PenguinOutfitIdle2_40
+  - first:
+      213: 4063957005717068449
+    second: PenguinOutfitIdle2_41
+  - first:
+      213: -9061435574223523854
+    second: PenguinOutfitIdle2_42
+  - first:
+      213: 135295045390647174
+    second: PenguinOutfitIdle2_43
+  - first:
+      213: 1049681880827351687
+    second: PenguinOutfitIdle2_44
+  - first:
+      213: -5390788592304359068
+    second: PenguinOutfitIdle2_45
+  - first:
+      213: 4310845495509906170
+    second: PenguinOutfitIdle2_46
+  - first:
+      213: -4376803547694577056
+    second: PenguinOutfitIdle2_47
+  - first:
+      213: -8509680034704048918
+    second: PenguinOutfitIdle2_48
+  - first:
+      213: 4005901261557069964
+    second: PenguinOutfitIdle2_49
+  - first:
+      213: 3245415761567773547
+    second: PenguinOutfitIdle2_50
+  - first:
+      213: 5962180530165824985
+    second: PenguinOutfitIdle2_51
+  - first:
+      213: 3203177797324726480
+    second: PenguinOutfitIdle2_52
+  - first:
+      213: -8968620527761764895
+    second: PenguinOutfitIdle2_53
+  - first:
+      213: -6907456627563664870
+    second: PenguinOutfitIdle2_54
+  - first:
+      213: -7979211386395962493
+    second: PenguinOutfitIdle2_55
+  - first:
+      213: 336455753170662802
+    second: PenguinOutfitIdle2_56
+  - first:
+      213: 5250493004940174806
+    second: PenguinOutfitIdle2_57
+  - first:
+      213: -800817728759405803
+    second: PenguinOutfitIdle2_58
+  - first:
+      213: -2942033430874717415
+    second: PenguinOutfitIdle2_59
+  - first:
+      213: -4941612102667641374
+    second: PenguinOutfitIdle2_60
+  - first:
+      213: 6369799620018135324
+    second: PenguinOutfitIdle2_61
+  - first:
+      213: 64561045928669971
+    second: PenguinOutfitIdle2_62
+  - first:
+      213: -4449193028821997687
+    second: PenguinOutfitIdle2_63
+  - first:
+      213: -4329489141753725622
+    second: PenguinOutfitIdle2_64
+  - first:
+      213: -8353026082666498156
+    second: PenguinOutfitIdle2_65
+  - first:
+      213: -3718864836624721427
+    second: PenguinOutfitIdle2_66
+  - first:
+      213: -1604512565564814759
+    second: PenguinOutfitIdle2_67
+  - first:
+      213: 4918233752310019845
+    second: PenguinOutfitIdle2_68
+  - first:
+      213: 4776617828339153320
+    second: PenguinOutfitIdle2_69
+  - first:
+      213: 3221847717115356520
+    second: PenguinOutfitIdle2_70
+  - first:
+      213: 2020341121904148341
+    second: PenguinOutfitIdle2_71
+  - first:
+      213: 2280067114986783969
+    second: PenguinOutfitIdle2_72
+  - first:
+      213: -3527765656088274761
+    second: PenguinOutfitIdle2_73
+  - first:
+      213: 6239289346735210346
+    second: PenguinOutfitIdle2_74
+  - first:
+      213: 7039831030328223345
+    second: PenguinOutfitIdle2_75
+  - first:
+      213: 3463745441880691346
+    second: PenguinOutfitIdle2_76
+  - first:
+      213: -4620023184358800881
+    second: PenguinOutfitIdle2_77
+  - first:
+      213: -5717678893159372679
+    second: PenguinOutfitIdle2_78
+  - first:
+      213: -6255262402281434077
+    second: PenguinOutfitIdle2_79
+  - first:
+      213: -977561470120040994
+    second: PenguinOutfitIdle2_80
+  - first:
+      213: 8185451407196990328
+    second: PenguinOutfitIdle2_81
+  - first:
+      213: -7395768865870675241
+    second: PenguinOutfitIdle2_82
+  - first:
+      213: 1450472564525575981
+    second: PenguinOutfitIdle2_83
+  - first:
+      213: 6144275781038180301
+    second: PenguinOutfitIdle2_84
+  - first:
+      213: 3899346140256938916
+    second: PenguinOutfitIdle2_85
+  - first:
+      213: 6107557932959800267
+    second: PenguinOutfitIdle2_86
+  - first:
+      213: 8297630561639680636
+    second: PenguinOutfitIdle2_87
+  - first:
+      213: -5639633862417731407
+    second: PenguinOutfitIdle2_88
+  - first:
+      213: -2146010332545214023
+    second: PenguinOutfitIdle2_89
+  - first:
+      213: -6418528430326692251
+    second: PenguinOutfitIdle2_90
+  - first:
+      213: 3934844292422611932
+    second: PenguinOutfitIdle2_91
+  - first:
+      213: 5015982212823904434
+    second: PenguinOutfitIdle2_92
+  - first:
+      213: 5180059044797911339
+    second: PenguinOutfitIdle2_93
+  - first:
+      213: -3402921857055577590
+    second: PenguinOutfitIdle2_94
+  - first:
+      213: 7531980133524524113
+    second: PenguinOutfitIdle2_95
+  - first:
+      213: -5563626814111585445
+    second: PenguinOutfitIdle2_96
+  - first:
+      213: 7387776928424277673
+    second: PenguinOutfitIdle2_97
+  - first:
+      213: -6745291058148577092
+    second: PenguinOutfitIdle2_98
+  - first:
+      213: -6619335851630436756
+    second: PenguinOutfitIdle2_99
+  - first:
+      213: 2790100327919524191
+    second: PenguinOutfitIdle2_100
+  - first:
+      213: -8156168713678408179
+    second: PenguinOutfitIdle2_101
+  - first:
+      213: 6435108712981674979
+    second: PenguinOutfitIdle2_102
+  - first:
+      213: 6019688649693027109
+    second: PenguinOutfitIdle2_103
+  - first:
+      213: 809126059755382195
+    second: PenguinOutfitIdle2_104
+  - first:
+      213: -1361310588620767295
+    second: PenguinOutfitIdle2_105
+  - first:
+      213: 4140098872833320900
+    second: PenguinOutfitIdle2_106
+  - first:
+      213: 4390766676262321434
+    second: PenguinOutfitIdle2_107
+  - first:
+      213: 2891879498413881372
+    second: PenguinOutfitIdle2_108
+  - first:
+      213: -2324130649079630652
+    second: PenguinOutfitIdle2_109
+  - first:
+      213: 2558216060779438141
+    second: PenguinOutfitIdle2_110
+  - first:
+      213: -3625213395654362022
+    second: PenguinOutfitIdle2_111
+  - first:
+      213: 8349865686240345710
+    second: PenguinOutfitIdle2_112
+  - first:
+      213: -8080096416205379162
+    second: PenguinOutfitIdle2_113
+  - first:
+      213: 7157571378788460835
+    second: PenguinOutfitIdle2_114
+  - first:
+      213: -6263702005414498363
+    second: PenguinOutfitIdle2_115
+  - first:
+      213: 8418937448418660973
+    second: PenguinOutfitIdle2_116
+  - first:
+      213: -7789595137970257198
+    second: PenguinOutfitIdle2_117
+  - first:
+      213: 9191877009508030253
+    second: PenguinOutfitIdle2_118
+  - first:
+      213: 7681619372059099114
+    second: PenguinOutfitIdle2_119
+  - first:
+      213: -4634828481624532818
+    second: PenguinOutfitIdle2_120
+  - first:
+      213: 1781300238136861491
+    second: PenguinOutfitIdle2_121
+  - first:
+      213: -5526513369725091768
+    second: PenguinOutfitIdle2_122
+  - first:
+      213: 5426892369276809997
+    second: PenguinOutfitIdle2_123
+  - first:
+      213: -1356154546785755891
+    second: PenguinOutfitIdle2_124
+  - first:
+      213: 5823990031841157621
+    second: PenguinOutfitIdle2_125
+  - first:
+      213: -4990010910803765111
+    second: PenguinOutfitIdle2_126
+  - first:
+      213: -5493549745710215603
+    second: PenguinOutfitIdle2_127
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 312.5
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PenguinOutfitIdle_128
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1792
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.0156}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a000f62e731af8445a617279ae81599e
+      internalID: 849129454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitIdle_129
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1792
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.0156}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 041b12d4b4416de42b89805412622ce9
+      internalID: 1422493752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitIdle_130
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1792
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.0156}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 172b65f80cfe08a42986d657261dc0b8
+      internalID: -1610964563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitIdle_131
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1792
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.0156}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1c7a50f67e47e14e9daa4d0e6398edd
+      internalID: -2031005902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitIdle_132
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1792
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.0156}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31acc7fadca96c548bddf25310034951
+      internalID: 1324070211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitIdle_133
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 1792
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.0156}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 552f35b1400845841988178c3675d6c3
+      internalID: 429326243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitIdle_134
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1792
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.0156}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d129f2efaca19f7469e9b54b292b11c5
+      internalID: -650966113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitIdle_135
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 1792
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.0156}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92811a0a98ef72e409b9282cde0a1b07
+      internalID: 1070179617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitIdle_136
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1536
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.0156}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17f3988263750b54689b7403965f264d
+      internalID: 288024092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitIdle_137
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1536
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.0156}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33712eab7a3c16043b4caa120d646990
+      internalID: 1430495799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitIdle_138
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1536
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.0156}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d72ec4a714e1794ea3c72b0b41029f7
+      internalID: 1939541434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitIdle_139
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1536
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.0156}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4021b367b1b29a74aa1f3f7a76c0afda
+      internalID: -2019720366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitIdle_140
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1536
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.0156}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 579eb47f2bed82541ad1b8cc5154e3f6
+      internalID: 528651035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitIdle_141
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 1536
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.0156}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b8619f879188f5458a4d3b7812334de
+      internalID: 575845539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitIdle_142
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1536
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.0156}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c21f41f9e01a96e4cb203be748302db6
+      internalID: 554333498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitIdle_143
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 1536
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.0156}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b55f2022426e56e4c8ddb6a88712392d
+      internalID: -1638150225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitIdle_144
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1280
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.0156}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8d83f0c155528a4b89261cb9446b0a0
+      internalID: -1726228064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitIdle_145
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1280
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.0156}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72df734e245a2144aba554a6f445d4de
+      internalID: -658466916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitIdle_146
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1280
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.0156}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f28f49c12f56d42429c5372805708cf7
+      internalID: 1769216851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitIdle_147
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1280
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.0156}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 929dd116240ab0d48b6d8172d0915ecd
+      internalID: 634784570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitIdle_148
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1280
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.0156}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10ad80732911fce4e965b218ae8cddb2
+      internalID: -1767731645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitIdle_149
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 1280
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.0156}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08015ed1bb8298c4ab5eb52d21ff3663
+      internalID: 1054882451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitIdle_150
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1280
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.0156}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efeb5c39d0836654fa1bfab2b8ddc753
+      internalID: 1159809611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitIdle_151
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 1280
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.0156}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cd218dc06f64fd43b6e332ddad5f869
+      internalID: -236647988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitIdle_152
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1024
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.0156}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9923ebee8e790342b97617f55051530
+      internalID: 297242934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitIdle_153
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1024
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.0156}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc63a5990ca970442bc3fd51a04a758a
+      internalID: 1541154929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitIdle_154
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1024
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.0156}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b276615cbd7981c45911f791a360c5ea
+      internalID: 1517806855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitIdle_155
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1024
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.0156}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f12257d48eae0204c90b2a5224e98bb7
+      internalID: -1559514235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitIdle_156
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1024
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.0156}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d726652a6eb1f1b41a926dd747ccb7c5
+      internalID: -736596066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitIdle_157
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 1024
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.0156}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c61bd40418e36d4479d545e602191911
+      internalID: 32770902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitIdle_158
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1024
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.0156}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdc987ace6f99584d9d023a3d4f21d5e
+      internalID: -812005651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitIdle_159
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 1024
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.0156}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 972266db0dcb58041807b0fcaabdaf5b
+      internalID: 390602138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitIdle_160
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 768
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.0156}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b9c07ceb18539446a40745d307cb92e
+      internalID: -1190087369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitIdle_161
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 768
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.0156}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4861bc921cbc67140a011e5f1b3c5073
+      internalID: -1063367252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitIdle_162
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 768
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.0156}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e125bef8852f3be42a3c3eca5762ce62
+      internalID: 58712289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitIdle_163
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 768
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.0156}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9edf062e77b87da40a29aa2943659880
+      internalID: -585682586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitIdle_164
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 768
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.0156}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 638ec0b090db0f84dbfc8b4d8efd03a0
+      internalID: -192701674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitIdle_165
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 768
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.0156}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b85461d596070c84aa51f566033e2793
+      internalID: 1481754628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitIdle_166
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 768
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.0156}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ef351f105163d848b4e4f09a59ad788
+      internalID: 978536191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitIdle_167
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 768
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.0156}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89fcc2a2d68549c49b85fefc917244cd
+      internalID: 160616657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitIdle_168
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 512
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.0156}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57a5101da95403746bd855891cf64cbd
+      internalID: -995479484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitIdle_169
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 512
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.0156}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4884978961021c4a906815468170fd2
+      internalID: -585701591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitIdle_170
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 512
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.0156}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4615227531d542d4bbdf8c6254c39194
+      internalID: -396570971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitIdle_171
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 512
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.0156}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3ee8b3043b65854b88201b68932a039
+      internalID: 175924844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitIdle_172
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 512
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.0156}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c266dea2ab0af548b1fd145d5012a06
+      internalID: -604594558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitIdle_173
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 512
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.0156}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc85ddf0bedfedf4da49a199d2ed1983
+      internalID: -1329151604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitIdle_174
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 512
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.0156}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d42bcba8b259ecf45af455d1822bfa4b
+      internalID: -516596133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitIdle_175
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 512
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.0156}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0193651c546bbc44aa3273174ffb026b
+      internalID: -1324380917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitIdle_176
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 256
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.0156}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c975d15ffff43a4c948e658459c0249
+      internalID: -1273910945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitIdle_177
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 256
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.0156}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d00fba5eb6a233e468d6394da63c37ea
+      internalID: 1237643590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitIdle_178
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 256
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.0156}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4af285e1d46364347a76d4d87db7c9cf
+      internalID: 1577283117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitIdle_179
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 256
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.0156}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac6893def53ddfa4caee580f1a468c42
+      internalID: -1571721872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitIdle_180
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 256
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.0156}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d22e1fa2b62c0f444be0e1dd03048169
+      internalID: 523087366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitIdle_181
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 256
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.0156}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8d9e17d2d81ddb4abeea18a05db95fb
+      internalID: 849064849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitIdle_182
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 256
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.0156}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1ea6eb1c227a824dafa06c20f4289ab
+      internalID: -495661505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitIdle_183
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 256
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.0156}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ade6b6f2ce6805a4bacade51db133eed
+      internalID: 1751007188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitIdle_184
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.0156}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf62328c0fc4bc141bea3c3c8917e851
+      internalID: 1842337682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitIdle_185
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.0156}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84de7890b98a60f4ebc4b9285bbe2620
+      internalID: -731408736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitIdle_186
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.0156}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af5695299f4c50b458318a5e4e0facfe
+      internalID: -932698970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitIdle_187
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.0156}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4630b220555ce384a939da5f97ed6a5e
+      internalID: 1124867218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitIdle_188
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 0
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.0156}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cebc313dc3ae3af4ea54713ea2add603
+      internalID: -494608708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitIdle_189
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 0
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.0156}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37f2c5e40fc8be44b9f469573771d012
+      internalID: -1705022573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitIdle_190
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 0
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.0156}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bfbe89deed7ee14ab8e133d3f5a3a88
+      internalID: -7119806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitIdle_191
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 0
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.0156}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 964a2a3b34732774a9223d08fa3f0a61
+      internalID: 1058816667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: b71aa147b0b344643b5a71b9a79ae4fb
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      PenguinOutfitIdle_128: 849129454
+      PenguinOutfitIdle_129: 1422493752
+      PenguinOutfitIdle_130: -1610964563
+      PenguinOutfitIdle_131: -2031005902
+      PenguinOutfitIdle_132: 1324070211
+      PenguinOutfitIdle_133: 429326243
+      PenguinOutfitIdle_134: -650966113
+      PenguinOutfitIdle_135: 1070179617
+      PenguinOutfitIdle_136: 288024092
+      PenguinOutfitIdle_137: 1430495799
+      PenguinOutfitIdle_138: 1939541434
+      PenguinOutfitIdle_139: -2019720366
+      PenguinOutfitIdle_140: 528651035
+      PenguinOutfitIdle_141: 575845539
+      PenguinOutfitIdle_142: 554333498
+      PenguinOutfitIdle_143: -1638150225
+      PenguinOutfitIdle_144: -1726228064
+      PenguinOutfitIdle_145: -658466916
+      PenguinOutfitIdle_146: 1769216851
+      PenguinOutfitIdle_147: 634784570
+      PenguinOutfitIdle_148: -1767731645
+      PenguinOutfitIdle_149: 1054882451
+      PenguinOutfitIdle_150: 1159809611
+      PenguinOutfitIdle_151: -236647988
+      PenguinOutfitIdle_152: 297242934
+      PenguinOutfitIdle_153: 1541154929
+      PenguinOutfitIdle_154: 1517806855
+      PenguinOutfitIdle_155: -1559514235
+      PenguinOutfitIdle_156: -736596066
+      PenguinOutfitIdle_157: 32770902
+      PenguinOutfitIdle_158: -812005651
+      PenguinOutfitIdle_159: 390602138
+      PenguinOutfitIdle_160: -1190087369
+      PenguinOutfitIdle_161: -1063367252
+      PenguinOutfitIdle_162: 58712289
+      PenguinOutfitIdle_163: -585682586
+      PenguinOutfitIdle_164: -192701674
+      PenguinOutfitIdle_165: 1481754628
+      PenguinOutfitIdle_166: 978536191
+      PenguinOutfitIdle_167: 160616657
+      PenguinOutfitIdle_168: -995479484
+      PenguinOutfitIdle_169: -585701591
+      PenguinOutfitIdle_170: -396570971
+      PenguinOutfitIdle_171: 175924844
+      PenguinOutfitIdle_172: -604594558
+      PenguinOutfitIdle_173: -1329151604
+      PenguinOutfitIdle_174: -516596133
+      PenguinOutfitIdle_175: -1324380917
+      PenguinOutfitIdle_176: -1273910945
+      PenguinOutfitIdle_177: 1237643590
+      PenguinOutfitIdle_178: 1577283117
+      PenguinOutfitIdle_179: -1571721872
+      PenguinOutfitIdle_180: 523087366
+      PenguinOutfitIdle_181: 849064849
+      PenguinOutfitIdle_182: -495661505
+      PenguinOutfitIdle_183: 1751007188
+      PenguinOutfitIdle_184: 1842337682
+      PenguinOutfitIdle_185: -731408736
+      PenguinOutfitIdle_186: -932698970
+      PenguinOutfitIdle_187: 1124867218
+      PenguinOutfitIdle_188: -494608708
+      PenguinOutfitIdle_189: -1705022573
+      PenguinOutfitIdle_190: -7119806
+      PenguinOutfitIdle_191: 1058816667
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
