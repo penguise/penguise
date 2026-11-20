@@ -21,8 +21,14 @@ public sealed class GameLayout : MonoBehaviour
     // Idle clips back to back (PenguinIdle0..3 / PenguinOutfitIdle0..3 sheets, same pivot), see PenguinIdle.
     [SerializeField, HideInInspector] private Sprite[] idleFrames;
     [SerializeField, HideInInspector] private Sprite[] idleOutfitFrames;
+    // Knocked-out clips (PenguinDizzy/Faint/Down and their outfit sheets, same pivot), see PenguinRunner.
+    [SerializeField, HideInInspector] private Sprite[] dizzyFrames, dizzyOutfitFrames;
+    [SerializeField, HideInInspector] private Sprite[] faintFrames, faintOutfitFrames;
+    [SerializeField, HideInInspector] private Sprite[] downFrames, downOutfitFrames;
     // Igloo doorway opening, pivot on the door hinge: masks penguins once they pass the door plane.
     [SerializeField, HideInInspector] private Sprite doorway;
+    // Lamp-off window pane (centre pivot) shown while a visitor is inside, see IglooAction.
+    [SerializeField, HideInInspector] private Sprite windowDark;
     [SerializeField, HideInInspector] private Material spriteMaterial;
     [SerializeField, HideInInspector] private Font nameFont;
     private Transform generated;
@@ -72,12 +78,23 @@ public sealed class GameLayout : MonoBehaviour
     // penguin on a visit (out of its own igloo, or from its slot, into the clicked one, a short wait, then
     // back into its own igloo); clicking its own igloo runs it in or out. Runtime code uses Visit(slot, target).
     [SerializeField, Range(0, 8)] private int playAs;
+    // Preview: knocks out that slot (1-based, 0 off). Inside its igloo it walks out dizzy on the next run out
+    // and faints past its door; standing on its slot, it faints at once. Changing the field brings the
+    // previous one back, so only the chosen slot is knocked out. Runtime code uses KnockOut(slot).
+    [SerializeField, Range(0, 8)] private int knockOut;
+    // Ground speed of a knocked-out penguin's dizzy walk out (units/s); the art's own pace is
+    // PenguinRunner.DizzyArtSpeed, and frames follow distance, so faster plays the loop faster.
+    [SerializeField, Range(0.2f, 1.5f)] private float dizzySpeed = 0.6f;
+    private int renderedKnockOut;
     public float CharacterGap => characterGap;
     public float IglooGap => iglooGap;
     private int renderedCount;
     private float renderedCharacterGap = float.NaN, renderedIglooGap = float.NaN, renderedDoorOpen = float.NaN;
     private readonly List<IglooDoor> doors = new List<IglooDoor>();
     public IReadOnlyList<IglooDoor> Doors => doors;
+    private readonly List<IglooAction> actions = new List<IglooAction>();
+    // Per igloo: the lamp flicker and shake played while a visitor is inside.
+    public IReadOnlyList<IglooAction> Actions => actions;
     private readonly List<PenguinRunner> runners = new List<PenguinRunner>();
     public IReadOnlyList<PenguinRunner> Runners => runners;
     private readonly List<PenguinIdle> idles = new List<PenguinIdle>();
@@ -108,8 +125,16 @@ public sealed class GameLayout : MonoBehaviour
             RunOutOfIgloo(i);
     }
 
-    // Seconds a visitor stays inside the igloo it visits.
-    public const float VisitMinSeconds = 2f, VisitMaxSeconds = 3f;
+    // Knocks out the penguin of `slot` for good (see PenguinRunner.KnockOut): it comes out of its igloo
+    // dizzy and faints on its slot, or faints at once if it stands there.
+    public void KnockOut(int slot)
+    {
+        if (slot >= 0 && slot < runners.Count && runners[slot] != null)
+            runners[slot].KnockOut();
+    }
+
+    // Seconds a visitor stays inside the igloo it visits; that igloo's IglooAction stretches to the stay.
+    public const float VisitMinSeconds = 3f, VisitMaxSeconds = 5f;
     // Ground area (reference units) where visit routes may turn: on screen, right of the chat panel, with
     // room for the penguin above its feet.
     public static readonly Rect WalkArea = Rect.MinMaxRect(-5.2f, -5.3f, 9.3f, 4.6f);
@@ -125,7 +150,7 @@ public sealed class GameLayout : MonoBehaviour
         new Dictionary<(int, int, bool), PenguinRunner.Route>();
 
     // Sends the penguin of `slot` into igloo `target`: out of its own igloo when inside (or from its slot
-    // when standing there), a wait of 2-3 s, then back into its own igloo. False if it is busy, the slots
+    // when standing there), a wait of 3-5 s (the igloo's lamp flickers and it shakes), then back into its own igloo. False if it is busy, the slots
     // are invalid or no route keeps clear of the igloos.
     public bool Visit(int slot, int target)
     {
@@ -250,6 +275,8 @@ public sealed class GameLayout : MonoBehaviour
 
     // Window glow: texture fractions (y up) of the igloo art's round window, plus light shape and color.
     private static readonly Vector2 IglooWindow = new Vector2(0.2587f, 0.4336f);
+    // Centre of the lamp-off pane's crop (IglooWindowDark.png) as a texture fraction of the igloo art.
+    private static readonly Vector2 IglooWindowDark = new Vector2(0.261164f, 0.433812f);
     // Door hinge (bottom of the leaf's right edge) as a texture fraction of the igloo art, y up.
     private static readonly Vector2 IglooDoorHinge = new Vector2(0.775521f, 0.231698f);
     // Names draw above every igloo and penguin (depth orders stay well below this).
@@ -661,6 +688,30 @@ public sealed class GameLayout : MonoBehaviour
             RunAllOutOfIgloos();
     }
 
+    private static bool Frames(Sprite[] body, Sprite[] outfit, int count) =>
+        body != null && body.Length == count && outfit != null && outfit.Length == count;
+
+    // Inspector knock-out preview: brings the previous slot back and knocks out the chosen one (0: none).
+    // Dragging the slider passes through other slots, which must not stay knocked out.
+    private void ApplyKnockOutSetting()
+    {
+        if (knockOut == renderedKnockOut || generated == null)
+            return;
+        int previous = renderedKnockOut - 1;
+        if (previous >= 0 && previous < runners.Count && runners[previous] != null)
+            runners[previous].UndoKnockOutPreview();
+        renderedKnockOut = knockOut;
+        if (knockOut > 0)
+            KnockOut(knockOut - 1);
+    }
+
+    private void ApplyDizzySpeed()
+    {
+        foreach (PenguinRunner runner in runners)
+            if (runner != null && runner.DizzySpeed != dizzySpeed)
+                runner.DizzySpeed = dizzySpeed;
+    }
+
     // Applies the inspector door slider when it changes, so runtime door control is left alone otherwise.
     private void ApplyDoors()
     {
@@ -705,6 +756,8 @@ public sealed class GameLayout : MonoBehaviour
 
         AlignWithBackground();
         ApplyRunSetting();
+        ApplyDizzySpeed();
+        ApplyKnockOutSetting();
         ApplyIdleSetting();
         HandleClick();
 
@@ -720,10 +773,13 @@ public sealed class GameLayout : MonoBehaviour
     public void Rebuild()
     {
         if (igloo == null || doorFront == null || doorBack == null || character == null || outfit == null
-            || doorway == null || runFrames == null || runFrames.Length != PenguinRunner.RunFrames
+            || doorway == null || windowDark == null || runFrames == null || runFrames.Length != PenguinRunner.RunFrames
             || runOutfitFrames == null || runOutfitFrames.Length != PenguinRunner.RunFrames
             || idleFrames == null || idleFrames.Length != PenguinIdle.TotalFrames
             || idleOutfitFrames == null || idleOutfitFrames.Length != PenguinIdle.TotalFrames
+            || !Frames(dizzyFrames, dizzyOutfitFrames, PenguinRunner.DizzyFrames)
+            || !Frames(faintFrames, faintOutfitFrames, PenguinRunner.FaintFrames)
+            || !Frames(downFrames, downOutfitFrames, PenguinRunner.DownFrames)
             || spriteMaterial == null || nameFont == null)
             return;
         for (int i = transform.childCount - 1; i >= 0; i--)
@@ -742,11 +798,13 @@ public sealed class GameLayout : MonoBehaviour
         windowLights.Clear();
         nameLabels.Clear();
         doors.Clear();
+        actions.Clear();
         runners.Clear();
         idles.Clear();
         visitRoutes.Clear();
         iglooPositions = feet = null;
         renderedRun = false;
+        renderedKnockOut = 0;
         renderedCharacterGap = characterGap;
         renderedIglooGap = iglooGap;
         generated = new GameObject("Layout").transform;
@@ -804,6 +862,15 @@ public sealed class GameLayout : MonoBehaviour
             window.pointLightInnerRadius = 0.08f * generated.lossyScale.x;
             window.falloffIntensity = 0.6f;
             windowLights.Add(window);
+            var pane = new GameObject("Window Dark").AddComponent<SpriteRenderer>();
+            pane.transform.SetParent(iglooRenderer.transform, false);
+            pane.transform.localPosition = IglooPoint(IglooWindowDark);
+            pane.sprite = windowDark;
+            pane.sharedMaterial = spriteMaterial;
+            pane.sortingOrder = 1;
+            var action = iglooRenderer.gameObject.AddComponent<IglooAction>();
+            action.Setup(iglooRenderer.transform, pane, 1f / unitsPerPixel);
+            actions.Add(action);
             // Penguin pivot is its feet; the penguin stays untinted and its outfit carries the player color.
             Vector2 foot = FootPosition(angles[i], characterGap);
             var penguin = MakeSprite("Character " + (i + 1), character, foot,
@@ -845,12 +912,16 @@ public sealed class GameLayout : MonoBehaviour
 
             var runner = penguin.gameObject.AddComponent<PenguinRunner>();
             runner.Setup(penguin, clothes, renderer, runFrames, runOutfitFrames);
+            runner.SetupKnockOut(dizzyFrames, dizzyOutfitFrames, faintFrames, faintOutfitFrames, downFrames,
+                downOutfitFrames);
+            runner.DizzySpeed = dizzySpeed;
             var otherDomes = new List<Vector2>();
             for (int other = 0; other < count; other++)
                 if (other != i)
                     otherDomes.Add((iglooPositions[other] - iglooPosition) / unitsPerPixel);
             var route = IglooGround.PathToDoor((foot - iglooPosition - domeCenter) / unitsPerPixel, otherDomes);
             runner.SetHome(MakeRoute(route, iglooPosition + domeCenter, null, door, foot));
+            runner.GuestArrived += PlayAction;
             runners.Add(runner);
 
             // Each penguin gets its own random breath phase, speed and clip order.
@@ -865,6 +936,14 @@ public sealed class GameLayout : MonoBehaviour
                 part.gameObject.hideFlags = HideFlags.DontSave;
 #endif
         ApplyLighting();
+    }
+
+    // A visitor went in through `door`: that igloo's lamp flickers and it shakes for the stay.
+    private void PlayAction(IglooDoor door, float seconds)
+    {
+        int igloo = doors.IndexOf(door);
+        if (igloo >= 0 && igloo < actions.Count && actions[igloo] != null)
+            actions[igloo].Play(seconds);
     }
 
     // Igloo art point (texture fraction, y up) in the igloo sprite's local units.
@@ -894,12 +973,14 @@ public sealed class GameLayout : MonoBehaviour
             background.a = 1f;
             layoutCamera.backgroundColor = background;
         }
-        foreach (Light2D window in windowLights)
+        for (int i = 0; i < windowLights.Count; i++)
         {
+            Light2D window = windowLights[i];
             if (window == null)
                 continue;
-            window.intensity = WindowLightIntensity * darkness;
-            window.enabled = darkness > 0.001f;
+            float lamp = i < actions.Count && actions[i] != null ? actions[i].Lamp : 1f;
+            window.intensity = WindowLightIntensity * darkness * lamp;
+            window.enabled = darkness * lamp > 0.001f;
         }
         Color nameColor = Color.Lerp(DayNameColor, NightNameColor, darkness);
         foreach (TextMesh label in nameLabels)

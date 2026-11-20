@@ -10,6 +10,10 @@ using UnityEngine;
 // Visit: from its own tunnel (or its slot) along a route around the domes into another igloo's tunnel,
 // a wait inside, then back into its own igloo (the same route when it set off from there). Each door opens as the penguin comes
 // near it or sets off inside it, and closes once the penguin is clear of the leaf or has gone in.
+// Knocked out (KnockOut): it can no longer go in or visit. Run out of its igloo, it walks out dizzy (spiral
+// eyes, stars circling its head) just far enough for its door to close behind it (the same distance for every
+// igloo), faints backwards and lies there for good (Fainting, then Down); knocked out while standing on its
+// slot, it faints there.
 // In Edit mode it ticks from EditorApplication.update, so previews animate while the Editor is unfocused.
 [ExecuteAlways]
 public sealed class PenguinRunner : MonoBehaviour
@@ -20,8 +24,26 @@ public sealed class PenguinRunner : MonoBehaviour
     public const float DoorSeconds = 0.45f;
     private static readonly Color InsideTint = new Color(0.22f, 0.25f, 0.32f);
 
+    // Knocked-out art (PenguinDizzy/Faint/Down sheets, Tools/ArtGen/penguin/faint.py): the dizzy walk loop
+    // (frames follow distance), the fall (by time) and lying down (looped by time). The fall starts from the
+    // walk at loop position FaintStartLoop, so the walk out is stretched to end there.
+    public const int DizzyFrames = 24, FaintFrames = 29, DownFrames = 36;
+    public const float DizzyLoopDistance = 0.330667f;
+    // The art's own pace (units/s); faster walks play the loop faster, since frames follow distance.
+    public const float DizzyArtSpeed = 0.393651f;
+    public const float FaintStartLoop = 0.275f;
+    public const float FaintSeconds = 1.449f;
+    public const float DownSeconds = 2.52f;
+    // The name rises clear of the stars while dizzy and sits lower over the lying penguin.
+    private const float DizzyNameLift = 0.08f, DownNameLift = -0.2f;
+    // The walk out slows to a stop over this last stretch, this far past the point its door's leaf no
+    // longer reaches (the door closes behind it as it stops).
+    private const float DizzyStopDistance = 0.15f;
+    public const float FaintPastDoorClear = 0.35f;
+
     // Visiting: on the way to another igloo; Guest: inside it; Returning: on the way back.
-    public enum State { Idle, RunningIn, Inside, RunningOut, Visiting, Guest, Returning }
+    // Fainting: falling over on its slot; Down: lying there, knocked out for good.
+    public enum State { Idle, RunningIn, Inside, RunningOut, Visiting, Guest, Returning, Fainting, Down }
 
     // A ground route in the parent's local units. A door at either end belongs to the tunnel that end of
     // the route lies in; its Clear distance is the point in front of the door that the open leaf does not
@@ -56,15 +78,39 @@ public sealed class PenguinRunner : MonoBehaviour
     [SerializeField, HideInInspector] private Color clothesColor = Color.white;
     [SerializeField, HideInInspector] private bool idleFlip;
     [SerializeField, HideInInspector] private Route home;
+    [SerializeField, HideInInspector] private Sprite[] dizzyBody, dizzyClothes, faintBody, faintClothes, downBody, downClothes;
+    [SerializeField, HideInInspector] private Vector3 labelRest;
 
     private Route route, returnRoute;
     private State state;
     private float travelled, stride, speed, waitLeft;
-    private bool waitingForDoor;
+    private bool waitingForDoor, knockedOut;
+    private float dizzyScale = 1f, clipTime;
+    private Vector2 faintPosition;
+    private bool faintFlip;
+    [SerializeField, HideInInspector] private float dizzySpeed = DizzyArtSpeed;
     private DoorDrive startDrive, endDrive;
     private double lastTick;
 
     public State Current => state;
+    public bool KnockedOut => knockedOut;
+    // Distance along the home route (from the slot) where a dizzy walk out stops and the penguin faints.
+    public float FaintDistance => Mathf.Max(0f, DoorClearDistance - FaintPastDoorClear);
+    // Where it fainted (layout units), once Fainting or Down.
+    public Vector2 FaintPosition => faintPosition;
+    // Ground speed of the dizzy walk out, units/s.
+    public float DizzySpeed
+    {
+        get => dizzySpeed;
+        set
+        {
+            dizzySpeed = Mathf.Max(0.05f, value);
+            if (Dizzy)
+                speed = dizzySpeed;
+        }
+    }
+    // Raised when a visitor has gone in at the end of a visit route: the igloo's door and the stay in seconds.
+    public event Action<IglooDoor, float> GuestArrived;
     public bool IsInside => state == State.Inside;
     public bool IsRunning => state == State.RunningIn || state == State.RunningOut
         || state == State.Visiting || state == State.Returning;
@@ -96,6 +142,34 @@ public sealed class PenguinRunner : MonoBehaviour
         this.runClothes = runClothes;
         clothesColor = clothes.color;
         idleFlip = body.flipX;
+        if (label != null)
+            labelRest = label.transform.localPosition;
+    }
+
+    // Knocked-out art: dizzy walk, fall and lying frames (body and outfit layers, same pivot as the others).
+    public void SetupKnockOut(Sprite[] dizzyBody, Sprite[] dizzyClothes, Sprite[] faintBody, Sprite[] faintClothes,
+        Sprite[] downBody, Sprite[] downClothes)
+    {
+        this.dizzyBody = dizzyBody;
+        this.dizzyClothes = dizzyClothes;
+        this.faintBody = faintBody;
+        this.faintClothes = faintClothes;
+        this.downBody = downBody;
+        this.downClothes = downClothes;
+    }
+
+    // Knocks the penguin out for good. Inside its igloo, it comes out dizzy on its next run out (one
+    // already under way turns dizzy); standing on its slot, it faints there. Going in or visiting, it takes
+    // effect once it is back inside.
+    public void KnockOut()
+    {
+        if (knockedOut)
+            return;
+        knockedOut = true;
+        if (state == State.Idle)
+            StartFaint(home != null && home.Valid ? home.Points[0] : (Vector2)transform.localPosition, idleFlip);
+        else if (state == State.RunningOut)
+            Begin(home, State.RunningOut, dizzySpeed);
     }
 
     // Home route from the penguin's feet on its slot into its own tunnel (EndDoor is its own door).
@@ -107,9 +181,28 @@ public sealed class PenguinRunner : MonoBehaviour
         ShowIdle();
     }
 
+    // Inspector preview only (GameLayout's Knock Out field): undoes a knock-out, so dragging the field
+    // through other slots leaves only the chosen one knocked out. In a match a knock-out lasts until the end.
+    internal void UndoKnockOutPreview()
+    {
+        if (!knockedOut)
+            return;
+        knockedOut = false;
+        if (state == State.Fainting || state == State.Down)
+        {
+            state = State.Idle;
+            route = home;
+            ShowIdle();
+        }
+        else
+            LiftLabel(0f);
+    }
+
     // From the slot (or turning back from a run out) into the igloo.
     public void RunIntoIgloo(float unitsPerSecond)
     {
+        if (knockedOut)
+            return;
         if (state == State.Idle)
             travelled = 0f;
         else if (state != State.RunningOut)
@@ -124,7 +217,7 @@ public sealed class PenguinRunner : MonoBehaviour
             travelled = PathLength;
         else if (state != State.RunningIn)
             return;
-        Begin(home, State.RunningOut, unitsPerSecond);
+        Begin(home, State.RunningOut, knockedOut ? dizzySpeed : unitsPerSecond);
     }
 
     // Visit along `visit` (from the own tunnel when inside, from the slot when idle there), stay inside
@@ -133,7 +226,7 @@ public sealed class PenguinRunner : MonoBehaviour
     // False if the penguin is busy or the routes do not start where it is.
     public bool Visit(Route visit, Route back, float unitsPerSecond, float waitSeconds)
     {
-        if (visit == null || !visit.Valid || visit.EndDoor == null)
+        if (knockedOut || visit == null || !visit.Valid || visit.EndDoor == null)
             return false;
         if (state == State.Inside ? visit.StartDoor != Door : state != State.Idle || visit.StartDoor != null)
             return false;
@@ -162,6 +255,19 @@ public sealed class PenguinRunner : MonoBehaviour
         }
         state = run;
         speed = Mathf.Max(0.01f, unitsPerSecond);
+        if (Dizzy)
+        {
+            if (travelled <= FaintDistance)
+            {
+                StartFaint(transform.localPosition, body.flipX);
+                return;
+            }
+            // Stretch the dizzy stride so the walk stops exactly at the fall's start pose.
+            float loops = (travelled - FaintDistance) / DizzyLoopDistance;
+            float whole = Mathf.Max(0f, Mathf.Round(loops - FaintStartLoop));
+            dizzyScale = loops > 1e-4f ? (whole + FaintStartLoop) / loops : 1f;
+            stride = 0f;
+        }
         startDrive.Opening = endDrive.Opening = false;
         startDrive.Released = endDrive.Released = false;
         // Setting off from the far end of a tunnel: wait there, hidden, until its door is fully open, then
@@ -217,6 +323,16 @@ public sealed class PenguinRunner : MonoBehaviour
                 return;
             }
         }
+        if (state == State.Fainting || state == State.Down)
+        {
+            clipTime += seconds;
+            if (state == State.Fainting && clipTime >= FaintSeconds)
+            {
+                state = State.Down;
+                clipTime -= FaintSeconds;
+            }
+            ShowKnockedOut();
+        }
         if (forward)
         {
             float next = Mathf.Min(travelled + speed * seconds, route.Length);
@@ -225,7 +341,12 @@ public sealed class PenguinRunner : MonoBehaviour
         }
         else if (backward)
         {
-            float next = Mathf.Max(travelled - speed * seconds, 0f);
+            // Dizzy, it slows down over the last stretch to its slot.
+            float stop = Dizzy ? FaintDistance : 0f;
+            float pace = Dizzy
+                ? Mathf.Lerp(0.35f, 1f, Mathf.SmoothStep(0f, 1f, (travelled - stop) / DizzyStopDistance))
+                : 1f;
+            float next = Mathf.Max(travelled - speed * pace * seconds, stop);
             stride += travelled - next;
             travelled = next;
         }
@@ -234,8 +355,15 @@ public sealed class PenguinRunner : MonoBehaviour
             DriveDoor(route.EndDoor, ref endDrive, true, route.EndClear, forward);
             DriveDoor(route.StartDoor, ref startDrive, false, route.StartClear, forward);
             Place(travelled, forward);
-            if (forward && travelled >= route.Length)
-                Arrive(state == State.RunningIn ? State.Inside : State.Guest, ref endDrive);
+            if (backward && Dizzy && travelled <= FaintDistance)
+                StartFaint(transform.localPosition, body.flipX);
+            else if (forward && travelled >= route.Length)
+            {
+                bool guest = state == State.Visiting;
+                Arrive(guest ? State.Guest : State.Inside, ref endDrive);
+                if (guest)
+                    GuestArrived?.Invoke(route.EndDoor, waitLeft);
+            }
             else if (backward && travelled <= 0f)
             {
                 if (route.StartDoor != null)
@@ -332,7 +460,9 @@ public sealed class PenguinRunner : MonoBehaviour
         Time.realtimeSinceStartupAsDouble;
 #endif
 
-    private bool Active => IsRunning || state == State.Guest || startDrive.Closing || endDrive.Closing;
+    private bool Active => IsRunning || state == State.Guest || state == State.Fainting || state == State.Down
+        || startDrive.Closing || endDrive.Closing;
+    private bool Dizzy => knockedOut && state == State.RunningOut;
 
     private void Update()
     {
@@ -384,12 +514,25 @@ public sealed class PenguinRunner : MonoBehaviour
         Vector2 position = Vector2.Lerp(points[i - 1], points[i], t);
         float dx = (points[i].x - points[i - 1].x) * (forward ? 1f : -1f);
         bool flip = Mathf.Abs(dx) > 1e-4f ? dx < 0f : body.flipX;
-        int frame = Mathf.FloorToInt(stride / CycleDistance * RunFrames) % RunFrames;
+        Sprite bodySprite, clothesSprite;
+        if (Dizzy)
+        {
+            int dizzy = Mathf.FloorToInt(stride * dizzyScale / DizzyLoopDistance * DizzyFrames + 1e-3f) % DizzyFrames;
+            bodySprite = dizzyBody[dizzy];
+            clothesSprite = dizzyClothes[dizzy];
+        }
+        else
+        {
+            int frame = Mathf.FloorToInt(stride / CycleDistance * RunFrames) % RunFrames;
+            bodySprite = runBody[frame];
+            clothesSprite = runClothes[frame];
+        }
         // A segment between a masked and an open point counts as outside, whichever way it is walked.
         bool inside = route.Masked[i] && route.Masked[i - 1]
             || route.Masked[i] && t >= 1f || route.Masked[i - 1] && t <= 0f;
         float shade = Mathf.Lerp(route.Shades[i - 1], route.Shades[i], t);
-        Show(position, runBody[frame], runClothes[frame], flip, inside, shade);
+        Show(position, bodySprite, clothesSprite, flip, inside, shade);
+        LiftLabel(Dizzy ? DizzyNameLift : 0f);
         // The doorway mask draws the penguin in front of the igloo, over a closed or half-open leaf too, so
         // in a tunnel it shows only once that tunnel's door is fully open (e.g. setting off from inside).
         IglooDoor tunnelDoor = distance > route.Length * 0.5f ? route.EndDoor : route.StartDoor;
@@ -427,7 +570,46 @@ public sealed class PenguinRunner : MonoBehaviour
     {
         Show(home != null && home.Valid ? home.Points[0] : (Vector2)transform.localPosition,
             idleBody, idleClothes, idleFlip, false, 0f);
+        LiftLabel(0f);
         stride = 0f;
+    }
+
+    // The fall at `position` facing as `flip` (it falls backwards), then lying down for good.
+    private void StartFaint(Vector2 position, bool flip)
+    {
+        faintPosition = position;
+        faintFlip = flip;
+        state = State.Fainting;
+        route = home;
+        clipTime = 0f;
+        SetVisible(true);
+        ShowKnockedOut();
+        lastTick = Now;
+#if UNITY_EDITOR
+        SetEditorTicking(!Application.isPlaying);
+#endif
+    }
+
+    private void ShowKnockedOut()
+    {
+        if (state == State.Fainting)
+        {
+            int frame = Mathf.Min(FaintFrames - 1, Mathf.FloorToInt(clipTime / FaintSeconds * FaintFrames));
+            Show(faintPosition, faintBody[frame], faintClothes[frame], faintFlip, false, 0f);
+            LiftLabel(Mathf.Lerp(DizzyNameLift, DownNameLift, Mathf.SmoothStep(0f, 1f, clipTime / FaintSeconds)));
+        }
+        else
+        {
+            int frame = Mathf.FloorToInt(Mathf.Repeat(clipTime, DownSeconds) / DownSeconds * DownFrames) % DownFrames;
+            Show(faintPosition, downBody[frame], downClothes[frame], faintFlip, false, 0f);
+            LiftLabel(DownNameLift);
+        }
+    }
+
+    private void LiftLabel(float lift)
+    {
+        if (label != null)
+            label.transform.localPosition = labelRest + Vector3.up * lift;
     }
 
     private void SetVisible(bool visible)

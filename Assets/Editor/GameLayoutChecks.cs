@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System;
 using UnityEditor;
 using UnityEngine;
@@ -99,7 +100,10 @@ public static class GameLayoutChecks
                 for (int i = 1; i <= count; i++)
                     CheckRun(root, i, count);
                 CheckIdle(root, count);
+                CheckAction(layout, root, count);
+                CheckKnockOut(layout, root, count);
             }
+            CheckKnockOutPreview(layout, serialized);
         }
         finally
         {
@@ -361,6 +365,151 @@ public static class GameLayoutChecks
         }
         Require(phases.Count > 1, $"Idle phases differ between the {count} penguins");
         Require(seen.Count == Enum.GetValues(typeof(PenguinIdle.Clip)).Length, "Every idle clip plays");
+    }
+
+    // Night action: each igloo's lamp-off pane sits on its window; a visit plays the visited igloo's
+    // action (only that one) for the whole stay, the lamp goes out and the igloo shakes, and it all
+    // settles back to rest before the visitor comes out.
+    private static void CheckAction(GameLayout layout, Transform root, int count)
+    {
+        Require(layout.Actions.Count == count, "One action per igloo");
+        for (int i = 0; i < count; i++)
+        {
+            var igloo = root.Find("Igloo " + (i + 1));
+            var pane = igloo.Find("Window Dark").GetComponent<SpriteRenderer>();
+            var light = igloo.Find("Window Light");
+            Require(!pane.enabled && layout.Actions[i].Lamp == 1f && !layout.Actions[i].Playing,
+                $"Igloo {i + 1}/{count} lamp is lit at rest");
+            Require(Vector2.Distance(pane.bounds.center, light.position) < 0.02f,
+                $"Igloo {i + 1}/{count} lamp-off pane sits on the window");
+        }
+        int slot = 0, target = count / 2;
+        PenguinRunner runner = layout.Runners[slot];
+        var visited = root.Find("Igloo " + (target + 1));
+        Vector3 rest = visited.localPosition;
+        Require(layout.Visit(slot, target), "Visit starts");
+        float step = 1f / 50f, minLamp = 1f, maxTilt = 0f, guestTime = 0f;
+        bool played = false;
+        for (int frame = 0; frame < 5000 && runner.IsVisiting; frame++)
+        {
+            runner.Tick(step);
+            foreach (IglooAction action in layout.Actions)
+                action.Tick(step);
+            for (int i = 0; i < count; i++)
+                Require(i == target || !layout.Actions[i].Playing, "Only the visited igloo acts");
+            if (runner.Current == PenguinRunner.State.Guest)
+            {
+                guestTime += step;
+                played |= layout.Actions[target].Playing;
+                minLamp = Mathf.Min(minLamp, layout.Actions[target].Lamp);
+                maxTilt = Mathf.Max(maxTilt, Mathf.Abs(Mathf.DeltaAngle(0f, visited.localEulerAngles.z)));
+            }
+            else if (guestTime > 0f)
+                Require(!layout.Actions[target].Playing && visited.localPosition == rest
+                    && visited.localRotation == Quaternion.identity && visited.localScale == Vector3.one
+                    && layout.Actions[target].Lamp == 1f, "The igloo is back at rest when the visitor comes out");
+        }
+        Require(played && minLamp < 0.01f && maxTilt > 1f, $"The visited igloo's lamp goes out and it shakes ({maxTilt:F2} deg)");
+        Require(guestTime >= GameLayout.VisitMinSeconds - 0.05f && guestTime <= GameLayout.VisitMaxSeconds + 0.05f,
+            $"The visitor stays {guestTime:F2} s inside");
+        Require(runner.Current == PenguinRunner.State.Inside, "The visitor ends in its own igloo");
+    }
+
+    // Knocked out inside its igloo, a penguin walks out dizzy (dizzy frames only) just past the point its
+    // door's leaf reaches (the same walk for every igloo), stops exactly at the fall's start pose, faints
+    // there facing the way it walked, its door closes, and it lies there for good: no going in, no visits.
+    // Knocked out on its slot, it faints at once.
+    private static void CheckKnockOut(GameLayout layout, Transform root, int count)
+    {
+        int slot = count - 1;
+        PenguinRunner runner = layout.Runners[slot];
+        var body = root.Find("Character " + (slot + 1)).GetComponent<SpriteRenderer>();
+        var name = body.GetComponentInChildren<TextMesh>().transform;
+        Vector3 nameRest = name.localPosition;
+        var dizzy = new HashSet<Sprite>();
+        foreach (Sprite sprite in (Sprite[])Field(runner, "dizzyBody"))
+            dizzy.Add(sprite);
+        var down = new HashSet<Sprite>();
+        foreach (Sprite sprite in (Sprite[])Field(runner, "downBody"))
+            down.Add(sprite);
+        float step = 1f / 50f;
+        runner.RunIntoIgloo(1.1f);
+        for (int frame = 0; frame < 2000 && runner.Current != PenguinRunner.State.Inside; frame++)
+            runner.Tick(step);
+        Require(runner.Current == PenguinRunner.State.Inside, "The penguin went in before the knock-out");
+        layout.KnockOut(slot);
+        Require(runner.KnockedOut && runner.Current == PenguinRunner.State.Inside, "Knocked out inside, it stays in");
+        layout.RunOutOfIgloo(slot);
+        bool facing = false;
+        for (int frame = 0; frame < 5000 && runner.Current == PenguinRunner.State.RunningOut; frame++)
+        {
+            facing = body.flipX;
+            runner.Tick(step);
+            if (runner.Current == PenguinRunner.State.RunningOut && body.enabled)
+                Require(dizzy.Contains(body.sprite), "Walking out dizzy shows dizzy frames only");
+        }
+        Require(runner.Current == PenguinRunner.State.Fainting, "It faints after walking out");
+        float phase = Mathf.Repeat((float)Field(runner, "stride") * (float)Field(runner, "dizzyScale")
+            / PenguinRunner.DizzyLoopDistance, 1f);
+        Require(Mathf.Abs(phase - PenguinRunner.FaintStartLoop) < 0.01f,
+            $"The dizzy walk ends at the fall's start pose (loop {phase:F3})");
+        Require(Mathf.Abs(runner.PathLength - runner.FaintDistance - (layout.Runners[0].PathLength
+                - layout.Runners[0].FaintDistance)) < 1e-3f && runner.FaintDistance > 0f,
+            "Every knocked-out penguin walks the same distance out of its igloo");
+        Require(Mathf.Abs(runner.Travelled - runner.FaintDistance) < 1e-4f
+            && Vector2.Distance(body.transform.localPosition, runner.FaintPosition) < 1e-4f
+            && body.flipX == facing, "It faints where its walk stopped, facing the way it walked");
+        for (float t = 0f; t < PenguinRunner.FaintSeconds + 0.5f; t += step)
+            runner.Tick(step);
+        Require(runner.Current == PenguinRunner.State.Down && down.Contains(body.sprite)
+            && name.localPosition.y < nameRest.y, "It lies down for good, its name lower");
+        Require(runner.Door.Open == 0f, "Its door has closed behind it");
+        runner.RunIntoIgloo(1.1f);
+        layout.RunOutOfIgloo(slot);
+        Require(runner.Current == PenguinRunner.State.Down && !layout.Visit(slot, 0),
+            "A knocked-out penguin neither goes in nor visits");
+        PenguinRunner standing = layout.Runners[1];
+        Require(standing.Current == PenguinRunner.State.Idle, "Another penguin stands on its slot");
+        layout.KnockOut(1);
+        Require(standing.Current == PenguinRunner.State.Fainting, "Knocked out on its slot, it faints at once");
+    }
+
+    // The inspector Knock Out field leaves only its current slot knocked out: dragging the slider passes
+    // through other slots, which come back.
+    private static void CheckKnockOutPreview(GameLayout layout, SerializedObject serialized)
+    {
+        var field = serialized.FindProperty("knockOut");
+        int original = field.intValue;
+        var apply = typeof(GameLayout).GetMethod("ApplyKnockOutSetting",
+            System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
+        System.Action<int> set = value =>
+        {
+            serialized.Update();
+            field.intValue = value;
+            serialized.ApplyModifiedPropertiesWithoutUndo();
+            apply.Invoke(layout, null);
+        };
+        try
+        {
+            set(0);
+            layout.Rebuild();
+            foreach (int value in new[] { 1, 3, layout.Runners.Count, 2 })
+                set(value);
+            for (int i = 0; i < layout.Runners.Count; i++)
+                Require(layout.Runners[i].KnockedOut == (i == 1)
+                    && (i == 1 || layout.Runners[i].Current == PenguinRunner.State.Idle),
+                    "Only the slot the Knock Out field ends on is knocked out");
+            set(0);
+            foreach (PenguinRunner runner in layout.Runners)
+                Require(!runner.KnockedOut && runner.Current == PenguinRunner.State.Idle,
+                    "Knock Out 0 brings the previewed penguin back");
+        }
+        finally
+        {
+            serialized.Update();
+            field.intValue = original;
+            serialized.ApplyModifiedPropertiesWithoutUndo();
+        }
     }
 
     private static object Field(object target, string name) =>
