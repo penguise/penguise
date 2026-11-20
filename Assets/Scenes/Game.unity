@@ -150,8 +150,45 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GameLayout
   playerCount: 8
   igloo: {fileID: 21300000, guid: c0a5ea179e5aa7347ae7ab00c9be3c22, type: 3}
+  doorFront: {fileID: 21300000, guid: cb60cf344e9b4a7f987869f95c92b663, type: 3}
+  doorBack: {fileID: 21300000, guid: 9aa54d0f5d954bca904aa7680b51f608, type: 3}
   character: {fileID: 21300000, guid: bf8f4bbd8b6048af8ae5c1ff1d665ed8, type: 3}
   outfit: {fileID: 21300000, guid: a2d91e571ff1ec84bb966f74d0fcbe3c, type: 3}
+  runFrames:
+  - {fileID: -253827298, guid: 1e05a273ad8a5aa44b37a45e9711d4e4, type: 3}
+  - {fileID: -1089372551, guid: 1e05a273ad8a5aa44b37a45e9711d4e4, type: 3}
+  - {fileID: 568858522, guid: 1e05a273ad8a5aa44b37a45e9711d4e4, type: 3}
+  - {fileID: 906469811, guid: 1e05a273ad8a5aa44b37a45e9711d4e4, type: 3}
+  - {fileID: -109320382, guid: 1e05a273ad8a5aa44b37a45e9711d4e4, type: 3}
+  - {fileID: 1081347490, guid: 1e05a273ad8a5aa44b37a45e9711d4e4, type: 3}
+  - {fileID: -1925205950, guid: 1e05a273ad8a5aa44b37a45e9711d4e4, type: 3}
+  - {fileID: 1172371497, guid: 1e05a273ad8a5aa44b37a45e9711d4e4, type: 3}
+  - {fileID: 2075348244, guid: 1e05a273ad8a5aa44b37a45e9711d4e4, type: 3}
+  - {fileID: -1010683548, guid: 1e05a273ad8a5aa44b37a45e9711d4e4, type: 3}
+  - {fileID: 3938974686559721712, guid: 1e05a273ad8a5aa44b37a45e9711d4e4, type: 3}
+  - {fileID: 1591675797022828915, guid: 1e05a273ad8a5aa44b37a45e9711d4e4, type: 3}
+  - {fileID: -2998333588460322991, guid: 1e05a273ad8a5aa44b37a45e9711d4e4, type: 3}
+  - {fileID: -3515495977676817024, guid: 1e05a273ad8a5aa44b37a45e9711d4e4, type: 3}
+  - {fileID: -1106643064451737683, guid: 1e05a273ad8a5aa44b37a45e9711d4e4, type: 3}
+  - {fileID: 8423671532821435367, guid: 1e05a273ad8a5aa44b37a45e9711d4e4, type: 3}
+  runOutfitFrames:
+  - {fileID: -698161916, guid: f8bb5df0e525bcf4bbcd6b712594636f, type: 3}
+  - {fileID: 633003835, guid: f8bb5df0e525bcf4bbcd6b712594636f, type: 3}
+  - {fileID: -261641918, guid: f8bb5df0e525bcf4bbcd6b712594636f, type: 3}
+  - {fileID: -272433072, guid: f8bb5df0e525bcf4bbcd6b712594636f, type: 3}
+  - {fileID: -1597190214, guid: f8bb5df0e525bcf4bbcd6b712594636f, type: 3}
+  - {fileID: -1327397544, guid: f8bb5df0e525bcf4bbcd6b712594636f, type: 3}
+  - {fileID: 1717914405, guid: f8bb5df0e525bcf4bbcd6b712594636f, type: 3}
+  - {fileID: -1077239452, guid: f8bb5df0e525bcf4bbcd6b712594636f, type: 3}
+  - {fileID: -28086127, guid: f8bb5df0e525bcf4bbcd6b712594636f, type: 3}
+  - {fileID: -1850409153, guid: f8bb5df0e525bcf4bbcd6b712594636f, type: 3}
+  - {fileID: 119929800141533149, guid: f8bb5df0e525bcf4bbcd6b712594636f, type: 3}
+  - {fileID: 529430334880686583, guid: f8bb5df0e525bcf4bbcd6b712594636f, type: 3}
+  - {fileID: 386994381802606224, guid: f8bb5df0e525bcf4bbcd6b712594636f, type: 3}
+  - {fileID: 4495447836469116926, guid: f8bb5df0e525bcf4bbcd6b712594636f, type: 3}
+  - {fileID: 3510233923477621841, guid: f8bb5df0e525bcf4bbcd6b712594636f, type: 3}
+  - {fileID: 8640137195459173941, guid: f8bb5df0e525bcf4bbcd6b712594636f, type: 3}
+  doorway: {fileID: 21300000, guid: 7b9f826d4cad98e4482904cfda958527, type: 3}
   spriteMaterial: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   nameFont: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
   layoutCamera: {fileID: 2127360230}
@@ -160,6 +197,9 @@ MonoBehaviour:
   iglooGap: 0.3
   timeOfDay: 12
   globalLight: {fileID: 1200271767}
+  doorOpen: 0
+  runIntoIgloos: 0
+  runSpeed: 1.1
 --- !u!4 &556460177
 Transform:
   m_ObjectHideFlags: 0
@@ -528,7 +568,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5.400114
+  orthographic size: 5.4
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2

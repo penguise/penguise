@@ -25,7 +25,7 @@ public static class GameLayoutChecks
                 layout.Rebuild();
                 var root = layout.transform.Find("Layout");
                 Require(layout.transform.childCount == 1, "No stale generated layouts");
-                Require(root.childCount == count * 2, "One igloo and one character per player");
+                Require(root.childCount == count * 3, "One igloo, doorway mask and character per player");
                 var iglooSpacings = new float[count];
 
                 for (int i = 1; i <= count; i++)
@@ -81,6 +81,7 @@ public static class GameLayoutChecks
                     var window = igloo.GetComponentInChildren<UnityEngine.Rendering.Universal.Light2D>(true);
                     Require(window != null && window.lightType == UnityEngine.Rendering.Universal.Light2D.LightType.Point,
                         $"Igloo {i}/{count} has a window light");
+                    CheckDoor(igloo, $"{i}/{count}");
 
                     CheckHoleClearance(foot + Vector2.up * GameLayout.CharacterHeight / 2f);
                     var next = root.Find("Character " + (i % count + 1));
@@ -94,6 +95,9 @@ public static class GameLayoutChecks
                 float spacingMin = Mathf.Min(iglooSpacings), spacingMax = Mathf.Max(iglooSpacings);
                 Require(spacingMax - spacingMin < 0.01f,
                     $"Edge-to-edge igloo gaps are equal for {count} players ({spacingMin:F3} to {spacingMax:F3})");
+                // Runs move the penguins, so they go last.
+                for (int i = 1; i <= count; i++)
+                    CheckRun(root, i, count);
             }
         }
         finally
@@ -105,6 +109,176 @@ public static class GameLayoutChecks
         }
         CheckDayNightCycle();
         Debug.Log("Game layout checks passed for every player count from 4 to 8.");
+    }
+
+    // The door hangs on its hinge inside the igloo's sorting group, closes flush (identity map) and,
+    // at every angle, its transform chain reproduces the hinge-centered open map exactly.
+    private static void CheckDoor(Transform igloo, string label)
+    {
+        var door = igloo.GetComponentInChildren<IglooDoor>(true);
+        Require(door != null && door.transform.parent == igloo, $"Igloo {label} has a door");
+        var group = igloo.GetComponent<UnityEngine.Rendering.SortingGroup>();
+        var leaf = door.GetComponentInChildren<SpriteRenderer>(true);
+        Require(group != null && leaf != null && leaf.sortingOrder > igloo.GetComponent<SpriteRenderer>().sortingOrder,
+            $"Door {label} draws over its igloo inside the igloo's sorting group");
+        float original = door.Open;
+        try
+        {
+            foreach (float open in new[] { 0f, 0.3f, 0.55f, 0.7f, 1f })
+            {
+                door.Open = open;
+                Matrix4x4 expected = Matrix4x4.Translate(door.transform.localPosition) * IglooDoor.OpenMatrix(door.Angle);
+                Matrix4x4 actual = igloo.worldToLocalMatrix * leaf.transform.localToWorldMatrix;
+                for (int k = 0; k < 16; k++)
+                    if (k != 10)
+                        Require(Mathf.Abs(expected[k] - actual[k]) < 1e-4f, $"Door {label} transform at {open:F2} matches the open map");
+                Require(leaf.sprite != null && leaf.flipX == false, $"Door {label} shows a face");
+            }
+            door.Open = 0f;
+            Require(IglooDoor.OpenMatrix(0f) == Matrix4x4.identity || Approximately(IglooDoor.OpenMatrix(0f), Matrix4x4.identity),
+                $"Door {label} closed map is identity");
+            Require(IglooDoor.FacesCamera(64f) && !IglooDoor.FacesCamera(66f), "Door shows its back past 65 degrees");
+        }
+        finally
+        {
+            door.Open = original;
+        }
+    }
+
+    // Run into the igloo: frames match the idle art, the route keeps clear of every dome, sorts by depth,
+    // ends in its own tunnel behind the doorway mask; the door opens for it and closes behind it.
+    // Run out: the same route back to the slot, door opening and closing again, idle pose restored.
+    // A run in that turns around midway also ends back on the slot.
+    private static void CheckRun(Transform root, int slot, int count)
+    {
+        string label = $"{slot}/{count}";
+        var character = root.Find("Character " + slot);
+        var runner = character.GetComponent<PenguinRunner>();
+        var body = character.GetComponent<SpriteRenderer>();
+        var outfit = character.Find("Outfit").GetComponent<SpriteRenderer>();
+        var name = character.GetComponentInChildren<TextMesh>().GetComponent<MeshRenderer>();
+        var igloo = root.Find("Igloo " + slot);
+        var iglooSprite = igloo.GetComponent<SpriteRenderer>().sprite;
+        var group = igloo.GetComponent<UnityEngine.Rendering.SortingGroup>();
+        var mask = root.Find("Doorway " + slot)?.GetComponent<SpriteMask>();
+        Require(runner != null && runner.Current == PenguinRunner.State.Idle && runner.Door != null
+            && runner.Door.transform.parent == igloo, $"Penguin {label} has an idle runner bound to its own door");
+        Sprite idleBody = body.sprite, idleOutfit = outfit.sprite;
+        bool idleFlip = body.flipX;
+        Color idleColor = outfit.color;
+        Vector3 slotPosition = character.localPosition;
+        Require(mask != null && mask.sprite != null
+            && Vector2.Distance(mask.transform.localPosition, igloo.localPosition + runner.Door.transform.localPosition) < 1e-4f,
+            $"Doorway mask {label} sits on its igloo's door hinge");
+        Require(body.sortingOrder == PenguinRunner.DepthOrder(character.localPosition.y) && body.sortingOrder < name.sortingOrder,
+            $"Penguin {label} sorts by depth below the names");
+
+        // Ground frame of every igloo: dome base center and canvas pixels per layout unit.
+        float pixels = GameLayout.IglooCanvasPixelsPerUnit(iglooSprite);
+        Vector2 domeOffset = GameLayout.IglooArtPoint(iglooSprite, IglooGround.DomeCenter);
+        var path = runner.Path;
+        Require(Vector2.Distance(path[0], character.localPosition) < 1e-4f, $"Run {label} starts at the feet");
+        for (int other = 1; other <= count; other++)
+        {
+            Vector2 dome = (Vector2)root.Find("Igloo " + other).localPosition + domeOffset;
+            for (int k = 1; k < path.Count; k++)
+                for (int step = 0; step < 8; step++)
+                {
+                    Vector2 point = Vector2.Lerp(path[k - 1], path[k], step / 8f);
+                    Vector2 frame = IglooGround.ToFrame((point - dome) * pixels);
+                    if (other != slot)
+                        Require(frame.magnitude > 530f, $"Run {label} keeps clear of igloo {other}'s dome ({frame.magnitude:F0} px)");
+                    else if (frame.x > IglooGround.TunnelFront + 30f || Mathf.Abs(frame.y) > 140f)
+                        Require(frame.magnitude > 600f, $"Run {label} goes around its own igloo, not through it ({frame.magnitude:F0} px)");
+                }
+        }
+        Vector2 end = IglooGround.ToFrame((path[path.Count - 1] - (Vector2)igloo.localPosition - domeOffset) * pixels);
+        Require(end.x < IglooGround.TunnelFront - 100f && Mathf.Abs(end.y) < 1f, $"Run {label} ends inside its own tunnel");
+
+        // Simulate the run in fixed steps.
+        bool doorOpened = false, maskedBeforeEnd = false;
+        float seconds = 0f;
+        runner.RunIntoIgloo(1.1f);
+        while (runner.IsRunning && seconds < 30f)
+        {
+            runner.Tick(0.05f);
+            seconds += 0.05f;
+            doorOpened |= runner.Door.Open > 0.999f;
+            if (!runner.IsRunning)
+                break;
+            Require(body.sprite != outfit.sprite && body.flipX == outfit.flipX && outfit.sortingOrder == body.sortingOrder + 1
+                && body.sortingOrder == PenguinRunner.DepthOrder(character.localPosition.y),
+                $"Run {label} keeps the outfit on the body and sorts by depth");
+            float domeY = igloo.localPosition.y + domeOffset.y;
+            if (body.maskInteraction == SpriteMaskInteraction.None && character.localPosition.y > domeY + 0.05f)
+                Require(body.sortingOrder < group.sortingOrder, $"Run {label} passes behind its igloo");
+            maskedBeforeEnd |= body.maskInteraction == SpriteMaskInteraction.VisibleInsideMask
+                && outfit.maskInteraction == SpriteMaskInteraction.VisibleInsideMask && !name.enabled;
+        }
+        Require(runner.IsInside && Mathf.Abs(seconds - runner.PathLength / 1.1f) < 0.1f,
+            $"Run {label} reaches the tunnel in {seconds:F2} s at 1.1 units/s");
+        Require(doorOpened && maskedBeforeEnd && !body.enabled && !outfit.enabled && !name.enabled,
+            $"Run {label} opens the door, enters through the doorway mask and disappears");
+        for (int k = 0; k < 20; k++)
+            runner.Tick(0.05f);
+        Require(runner.Door.Open < 1e-4f, $"Door {label} closes behind the penguin");
+
+        // Back out to the slot.
+        bool doorOpenedOut = false, maskedOut = false, closingWhileClear = true;
+        seconds = 0f;
+        runner.RunOutOfIgloo(1.1f);
+        Require(runner.Current == PenguinRunner.State.RunningOut && body.enabled && outfit.enabled
+            && body.maskInteraction == SpriteMaskInteraction.VisibleInsideMask,
+            $"Run out {label} starts visible inside the tunnel, behind the doorway mask");
+        float previousOpen = runner.Door.Open;
+        while (runner.IsRunning && seconds < 30f)
+        {
+            runner.Tick(0.05f);
+            seconds += 0.05f;
+            doorOpenedOut |= runner.Door.Open > 0.999f;
+            if (!runner.IsRunning)
+                break;
+            Require(body.sprite != outfit.sprite && body.flipX == outfit.flipX && outfit.sortingOrder == body.sortingOrder + 1
+                && body.sortingOrder == PenguinRunner.DepthOrder(character.localPosition.y),
+                $"Run out {label} keeps the outfit on the body and sorts by depth");
+            maskedOut |= body.maskInteraction == SpriteMaskInteraction.VisibleInsideMask;
+            // The door only starts closing once the penguin is past the leaf's swing.
+            if (runner.Door.Open < previousOpen - 1e-5f)
+            {
+                Vector2 at = IglooGround.ToFrame(((Vector2)character.localPosition - (Vector2)igloo.localPosition - domeOffset) * pixels);
+                closingWhileClear &= at.x > 790f || at.magnitude > 640f;
+            }
+            previousOpen = runner.Door.Open;
+        }
+        Require(runner.Current == PenguinRunner.State.Idle && Mathf.Abs(seconds - runner.PathLength / 1.1f) < 0.1f,
+            $"Run out {label} reaches its slot in {seconds:F2} s at 1.1 units/s");
+        Require(doorOpenedOut && maskedOut && closingWhileClear && runner.Door.Open < 1e-4f,
+            $"Run out {label} opens the door, leaves through the doorway and the door is closed on arrival");
+        Require(Vector3.Distance(character.localPosition, slotPosition) < 1e-4f && body.sprite == idleBody
+            && outfit.sprite == idleOutfit && body.flipX == idleFlip && outfit.flipX == idleFlip
+            && body.maskInteraction == SpriteMaskInteraction.None && body.color == Color.white
+            && outfit.color == idleColor && body.enabled && outfit.enabled && name.enabled
+            && body.sortingOrder == PenguinRunner.DepthOrder(slotPosition.y),
+            $"Run out {label} ends standing on the slot in the idle pose, facing the middle");
+
+        // Turning around midway.
+        runner.RunIntoIgloo(1.1f);
+        for (int k = 0; k < 30; k++)
+            runner.Tick(0.05f);
+        runner.RunOutOfIgloo(1.1f);
+        Require(runner.Current == PenguinRunner.State.RunningOut, $"Run {label} turns around midway");
+        for (int k = 0; k < 600 && (runner.IsRunning || runner.Door.Open > 0f); k++)
+            runner.Tick(0.05f);
+        Require(runner.Current == PenguinRunner.State.Idle && Vector3.Distance(character.localPosition, slotPosition) < 1e-4f
+            && runner.Door.Open < 1e-4f && body.sprite == idleBody, $"Run {label} turned around ends on its slot, door closed");
+    }
+
+    private static bool Approximately(Matrix4x4 a, Matrix4x4 b)
+    {
+        for (int k = 0; k < 16; k++)
+            if (Mathf.Abs(a[k] - b[k]) > 1e-5f)
+                return false;
+        return true;
     }
 
     private static void CheckDayNightCycle()

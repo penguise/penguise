@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
 using UnityEngine.Serialization;
 
@@ -8,9 +9,17 @@ public sealed class GameLayout : MonoBehaviour
 {
     [SerializeField, Range(4, 8)] private int playerCount = 8;
     [SerializeField, HideInInspector] private Sprite igloo;
+    // Door leaf faces, cropped from the igloo canvas with the pivot on the hinge (see IglooDoor).
+    [SerializeField, HideInInspector] private Sprite doorFront;
+    [SerializeField, HideInInspector] private Sprite doorBack;
     [FormerlySerializedAs("capsule"), SerializeField, HideInInspector] private Sprite character;
     // White outfit art drawn over the penguin (same canvas and pivot), tinted per player color.
     [SerializeField, HideInInspector] private Sprite outfit;
+    // Run cycle frames for the penguin and its outfit (PenguinRun/PenguinOutfitRun sheets, same pivot).
+    [SerializeField, HideInInspector] private Sprite[] runFrames;
+    [SerializeField, HideInInspector] private Sprite[] runOutfitFrames;
+    // Igloo doorway opening, pivot on the door hinge: masks penguins once they pass the door plane.
+    [SerializeField, HideInInspector] private Sprite doorway;
     [SerializeField, HideInInspector] private Material spriteMaterial;
     [SerializeField, HideInInspector] private Font nameFont;
     private Transform generated;
@@ -45,13 +54,54 @@ public sealed class GameLayout : MonoBehaviour
     // Hours on a 24-hour clock: 0 midnight, ~6 dawn, 12 noon, ~19.5 sunset.
     [SerializeField, Range(0f, DayNightCycle.Hours)] private float timeOfDay = DayNightCycle.Noon;
     [SerializeField, HideInInspector] private Light2D globalLight;
+    // Door preview: opens every igloo door (0 closed, 1 fully open). Runtime code drives single doors
+    // through Doors; changing this slider overrides them all.
+    [SerializeField, Range(0f, 1f)] private float doorOpen;
+    // Preview: on, every penguin runs into its own igloo; off, they run back out to their slots.
+    // Runtime code uses RunIntoIgloo(slot) / RunOutOfIgloo(slot) or the RunAll... forms instead.
+    [SerializeField] private bool runIntoIgloos;
+    // Ground speed in layout units per second; the run cycle keeps pace (0.55 matches the art's stride).
+    [SerializeField, Range(0.3f, 3f)] private float runSpeed = 1.1f;
     public float CharacterGap => characterGap;
     public float IglooGap => iglooGap;
     private int renderedCount;
-    private float renderedCharacterGap = float.NaN, renderedIglooGap = float.NaN;
+    private float renderedCharacterGap = float.NaN, renderedIglooGap = float.NaN, renderedDoorOpen = float.NaN;
+    private readonly List<IglooDoor> doors = new List<IglooDoor>();
+    public IReadOnlyList<IglooDoor> Doors => doors;
+    private readonly List<PenguinRunner> runners = new List<PenguinRunner>();
+    public IReadOnlyList<PenguinRunner> Runners => runners;
+    private bool renderedRun;
+
+    public void RunIntoIgloo(int slot)
+    {
+        if (slot >= 0 && slot < runners.Count && runners[slot] != null)
+            runners[slot].RunIntoIgloo(runSpeed);
+    }
+
+    public void RunAllIntoIgloos()
+    {
+        for (int i = 0; i < runners.Count; i++)
+            RunIntoIgloo(i);
+    }
+
+    public void RunOutOfIgloo(int slot)
+    {
+        if (slot >= 0 && slot < runners.Count && runners[slot] != null)
+            runners[slot].RunOutOfIgloo(runSpeed);
+    }
+
+    public void RunAllOutOfIgloos()
+    {
+        for (int i = 0; i < runners.Count; i++)
+            RunOutOfIgloo(i);
+    }
 
     // Window glow: texture fractions (y up) of the igloo art's round window, plus light shape and color.
-    private static readonly Vector2 IglooWindow = new Vector2(0.265f, 0.444f);
+    private static readonly Vector2 IglooWindow = new Vector2(0.2587f, 0.4336f);
+    // Door hinge (bottom of the leaf's right edge) as a texture fraction of the igloo art, y up.
+    private static readonly Vector2 IglooDoorHinge = new Vector2(0.775521f, 0.231698f);
+    // Names draw above every igloo and penguin (depth orders stay well below this).
+    public const int NameOrder = 1000;
     private const float WindowLightRadius = 0.75f;
     private const float WindowLightIntensity = 1.4f;
     private static readonly Color WindowLightColor = new Color(1f, 0.78f, 0.45f);
@@ -120,18 +170,24 @@ public sealed class GameLayout : MonoBehaviour
     // Regenerate if the igloo art changes.
     private static readonly Vector2[] IglooHull =
     {
-        new Vector2(0.0973f, 0.3385f), new Vector2(0.1148f, 0.3114f), new Vector2(0.1555f, 0.2827f),
-        new Vector2(0.2041f, 0.2596f), new Vector2(0.2376f, 0.2468f), new Vector2(0.2839f, 0.2325f),
-        new Vector2(0.3150f, 0.2229f), new Vector2(0.5159f, 0.1703f), new Vector2(0.8381f, 0.2317f),
-        new Vector2(0.8892f, 0.2460f), new Vector2(0.9219f, 0.3258f), new Vector2(0.9107f, 0.4031f),
-        new Vector2(0.8971f, 0.4725f), new Vector2(0.8900f, 0.5036f), new Vector2(0.8573f, 0.5865f),
-        new Vector2(0.8190f, 0.6527f), new Vector2(0.7759f, 0.7014f), new Vector2(0.7512f, 0.7237f),
-        new Vector2(0.6850f, 0.7723f), new Vector2(0.6061f, 0.8074f), new Vector2(0.5742f, 0.8178f),
-        new Vector2(0.5383f, 0.8250f), new Vector2(0.5040f, 0.8266f), new Vector2(0.4705f, 0.8234f),
-        new Vector2(0.4234f, 0.8154f), new Vector2(0.3852f, 0.8034f), new Vector2(0.3293f, 0.7755f),
-        new Vector2(0.2464f, 0.7165f), new Vector2(0.2177f, 0.6870f), new Vector2(0.1563f, 0.5873f),
-        new Vector2(0.1388f, 0.5490f), new Vector2(0.1276f, 0.5171f), new Vector2(0.1132f, 0.4526f),
-        new Vector2(0.1061f, 0.4095f), new Vector2(0.0973f, 0.3449f),
+        new Vector2(0.0941f, 0.3620f), new Vector2(0.0973f, 0.3453f), new Vector2(0.1077f, 0.3206f),
+        new Vector2(0.1372f, 0.2919f), new Vector2(0.1571f, 0.2775f), new Vector2(0.1898f, 0.2584f),
+        new Vector2(0.2400f, 0.2384f), new Vector2(0.2823f, 0.2265f), new Vector2(0.5144f, 0.1659f),
+        new Vector2(0.6300f, 0.1778f), new Vector2(0.7879f, 0.2073f), new Vector2(0.8788f, 0.2329f),
+        new Vector2(0.8804f, 0.2344f), new Vector2(0.9163f, 0.3549f), new Vector2(0.9171f, 0.3620f),
+        new Vector2(0.9147f, 0.4171f), new Vector2(0.9091f, 0.4585f), new Vector2(0.8995f, 0.5016f),
+        new Vector2(0.8876f, 0.5399f), new Vector2(0.8740f, 0.5742f), new Vector2(0.8581f, 0.6069f),
+        new Vector2(0.8429f, 0.6332f), new Vector2(0.8254f, 0.6595f), new Vector2(0.7959f, 0.6962f),
+        new Vector2(0.7703f, 0.7225f), new Vector2(0.7488f, 0.7416f), new Vector2(0.7249f, 0.7600f),
+        new Vector2(0.6994f, 0.7767f), new Vector2(0.6635f, 0.7959f), new Vector2(0.6372f, 0.8070f),
+        new Vector2(0.6164f, 0.8142f), new Vector2(0.5869f, 0.8222f), new Vector2(0.5622f, 0.8270f),
+        new Vector2(0.5215f, 0.8309f), new Vector2(0.4896f, 0.8309f), new Vector2(0.4490f, 0.8270f),
+        new Vector2(0.4242f, 0.8222f), new Vector2(0.3947f, 0.8142f), new Vector2(0.3565f, 0.7998f),
+        new Vector2(0.3317f, 0.7879f), new Vector2(0.3054f, 0.7727f), new Vector2(0.2863f, 0.7600f),
+        new Vector2(0.2624f, 0.7416f), new Vector2(0.2408f, 0.7225f), new Vector2(0.2153f, 0.6962f),
+        new Vector2(0.1858f, 0.6595f), new Vector2(0.1683f, 0.6332f), new Vector2(0.1531f, 0.6069f),
+        new Vector2(0.1372f, 0.5742f), new Vector2(0.1236f, 0.5399f), new Vector2(0.1116f, 0.5016f),
+        new Vector2(0.1021f, 0.4585f), new Vector2(0.0965f, 0.4171f),
     };
 
     // Igloo silhouette in layout units, relative to the sprite pivot.
@@ -408,7 +464,52 @@ public sealed class GameLayout : MonoBehaviour
 
     private void MarkRosterDirty() => rosterDirty = true;
     // Layout settings rebuild in Update; time-of-day changes only relight, so scrubbing stays cheap.
-    private void OnValidate() => ApplyLighting();
+    private void OnValidate()
+    {
+        ApplyLighting();
+        ApplyDoors();
+#if UNITY_EDITOR
+        // Edit-mode Update only follows scene changes; apply the run toggle on the next Editor tick.
+        if (!Application.isPlaying)
+        {
+            UnityEditor.EditorApplication.update -= ApplyRunSettingOnce;
+            UnityEditor.EditorApplication.update += ApplyRunSettingOnce;
+        }
+#endif
+    }
+
+#if UNITY_EDITOR
+    private void ApplyRunSettingOnce()
+    {
+        UnityEditor.EditorApplication.update -= ApplyRunSettingOnce;
+        if (this != null && !Application.isPlaying)
+            ApplyRunSetting();
+    }
+#endif
+
+    // Inspector run toggle: on sends every penguin into its igloo, off brings them back out to their slots
+    // (a penguin still on its way turns around).
+    private void ApplyRunSetting()
+    {
+        if (runIntoIgloos == renderedRun || generated == null)
+            return;
+        renderedRun = runIntoIgloos;
+        if (runIntoIgloos)
+            RunAllIntoIgloos();
+        else
+            RunAllOutOfIgloos();
+    }
+
+    // Applies the inspector door slider when it changes, so runtime door control is left alone otherwise.
+    private void ApplyDoors()
+    {
+        if (renderedDoorOpen == doorOpen)
+            return;
+        renderedDoorOpen = doorOpen;
+        foreach (IglooDoor door in doors)
+            if (door != null)
+                door.Open = doorOpen;
+    }
 
     private void Update()
     {
@@ -420,6 +521,7 @@ public sealed class GameLayout : MonoBehaviour
             transitioning = t < 1f;
         }
         ApplyLighting();
+        ApplyDoors();
 
         int count = Mathf.Clamp(playerCount, 4, 8);
         var session = Application.isPlaying ? RoomSessionManager.Instance : null;
@@ -441,6 +543,7 @@ public sealed class GameLayout : MonoBehaviour
 #endif
 
         AlignWithBackground();
+        ApplyRunSetting();
 
         if (layoutCamera != null && background != null)
         {
@@ -453,7 +556,10 @@ public sealed class GameLayout : MonoBehaviour
 
     public void Rebuild()
     {
-        if (igloo == null || character == null || outfit == null || spriteMaterial == null || nameFont == null)
+        if (igloo == null || doorFront == null || doorBack == null || character == null || outfit == null
+            || doorway == null || runFrames == null || runFrames.Length != PenguinRunner.RunFrames
+            || runOutfitFrames == null || runOutfitFrames.Length != PenguinRunner.RunFrames
+            || spriteMaterial == null || nameFont == null)
             return;
         for (int i = transform.childCount - 1; i >= 0; i--)
         {
@@ -470,6 +576,9 @@ public sealed class GameLayout : MonoBehaviour
         rosterDirty = false;
         windowLights.Clear();
         nameLabels.Clear();
+        doors.Clear();
+        runners.Clear();
+        renderedRun = false;
         renderedCharacterGap = characterGap;
         renderedIglooGap = iglooGap;
         generated = new GameObject("Layout").transform;
@@ -486,20 +595,35 @@ public sealed class GameLayout : MonoBehaviour
         var players = session != null ? session.Profiles.Roster.Players : null;
         int count = players != null ? players.Count : Mathf.Clamp(playerCount, 4, 8);
         renderedCount = count;
+        renderedDoorOpen = doorOpen;
         if (count < 4 || count > 8)
             return;
         AlignWithBackground();
         Vector2[] iglooOutline = IglooOutline(igloo);
         float[] angles = SlotAngles(count, iglooGap, iglooOutline);
+        Vector2 domeCenter = IglooPoint(IglooGround.DomeCenter);
+        float unitsPerPixel = 1f / IglooCanvasPixelsPerUnit(igloo);
+        var iglooPositions = new Vector2[count];
+        for (int i = 0; i < count; i++)
+            iglooPositions[i] = IglooPosition(angles[i], iglooGap, iglooOutline);
         for (int i = 0; i < count; i++)
         {
             // The igloo import sets its size (pixels per unit) and a base pivot, so place it unscaled.
-            var iglooRenderer = MakeSprite("Igloo " + (i + 1), igloo, IglooPosition(angles[i], iglooGap, iglooOutline),
-                igloo.bounds.size, Color.white, 1, true);
+            Vector2 iglooPosition = iglooPositions[i];
+            var iglooRenderer = MakeSprite("Igloo " + (i + 1), igloo, iglooPosition,
+                igloo.bounds.size, Color.white, 0, true);
+            // The igloo and its door sort as one unit, by depth with the penguins: a penguin whose feet are
+            // above the dome's base center on screen is behind the igloo.
+            var group = iglooRenderer.gameObject.AddComponent<SortingGroup>();
+            group.sortingOrder = PenguinRunner.DepthOrder(iglooPosition.y + domeCenter.y);
+            var door = IglooDoor.Create(iglooRenderer.transform, IglooPoint(IglooDoorHinge), doorFront, doorBack,
+                spriteMaterial, 1);
+            door.Open = doorOpen;
+            doors.Add(door);
             // Warm window glow that fades in as the ambient light drops.
             var window = new GameObject("Window Light").AddComponent<Light2D>();
             window.transform.SetParent(iglooRenderer.transform, false);
-            window.transform.localPosition = (Vector2.Scale(IglooWindow, igloo.rect.size) - igloo.pivot) / igloo.pixelsPerUnit;
+            window.transform.localPosition = IglooPoint(IglooWindow);
             window.lightType = Light2D.LightType.Point;
             window.shadowsEnabled = false;
             window.color = WindowLightColor;
@@ -509,8 +633,9 @@ public sealed class GameLayout : MonoBehaviour
             window.falloffIntensity = 0.6f;
             windowLights.Add(window);
             // Penguin pivot is its feet; the penguin stays untinted and its outfit carries the player color.
-            var penguin = MakeSprite("Character " + (i + 1), character, FootPosition(angles[i], characterGap),
-                character.bounds.size, Color.white, 2, true);
+            Vector2 foot = FootPosition(angles[i], characterGap);
+            var penguin = MakeSprite("Character " + (i + 1), character, foot,
+                character.bounds.size, Color.white, PenguinRunner.DepthOrder(foot.y), true);
             // The art faces right: penguins on the right half turn left, toward the middle.
             penguin.flipX = SlotDirection(angles[i]).x > 0.001f;
 
@@ -522,7 +647,7 @@ public sealed class GameLayout : MonoBehaviour
             clothes.sharedMaterial = spriteMaterial;
             clothes.color = PlayerColor(color);
             clothes.flipX = penguin.flipX;
-            clothes.sortingOrder = 3;
+            clothes.sortingOrder = penguin.sortingOrder + 1;
 
             var label = new GameObject("Name");
             label.transform.SetParent(penguin.transform, false);
@@ -538,7 +663,39 @@ public sealed class GameLayout : MonoBehaviour
             nameLabels.Add(text);
             var renderer = label.GetComponent<MeshRenderer>();
             renderer.sharedMaterial = nameFont.material;
-            renderer.sortingOrder = 4;
+            renderer.sortingOrder = NameOrder;
+
+            // Doorway mask outside the igloo's sorting group, so it reaches the penguin's renderers.
+            var mask = new GameObject("Doorway " + (i + 1)).AddComponent<SpriteMask>();
+            mask.transform.SetParent(generated, false);
+            mask.transform.localPosition = iglooPosition + IglooPoint(IglooDoorHinge);
+            mask.sprite = doorway;
+
+            var runner = penguin.gameObject.AddComponent<PenguinRunner>();
+            runner.Setup(penguin, clothes, renderer, runFrames, runOutfitFrames, door);
+            var otherDomes = new List<Vector2>();
+            for (int other = 0; other < count; other++)
+                if (other != i)
+                    otherDomes.Add((iglooPositions[other] - iglooPosition) / unitsPerPixel);
+            var route = IglooGround.PathToDoor((foot - iglooPosition - domeCenter) / unitsPerPixel, otherDomes);
+            var points = new Vector2[route.Count];
+            var lengths = new float[route.Count];
+            var pathMasked = new bool[route.Count];
+            var shades = new float[route.Count];
+            int clearIndex = 0;
+            for (int k = 0; k < route.Count; k++)
+            {
+                if (route[k].DoorClear)
+                    clearIndex = k;
+                points[k] = iglooPosition + domeCenter + route[k].Pixels * unitsPerPixel;
+                lengths[k] = k == 0 ? 0f
+                    : lengths[k - 1] + Vector3.Distance(route[k - 1].Frame, route[k].Frame) * unitsPerPixel;
+                pathMasked[k] = route[k].Masked;
+                shades[k] = route[k].Shade;
+            }
+            points[0] = foot;
+            runner.SetPath(points, lengths, pathMasked, shades, clearIndex);
+            runners.Add(runner);
         }
 #if UNITY_EDITOR
         if (!Application.isPlaying)
@@ -547,6 +704,16 @@ public sealed class GameLayout : MonoBehaviour
 #endif
         ApplyLighting();
     }
+
+    // Igloo art point (texture fraction, y up) in the igloo sprite's local units.
+    private Vector2 IglooPoint(Vector2 fraction) => IglooArtPoint(igloo, fraction);
+
+    public static Vector2 IglooArtPoint(Sprite sprite, Vector2 fraction) =>
+        (Vector2.Scale(fraction, sprite.rect.size) - sprite.pivot) / sprite.pixelsPerUnit;
+
+    // Igloo art canvas pixels (IglooGround's units) per layout unit.
+    public static float IglooCanvasPixelsPerUnit(Sprite sprite) =>
+        IglooGround.CanvasPixels * sprite.pixelsPerUnit / sprite.rect.width;
 
     // Ambient light, window glow, letterbox color, and name contrast for the current time of day.
     // Names stay unlit, switching to a light color at night so they remain readable.
