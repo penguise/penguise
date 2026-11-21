@@ -29,6 +29,10 @@ public sealed class GameLayout : MonoBehaviour
     [SerializeField, HideInInspector] private Sprite doorway;
     // Lamp-off window pane (centre pivot) shown while a visitor is inside, see IglooAction.
     [SerializeField, HideInInspector] private Sprite windowDark;
+    // Heal action: mint window pane (same crop and pivot as windowDark) and the particles rising from the
+    // dome (HealPlus/HealSparkle, centre pivot, igloo scale), drawn unlit with effectMaterial.
+    [SerializeField, HideInInspector] private Sprite windowHeal, healPlus, healSparkle;
+    [SerializeField, HideInInspector] private Material effectMaterial;
     [SerializeField, HideInInspector] private Material spriteMaterial;
     [SerializeField, HideInInspector] private Font nameFont;
     private Transform generated;
@@ -76,8 +80,10 @@ public sealed class GameLayout : MonoBehaviour
     [SerializeField] private bool idleAnimation = true;
     // Preview: the slot (1-based, 0 off) played as "us". In Play mode, clicking another igloo sends that
     // penguin on a visit (out of its own igloo, or from its slot, into the clicked one, a short wait, then
-    // back into its own igloo); clicking its own igloo runs it in or out. Runtime code uses Visit(slot, target).
+    // back into its own igloo); clicking its own igloo runs it in or out. Runtime code uses Visit(slot, target, action).
     [SerializeField, Range(0, 8)] private int playAs;
+    // Preview: what the Play As penguin does inside the igloo it visits (seen from outside).
+    [SerializeField] private IglooAction.Kind visitAction = IglooAction.Kind.KnockOut;
     // Preview: knocks out that slot (1-based, 0 off). Inside its igloo it walks out dizzy on the next run out
     // and faints past its door; standing on its slot, it faints at once. Changing the field brings the
     // previous one back, so only the chosen slot is knocked out. Runtime code uses KnockOut(slot).
@@ -93,7 +99,7 @@ public sealed class GameLayout : MonoBehaviour
     private readonly List<IglooDoor> doors = new List<IglooDoor>();
     public IReadOnlyList<IglooDoor> Doors => doors;
     private readonly List<IglooAction> actions = new List<IglooAction>();
-    // Per igloo: the lamp flicker and shake played while a visitor is inside.
+    // Per igloo: what the outside sees while a visitor is inside (knock-out or heal).
     public IReadOnlyList<IglooAction> Actions => actions;
     private readonly List<PenguinRunner> runners = new List<PenguinRunner>();
     public IReadOnlyList<PenguinRunner> Runners => runners;
@@ -146,13 +152,16 @@ public sealed class GameLayout : MonoBehaviour
     private Vector2[] iglooPositions, feet, iglooOutline;
     private Vector2 domeCenter;
     private float unitsPerPixel;
+    // The action each visiting slot plays in the igloo it visits.
+    private readonly Dictionary<int, IglooAction.Kind> visitActions = new Dictionary<int, IglooAction.Kind>();
     private readonly Dictionary<(int, int, bool), PenguinRunner.Route> visitRoutes =
         new Dictionary<(int, int, bool), PenguinRunner.Route>();
 
     // Sends the penguin of `slot` into igloo `target`: out of its own igloo when inside (or from its slot
-    // when standing there), a wait of 3-5 s (the igloo's lamp flickers and it shakes), then back into its own igloo. False if it is busy, the slots
-    // are invalid or no route keeps clear of the igloos.
-    public bool Visit(int slot, int target)
+    // when standing there), a wait of 3-5 s while the igloo plays `action` (knock-out: its lamp flickers and
+    // it shakes; heal: it beats with a mint glow and sparkles), then back into its own igloo. False if it is
+    // busy, the slots are invalid or no route keeps clear of the igloos.
+    public bool Visit(int slot, int target, IglooAction.Kind action = IglooAction.Kind.KnockOut)
     {
         if (slot < 0 || slot >= runners.Count || target < 0 || target >= runners.Count || slot == target
             || runners[slot] == null)
@@ -168,7 +177,10 @@ public sealed class GameLayout : MonoBehaviour
             Debug.LogWarning($"No route from igloo {slot + 1} to igloo {target + 1}.", this);
             return false;
         }
-        return runner.Visit(visit, inside ? null : back, runSpeed, Random.Range(VisitMinSeconds, VisitMaxSeconds));
+        if (!runner.Visit(visit, inside ? null : back, runSpeed, Random.Range(VisitMinSeconds, VisitMaxSeconds)))
+            return false;
+        visitActions[slot] = action;
+        return true;
     }
 
     // Route from igloo `slot` (its tunnel, or its penguin's slot) into igloo `target`'s tunnel; cached until
@@ -266,7 +278,7 @@ public sealed class GameLayout : MonoBehaviour
         if (target < 0 || runners[slot] == null)
             return;
         if (target != slot)
-            Visit(slot, target);
+            Visit(slot, target, visitAction);
         else if (runners[slot].Current == PenguinRunner.State.Inside)
             runners[slot].RunOutOfIgloo(runSpeed);
         else
@@ -275,19 +287,26 @@ public sealed class GameLayout : MonoBehaviour
 
     // Window glow: texture fractions (y up) of the igloo art's round window, plus light shape and color.
     private static readonly Vector2 IglooWindow = new Vector2(0.2587f, 0.4336f);
-    // Centre of the lamp-off pane's crop (IglooWindowDark.png) as a texture fraction of the igloo art.
+    // Centre of the lamp-off pane's crop (IglooWindowDark.png; IglooWindowHeal.png shares it) as a texture
+    // fraction of the igloo art.
     private static readonly Vector2 IglooWindowDark = new Vector2(0.261164f, 0.433812f);
     // Door hinge (bottom of the leaf's right edge) as a texture fraction of the igloo art, y up.
     private static readonly Vector2 IglooDoorHinge = new Vector2(0.775521f, 0.231698f);
+    // Top of the dome as a texture fraction of the igloo art: heal particles rise from here.
+    private static readonly Vector2 IglooApex = new Vector2(0.505582f, 0.797970f);
     // Names draw above every igloo and penguin (depth orders stay well below this).
     public const int NameOrder = 1000;
     private const float WindowLightRadius = 0.75f;
     private const float WindowLightIntensity = 1.4f;
     private static readonly Color WindowLightColor = new Color(1f, 0.78f, 0.45f);
+    // Mint light at the window while a heal glows (scaled by IglooAction.Glow).
+    private const float HealLightIntensity = 1.5f;
+    private static readonly Color HealLightColor = new Color(0.45f, 1f, 0.7f);
     private static readonly Color DayBackground = new Color(0.863f, 0.929f, 0.957f);
     private static readonly Color DayNameColor = new Color32(32, 55, 73, 255);
     private static readonly Color NightNameColor = new Color32(236, 241, 250, 255);
     private readonly List<Light2D> windowLights = new List<Light2D>();
+    private readonly List<Light2D> healLights = new List<Light2D>();
     private readonly List<TextMesh> nameLabels = new List<TextMesh>();
 
     private bool transitioning;
@@ -773,7 +792,8 @@ public sealed class GameLayout : MonoBehaviour
     public void Rebuild()
     {
         if (igloo == null || doorFront == null || doorBack == null || character == null || outfit == null
-            || doorway == null || windowDark == null || runFrames == null || runFrames.Length != PenguinRunner.RunFrames
+            || doorway == null || windowDark == null || windowHeal == null || healPlus == null || healSparkle == null
+            || effectMaterial == null || runFrames == null || runFrames.Length != PenguinRunner.RunFrames
             || runOutfitFrames == null || runOutfitFrames.Length != PenguinRunner.RunFrames
             || idleFrames == null || idleFrames.Length != PenguinIdle.TotalFrames
             || idleOutfitFrames == null || idleOutfitFrames.Length != PenguinIdle.TotalFrames
@@ -796,12 +816,14 @@ public sealed class GameLayout : MonoBehaviour
 
         rosterDirty = false;
         windowLights.Clear();
+        healLights.Clear();
         nameLabels.Clear();
         doors.Clear();
         actions.Clear();
         runners.Clear();
         idles.Clear();
         visitRoutes.Clear();
+        visitActions.Clear();
         iglooPositions = feet = null;
         renderedRun = false;
         renderedKnockOut = 0;
@@ -862,6 +884,11 @@ public sealed class GameLayout : MonoBehaviour
             window.pointLightInnerRadius = 0.08f * generated.lossyScale.x;
             window.falloffIntensity = 0.6f;
             windowLights.Add(window);
+            var healLight = Instantiate(window, iglooRenderer.transform, false);
+            healLight.name = "Heal Light";
+            healLight.color = HealLightColor;
+            healLight.enabled = false;
+            healLights.Add(healLight);
             var pane = new GameObject("Window Dark").AddComponent<SpriteRenderer>();
             pane.transform.SetParent(iglooRenderer.transform, false);
             pane.transform.localPosition = IglooPoint(IglooWindowDark);
@@ -870,6 +897,17 @@ public sealed class GameLayout : MonoBehaviour
             pane.sortingOrder = 1;
             var action = iglooRenderer.gameObject.AddComponent<IglooAction>();
             action.Setup(iglooRenderer.transform, pane, 1f / unitsPerPixel);
+            var healPane = new GameObject("Window Heal").AddComponent<SpriteRenderer>();
+            healPane.transform.SetParent(iglooRenderer.transform, false);
+            healPane.transform.localPosition = IglooPoint(IglooWindowDark);
+            healPane.sprite = windowHeal;
+            healPane.sharedMaterial = spriteMaterial;
+            healPane.sortingOrder = 2;
+            // Particles stay out of the igloo's sorting group and its hop: unlit, above igloos and penguins.
+            var particles = new GameObject("Heal Particles " + (i + 1)).transform;
+            particles.SetParent(generated, false);
+            action.SetupHeal(healPane, particles, iglooPosition, IglooPoint(IglooApex), IglooPoint(IglooWindow),
+                healPlus, healSparkle, effectMaterial, NameOrder - 1);
             actions.Add(action);
             // Penguin pivot is its feet; the penguin stays untinted and its outfit carries the player color.
             Vector2 foot = FootPosition(angles[i], characterGap);
@@ -921,7 +959,8 @@ public sealed class GameLayout : MonoBehaviour
                     otherDomes.Add((iglooPositions[other] - iglooPosition) / unitsPerPixel);
             var route = IglooGround.PathToDoor((foot - iglooPosition - domeCenter) / unitsPerPixel, otherDomes);
             runner.SetHome(MakeRoute(route, iglooPosition + domeCenter, null, door, foot));
-            runner.GuestArrived += PlayAction;
+            int visitor = i;
+            runner.GuestArrived += (door, seconds) => PlayAction(visitor, door, seconds);
             runners.Add(runner);
 
             // Each penguin gets its own random breath phase, speed and clip order.
@@ -938,12 +977,15 @@ public sealed class GameLayout : MonoBehaviour
         ApplyLighting();
     }
 
-    // A visitor went in through `door`: that igloo's lamp flickers and it shakes for the stay.
-    private void PlayAction(IglooDoor door, float seconds)
+    // The penguin of `visitor` went in through `door`: that igloo plays the visit's action for the stay.
+    private void PlayAction(int visitor, IglooDoor door, float seconds)
     {
         int igloo = doors.IndexOf(door);
-        if (igloo >= 0 && igloo < actions.Count && actions[igloo] != null)
-            actions[igloo].Play(seconds);
+        if (igloo < 0 || igloo >= actions.Count || actions[igloo] == null)
+            return;
+        if (!visitActions.TryGetValue(visitor, out IglooAction.Kind action))
+            action = IglooAction.Kind.KnockOut;
+        actions[igloo].Play(seconds, action);
     }
 
     // Igloo art point (texture fraction, y up) in the igloo sprite's local units.
@@ -981,6 +1023,12 @@ public sealed class GameLayout : MonoBehaviour
             float lamp = i < actions.Count && actions[i] != null ? actions[i].Lamp : 1f;
             window.intensity = WindowLightIntensity * darkness * lamp;
             window.enabled = darkness * lamp > 0.001f;
+            Light2D heal = i < healLights.Count ? healLights[i] : null;
+            if (heal == null)
+                continue;
+            float glow = i < actions.Count && actions[i] != null ? actions[i].Glow : 0f;
+            heal.intensity = HealLightIntensity * darkness * glow;
+            heal.enabled = darkness * glow > 0.001f;
         }
         Color nameColor = Color.Lerp(DayNameColor, NightNameColor, darkness);
         foreach (TextMesh label in nameLabels)

@@ -880,6 +880,10 @@ MonoBehaviour:
   - {fileID: -2355143610449189465, guid: 66080a5f06b5cab4b8ba0d5b909b60c0, type: 3}
   doorway: {fileID: 21300000, guid: 7b9f826d4cad98e4482904cfda958527, type: 3}
   windowDark: {fileID: 21300000, guid: 7650a598a48444f44b99c7d4cb24d329, type: 3}
+  windowHeal: {fileID: 21300000, guid: 5caf054902e348e43acf6ec1803f8d57, type: 3}
+  healPlus: {fileID: 21300000, guid: 9030fb3685ca52f4281e4142e93a0383, type: 3}
+  healSparkle: {fileID: 21300000, guid: 0c53e9c8bef209f4f9fa5fdfacda91b2, type: 3}
+  effectMaterial: {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
   spriteMaterial: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   nameFont: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
   layoutCamera: {fileID: 2127360230}
@@ -893,6 +897,7 @@ MonoBehaviour:
   runSpeed: 2
   idleAnimation: 1
   playAs: 1
+  visitAction: 0
   knockOut: 3
   dizzySpeed: 0.6
 --- !u!4 &556460177

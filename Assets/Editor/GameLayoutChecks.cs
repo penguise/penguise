@@ -26,7 +26,7 @@ public static class GameLayoutChecks
                 layout.Rebuild();
                 var root = layout.transform.Find("Layout");
                 Require(layout.transform.childCount == 1, "No stale generated layouts");
-                Require(root.childCount == count * 3, "One igloo, doorway mask and character per player");
+                Require(root.childCount == count * 4, "One igloo, doorway mask, heal particle group and character per player");
                 var iglooSpacings = new float[count];
 
                 for (int i = 1; i <= count; i++)
@@ -101,6 +101,7 @@ public static class GameLayoutChecks
                     CheckRun(root, i, count);
                 CheckIdle(root, count);
                 CheckAction(layout, root, count);
+                CheckHeal(layout, root, count);
                 CheckKnockOut(layout, root, count);
             }
             CheckKnockOutPreview(layout, serialized);
@@ -413,6 +414,100 @@ public static class GameLayoutChecks
         Require(guestTime >= GameLayout.VisitMinSeconds - 0.05f && guestTime <= GameLayout.VisitMaxSeconds + 0.05f,
             $"The visitor stays {guestTime:F2} s inside");
         Require(runner.Current == PenguinRunner.State.Inside, "The visitor ends in its own igloo");
+    }
+
+    // Heal: each igloo's mint pane sits on its window (shown only while glowing) beside a mint heal light. A
+    // heal visit plays the visited igloo's heal (only that one): the lamp dims but never goes out, the window
+    // glows mint, the igloo swells with the beats and hops once without tilting, particles rise above the
+    // dome (at night the mint light comes on), and it all settles back to rest before the visitor comes out.
+    // The curves also end at rest for the shortest and longest stays.
+    private static void CheckHeal(GameLayout layout, Transform root, int count)
+    {
+        for (int i = 0; i < count; i++)
+        {
+            var igloo = root.Find("Igloo " + (i + 1));
+            var pane = igloo.Find("Window Heal").GetComponent<SpriteRenderer>();
+            var dark = igloo.Find("Window Dark").GetComponent<SpriteRenderer>();
+            var light = igloo.Find("Heal Light").GetComponent<UnityEngine.Rendering.Universal.Light2D>();
+            Require(!pane.enabled && !light.enabled && layout.Actions[i].Glow == 0f && layout.Actions[i].VisibleParticles == 0,
+                $"Igloo {i + 1}/{count} heal glow is off at rest");
+            Require(pane.sortingOrder > dark.sortingOrder && Vector2.Distance(pane.bounds.center, dark.bounds.center) < 0.002f
+                && Vector2.Distance(light.transform.position, igloo.Find("Window Light").position) < 0.002f,
+                $"Igloo {i + 1}/{count} mint pane and light sit on the window");
+            Require(root.Find("Heal Particles " + (i + 1)).childCount > 0, $"Igloo {i + 1}/{count} has heal particles");
+        }
+        foreach (float stay in new[] { GameLayout.VisitMinSeconds, GameLayout.VisitMaxSeconds })
+        {
+            IglooAction.SampleHeal(stay - 0.02f, stay, out float lampEnd, out float glowEnd, out Vector2 scaleEnd, out float liftEnd);
+            Require(Mathf.Abs(lampEnd - 1f) < 0.01f && glowEnd < 0.05f && (scaleEnd - Vector2.one).magnitude < 0.005f
+                && liftEnd == 0f, $"The heal ends at rest for a {stay:F0} s stay");
+        }
+
+        int slot = 1, target = (count / 2 + 1) % count;
+        PenguinRunner runner = layout.Runners[slot];
+        var visited = root.Find("Igloo " + (target + 1));
+        var particles = root.Find("Heal Particles " + (target + 1));
+        var healLight = visited.Find("Heal Light").GetComponent<UnityEngine.Rendering.Universal.Light2D>();
+        Bounds art = visited.GetComponent<SpriteRenderer>().bounds;   // the whole 1254 px canvas
+        float apexY = art.min.y + 0.79797f * art.size.y;              // top of the dome
+        Vector3 rest = visited.localPosition;
+        float hour = layout.TimeOfDay;
+        try
+        {
+            layout.TimeOfDay = 0f;
+            Require(layout.Visit(slot, target, IglooAction.Kind.Heal), "Heal visit starts");
+            float step = 1f / 50f, minLamp = 2f, maxLamp = 0f, maxGlow = 0f, maxSwell = 1f, maxLift = 0f, maxTilt = 0f;
+            float guestTime = 0f, highest = float.NegativeInfinity;
+            int maxParticles = 0;
+            bool played = false, lit = false;
+            for (int frame = 0; frame < 5000 && runner.IsVisiting; frame++)
+            {
+                runner.Tick(step);
+                foreach (IglooAction action in layout.Actions)
+                    action.Tick(step);
+                layout.TimeOfDay = 0f;   // applies the lights for this frame
+                for (int i = 0; i < count; i++)
+                    Require(i == target || !layout.Actions[i].Playing, "Only the healed igloo acts");
+                IglooAction healed = layout.Actions[target];
+                if (runner.Current == PenguinRunner.State.Guest)
+                {
+                    guestTime += step;
+                    played |= healed.Playing && healed.Current == IglooAction.Kind.Heal;
+                    minLamp = Mathf.Min(minLamp, healed.Lamp);
+                    maxLamp = Mathf.Max(maxLamp, healed.Lamp);
+                    maxGlow = Mathf.Max(maxGlow, healed.Glow);
+                    maxSwell = Mathf.Max(maxSwell, visited.localScale.y);
+                    maxLift = Mathf.Max(maxLift, visited.localPosition.y - rest.y);
+                    maxTilt = Mathf.Max(maxTilt, Mathf.Abs(Mathf.DeltaAngle(0f, visited.localEulerAngles.z)));
+                    maxParticles = Mathf.Max(maxParticles, healed.VisibleParticles);
+                    lit |= healLight.enabled && healLight.intensity > 1f;
+                    foreach (SpriteRenderer particle in particles.GetComponentsInChildren<SpriteRenderer>())
+                        if (particle.enabled)
+                            highest = Mathf.Max(highest, particle.bounds.max.y);
+                }
+                else if (guestTime > 0f)
+                    Require(!healed.Playing && visited.localPosition == rest && visited.localRotation == Quaternion.identity
+                        && visited.localScale == Vector3.one && healed.Lamp == 1f && healed.Glow == 0f
+                        && healed.VisibleParticles == 0 && !healLight.enabled,
+                        "The healed igloo is back at rest when the visitor comes out");
+            }
+            Require(played, "The visited igloo plays the heal");
+            Require(minLamp > 0.25f && minLamp < 0.35f && maxLamp > 1.2f, $"The lamp dims (to {minLamp:F2}) but never goes out, then comes back ({maxLamp:F2})");
+            Require(maxGlow > 0.95f && lit, "The window glows mint and the mint light comes on at night");
+            Require(maxSwell > 1.03f && maxLift > 0.05f && maxTilt < 0.001f,
+                $"The igloo beats and hops without tilting (swell {maxSwell:F3}, lift {maxLift:F3})");
+            Require(maxParticles >= 10 && highest > apexY, $"Particles rise above the dome ({maxParticles} at once)");
+            Require(runner.Current == PenguinRunner.State.Inside, "The healer ends in its own igloo");
+            // Back to its slot: later checks expect it standing there.
+            layout.RunOutOfIgloo(slot);
+            for (int frame = 0; frame < 5000 && runner.Current != PenguinRunner.State.Idle; frame++)
+                runner.Tick(1f / 50f);
+            Require(runner.Current == PenguinRunner.State.Idle, "The healer runs back out to its slot");
+        }
+        finally
+        {
+            layout.TimeOfDay = hour;
+        }
     }
 
     // Knocked out inside its igloo, a penguin walks out dizzy (dizzy frames only) just past the point its
