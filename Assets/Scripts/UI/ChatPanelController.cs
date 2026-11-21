@@ -20,6 +20,10 @@ public sealed class ChatPanelController : MonoBehaviour
     private Label status;
     private string placeholderText = string.Empty;
     private MatchChat chat;
+    // The panel follows the scene's day-night light (DayNightCycle.InterfaceTint) through a tint filter.
+    private VisualElement chatPanel;
+    private GameLayout layout;
+    private Color appliedTint = Color.white;
 
     private void OnEnable()
     {
@@ -51,7 +55,9 @@ public sealed class ChatPanelController : MonoBehaviour
             Debug.LogError("Chat UI elements were not found.", this);
             return;
         }
-        var chatPanel = root.Q<VisualElement>("chat-panel");
+        chatPanel = root.Q<VisualElement>("chat-panel");
+        appliedTint = Color.white;
+        ApplyDayNight();
         if (chatPanel != null && chatPanel.Q<SnowCap>() == null)
         {
             var snow = new SnowCap();
@@ -70,6 +76,29 @@ public sealed class ChatPanelController : MonoBehaviour
         HideStatus();
         RenderHistory();
         UpdateSendButton();
+    }
+
+    private void Update() => ApplyDayNight();
+
+    // Dims the panel with the time of day; no filter at all in full daylight.
+    private void ApplyDayNight()
+    {
+        if (chatPanel == null)
+            return;
+        if (layout == null)
+            layout = FindFirstObjectByType<GameLayout>();
+        Color tint = layout != null ? DayNightCycle.InterfaceTint(layout.TimeOfDay) : Color.white;
+        if (Mathf.Abs(tint.r - appliedTint.r) + Mathf.Abs(tint.g - appliedTint.g) + Mathf.Abs(tint.b - appliedTint.b) < 0.002f)
+            return;
+        appliedTint = tint;
+        if (tint.r > 0.999f && tint.g > 0.999f && tint.b > 0.999f)
+        {
+            chatPanel.style.filter = StyleKeyword.Null;
+            return;
+        }
+        var filter = new FilterFunction(FilterFunctionType.Tint);
+        filter.AddParameter(new FilterParameter(tint));
+        chatPanel.style.filter = new StyleList<FilterFunction>(new System.Collections.Generic.List<FilterFunction> { filter });
     }
 
     private void OnInputChanged(ChangeEvent<string> change)

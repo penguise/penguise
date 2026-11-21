@@ -57,6 +57,20 @@ public static class DayNightCycle
         intensity = Keys[0].Intensity;
     }
 
+    // Multiply tint for the screen UI (the chat panel): white by day, the ambient color dimmed at night,
+    // but only part of the way, so the UI sits in the scene's light without losing text contrast.
+    private const float InterfaceNightBrightness = 0.85f;
+    private const float InterfaceNightStrength = 0.85f;
+
+    public static Color InterfaceTint(float hour)
+    {
+        Evaluate(hour, out Color color, out float intensity);
+        float night = Mathf.InverseLerp(DayIntensity, NightIntensity, intensity);
+        Color tint = Color.Lerp(Color.white, color * InterfaceNightBrightness, night * InterfaceNightStrength);
+        tint.a = 1f;
+        return tint;
+    }
+
     // 0 in full daylight, 1 at full night; drives igloo window lights and name contrast.
     public static float Darkness(float intensity) =>
         Mathf.SmoothStep(0, 1, Mathf.InverseLerp(0.9f, NightIntensity + 0.05f, intensity));
