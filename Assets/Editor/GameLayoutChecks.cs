@@ -103,6 +103,7 @@ public static class GameLayoutChecks
                 CheckAction(layout, root, count);
                 CheckHeal(layout, root, count);
                 CheckKnockOut(layout, root, count);
+                CheckFishing(layout, root, count);
             }
             CheckKnockOutPreview(layout, serialized);
         }
@@ -604,6 +605,115 @@ public static class GameLayoutChecks
             serialized.Update();
             field.intValue = original;
             serialized.ApplyModifiedPropertiesWithoutUndo();
+        }
+    }
+
+    // Fishing: every igloo reaches both stand points beside the ice hole and takes the nearer one (its own
+    // side when nearly equal), never passing the hole on its far side (near the hole, every turn is on the
+    // stand side); the routes end and start exactly there. A penguin goes out of its igloo (or from its slot),
+    // stands facing the water while its clip plays (tackle in front of the outfit, the catch's "+1" unlit on
+    // top, pre-mirrored when flipped), then runs back into its own igloo and its door closes. Knocked out
+    // (CheckKnockOut ran before), it does not go.
+    private static void CheckFishing(GameLayout layout, Transform root, int count)
+    {
+        Vector2 water = GameLayout.FishingWater;
+        Require(GameLayout.OnIceHole(GameLayout.HoleOpening) && !GameLayout.OnIceHole(GameLayout.FishingStandPoint(1))
+            && !GameLayout.OnIceHole(GameLayout.FishingStandPoint(-1)), "Clicks on the hole, not beside it, go fishing");
+        for (int slot = 0; slot < count; slot++)
+            foreach (bool fromSlot in new[] { false, true })
+            {
+                string label = $"{slot + 1}/{count} ({(fromSlot ? "slot" : "igloo")})";
+                int side = layout.FishingSide(slot, fromSlot);
+                PenguinRunner.Route go = layout.FishingRoute(slot, side, fromSlot);
+                PenguinRunner.Route other = layout.FishingRoute(slot, -side, fromSlot);
+                PenguinRunner.Route back = layout.FishingRoute(slot, side, null);
+                Require(side != 0 && go != null && other != null && back != null && go.Length <= other.Length
+                    + GameLayout.FishingSideTie,
+                    $"Fishing {label} takes the nearer side of the hole");
+                Vector2 stand = GameLayout.FishingStandPoint(side);
+                Require(Vector2.Distance(go.Points[go.Points.Length - 1], stand) < 1e-4f
+                    && Vector2.Distance(back.Points[0], stand) < 1e-4f && go.EndDoor == null && back.StartDoor == null
+                    && back.EndDoor == layout.Runners[slot].Door && go.StartDoor == (fromSlot ? null : layout.Runners[slot].Door),
+                    $"Fishing {label} goes to its stand point and back into its own igloo");
+                for (int k = 1; k < go.Points.Length; k++)
+                    if (Vector2.Distance(go.Points[k], GameLayout.IceHole) < 1.6f)
+                        Require((go.Points[k].x - water.x) * side > -1e-3f, $"Fishing {label} never passes the hole on its far side");
+            }
+
+        float step = 1f / 50f;
+        Require(!layout.GoFishing(count - 1, true), "A knocked-out penguin does not go fishing");
+        // From inside its igloo (a catch), and from its slot (a miss), on both sides of the hole.
+        foreach (int slot in new[] { 0, count / 2 })
+        {
+            PenguinRunner runner = layout.Runners[slot];
+            var character = root.Find("Character " + (slot + 1));
+            var body = character.GetComponent<SpriteRenderer>();
+            var outfit = character.Find("Outfit").GetComponent<SpriteRenderer>();
+            var tackle = character.Find("Tackle").GetComponent<SpriteRenderer>();
+            var effect = character.Find("Fish Effect").GetComponent<SpriteRenderer>();
+            var name = character.GetComponentInChildren<TextMesh>().GetComponent<MeshRenderer>();
+            Vector3 slotPosition = runner.Path[0];
+            bool caught = slot == 0;
+            if (caught)
+            {
+                runner.RunIntoIgloo(1.1f);
+                for (int frame = 0; frame < 2000 && runner.Current != PenguinRunner.State.Inside; frame++)
+                    runner.Tick(step);
+                Require(runner.Current == PenguinRunner.State.Inside, "The fisher went in first");
+            }
+            bool inside = runner.Current == PenguinRunner.State.Inside;
+            int side = layout.FishingSide(slot, !inside);
+            Require(!tackle.enabled && !effect.enabled, $"Fishing {slot + 1}: no tackle before it goes");
+            Require(layout.GoFishing(slot, caught) && runner.IsFishing && runner.FishCatch == caught, $"Fishing {slot + 1} starts");
+            Require(!layout.GoFishing(slot, caught), $"Fishing {slot + 1}: a second click while busy is ignored");
+            var catchEffect = new HashSet<Sprite>((Sprite[])Field(runner, "catchEffect"));
+            var flippedEffect = new HashSet<Sprite>((Sprite[])Field(runner, "catchEffectFlipped"));
+            var clipBody = new HashSet<Sprite>((Sprite[])Field(runner, caught ? "catchBody" : "missBody"));
+            float clip = 0f;
+            bool tackleShown = false, effectShown = false, doorOpened = false;
+            int frames = 0;
+            for (; frames < 20000 && runner.IsFishing; frames++)
+            {
+                runner.Tick(step);
+                doorOpened |= runner.Door.Open > 0.99f;
+                if (runner.Current != PenguinRunner.State.Fishing)
+                {
+                    Require(!tackle.enabled && !effect.enabled, $"Fishing {slot + 1}: no tackle while running");
+                    continue;
+                }
+                clip += step;
+                Require(Vector2.Distance(character.localPosition, GameLayout.FishingStandPoint(side)) < 1e-4f
+                    && body.flipX == side > 0 && outfit.flipX == body.flipX && clipBody.Contains(body.sprite)
+                    && body.enabled && outfit.enabled && name.enabled && body.maskInteraction == SpriteMaskInteraction.None,
+                    $"Fishing {slot + 1} stands at the hole facing the water, playing its clip");
+                Require(outfit.sortingOrder == body.sortingOrder + 1 && tackle.sortingOrder == body.sortingOrder + 2
+                    && tackle.sortingOrder < name.sortingOrder && effect.sortingOrder == GameLayout.NameOrder - 1,
+                    $"Fishing {slot + 1}: tackle in front of the outfit, effects above everything but names");
+                if (tackle.enabled)
+                {
+                    tackleShown = true;
+                    Require(tackle.flipX == body.flipX && tackle.sprite != null, $"Fishing {slot + 1}: tackle faces with the penguin");
+                }
+                if (effect.enabled)
+                {
+                    effectShown = true;
+                    Require(effect.flipX == body.flipX && (body.flipX ? flippedEffect : catchEffect).Contains(effect.sprite),
+                        $"Fishing {slot + 1}: the \"+1\" uses the sheet that reads right way round");
+                }
+            }
+            Require(runner.Current == PenguinRunner.State.Inside && !body.enabled && !tackle.enabled && !effect.enabled,
+                $"Fishing {slot + 1} ends inside its own igloo");
+            Require(Mathf.Abs(clip - PenguinRunner.FishingSeconds(caught)) < 2 * step && tackleShown && effectShown == caught,
+                $"Fishing {slot + 1} plays the whole {(caught ? "catch" : "miss")} clip ({clip:F2} s)");
+            for (int frame = 0; frame < 100; frame++)
+                runner.Tick(step);
+            Require(doorOpened && runner.Door.Open < 1e-4f, $"Fishing {slot + 1}: its door opened and closed again");
+            // Back to its slot, as the other checks left it.
+            runner.RunOutOfIgloo(1.1f);
+            for (int frame = 0; frame < 5000 && runner.Current != PenguinRunner.State.Idle; frame++)
+                runner.Tick(step);
+            Require(runner.Current == PenguinRunner.State.Idle && Vector3.Distance(character.localPosition, slotPosition) < 1e-4f,
+                $"Fishing {slot + 1}: back on its slot ({runner.Current} at {character.localPosition}, slot {slotPosition})");
         }
     }
 

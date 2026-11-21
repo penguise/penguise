@@ -14,6 +14,9 @@ using UnityEngine;
 // eyes, stars circling its head) just far enough for its door to close behind it (the same distance for every
 // igloo), faints backwards and lies there for good (Fainting, then Down); knocked out while standing on its
 // slot, it faints there.
+// Fishing (GoFishing): out of its own igloo (or from its slot) along a route to a stand point beside the ice
+// hole, a catch or miss clip there facing the hole (rod, line and fish on a Tackle renderer in front; the
+// catch's sparkles and "+1" unlit on a Fish Effect renderer), then back into its own igloo.
 // In Edit mode it ticks from EditorApplication.update, so previews animate while the Editor is unfocused.
 [ExecuteAlways]
 public sealed class PenguinRunner : MonoBehaviour
@@ -41,9 +44,21 @@ public sealed class PenguinRunner : MonoBehaviour
     private const float DizzyStopDistance = 0.15f;
     public const float FaintPastDoorClear = 0.35f;
 
+    // Fishing art (Tools/ArtGen/penguin/export_fishing.py), 15 frames/s by time. Body and outfit sheets hold
+    // every frame; the tackle and effect sheets leave out their empty frames before First (and after).
+    public const float FishFramesPerSecond = 15f;
+    public const int CatchFrames = 81, MissFrames = 84;
+    public const int CatchTackleFirst = 3, CatchTackleFrames = 74, MissTackleFirst = 3, MissTackleFrames = 71;
+    public const int CatchEffectFirst = 61, CatchEffectFrames = 16;
+
     // Visiting: on the way to another igloo; Guest: inside it; Returning: on the way back.
     // Fainting: falling over on its slot; Down: lying there, knocked out for good.
-    public enum State { Idle, RunningIn, Inside, RunningOut, Visiting, Guest, Returning, Fainting, Down }
+    // GoingFishing: on the way to the ice hole; Fishing: the clip there; FishReturning: on the way home.
+    public enum State
+    {
+        Idle, RunningIn, Inside, RunningOut, Visiting, Guest, Returning, Fainting, Down, GoingFishing, Fishing,
+        FishReturning,
+    }
 
     // A ground route in the parent's local units. A door at either end belongs to the tunnel that end of
     // the route lies in; its Clear distance is the point in front of the door that the open leaf does not
@@ -80,6 +95,10 @@ public sealed class PenguinRunner : MonoBehaviour
     [SerializeField, HideInInspector] private Route home;
     [SerializeField, HideInInspector] private Sprite[] dizzyBody, dizzyClothes, faintBody, faintClothes, downBody, downClothes;
     [SerializeField, HideInInspector] private Vector3 labelRest;
+    [SerializeField, HideInInspector] private SpriteRenderer tackle, effect;
+    [SerializeField, HideInInspector] private Sprite[] catchBody, catchClothes, catchTackle, catchEffect, catchEffectFlipped;
+    [SerializeField, HideInInspector] private Sprite[] missBody, missClothes, missTackle;
+    private bool fishCatch, fishFlip;
 
     private Route route, returnRoute;
     private State state;
@@ -113,8 +132,15 @@ public sealed class PenguinRunner : MonoBehaviour
     public event Action<IglooDoor, float> GuestArrived;
     public bool IsInside => state == State.Inside;
     public bool IsRunning => state == State.RunningIn || state == State.RunningOut
-        || state == State.Visiting || state == State.Returning;
+        || state == State.Visiting || state == State.Returning || state == State.GoingFishing
+        || state == State.FishReturning;
     public bool IsVisiting => state == State.Visiting || state == State.Guest || state == State.Returning;
+    public bool IsFishing => state == State.GoingFishing || state == State.Fishing || state == State.FishReturning;
+    // The clip played at the hole: true a catch, false a miss (meaningful while IsFishing).
+    public bool FishCatch => fishCatch;
+    // Seconds into the clip at the hole (while Fishing).
+    public float FishingTime => state == State.Fishing ? clipTime : 0f;
+    public static float FishingSeconds(bool caught) => (caught ? CatchFrames : MissFrames) / FishFramesPerSecond;
     // Home route: own door, its length and clear distance, and its points (slot first).
     public IglooDoor Door => home?.EndDoor;
     public float PathLength => home?.Length ?? 0f;
@@ -126,9 +152,9 @@ public sealed class PenguinRunner : MonoBehaviour
     // Hidden at the far end of a tunnel, waiting for its door to open before walking out.
     public bool WaitingForDoor => waitingForDoor;
     // Depth sorting shared with the igloos: lower on screen (nearer the camera) draws on top.
-    // Even orders; a penguin's outfit takes the next odd one. About 40..760 on this background: above the
-    // background (-10) and below the names (GameLayout.NameOrder).
-    public static int DepthOrder(float y) => 400 - 2 * Mathf.RoundToInt(y * 30f);
+    // Steps of three: a penguin's outfit takes the next order and its fishing tackle the one after. About
+    // 40..930 over the walk area: above the background (-10) and below the names (GameLayout.NameOrder).
+    public static int DepthOrder(float y) => 450 - 3 * Mathf.RoundToInt(y * 30f);
 
     public void Setup(SpriteRenderer body, SpriteRenderer clothes, Renderer label, Sprite[] runBody,
         Sprite[] runClothes)
@@ -156,6 +182,45 @@ public sealed class PenguinRunner : MonoBehaviour
         this.faintClothes = faintClothes;
         this.downBody = downBody;
         this.downClothes = downClothes;
+    }
+
+    // Fishing art and its two extra renderers (children of the penguin): the tackle in front of the outfit,
+    // the effect unlit above everything (its order is set by the caller).
+    public void SetupFishing(SpriteRenderer tackle, SpriteRenderer effect, Sprite[] catchBody, Sprite[] catchClothes,
+        Sprite[] catchTackle, Sprite[] catchEffect, Sprite[] catchEffectFlipped, Sprite[] missBody, Sprite[] missClothes,
+        Sprite[] missTackle)
+    {
+        this.tackle = tackle;
+        this.effect = effect;
+        this.catchBody = catchBody;
+        this.catchClothes = catchClothes;
+        this.catchTackle = catchTackle;
+        this.catchEffect = catchEffect;
+        this.catchEffectFlipped = catchEffectFlipped;
+        this.missBody = missBody;
+        this.missClothes = missClothes;
+        this.missTackle = missTackle;
+        tackle.enabled = effect.enabled = false;
+    }
+
+    // Goes fishing along `go` (from the own tunnel when inside, from the slot when idle there) to its stand
+    // point beside the hole, plays the catch (`caught`) or miss clip there facing left when `faceLeft`, then
+    // runs home along `back` (from that stand point into the own tunnel). False if the penguin is knocked
+    // out, busy, or the routes do not start and end where it is.
+    public bool GoFishing(Route go, Route back, float unitsPerSecond, bool caught, bool faceLeft)
+    {
+        if (knockedOut || go == null || !go.Valid || go.EndDoor != null || back == null || !back.Valid
+            || back.StartDoor != null || back.EndDoor != Door || tackle == null
+            || Vector2.Distance(go.Points[go.Points.Length - 1], back.Points[0]) > 1e-4f)
+            return false;
+        if (state == State.Inside ? go.StartDoor != Door : state != State.Idle || go.StartDoor != null)
+            return false;
+        returnRoute = back;
+        fishCatch = caught;
+        fishFlip = faceLeft;
+        travelled = 0f;
+        Begin(go, State.GoingFishing, unitsPerSecond);
+        return true;
     }
 
     // Knocks the penguin out for good. Inside its igloo, it comes out dizzy on its next run out (one
@@ -272,7 +337,8 @@ public sealed class PenguinRunner : MonoBehaviour
         startDrive.Released = endDrive.Released = false;
         // Setting off from the far end of a tunnel: wait there, hidden, until its door is fully open, then
         // walk out of the dark tunnel.
-        bool fromStart = run == State.RunningIn || run == State.Visiting;
+        bool fromStart = run == State.RunningIn || run == State.Visiting || run == State.GoingFishing
+            || run == State.FishReturning;
         IglooDoor exitDoor = fromStart ? route.StartDoor : route.EndDoor;
         waitingForDoor = exitDoor != null && exitDoor.Open < 0.999f
             && (fromStart ? route.Masked[0] && travelled <= 1e-4f
@@ -307,7 +373,8 @@ public sealed class PenguinRunner : MonoBehaviour
         endDrive.Timer += seconds;
         if (route == null || !route.Valid)
             return;
-        bool forward = state == State.RunningIn || state == State.Visiting;
+        bool forward = state == State.RunningIn || state == State.Visiting || state == State.GoingFishing
+            || state == State.FishReturning;
         bool backward = state == State.RunningOut || state == State.Returning;
         if (waitingForDoor && (forward || backward))
         {
@@ -333,6 +400,21 @@ public sealed class PenguinRunner : MonoBehaviour
             }
             ShowKnockedOut();
         }
+        else if (state == State.Fishing)
+        {
+            clipTime += seconds;
+            if (clipTime >= FishingSeconds(fishCatch))
+            {
+                // Home from the stand point, where the fishing route ended.
+                tackle.enabled = effect.enabled = false;
+                Route back = returnRoute;
+                returnRoute = null;
+                travelled = 0f;
+                Begin(back, State.FishReturning, speed);
+                return;
+            }
+            ShowFishing();
+        }
         if (forward)
         {
             float next = Mathf.Min(travelled + speed * seconds, route.Length);
@@ -357,6 +439,12 @@ public sealed class PenguinRunner : MonoBehaviour
             Place(travelled, forward);
             if (backward && Dizzy && travelled <= FaintDistance)
                 StartFaint(transform.localPosition, body.flipX);
+            else if (forward && travelled >= route.Length && state == State.GoingFishing)
+            {
+                state = State.Fishing;
+                clipTime = 0f;
+                ShowFishing();
+            }
             else if (forward && travelled >= route.Length)
             {
                 bool guest = state == State.Visiting;
@@ -461,7 +549,7 @@ public sealed class PenguinRunner : MonoBehaviour
 #endif
 
     private bool Active => IsRunning || state == State.Guest || state == State.Fainting || state == State.Down
-        || startDrive.Closing || endDrive.Closing;
+        || state == State.Fishing || startDrive.Closing || endDrive.Closing;
     private bool Dizzy => knockedOut && state == State.RunningOut;
 
     private void Update()
@@ -561,6 +649,8 @@ public sealed class PenguinRunner : MonoBehaviour
         int order = DepthOrder(position.y);
         body.sortingOrder = order;
         clothes.sortingOrder = order + 1;
+        if (tackle != null)
+            tackle.sortingOrder = order + 2;
         if (label != null)
             label.enabled = !inside;
     }
@@ -604,6 +694,29 @@ public sealed class PenguinRunner : MonoBehaviour
             Show(faintPosition, downBody[frame], downClothes[frame], faintFlip, false, 0f);
             LiftLabel(DownNameLift);
         }
+    }
+
+    // The clip at the hole: body and outfit, plus the tackle and the catch's effects while they draw.
+    private void ShowFishing()
+    {
+        int frames = fishCatch ? CatchFrames : MissFrames;
+        int frame = Mathf.Min(frames - 1, Mathf.FloorToInt(clipTime * FishFramesPerSecond + 1e-4f));
+        Vector2 stand = route.Points[route.Points.Length - 1];
+        Show(stand, (fishCatch ? catchBody : missBody)[frame], (fishCatch ? catchClothes : missClothes)[frame],
+            fishFlip, false, 0f);
+        LiftLabel(0f);
+        int tackleFrame = frame - (fishCatch ? CatchTackleFirst : MissTackleFirst);
+        Sprite[] tackleSprites = fishCatch ? catchTackle : missTackle;
+        tackle.enabled = tackleFrame >= 0 && tackleFrame < tackleSprites.Length;
+        if (tackle.enabled)
+            tackle.sprite = tackleSprites[tackleFrame];
+        tackle.flipX = fishFlip;
+        int effectFrame = frame - CatchEffectFirst;
+        effect.enabled = fishCatch && effectFrame >= 0 && effectFrame < CatchEffectFrames;
+        if (effect.enabled)
+            // Flipped penguins use the sheet whose "+1" is pre-mirrored, so it reads normally.
+            effect.sprite = (fishFlip ? catchEffectFlipped : catchEffect)[effectFrame];
+        effect.flipX = fishFlip;
     }
 
     private void LiftLabel(float lift)

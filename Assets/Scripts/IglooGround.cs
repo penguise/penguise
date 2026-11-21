@@ -170,12 +170,14 @@ public static class IglooGround
     // center as screen offsets (canvas pixels) from `from`'s dome center, which the result's Pixels are
     // relative to too; Frame is the ground point in one frame shared by every igloo. `start` null leaves
     // from deep in `from`'s tunnel (its door approach backwards); otherwise it starts at that ground point
-    // (screen offset, e.g. the penguin's slot). In between it takes the shortest way around every dome
-    // (Clearance from both igloos, NeighborClearance from the others), turning only at points whose screen
-    // offset lies in `area`. `obstacles` are more round ground areas to keep out of (screen offset of the
-    // center, ground radius; e.g. the ice hole). Null when no such way exists.
+    // (screen offset, e.g. the penguin's slot). `end` set ends there (screen offset, e.g. beside the ice
+    // hole) instead of in `to`'s tunnel; `to` still keeps the full Clearance. In between it takes the
+    // shortest way around every dome (Clearance from both igloos, NeighborClearance from the others),
+    // turning only at points whose screen offset lies in `area`. `obstacles` are more round ground areas to
+    // keep out of (screen offset of the center, ground radius; e.g. the ice hole); either end may lie inside
+    // one and only moves away from its center. Null when no such way exists.
     public static List<Waypoint> PathBetween(Vector2? start, int from, int to, IReadOnlyList<Vector2> domes, Rect area,
-        IReadOnlyList<(Vector2 Center, float Radius)> obstacles = null)
+        IReadOnlyList<(Vector2 Center, float Radius)> obstacles = null, Vector2? end = null)
     {
         int extra = obstacles?.Count ?? 0;
         var centers = new Vector2[domes.Count + extra];
@@ -211,18 +213,24 @@ public static class IglooGround
             }
         int sources = nodes.Count;
         var tails = new List<List<Waypoint>>();
-        foreach (List<Waypoint> arrive in Approaches())
+        if (end.HasValue)
         {
-            for (int k = 0; k < arrive.Count; k++)
-            {
-                Waypoint point = arrive[k];
-                point.Frame += (Vector3)centers[to];
-                point.Pixels += domes[to];
-                arrive[k] = point;
-            }
-            nodes.Add(arrive[0].Frame);
-            tails.Add(arrive);
+            nodes.Add(ToFrame(end.Value));
+            tails.Add(new List<Waypoint> { new Waypoint { Pixels = end.Value, Frame = ToFrame(end.Value) } });
         }
+        else
+            foreach (List<Waypoint> arrive in Approaches())
+            {
+                for (int k = 0; k < arrive.Count; k++)
+                {
+                    Waypoint point = arrive[k];
+                    point.Frame += (Vector3)centers[to];
+                    point.Pixels += domes[to];
+                    arrive[k] = point;
+                }
+                nodes.Add(arrive[0].Frame);
+                tails.Add(arrive);
+            }
         int endpoints = nodes.Count;
         for (int i = 0; i < centers.Length; i++)
         {

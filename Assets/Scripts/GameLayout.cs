@@ -25,6 +25,11 @@ public sealed class GameLayout : MonoBehaviour
     [SerializeField, HideInInspector] private Sprite[] dizzyFrames, dizzyOutfitFrames;
     [SerializeField, HideInInspector] private Sprite[] faintFrames, faintOutfitFrames;
     [SerializeField, HideInInspector] private Sprite[] downFrames, downOutfitFrames;
+    // Fishing clips (Tools/ArtGen/penguin/export_fishing.py): body and outfit (same pivot as the others), the
+    // tackle in front, and the catch's unlit sparkles and "+1" (a pre-mirrored sheet for flipped penguins).
+    [SerializeField, HideInInspector] private Sprite[] fishCatchFrames, fishCatchOutfitFrames, fishCatchTackle;
+    [SerializeField, HideInInspector] private Sprite[] fishCatchEffect, fishCatchEffectFlipped;
+    [SerializeField, HideInInspector] private Sprite[] fishMissFrames, fishMissOutfitFrames, fishMissTackle;
     // Igloo doorway opening, pivot on the door hinge: masks penguins once they pass the door plane.
     [SerializeField, HideInInspector] private Sprite doorway;
     // Lamp-off window pane (centre pivot) shown while a visitor is inside, see IglooAction.
@@ -84,6 +89,9 @@ public sealed class GameLayout : MonoBehaviour
     [SerializeField, Range(0, 8)] private int playAs;
     // Preview: what the Play As penguin does inside the igloo it visits (seen from outside).
     [SerializeField] private IglooAction.Kind visitAction = IglooAction.Kind.KnockOut;
+    // Preview: clicking the ice hole sends the Play As penguin fishing there; this picks the clip.
+    public enum FishingOutcome { Random, Catch, Miss }
+    [SerializeField] private FishingOutcome fishingOutcome = FishingOutcome.Random;
     // Preview: knocks out that slot (1-based, 0 off). Inside its igloo it walks out dizzy on the next run out
     // and faints past its door; standing on its slot, it faints at once. Changing the field brings the
     // previous one back, so only the chosen slot is knocked out. Runtime code uses KnockOut(slot).
@@ -148,6 +156,13 @@ public sealed class GameLayout : MonoBehaviour
     // (its snow rim plus half a penguin).
     public static readonly Vector2 IceHole = new Vector2(1.95f, -0.12f);
     public const float IceHoleClearance = 1.1f;
+    // Fishing (reference units): the water's centre in the hole, the hole's opening (centre and radii, a
+    // little wider than the art for clicks), and how far left or right of the water a fishing penguin's feet
+    // stand (fish_catch.GAME_STAND: the float lands where the art casts it).
+    public static readonly Vector2 FishingWater = new Vector2(1.975f, -0.195f);
+    public static readonly Vector2 HoleOpening = new Vector2(1.97f, -0.095f);
+    public static readonly Vector2 HoleClickRadii = new Vector2(0.6f, 0.45f);
+    public const float FishingStand = 0.72f;
 
     private Vector2[] iglooPositions, feet, iglooOutline;
     private Vector2 domeCenter;
@@ -156,6 +171,104 @@ public sealed class GameLayout : MonoBehaviour
     private readonly Dictionary<int, IglooAction.Kind> visitActions = new Dictionary<int, IglooAction.Kind>();
     private readonly Dictionary<(int, int, bool), PenguinRunner.Route> visitRoutes =
         new Dictionary<(int, int, bool), PenguinRunner.Route>();
+    private readonly Dictionary<(int, int, bool), PenguinRunner.Route> fishingRoutes =
+        new Dictionary<(int, int, bool), PenguinRunner.Route>();
+
+    // Stand point (reference units) left (side -1) or right (+1) of the hole's water.
+    public static Vector2 FishingStandPoint(int side) => FishingWater + new Vector2(side * FishingStand, 0f);
+
+    // True if `point` (layout units) is on the ice hole's opening.
+    public static bool OnIceHole(Vector2 point)
+    {
+        Vector2 d = point - HoleOpening;
+        return d.x * d.x / (HoleClickRadii.x * HoleClickRadii.x)
+            + d.y * d.y / (HoleClickRadii.y * HoleClickRadii.y) <= 1f;
+    }
+
+    // Sends the penguin of `slot` fishing: out of its own igloo when inside (or from its slot when standing
+    // there) straight to the nearer side of the ice hole (whichever stand point its route reaches sooner),
+    // the catch or miss clip there facing the water, then home into its own igloo. False if it is busy or
+    // knocked out, or no route keeps clear of the igloos.
+    public bool GoFishing(int slot, bool caught)
+    {
+        if (slot < 0 || slot >= runners.Count || runners[slot] == null)
+            return false;
+        PenguinRunner runner = runners[slot];
+        bool inside = runner.Current == PenguinRunner.State.Inside;
+        if (runner.KnockedOut || !inside && runner.Current != PenguinRunner.State.Idle)
+            return false;
+        int side = FishingSide(slot, !inside);
+        if (side == 0)
+        {
+            Debug.LogWarning($"No route from igloo {slot + 1} to the ice hole.", this);
+            return false;
+        }
+        return runner.GoFishing(FishingRoute(slot, side, !inside), FishingRoute(slot, side, null), runSpeed, caught,
+            side > 0);
+    }
+
+    // Route length (ground units) under which the other side of the hole does not count as shorter.
+    public const float FishingSideTie = 0.3f;
+
+    // The stand side (-1 left, +1 right, 0 none) whose route from igloo `slot` (its tunnel, or its slot) is
+    // shorter.
+    public int FishingSide(int slot, bool fromSlot)
+    {
+        // Nearly equal ways (within FishingSideTie) go to the side the igloo is on.
+        int own = iglooPositions != null && slot >= 0 && slot < iglooPositions.Length
+            && iglooPositions[slot].x + domeCenter.x > FishingWater.x ? 1 : -1;
+        int best = 0;
+        float shortest = float.PositiveInfinity;
+        foreach (int side in new[] { own, -own })
+        {
+            PenguinRunner.Route go = FishingRoute(slot, side, fromSlot);
+            if (go != null && FishingRoute(slot, side, null) != null
+                && go.Length < shortest - (best == own ? FishingSideTie : 0f))
+            {
+                shortest = go.Length;
+                best = side;
+            }
+        }
+        return best;
+    }
+
+    // Route for igloo `slot` and hole side `side`: `fromSlot` true from its penguin's slot, false from its
+    // tunnel, to the stand point; null from the stand point back into its tunnel. Cached until the next rebuild.
+    public PenguinRunner.Route FishingRoute(int slot, int side, bool? fromSlot)
+    {
+        if (iglooPositions == null || slot < 0 || slot >= iglooPositions.Length || doors.Count != iglooPositions.Length
+            || side != -1 && side != 1)
+            return null;
+        int key = fromSlot.HasValue ? (fromSlot.Value ? 1 : 0) : 2;
+        if (fishingRoutes.TryGetValue((slot, key, side > 0), out PenguinRunner.Route cached))
+            return cached;
+        Vector2 origin = iglooPositions[slot] + domeCenter;
+        var domes = new List<Vector2>();
+        foreach (Vector2 position in iglooPositions)
+            domes.Add((position - iglooPositions[slot]) / unitsPerPixel);
+        Rect area = Rect.MinMaxRect((WalkArea.xMin - origin.x) / unitsPerPixel, (WalkArea.yMin - origin.y) / unitsPerPixel,
+            (WalkArea.xMax - origin.x) / unitsPerPixel, (WalkArea.yMax - origin.y) / unitsPerPixel);
+        var hole = new[] { ((IceHole - origin) / unitsPerPixel, IceHoleClearance / unitsPerPixel) };
+        Vector2 stand = FishingStandPoint(side);
+        Vector2 standOffset = (stand - origin) / unitsPerPixel;
+        PenguinRunner.Route route;
+        if (fromSlot.HasValue)
+        {
+            Vector2? start = fromSlot.Value ? (feet[slot] - origin) / unitsPerPixel : (Vector2?)null;
+            List<IglooGround.Waypoint> path = IglooGround.PathBetween(start, slot, slot, domes, area, hole, standOffset);
+            route = path == null ? null : MakeRoute(path, origin, fromSlot.Value ? null : doors[slot], null,
+                fromSlot.Value ? feet[slot] : (Vector2?)null);
+            if (route != null)
+                route.Points[route.Points.Length - 1] = stand;
+        }
+        else
+        {
+            List<IglooGround.Waypoint> path = IglooGround.PathBetween(standOffset, slot, slot, domes, area, hole);
+            route = path == null ? null : MakeRoute(path, origin, null, doors[slot], stand);
+        }
+        fishingRoutes[(slot, key, side > 0)] = route;
+        return route;
+    }
 
     // Sends the penguin of `slot` into igloo `target`: out of its own igloo when inside (or from its slot
     // when standing there), a wait of 3-5 s while the igloo plays `action` (knock-out: its lamp flickers and
@@ -273,9 +386,19 @@ public sealed class GameLayout : MonoBehaviour
         if (pointer == null || !pointer.press.wasPressedThisFrame)
             return;
         Vector3 world = layoutCamera.ScreenToWorldPoint(pointer.position.ReadValue());
-        int target = IglooAt(generated.InverseTransformPoint(world));
+        Vector2 point = generated.InverseTransformPoint(world);
         int slot = playAs - 1;
-        if (target < 0 || runners[slot] == null)
+        if (runners[slot] == null)
+            return;
+        if (OnIceHole(point))
+        {
+            bool caught = fishingOutcome == FishingOutcome.Catch
+                || fishingOutcome == FishingOutcome.Random && Random.value < 0.5f;
+            GoFishing(slot, caught);
+            return;
+        }
+        int target = IglooAt(point);
+        if (target < 0)
             return;
         if (target != slot)
             Visit(slot, target, visitAction);
@@ -800,6 +923,11 @@ public sealed class GameLayout : MonoBehaviour
             || !Frames(dizzyFrames, dizzyOutfitFrames, PenguinRunner.DizzyFrames)
             || !Frames(faintFrames, faintOutfitFrames, PenguinRunner.FaintFrames)
             || !Frames(downFrames, downOutfitFrames, PenguinRunner.DownFrames)
+            || !Frames(fishCatchFrames, fishCatchOutfitFrames, PenguinRunner.CatchFrames)
+            || !Frames(fishMissFrames, fishMissOutfitFrames, PenguinRunner.MissFrames)
+            || fishCatchTackle == null || fishCatchTackle.Length != PenguinRunner.CatchTackleFrames
+            || fishMissTackle == null || fishMissTackle.Length != PenguinRunner.MissTackleFrames
+            || !Frames(fishCatchEffect, fishCatchEffectFlipped, PenguinRunner.CatchEffectFrames)
             || spriteMaterial == null || nameFont == null)
             return;
         for (int i = transform.childCount - 1; i >= 0; i--)
@@ -823,6 +951,7 @@ public sealed class GameLayout : MonoBehaviour
         runners.Clear();
         idles.Clear();
         visitRoutes.Clear();
+        fishingRoutes.Clear();
         visitActions.Clear();
         iglooPositions = feet = null;
         renderedRun = false;
@@ -953,6 +1082,17 @@ public sealed class GameLayout : MonoBehaviour
             runner.SetupKnockOut(dizzyFrames, dizzyOutfitFrames, faintFrames, faintOutfitFrames, downFrames,
                 downOutfitFrames);
             runner.DizzySpeed = dizzySpeed;
+            // Fishing: the tackle in front of the outfit (lit, by depth), the catch's sparkles and "+1" unlit
+            // above every igloo and penguin.
+            var tackle = new GameObject("Tackle").AddComponent<SpriteRenderer>();
+            tackle.transform.SetParent(penguin.transform, false);
+            tackle.sharedMaterial = spriteMaterial;
+            var effect = new GameObject("Fish Effect").AddComponent<SpriteRenderer>();
+            effect.transform.SetParent(penguin.transform, false);
+            effect.sharedMaterial = effectMaterial;
+            effect.sortingOrder = NameOrder - 1;
+            runner.SetupFishing(tackle, effect, fishCatchFrames, fishCatchOutfitFrames, fishCatchTackle,
+                fishCatchEffect, fishCatchEffectFlipped, fishMissFrames, fishMissOutfitFrames, fishMissTackle);
             var otherDomes = new List<Vector2>();
             for (int other = 0; other < count; other++)
                 if (other != i)
