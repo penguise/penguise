@@ -184,10 +184,11 @@ def frame_at(th, ph):
     return p, n, t1, t2
 
 WINDOW_R_OUT, WINDOW_R_IN, WINDOW_R_GLASS, WINDOW_DEPTH, WINDOW_LIFT = 104.0, 70.0, 70.0, 18.0, 5.0
-# Pane, inner glow and shine colors: lit by the lamp inside (the igloo art), or with the lamp off.
+# Pane, inner glow and shine colors: lit by the lamp inside (the igloo art), with the lamp off, or the heal glow.
 WINDOW_GLASS = {
     True: ("#FFC447", "#FFDD80", "#FFF7DB"),
     False: ("#2C4762", "#375A7C", "#8FB2D0"),
+    "heal": ("#5FD9A0", "#A8F2CC", "#F2FFF8"),   # mint glow while a doctor heals inside
 }
 
 def window_glass(lit=True):

@@ -45,3 +45,15 @@ pane = Image.open(os.path.join(OUT, "window_dark_full.png"))
 box = pane.getbbox()
 pane.crop(box).save(os.path.join(OUT, "IglooWindowDark.png"))
 print("window dark crop", box, "centre frac %.6f %.6f" % ((box[0] + box[2]) / 2 / W, 1 - (box[1] + box[3]) / 2 / W))
+# heal (night action: a doctor inside): the mint pane, cropped like the lamp-off pane (same centre pivot),
+# and the particles rising from the dome (plus sign and sparkle, PARTICLE px squares, centre pivot)
+import preview_heal as heal
+open(os.path.join(OUT, "window_heal.svg"), "w").write(g.window_overlay(lit="heal"))
+subprocess.run(["magick", "-background", "none", os.path.join(OUT, "window_heal.svg"), os.path.join(OUT, "window_heal_full.png")], check=True)
+Image.open(os.path.join(OUT, "window_heal_full.png")).crop(box).save(os.path.join(OUT, "IglooWindowHeal.png"))
+PARTICLE = 128
+for name, svg in (("HealPlus", heal.plus_svg(PARTICLE)), ("HealSparkle", heal.sparkle_svg(PARTICLE))):
+    open(os.path.join(OUT, name + ".svg"), "w").write(svg)
+    subprocess.run(["magick", "-background", "none", os.path.join(OUT, name + ".svg"), os.path.join(OUT, name + ".png")], check=True)
+apex = g.proj(g.dome(0.0, 90.0))
+print("dome apex frac %.6f %.6f" % (apex[0] / W, 1 - apex[1] / W), "particle px", PARTICLE)

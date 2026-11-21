@@ -50,15 +50,16 @@ Every body and outfit layer shares one canvas and pivot. Unity imports them with
 | Script | Purpose |
 | --- | --- |
 | `igloo.py <out.svg> [door deg]` | Igloo from a small 3D model with an orthographic camera (tunnel turned 25°, camera 23.6° up) |
-| `export_igloo.py <out>` | `Igloo.png` (doorless body, 1254 canvas), `IglooDoorFront.png` / `IglooDoorBack.png` (cropped) and `IglooWindowDark.png` (lamp-off window pane, cropped, centre pivot). Prints the door pivot, hinge, window, pane centre and axes |
+| `export_igloo.py <out>` | `Igloo.png` (doorless body, 1254 canvas), `IglooDoorFront.png` / `IglooDoorBack.png` (cropped), `IglooWindowDark.png` (lamp-off window pane, cropped, centre pivot), `IglooWindowHeal.png` (mint heal pane, same crop) and the heal particles `HealPlus.png` / `HealSparkle.png` (128 px, centre pivot). Prints the door pivot, hinge, window, pane centre, dome apex and axes |
 | `export_doorway.py <out>` | `IglooDoorway.png`, the doorway mask with its pivot on the hinge. Prints the ground-plane numbers used by `IglooGround.cs` |
 | `igloo_hull.py <Igloo.png> 0.8` | Prints `GameLayout.IglooHull` (convex hull, alpha >= 64) as C# |
 | `preview_door.py <out>` | Door open/close flipbook SVG and frames |
 | `preview_action.py <work> [seconds]` | Night action seen from outside (lamp flicker and shake) as day/night GIFs plus a timeline; its curves match `IglooAction.cs` |
+| `preview_heal.py <work> [seconds]` | Night heal seen from outside (lamp dims, heartbeat swell with a mint window glow, hop, rising plus signs and sparkles) as day/night GIFs, key frames and a timeline; its curves and particles match `IglooAction.cs` (`Kind.Heal`) |
 
-Igloo sprites are 300 pixels per unit. The body's pivot is the base center. The door and doorway pivots are on the hinge. When the igloo art changes:
+Igloo sprites (heal particles too) are 300 pixels per unit. The body's pivot is the base center. The door and doorway pivots are on the hinge. When the igloo art changes:
 
 1. Re-export with `export_igloo.py` and `export_doorway.py`.
-2. Update the printed fractions in `GameLayout.cs` (`IglooWindow`, `IglooWindowDark`, `IglooDoorHinge`), the door sprites' pivot, and `IglooGround.cs`.
+2. Update the printed fractions in `GameLayout.cs` (`IglooWindow`, `IglooWindowDark`, `IglooDoorHinge`, `IglooApex`), the door sprites' pivot, and `IglooGround.cs`.
 3. Regenerate `IglooHull` with `igloo_hull.py`.
 4. Run `GameLayoutChecks.Run()` in the Editor.
