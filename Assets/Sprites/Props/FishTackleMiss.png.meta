@@ -1,0 +1,2089 @@
+fileFormatVersion: 2
+guid: ac0d3e8c8902e47469d7672bb07840d2
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4964416472070036327
+    second: FishTackleMiss_0
+  - first:
+      213: -6101185155721626097
+    second: FishTackleMiss_1
+  - first:
+      213: -4838465774801977305
+    second: FishTackleMiss_2
+  - first:
+      213: 6768266876108271219
+    second: FishTackleMiss_3
+  - first:
+      213: 5755533954486655809
+    second: FishTackleMiss_4
+  - first:
+      213: 5974418717990344022
+    second: FishTackleMiss_5
+  - first:
+      213: 6983858399776275688
+    second: FishTackleMiss_6
+  - first:
+      213: -878402801156084802
+    second: FishTackleMiss_7
+  - first:
+      213: -8483010626985896360
+    second: FishTackleMiss_8
+  - first:
+      213: 5227566939873233268
+    second: FishTackleMiss_9
+  - first:
+      213: -3628785730098083099
+    second: FishTackleMiss_10
+  - first:
+      213: -1141401655993001539
+    second: FishTackleMiss_11
+  - first:
+      213: 1162944299508339580
+    second: FishTackleMiss_12
+  - first:
+      213: 7764675227724797532
+    second: FishTackleMiss_13
+  - first:
+      213: -8716676651262343045
+    second: FishTackleMiss_14
+  - first:
+      213: 4372198964957354853
+    second: FishTackleMiss_15
+  - first:
+      213: -3690581060827915629
+    second: FishTackleMiss_16
+  - first:
+      213: 2340453504321637039
+    second: FishTackleMiss_17
+  - first:
+      213: 9163236237560724283
+    second: FishTackleMiss_18
+  - first:
+      213: -3319305191190797124
+    second: FishTackleMiss_19
+  - first:
+      213: 1668733764547294345
+    second: FishTackleMiss_20
+  - first:
+      213: 1133105630329047770
+    second: FishTackleMiss_21
+  - first:
+      213: 5102852568481141377
+    second: FishTackleMiss_22
+  - first:
+      213: 50174404178550235
+    second: FishTackleMiss_23
+  - first:
+      213: 4749351772905944158
+    second: FishTackleMiss_24
+  - first:
+      213: 7252890639032756265
+    second: FishTackleMiss_25
+  - first:
+      213: 7741343013966862724
+    second: FishTackleMiss_26
+  - first:
+      213: -2890073676106919596
+    second: FishTackleMiss_27
+  - first:
+      213: -9082297045423341696
+    second: FishTackleMiss_28
+  - first:
+      213: -996949095416999788
+    second: FishTackleMiss_29
+  - first:
+      213: -3328082214395470393
+    second: FishTackleMiss_30
+  - first:
+      213: -7948065154403921295
+    second: FishTackleMiss_31
+  - first:
+      213: -4892714829238832907
+    second: FishTackleMiss_32
+  - first:
+      213: 4572421010076582090
+    second: FishTackleMiss_33
+  - first:
+      213: -6941040406054336957
+    second: FishTackleMiss_34
+  - first:
+      213: 8955363964028231600
+    second: FishTackleMiss_35
+  - first:
+      213: 3202438501613699878
+    second: FishTackleMiss_36
+  - first:
+      213: -1561543011082334053
+    second: FishTackleMiss_37
+  - first:
+      213: 4880183518466049246
+    second: FishTackleMiss_38
+  - first:
+      213: 2765184804947262932
+    second: FishTackleMiss_39
+  - first:
+      213: 6284980490881288334
+    second: FishTackleMiss_40
+  - first:
+      213: 640331966046371675
+    second: FishTackleMiss_41
+  - first:
+      213: 5486989923869514414
+    second: FishTackleMiss_42
+  - first:
+      213: 3482931930662583058
+    second: FishTackleMiss_43
+  - first:
+      213: 4839670532807681099
+    second: FishTackleMiss_44
+  - first:
+      213: 2749793858099470630
+    second: FishTackleMiss_45
+  - first:
+      213: 4688576580561490427
+    second: FishTackleMiss_46
+  - first:
+      213: -697465635758436844
+    second: FishTackleMiss_47
+  - first:
+      213: 2275412463292917231
+    second: FishTackleMiss_48
+  - first:
+      213: 2621185937614043055
+    second: FishTackleMiss_49
+  - first:
+      213: 1998746311808430386
+    second: FishTackleMiss_50
+  - first:
+      213: -5832397129749589607
+    second: FishTackleMiss_51
+  - first:
+      213: 9032874993481260667
+    second: FishTackleMiss_52
+  - first:
+      213: 3669937788584581726
+    second: FishTackleMiss_53
+  - first:
+      213: 3694644225674115953
+    second: FishTackleMiss_54
+  - first:
+      213: -8441983989855578275
+    second: FishTackleMiss_55
+  - first:
+      213: 2887866266253263886
+    second: FishTackleMiss_56
+  - first:
+      213: 603042331861379760
+    second: FishTackleMiss_57
+  - first:
+      213: -3037026768224213511
+    second: FishTackleMiss_58
+  - first:
+      213: 1758204361281353337
+    second: FishTackleMiss_59
+  - first:
+      213: 566145230301304939
+    second: FishTackleMiss_60
+  - first:
+      213: -2309062977704261161
+    second: FishTackleMiss_61
+  - first:
+      213: 5326952894134223579
+    second: FishTackleMiss_62
+  - first:
+      213: 4242280614849543885
+    second: FishTackleMiss_63
+  - first:
+      213: 6805654604512231702
+    second: FishTackleMiss_64
+  - first:
+      213: -5838386326222281113
+    second: FishTackleMiss_65
+  - first:
+      213: 1187564217478255387
+    second: FishTackleMiss_66
+  - first:
+      213: -2240956039216226340
+    second: FishTackleMiss_67
+  - first:
+      213: -5928544323778664957
+    second: FishTackleMiss_68
+  - first:
+      213: 2605611637158759285
+    second: FishTackleMiss_69
+  - first:
+      213: -5273299661568679367
+    second: FishTackleMiss_70
+  - first:
+      213: 2074685530537788845
+    second: FishTackleMiss_71
+  - first:
+      213: 4678324295295182691
+    second: FishTackleMiss_72
+  - first:
+      213: 8532560205947245472
+    second: FishTackleMiss_73
+  - first:
+      213: 7222242188208607673
+    second: FishTackleMiss_74
+  - first:
+      213: -4217608427244042810
+    second: FishTackleMiss_75
+  - first:
+      213: -1848966080127025786
+    second: FishTackleMiss_76
+  - first:
+      213: 6252039541083984151
+    second: FishTackleMiss_77
+  - first:
+      213: 7633715706315841836
+    second: FishTackleMiss_78
+  - first:
+      213: 5150523893773624793
+    second: FishTackleMiss_79
+  - first:
+      213: 7549761824041986312
+    second: FishTackleMiss_80
+  - first:
+      213: 4298731578945061043
+    second: FishTackleMiss_81
+  - first:
+      213: 8847180629198966940
+    second: FishTackleMiss_82
+  - first:
+      213: 7628524186004683497
+    second: FishTackleMiss_83
+  - first:
+      213: -5281607046623750567
+    second: FishTackleMiss_84
+  - first:
+      213: -7651771159528678940
+    second: FishTackleMiss_85
+  - first:
+      213: -7799038432656846619
+    second: FishTackleMiss_86
+  - first:
+      213: 3087591867231550613
+    second: FishTackleMiss_87
+  - first:
+      213: 1194597464730853554
+    second: FishTackleMiss_88
+  - first:
+      213: 7344070680918406612
+    second: FishTackleMiss_89
+  - first:
+      213: 1000895835098285955
+    second: FishTackleMiss_90
+  - first:
+      213: -7168560035856364809
+    second: FishTackleMiss_91
+  - first:
+      213: -5455913762178344033
+    second: FishTackleMiss_92
+  - first:
+      213: -3044164798842818007
+    second: FishTackleMiss_93
+  - first:
+      213: 3017683668752706714
+    second: FishTackleMiss_94
+  - first:
+      213: 5170970696181160636
+    second: FishTackleMiss_95
+  - first:
+      213: 3758067117341099329
+    second: FishTackleMiss_96
+  - first:
+      213: -3536149779048347692
+    second: FishTackleMiss_97
+  - first:
+      213: -8458943350604038416
+    second: FishTackleMiss_98
+  - first:
+      213: -8838662212546051062
+    second: FishTackleMiss_99
+  - first:
+      213: -3193231849944205758
+    second: FishTackleMiss_100
+  - first:
+      213: -5339601426628337375
+    second: FishTackleMiss_101
+  - first:
+      213: 3823367823232809891
+    second: FishTackleMiss_102
+  - first:
+      213: -5375300029630860532
+    second: FishTackleMiss_103
+  - first:
+      213: 973532525962009847
+    second: FishTackleMiss_104
+  - first:
+      213: -4079663421677041119
+    second: FishTackleMiss_105
+  - first:
+      213: 4523422366228232640
+    second: FishTackleMiss_106
+  - first:
+      213: -3206930623944287160
+    second: FishTackleMiss_107
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 312.5
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: FishTackleMiss_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1673
+        width: 198
+        height: 239
+      alignment: 9
+      pivot: {x: -0.282828, y: 0.033473}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e371160f2f0a88349bd7dbf0ab94d97c
+      internalID: 4964416472070036327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleMiss_1
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 1673
+        width: 198
+        height: 239
+      alignment: 9
+      pivot: {x: -0.282828, y: 0.033473}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59b0678f0f3e1204d904635d3ac4ecf8
+      internalID: -6101185155721626097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleMiss_2
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 1673
+        width: 198
+        height: 239
+      alignment: 9
+      pivot: {x: -0.282828, y: 0.033473}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b43169befbc1af45baea66b29372d5b
+      internalID: -4838465774801977305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleMiss_3
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 1673
+        width: 198
+        height: 239
+      alignment: 9
+      pivot: {x: -0.282828, y: 0.033473}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ea174593978db34db1804849fda41e4
+      internalID: 6768266876108271219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleMiss_4
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 1673
+        width: 198
+        height: 239
+      alignment: 9
+      pivot: {x: -0.282828, y: 0.033473}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 810592d7ea6cd9b4eb7fd9bbb8ca2fbe
+      internalID: 5755533954486655809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleMiss_5
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 1673
+        width: 198
+        height: 239
+      alignment: 9
+      pivot: {x: -0.282828, y: 0.033473}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14eb2808d6620064187560b64fe27eb1
+      internalID: 5974418717990344022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleMiss_6
+      rect:
+        serializedVersion: 2
+        x: 1188
+        y: 1673
+        width: 198
+        height: 239
+      alignment: 9
+      pivot: {x: -0.282828, y: 0.033473}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d46cd6a2a86d114fbde1407865f5331
+      internalID: 6983858399776275688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleMiss_7
+      rect:
+        serializedVersion: 2
+        x: 1386
+        y: 1673
+        width: 198
+        height: 239
+      alignment: 9
+      pivot: {x: -0.282828, y: 0.033473}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: decd47b806d33c64bb7935f3ce5f607e
+      internalID: -878402801156084802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleMiss_8
+      rect:
+        serializedVersion: 2
+        x: 1584
+        y: 1673
+        width: 198
+        height: 239
+      alignment: 9
+      pivot: {x: -0.282828, y: 0.033473}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d69e8fd5167f76d4ea925b8dd7ba0725
+      internalID: -8483010626985896360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleMiss_9
+      rect:
+        serializedVersion: 2
+        x: 1782
+        y: 1673
+        width: 198
+        height: 239
+      alignment: 9
+      pivot: {x: -0.282828, y: 0.033473}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0715e562a5676c24f9e3d0f155e50aee
+      internalID: 5227566939873233268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleMiss_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1434
+        width: 198
+        height: 239
+      alignment: 9
+      pivot: {x: -0.282828, y: 0.033473}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ec51458b1314a5438682a93a89e411b
+      internalID: -3628785730098083099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleMiss_11
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 1434
+        width: 198
+        height: 239
+      alignment: 9
+      pivot: {x: -0.282828, y: 0.033473}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9c462320cdd35c429d4cc3b697b62a5
+      internalID: -1141401655993001539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleMiss_12
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 1434
+        width: 198
+        height: 239
+      alignment: 9
+      pivot: {x: -0.282828, y: 0.033473}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb70c8cb7a4413c40bb6b41c8c6a03c7
+      internalID: 1162944299508339580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleMiss_13
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 1434
+        width: 198
+        height: 239
+      alignment: 9
+      pivot: {x: -0.282828, y: 0.033473}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7970c242f0b26a40b6d56df85f9f0b7
+      internalID: 7764675227724797532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleMiss_14
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 1434
+        width: 198
+        height: 239
+      alignment: 9
+      pivot: {x: -0.282828, y: 0.033473}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 298d93974480abb48b7c04737f6b99a1
+      internalID: -8716676651262343045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleMiss_15
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 1434
+        width: 198
+        height: 239
+      alignment: 9
+      pivot: {x: -0.282828, y: 0.033473}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7c8d361851e32e46b31c3dede20b4f0
+      internalID: 4372198964957354853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleMiss_16
+      rect:
+        serializedVersion: 2
+        x: 1188
+        y: 1434
+        width: 198
+        height: 239
+      alignment: 9
+      pivot: {x: -0.282828, y: 0.033473}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b94250c82ffded4bb9f4435829936a2
+      internalID: -3690581060827915629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleMiss_17
+      rect:
+        serializedVersion: 2
+        x: 1386
+        y: 1434
+        width: 198
+        height: 239
+      alignment: 9
+      pivot: {x: -0.282828, y: 0.033473}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4cc8b4d33166534b84542120ead2ca7
+      internalID: 2340453504321637039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleMiss_18
+      rect:
+        serializedVersion: 2
+        x: 1584
+        y: 1434
+        width: 198
+        height: 239
+      alignment: 9
+      pivot: {x: -0.282828, y: 0.033473}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47e82a214488bf34c87581f90d345e37
+      internalID: 9163236237560724283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleMiss_19
+      rect:
+        serializedVersion: 2
+        x: 1782
+        y: 1434
+        width: 198
+        height: 239
+      alignment: 9
+      pivot: {x: -0.282828, y: 0.033473}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64fe2f03762b2f3408315d3c96170ee4
+      internalID: -3319305191190797124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleMiss_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1195
+        width: 198
+        height: 239
+      alignment: 9
+      pivot: {x: -0.282828, y: 0.033473}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f17d2d6aa7f1d694b9229022b428e1d6
+      internalID: 1668733764547294345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleMiss_21
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 1195
+        width: 198
+        height: 239
+      alignment: 9
+      pivot: {x: -0.282828, y: 0.033473}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 364b4f2f6e7949f4ebf5dab79843f6ec
+      internalID: 1133105630329047770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleMiss_22
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 1195
+        width: 198
+        height: 239
+      alignment: 9
+      pivot: {x: -0.282828, y: 0.033473}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e00c23f083658a645994508eea70762f
+      internalID: 5102852568481141377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleMiss_23
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 1195
+        width: 198
+        height: 239
+      alignment: 9
+      pivot: {x: -0.282828, y: 0.033473}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ca3012633af69448baeb79b118eddda
+      internalID: 50174404178550235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleMiss_24
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 1195
+        width: 198
+        height: 239
+      alignment: 9
+      pivot: {x: -0.282828, y: 0.033473}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54f72d2e2d3ecae4c90b2d28b2a286a8
+      internalID: 4749351772905944158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleMiss_25
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 1195
+        width: 198
+        height: 239
+      alignment: 9
+      pivot: {x: -0.282828, y: 0.033473}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a30c22774aed4bf418a46eb1c47f5802
+      internalID: 7252890639032756265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleMiss_26
+      rect:
+        serializedVersion: 2
+        x: 1188
+        y: 1195
+        width: 198
+        height: 239
+      alignment: 9
+      pivot: {x: -0.282828, y: 0.033473}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a5a88139cee61241a106633c3880372
+      internalID: 7741343013966862724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleMiss_27
+      rect:
+        serializedVersion: 2
+        x: 1386
+        y: 1195
+        width: 198
+        height: 239
+      alignment: 9
+      pivot: {x: -0.282828, y: 0.033473}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90abcc0ccfbe8764da1e5ad6527c5a88
+      internalID: -2890073676106919596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleMiss_28
+      rect:
+        serializedVersion: 2
+        x: 1584
+        y: 1195
+        width: 198
+        height: 239
+      alignment: 9
+      pivot: {x: -0.282828, y: 0.033473}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96f7517cd6d4b9d43ba1b3af9132f4d1
+      internalID: -9082297045423341696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleMiss_29
+      rect:
+        serializedVersion: 2
+        x: 1782
+        y: 1195
+        width: 198
+        height: 239
+      alignment: 9
+      pivot: {x: -0.282828, y: 0.033473}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33a9d804dc697fb42bcf1803e00d4776
+      internalID: -996949095416999788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleMiss_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 956
+        width: 198
+        height: 239
+      alignment: 9
+      pivot: {x: -0.282828, y: 0.033473}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ced2f860f7b7e174f9e24695b273a03d
+      internalID: -3328082214395470393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleMiss_31
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 956
+        width: 198
+        height: 239
+      alignment: 9
+      pivot: {x: -0.282828, y: 0.033473}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: def8a5a246690e0419e929a1b660d4ca
+      internalID: -7948065154403921295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleMiss_32
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 956
+        width: 198
+        height: 239
+      alignment: 9
+      pivot: {x: -0.282828, y: 0.033473}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43a986152aff8924888684cda2c1a414
+      internalID: -4892714829238832907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleMiss_33
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 956
+        width: 198
+        height: 239
+      alignment: 9
+      pivot: {x: -0.282828, y: 0.033473}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02544236ec48c844f9f205cc66def86b
+      internalID: 4572421010076582090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleMiss_34
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 956
+        width: 198
+        height: 239
+      alignment: 9
+      pivot: {x: -0.282828, y: 0.033473}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb077d5084020864cbbaaf711cfca43e
+      internalID: -6941040406054336957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleMiss_35
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 956
+        width: 198
+        height: 239
+      alignment: 9
+      pivot: {x: -0.282828, y: 0.033473}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d297206a469e0a4e9c7178691a8f165
+      internalID: 8955363964028231600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleMiss_36
+      rect:
+        serializedVersion: 2
+        x: 1188
+        y: 956
+        width: 198
+        height: 239
+      alignment: 9
+      pivot: {x: -0.282828, y: 0.033473}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0495eb8649cfb5e45b652ad0b0aa4b2d
+      internalID: 3202438501613699878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleMiss_37
+      rect:
+        serializedVersion: 2
+        x: 1386
+        y: 956
+        width: 198
+        height: 239
+      alignment: 9
+      pivot: {x: -0.282828, y: 0.033473}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da871a00031cb0545ac127fbbd511a67
+      internalID: -1561543011082334053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleMiss_38
+      rect:
+        serializedVersion: 2
+        x: 1584
+        y: 956
+        width: 198
+        height: 239
+      alignment: 9
+      pivot: {x: -0.282828, y: 0.033473}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01d34f96fb9da3149a725110e17d4e93
+      internalID: 4880183518466049246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleMiss_39
+      rect:
+        serializedVersion: 2
+        x: 1782
+        y: 956
+        width: 198
+        height: 239
+      alignment: 9
+      pivot: {x: -0.282828, y: 0.033473}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec66f8bb9472ee4429ec67831cc44f68
+      internalID: 2765184804947262932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleMiss_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 717
+        width: 198
+        height: 239
+      alignment: 9
+      pivot: {x: -0.282828, y: 0.033473}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f80cdac957403b4b8b78e3688789432
+      internalID: 6284980490881288334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleMiss_41
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 717
+        width: 198
+        height: 239
+      alignment: 9
+      pivot: {x: -0.282828, y: 0.033473}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 510045e4346d1b247948b6933d639588
+      internalID: 640331966046371675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleMiss_42
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 717
+        width: 198
+        height: 239
+      alignment: 9
+      pivot: {x: -0.282828, y: 0.033473}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2ed2a1b0671b1e4b98271f6c8c66e22
+      internalID: 5486989923869514414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleMiss_43
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 717
+        width: 198
+        height: 239
+      alignment: 9
+      pivot: {x: -0.282828, y: 0.033473}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4407d99f43636204ba1e72908eebfb02
+      internalID: 3482931930662583058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleMiss_44
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 717
+        width: 198
+        height: 239
+      alignment: 9
+      pivot: {x: -0.282828, y: 0.033473}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be7ed0c632ed63f43a49d54ed81a6a26
+      internalID: 4839670532807681099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleMiss_45
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 717
+        width: 198
+        height: 239
+      alignment: 9
+      pivot: {x: -0.282828, y: 0.033473}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a44a90b7f7d9ba7419732db448cef91c
+      internalID: 2749793858099470630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleMiss_46
+      rect:
+        serializedVersion: 2
+        x: 1188
+        y: 717
+        width: 198
+        height: 239
+      alignment: 9
+      pivot: {x: -0.282828, y: 0.033473}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82e4ed7e06fc80b459d0933a9524ae40
+      internalID: 4688576580561490427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleMiss_47
+      rect:
+        serializedVersion: 2
+        x: 1386
+        y: 717
+        width: 198
+        height: 239
+      alignment: 9
+      pivot: {x: -0.282828, y: 0.033473}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1592fbab9744a7945a419d0ffec1ecec
+      internalID: -697465635758436844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleMiss_48
+      rect:
+        serializedVersion: 2
+        x: 1584
+        y: 717
+        width: 198
+        height: 239
+      alignment: 9
+      pivot: {x: -0.282828, y: 0.033473}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bea82a894af64e2428f50a9582bfd072
+      internalID: 2275412463292917231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleMiss_49
+      rect:
+        serializedVersion: 2
+        x: 1782
+        y: 717
+        width: 198
+        height: 239
+      alignment: 9
+      pivot: {x: -0.282828, y: 0.033473}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8346ab01b6f97184e9e500395e329851
+      internalID: 2621185937614043055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleMiss_50
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 478
+        width: 198
+        height: 239
+      alignment: 9
+      pivot: {x: -0.282828, y: 0.033473}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 474f9a7dbd07afd449bd2babcbba6eb1
+      internalID: 1998746311808430386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleMiss_51
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 478
+        width: 198
+        height: 239
+      alignment: 9
+      pivot: {x: -0.282828, y: 0.033473}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7a9e36655d2c984c8d48305a90e40f9
+      internalID: -5832397129749589607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleMiss_52
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 478
+        width: 198
+        height: 239
+      alignment: 9
+      pivot: {x: -0.282828, y: 0.033473}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f47b55c604e7826469c69a4ae7643b31
+      internalID: 9032874993481260667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleMiss_53
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 478
+        width: 198
+        height: 239
+      alignment: 9
+      pivot: {x: -0.282828, y: 0.033473}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3dbd7ef15d794c545b38143fc3db6a40
+      internalID: 3669937788584581726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleMiss_54
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 478
+        width: 198
+        height: 239
+      alignment: 9
+      pivot: {x: -0.282828, y: 0.033473}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d943dee303ef20b40816fb3ab8304a36
+      internalID: 3694644225674115953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleMiss_55
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 478
+        width: 198
+        height: 239
+      alignment: 9
+      pivot: {x: -0.282828, y: 0.033473}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3741f2041c38b134cb43d538a9a6fe85
+      internalID: -8441983989855578275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleMiss_56
+      rect:
+        serializedVersion: 2
+        x: 1188
+        y: 478
+        width: 198
+        height: 239
+      alignment: 9
+      pivot: {x: -0.282828, y: 0.033473}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d4df76639bc85240a869d8154c5ee2b
+      internalID: 2887866266253263886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleMiss_57
+      rect:
+        serializedVersion: 2
+        x: 1386
+        y: 478
+        width: 198
+        height: 239
+      alignment: 9
+      pivot: {x: -0.282828, y: 0.033473}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57d6453fe1f915c4a95e5f53f61aab15
+      internalID: 603042331861379760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleMiss_58
+      rect:
+        serializedVersion: 2
+        x: 1584
+        y: 478
+        width: 198
+        height: 239
+      alignment: 9
+      pivot: {x: -0.282828, y: 0.033473}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f247fb53fba9ff4aa91febcbf3477da
+      internalID: -3037026768224213511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleMiss_59
+      rect:
+        serializedVersion: 2
+        x: 1782
+        y: 478
+        width: 198
+        height: 239
+      alignment: 9
+      pivot: {x: -0.282828, y: 0.033473}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbed29f663c55b341a44ed1723a86b1b
+      internalID: 1758204361281353337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleMiss_60
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 239
+        width: 198
+        height: 239
+      alignment: 9
+      pivot: {x: -0.282828, y: 0.033473}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bba587a7045fb3d4e86d21dc542c5ae1
+      internalID: 566145230301304939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleMiss_61
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 239
+        width: 198
+        height: 239
+      alignment: 9
+      pivot: {x: -0.282828, y: 0.033473}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39e4626a38e5a0542aaa66b0366c0b5c
+      internalID: -2309062977704261161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleMiss_62
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 239
+        width: 198
+        height: 239
+      alignment: 9
+      pivot: {x: -0.282828, y: 0.033473}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 549640d0bc6982e4f8ca18c1ea3bc704
+      internalID: 5326952894134223579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleMiss_63
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 239
+        width: 198
+        height: 239
+      alignment: 9
+      pivot: {x: -0.282828, y: 0.033473}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87a40f11f98bba249aad41011698057c
+      internalID: 4242280614849543885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleMiss_64
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 239
+        width: 198
+        height: 239
+      alignment: 9
+      pivot: {x: -0.282828, y: 0.033473}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e35975334171ab468533ea6b645b5ed
+      internalID: 6805654604512231702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleMiss_65
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 239
+        width: 198
+        height: 239
+      alignment: 9
+      pivot: {x: -0.282828, y: 0.033473}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9607db9326445a2438f146ca56e45ae5
+      internalID: -5838386326222281113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleMiss_66
+      rect:
+        serializedVersion: 2
+        x: 1188
+        y: 239
+        width: 198
+        height: 239
+      alignment: 9
+      pivot: {x: -0.282828, y: 0.033473}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 547907af15417b04bacacf8722813309
+      internalID: 1187564217478255387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleMiss_67
+      rect:
+        serializedVersion: 2
+        x: 1386
+        y: 239
+        width: 198
+        height: 239
+      alignment: 9
+      pivot: {x: -0.282828, y: 0.033473}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 660e092a236bfa847a35c5f757d9f000
+      internalID: -2240956039216226340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleMiss_68
+      rect:
+        serializedVersion: 2
+        x: 1584
+        y: 239
+        width: 198
+        height: 239
+      alignment: 9
+      pivot: {x: -0.282828, y: 0.033473}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa0bd70a9d824504da89eef364c4d838
+      internalID: -5928544323778664957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleMiss_69
+      rect:
+        serializedVersion: 2
+        x: 1782
+        y: 239
+        width: 198
+        height: 239
+      alignment: 9
+      pivot: {x: -0.282828, y: 0.033473}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2aae02cb08b8b843b2ba00ac91c043d
+      internalID: 2605611637158759285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleMiss_70
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 198
+        height: 239
+      alignment: 9
+      pivot: {x: -0.282828, y: 0.033473}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84c2e09ca75573b4bb77b59ee9ccfc91
+      internalID: -5273299661568679367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 48f903570ebb22b419d06c3add1a611e
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      FishTackleMiss_0: 4964416472070036327
+      FishTackleMiss_1: -6101185155721626097
+      FishTackleMiss_10: -3628785730098083099
+      FishTackleMiss_11: -1141401655993001539
+      FishTackleMiss_12: 1162944299508339580
+      FishTackleMiss_13: 7764675227724797532
+      FishTackleMiss_14: -8716676651262343045
+      FishTackleMiss_15: 4372198964957354853
+      FishTackleMiss_16: -3690581060827915629
+      FishTackleMiss_17: 2340453504321637039
+      FishTackleMiss_18: 9163236237560724283
+      FishTackleMiss_19: -3319305191190797124
+      FishTackleMiss_2: -4838465774801977305
+      FishTackleMiss_20: 1668733764547294345
+      FishTackleMiss_21: 1133105630329047770
+      FishTackleMiss_22: 5102852568481141377
+      FishTackleMiss_23: 50174404178550235
+      FishTackleMiss_24: 4749351772905944158
+      FishTackleMiss_25: 7252890639032756265
+      FishTackleMiss_26: 7741343013966862724
+      FishTackleMiss_27: -2890073676106919596
+      FishTackleMiss_28: -9082297045423341696
+      FishTackleMiss_29: -996949095416999788
+      FishTackleMiss_3: 6768266876108271219
+      FishTackleMiss_30: -3328082214395470393
+      FishTackleMiss_31: -7948065154403921295
+      FishTackleMiss_32: -4892714829238832907
+      FishTackleMiss_33: 4572421010076582090
+      FishTackleMiss_34: -6941040406054336957
+      FishTackleMiss_35: 8955363964028231600
+      FishTackleMiss_36: 3202438501613699878
+      FishTackleMiss_37: -1561543011082334053
+      FishTackleMiss_38: 4880183518466049246
+      FishTackleMiss_39: 2765184804947262932
+      FishTackleMiss_4: 5755533954486655809
+      FishTackleMiss_40: 6284980490881288334
+      FishTackleMiss_41: 640331966046371675
+      FishTackleMiss_42: 5486989923869514414
+      FishTackleMiss_43: 3482931930662583058
+      FishTackleMiss_44: 4839670532807681099
+      FishTackleMiss_45: 2749793858099470630
+      FishTackleMiss_46: 4688576580561490427
+      FishTackleMiss_47: -697465635758436844
+      FishTackleMiss_48: 2275412463292917231
+      FishTackleMiss_49: 2621185937614043055
+      FishTackleMiss_5: 5974418717990344022
+      FishTackleMiss_50: 1998746311808430386
+      FishTackleMiss_51: -5832397129749589607
+      FishTackleMiss_52: 9032874993481260667
+      FishTackleMiss_53: 3669937788584581726
+      FishTackleMiss_54: 3694644225674115953
+      FishTackleMiss_55: -8441983989855578275
+      FishTackleMiss_56: 2887866266253263886
+      FishTackleMiss_57: 603042331861379760
+      FishTackleMiss_58: -3037026768224213511
+      FishTackleMiss_59: 1758204361281353337
+      FishTackleMiss_6: 6983858399776275688
+      FishTackleMiss_60: 566145230301304939
+      FishTackleMiss_61: -2309062977704261161
+      FishTackleMiss_62: 5326952894134223579
+      FishTackleMiss_63: 4242280614849543885
+      FishTackleMiss_64: 6805654604512231702
+      FishTackleMiss_65: -5838386326222281113
+      FishTackleMiss_66: 1187564217478255387
+      FishTackleMiss_67: -2240956039216226340
+      FishTackleMiss_68: -5928544323778664957
+      FishTackleMiss_69: 2605611637158759285
+      FishTackleMiss_7: -878402801156084802
+      FishTackleMiss_70: -5273299661568679367
+      FishTackleMiss_8: -8483010626985896360
+      FishTackleMiss_9: 5227566939873233268
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

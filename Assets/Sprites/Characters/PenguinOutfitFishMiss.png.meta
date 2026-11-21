@@ -1,0 +1,2568 @@
+fileFormatVersion: 2
+guid: 814da79540906674db87c2e1112ad790
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8152761365326779851
+    second: PenguinOutfitFishMiss_0
+  - first:
+      213: -4285753047749846146
+    second: PenguinOutfitFishMiss_1
+  - first:
+      213: 7791385474985562610
+    second: PenguinOutfitFishMiss_2
+  - first:
+      213: 6982102409159743335
+    second: PenguinOutfitFishMiss_3
+  - first:
+      213: -6017812598241142060
+    second: PenguinOutfitFishMiss_4
+  - first:
+      213: -5606710361939714043
+    second: PenguinOutfitFishMiss_5
+  - first:
+      213: 6687041183779648222
+    second: PenguinOutfitFishMiss_6
+  - first:
+      213: 2558031415463213552
+    second: PenguinOutfitFishMiss_7
+  - first:
+      213: 6293327904701677364
+    second: PenguinOutfitFishMiss_8
+  - first:
+      213: -3078178964505087617
+    second: PenguinOutfitFishMiss_9
+  - first:
+      213: -112590239021541218
+    second: PenguinOutfitFishMiss_10
+  - first:
+      213: 5392075282512890089
+    second: PenguinOutfitFishMiss_11
+  - first:
+      213: -4710666571471808204
+    second: PenguinOutfitFishMiss_12
+  - first:
+      213: 3235607181782558589
+    second: PenguinOutfitFishMiss_13
+  - first:
+      213: -7355709358473974808
+    second: PenguinOutfitFishMiss_14
+  - first:
+      213: -2426583613104855937
+    second: PenguinOutfitFishMiss_15
+  - first:
+      213: 1912968836173648151
+    second: PenguinOutfitFishMiss_16
+  - first:
+      213: -926175476578973221
+    second: PenguinOutfitFishMiss_17
+  - first:
+      213: 8503181332849147768
+    second: PenguinOutfitFishMiss_18
+  - first:
+      213: -4945451249371619396
+    second: PenguinOutfitFishMiss_19
+  - first:
+      213: 6739554146554467963
+    second: PenguinOutfitFishMiss_20
+  - first:
+      213: 6674426831623370286
+    second: PenguinOutfitFishMiss_21
+  - first:
+      213: -7203439702192931644
+    second: PenguinOutfitFishMiss_22
+  - first:
+      213: 1379075807199075769
+    second: PenguinOutfitFishMiss_23
+  - first:
+      213: 7707561648728051586
+    second: PenguinOutfitFishMiss_24
+  - first:
+      213: -2591782676359336848
+    second: PenguinOutfitFishMiss_25
+  - first:
+      213: 8444552947861544097
+    second: PenguinOutfitFishMiss_26
+  - first:
+      213: -6437551559781069903
+    second: PenguinOutfitFishMiss_27
+  - first:
+      213: -6428287905955922141
+    second: PenguinOutfitFishMiss_28
+  - first:
+      213: 4219888372230579441
+    second: PenguinOutfitFishMiss_29
+  - first:
+      213: -2876184528617305773
+    second: PenguinOutfitFishMiss_30
+  - first:
+      213: -6849985708518809126
+    second: PenguinOutfitFishMiss_31
+  - first:
+      213: 9125407751723987046
+    second: PenguinOutfitFishMiss_32
+  - first:
+      213: 6713620906780605220
+    second: PenguinOutfitFishMiss_33
+  - first:
+      213: -5063739822552273333
+    second: PenguinOutfitFishMiss_34
+  - first:
+      213: 8636262914323071982
+    second: PenguinOutfitFishMiss_35
+  - first:
+      213: -8771700722586636273
+    second: PenguinOutfitFishMiss_36
+  - first:
+      213: 5212589688824518174
+    second: PenguinOutfitFishMiss_37
+  - first:
+      213: -139979294623249453
+    second: PenguinOutfitFishMiss_38
+  - first:
+      213: -8979091670066278227
+    second: PenguinOutfitFishMiss_39
+  - first:
+      213: -3376875851852638976
+    second: PenguinOutfitFishMiss_40
+  - first:
+      213: 5212045277538828939
+    second: PenguinOutfitFishMiss_41
+  - first:
+      213: -6299309294072410775
+    second: PenguinOutfitFishMiss_42
+  - first:
+      213: -4388205240526284488
+    second: PenguinOutfitFishMiss_43
+  - first:
+      213: -5942758892285131542
+    second: PenguinOutfitFishMiss_44
+  - first:
+      213: -2346906898986819004
+    second: PenguinOutfitFishMiss_45
+  - first:
+      213: 1915018313316149644
+    second: PenguinOutfitFishMiss_46
+  - first:
+      213: -7442104456087328772
+    second: PenguinOutfitFishMiss_47
+  - first:
+      213: -4140361533663367689
+    second: PenguinOutfitFishMiss_48
+  - first:
+      213: -5979613716082064165
+    second: PenguinOutfitFishMiss_49
+  - first:
+      213: 852193939582750152
+    second: PenguinOutfitFishMiss_50
+  - first:
+      213: -3116629871828899614
+    second: PenguinOutfitFishMiss_51
+  - first:
+      213: 2006966804737121770
+    second: PenguinOutfitFishMiss_52
+  - first:
+      213: 7516910712889677758
+    second: PenguinOutfitFishMiss_53
+  - first:
+      213: -3867619605947266035
+    second: PenguinOutfitFishMiss_54
+  - first:
+      213: -1813190252790649016
+    second: PenguinOutfitFishMiss_55
+  - first:
+      213: 6702734059483253946
+    second: PenguinOutfitFishMiss_56
+  - first:
+      213: -5852440120401948348
+    second: PenguinOutfitFishMiss_57
+  - first:
+      213: 1227791113681322858
+    second: PenguinOutfitFishMiss_58
+  - first:
+      213: 2231444790415385890
+    second: PenguinOutfitFishMiss_59
+  - first:
+      213: -9064254161462460783
+    second: PenguinOutfitFishMiss_60
+  - first:
+      213: -8405941545318420669
+    second: PenguinOutfitFishMiss_61
+  - first:
+      213: 1676749346750532009
+    second: PenguinOutfitFishMiss_62
+  - first:
+      213: -6644816691497455185
+    second: PenguinOutfitFishMiss_63
+  - first:
+      213: 8744595685827573910
+    second: PenguinOutfitFishMiss_64
+  - first:
+      213: -6648853259946175034
+    second: PenguinOutfitFishMiss_65
+  - first:
+      213: -5890628321265226856
+    second: PenguinOutfitFishMiss_66
+  - first:
+      213: 3781420140542345826
+    second: PenguinOutfitFishMiss_67
+  - first:
+      213: 1482677549044714514
+    second: PenguinOutfitFishMiss_68
+  - first:
+      213: 7191926178829169484
+    second: PenguinOutfitFishMiss_69
+  - first:
+      213: 4709307185993621465
+    second: PenguinOutfitFishMiss_70
+  - first:
+      213: 6097902542736429808
+    second: PenguinOutfitFishMiss_71
+  - first:
+      213: 3996070683073528571
+    second: PenguinOutfitFishMiss_72
+  - first:
+      213: -7850775307240168042
+    second: PenguinOutfitFishMiss_73
+  - first:
+      213: -6415885112378387846
+    second: PenguinOutfitFishMiss_74
+  - first:
+      213: -8605028429138221998
+    second: PenguinOutfitFishMiss_75
+  - first:
+      213: 6173426822953660776
+    second: PenguinOutfitFishMiss_76
+  - first:
+      213: 1012010295658363765
+    second: PenguinOutfitFishMiss_77
+  - first:
+      213: -776268841026934430
+    second: PenguinOutfitFishMiss_78
+  - first:
+      213: 8075751015051166777
+    second: PenguinOutfitFishMiss_79
+  - first:
+      213: -7345907463610325117
+    second: PenguinOutfitFishMiss_80
+  - first:
+      213: -1361951577246712476
+    second: PenguinOutfitFishMiss_81
+  - first:
+      213: -7782230963203839232
+    second: PenguinOutfitFishMiss_82
+  - first:
+      213: 1066181809843462154
+    second: PenguinOutfitFishMiss_83
+  - first:
+      213: -2839450963347740126
+    second: PenguinOutfitFishMiss_84
+  - first:
+      213: 4098761559630092844
+    second: PenguinOutfitFishMiss_85
+  - first:
+      213: -3318318155924130268
+    second: PenguinOutfitFishMiss_86
+  - first:
+      213: 5167537638934433323
+    second: PenguinOutfitFishMiss_87
+  - first:
+      213: 4531438729893942636
+    second: PenguinOutfitFishMiss_88
+  - first:
+      213: -958595228733900817
+    second: PenguinOutfitFishMiss_89
+  - first:
+      213: -146663148981103781
+    second: PenguinOutfitFishMiss_90
+  - first:
+      213: 1943127676128250167
+    second: PenguinOutfitFishMiss_91
+  - first:
+      213: -2146969070433143828
+    second: PenguinOutfitFishMiss_92
+  - first:
+      213: -5627603313829205244
+    second: PenguinOutfitFishMiss_93
+  - first:
+      213: 1657044540147561586
+    second: PenguinOutfitFishMiss_94
+  - first:
+      213: -4441586059674893080
+    second: PenguinOutfitFishMiss_95
+  - first:
+      213: 5872541306662353204
+    second: PenguinOutfitFishMiss_96
+  - first:
+      213: 3212148182550355257
+    second: PenguinOutfitFishMiss_97
+  - first:
+      213: -5698574318087355668
+    second: PenguinOutfitFishMiss_98
+  - first:
+      213: -1065477131549425550
+    second: PenguinOutfitFishMiss_99
+  - first:
+      213: 1478374930452591761
+    second: PenguinOutfitFishMiss_100
+  - first:
+      213: 8280112598959720280
+    second: PenguinOutfitFishMiss_101
+  - first:
+      213: -5998323726256093453
+    second: PenguinOutfitFishMiss_102
+  - first:
+      213: -1254775303403816009
+    second: PenguinOutfitFishMiss_103
+  - first:
+      213: -3526510448515371435
+    second: PenguinOutfitFishMiss_104
+  - first:
+      213: -5356470772057978616
+    second: PenguinOutfitFishMiss_105
+  - first:
+      213: -2884553291428711506
+    second: PenguinOutfitFishMiss_106
+  - first:
+      213: -3059769804536172706
+    second: PenguinOutfitFishMiss_107
+  - first:
+      213: 4190528296838110574
+    second: PenguinOutfitFishMiss_108
+  - first:
+      213: -3181206794907880214
+    second: PenguinOutfitFishMiss_109
+  - first:
+      213: -7638893352938041156
+    second: PenguinOutfitFishMiss_110
+  - first:
+      213: -118304254078532715
+    second: PenguinOutfitFishMiss_111
+  - first:
+      213: 8980683030098415730
+    second: PenguinOutfitFishMiss_112
+  - first:
+      213: -240339124167199639
+    second: PenguinOutfitFishMiss_113
+  - first:
+      213: -8873157918437344910
+    second: PenguinOutfitFishMiss_114
+  - first:
+      213: -6482127246647474206
+    second: PenguinOutfitFishMiss_115
+  - first:
+      213: 3612680424268522095
+    second: PenguinOutfitFishMiss_116
+  - first:
+      213: 2624007386883026742
+    second: PenguinOutfitFishMiss_117
+  - first:
+      213: 5960761224650281063
+    second: PenguinOutfitFishMiss_118
+  - first:
+      213: -989210091328219992
+    second: PenguinOutfitFishMiss_119
+  - first:
+      213: -4066514249626858116
+    second: PenguinOutfitFishMiss_120
+  - first:
+      213: 1720930658545524982
+    second: PenguinOutfitFishMiss_121
+  - first:
+      213: 16938440607805897
+    second: PenguinOutfitFishMiss_122
+  - first:
+      213: -1009215356903924776
+    second: PenguinOutfitFishMiss_123
+  - first:
+      213: -8218775157802020494
+    second: PenguinOutfitFishMiss_124
+  - first:
+      213: -7061244582910460531
+    second: PenguinOutfitFishMiss_125
+  - first:
+      213: -7132241986312726389
+    second: PenguinOutfitFishMiss_126
+  - first:
+      213: -304214903880730654
+    second: PenguinOutfitFishMiss_127
+  - first:
+      213: 4600052273189041766
+    second: PenguinOutfitFishMiss_128
+  - first:
+      213: -724274344698884012
+    second: PenguinOutfitFishMiss_129
+  - first:
+      213: 1835920292384145755
+    second: PenguinOutfitFishMiss_130
+  - first:
+      213: -148917576979667187
+    second: PenguinOutfitFishMiss_131
+  - first:
+      213: 6197206299578458795
+    second: PenguinOutfitFishMiss_132
+  - first:
+      213: -2754280540605206893
+    second: PenguinOutfitFishMiss_133
+  - first:
+      213: 3149932936059787939
+    second: PenguinOutfitFishMiss_134
+  - first:
+      213: -5118624437359625942
+    second: PenguinOutfitFishMiss_135
+  - first:
+      213: -2929133484025813208
+    second: PenguinOutfitFishMiss_136
+  - first:
+      213: 401498736512632285
+    second: PenguinOutfitFishMiss_137
+  - first:
+      213: -6327292441307564972
+    second: PenguinOutfitFishMiss_138
+  - first:
+      213: 6920479099819145587
+    second: PenguinOutfitFishMiss_139
+  - first:
+      213: -3870174679251191655
+    second: PenguinOutfitFishMiss_140
+  - first:
+      213: -8017868535846970457
+    second: PenguinOutfitFishMiss_141
+  - first:
+      213: -9095072651018711103
+    second: PenguinOutfitFishMiss_142
+  - first:
+      213: 6243287629984894821
+    second: PenguinOutfitFishMiss_143
+  - first:
+      213: 2613732077095144275
+    second: PenguinOutfitFishMiss_144
+  - first:
+      213: 8911094834647455378
+    second: PenguinOutfitFishMiss_145
+  - first:
+      213: -548144275213290589
+    second: PenguinOutfitFishMiss_146
+  - first:
+      213: 6217253108801572757
+    second: PenguinOutfitFishMiss_147
+  - first:
+      213: -416020990681587555
+    second: PenguinOutfitFishMiss_148
+  - first:
+      213: -6558071176180789453
+    second: PenguinOutfitFishMiss_149
+  - first:
+      213: -5006891577306679398
+    second: PenguinOutfitFishMiss_150
+  - first:
+      213: 4169689355646836432
+    second: PenguinOutfitFishMiss_151
+  - first:
+      213: 6662485321109751186
+    second: PenguinOutfitFishMiss_152
+  - first:
+      213: -3864222152386855326
+    second: PenguinOutfitFishMiss_153
+  - first:
+      213: 1023152869177445434
+    second: PenguinOutfitFishMiss_154
+  - first:
+      213: 3257644577022483002
+    second: PenguinOutfitFishMiss_155
+  - first:
+      213: -6251647999991935651
+    second: PenguinOutfitFishMiss_156
+  - first:
+      213: -7601091367624873540
+    second: PenguinOutfitFishMiss_157
+  - first:
+      213: -7292535924411639749
+    second: PenguinOutfitFishMiss_158
+  - first:
+      213: 3420206297469764773
+    second: PenguinOutfitFishMiss_159
+  - first:
+      213: -9026516264227881799
+    second: PenguinOutfitFishMiss_160
+  - first:
+      213: 3705068431492137553
+    second: PenguinOutfitFishMiss_161
+  - first:
+      213: 2670200587413336378
+    second: PenguinOutfitFishMiss_162
+  - first:
+      213: -3505365661806795800
+    second: PenguinOutfitFishMiss_163
+  - first:
+      213: 8960294063536754866
+    second: PenguinOutfitFishMiss_164
+  - first:
+      213: 2622100116768729970
+    second: PenguinOutfitFishMiss_165
+  - first:
+      213: 7942069055990344202
+    second: PenguinOutfitFishMiss_166
+  - first:
+      213: -7354458258856249291
+    second: PenguinOutfitFishMiss_167
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 312.5
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PenguinOutfitFishMiss_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1512
+        width: 186
+        height: 216
+      alignment: 9
+      pivot: {x: 0.483871, y: -0.171296}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33c2adb67d1b75640a7e2fb1058e1bf7
+      internalID: 8152761365326779851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishMiss_1
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 1512
+        width: 186
+        height: 216
+      alignment: 9
+      pivot: {x: 0.483871, y: -0.171296}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cde9b604805b8f64aa28fd826b4ba0e8
+      internalID: -4285753047749846146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishMiss_2
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 1512
+        width: 186
+        height: 216
+      alignment: 9
+      pivot: {x: 0.483871, y: -0.171296}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b96bd9079456da746817f1326a399b2d
+      internalID: 7791385474985562610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishMiss_3
+      rect:
+        serializedVersion: 2
+        x: 558
+        y: 1512
+        width: 186
+        height: 216
+      alignment: 9
+      pivot: {x: 0.483871, y: -0.171296}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8ac9defcbb91da4896ab6e5dd7d0108
+      internalID: 6982102409159743335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishMiss_4
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 1512
+        width: 186
+        height: 216
+      alignment: 9
+      pivot: {x: 0.483871, y: -0.171296}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2875858f56402c459e0172e46b6c5fd
+      internalID: -6017812598241142060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishMiss_5
+      rect:
+        serializedVersion: 2
+        x: 930
+        y: 1512
+        width: 186
+        height: 216
+      alignment: 9
+      pivot: {x: 0.483871, y: -0.171296}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c5e4eb32926c934a91f7c3d2e9cb8ea
+      internalID: -5606710361939714043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishMiss_6
+      rect:
+        serializedVersion: 2
+        x: 1116
+        y: 1512
+        width: 186
+        height: 216
+      alignment: 9
+      pivot: {x: 0.483871, y: -0.171296}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0fb5564c9a53a745a9c88006e56879a
+      internalID: 6687041183779648222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishMiss_7
+      rect:
+        serializedVersion: 2
+        x: 1302
+        y: 1512
+        width: 186
+        height: 216
+      alignment: 9
+      pivot: {x: 0.483871, y: -0.171296}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 199052bd211d6cb4d939e7b324e9aaf7
+      internalID: 2558031415463213552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishMiss_8
+      rect:
+        serializedVersion: 2
+        x: 1488
+        y: 1512
+        width: 186
+        height: 216
+      alignment: 9
+      pivot: {x: 0.483871, y: -0.171296}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a21e9879ec3366748bbbbc7dc958ab9d
+      internalID: 6293327904701677364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishMiss_9
+      rect:
+        serializedVersion: 2
+        x: 1674
+        y: 1512
+        width: 186
+        height: 216
+      alignment: 9
+      pivot: {x: 0.483871, y: -0.171296}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 988d8dcda01f88044bfaec0a005f67d1
+      internalID: -3078178964505087617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishMiss_10
+      rect:
+        serializedVersion: 2
+        x: 1860
+        y: 1512
+        width: 186
+        height: 216
+      alignment: 9
+      pivot: {x: 0.483871, y: -0.171296}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 184fa8a0a44c3cd4fa72856ae87d42e7
+      internalID: -112590239021541218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishMiss_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1296
+        width: 186
+        height: 216
+      alignment: 9
+      pivot: {x: 0.483871, y: -0.171296}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e66424e21f8220e44999800b88d577a8
+      internalID: 5392075282512890089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishMiss_12
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 1296
+        width: 186
+        height: 216
+      alignment: 9
+      pivot: {x: 0.483871, y: -0.171296}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f131cd01ca93ac640b9acaa22ba22277
+      internalID: -4710666571471808204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishMiss_13
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 1296
+        width: 186
+        height: 216
+      alignment: 9
+      pivot: {x: 0.483871, y: -0.171296}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 281b02dc4bf677844bd648783e80e3da
+      internalID: 3235607181782558589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishMiss_14
+      rect:
+        serializedVersion: 2
+        x: 558
+        y: 1296
+        width: 186
+        height: 216
+      alignment: 9
+      pivot: {x: 0.483871, y: -0.171296}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25c3c7dac3b2bd54ea563ec7169c4b44
+      internalID: -7355709358473974808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishMiss_15
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 1296
+        width: 186
+        height: 216
+      alignment: 9
+      pivot: {x: 0.483871, y: -0.171296}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef42ffa7dc13d6142ab4a0f296d88c8d
+      internalID: -2426583613104855937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishMiss_16
+      rect:
+        serializedVersion: 2
+        x: 930
+        y: 1296
+        width: 186
+        height: 216
+      alignment: 9
+      pivot: {x: 0.483871, y: -0.171296}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cd095b231f8c2342bd0c85ae5012667
+      internalID: 1912968836173648151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishMiss_17
+      rect:
+        serializedVersion: 2
+        x: 1116
+        y: 1296
+        width: 186
+        height: 216
+      alignment: 9
+      pivot: {x: 0.483871, y: -0.171296}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8259235932639f45937e38e8b43efeb
+      internalID: -926175476578973221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishMiss_18
+      rect:
+        serializedVersion: 2
+        x: 1302
+        y: 1296
+        width: 186
+        height: 216
+      alignment: 9
+      pivot: {x: 0.483871, y: -0.171296}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab6ea2e73c63d4a47ba9fe8f4f921d5c
+      internalID: 8503181332849147768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishMiss_19
+      rect:
+        serializedVersion: 2
+        x: 1488
+        y: 1296
+        width: 186
+        height: 216
+      alignment: 9
+      pivot: {x: 0.483871, y: -0.171296}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a21d8b8ed419b046ab2ab7d0530dc88
+      internalID: -4945451249371619396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishMiss_20
+      rect:
+        serializedVersion: 2
+        x: 1674
+        y: 1296
+        width: 186
+        height: 216
+      alignment: 9
+      pivot: {x: 0.483871, y: -0.171296}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe75097ab0591ee4c92bd0b802e84ef9
+      internalID: 6739554146554467963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishMiss_21
+      rect:
+        serializedVersion: 2
+        x: 1860
+        y: 1296
+        width: 186
+        height: 216
+      alignment: 9
+      pivot: {x: 0.483871, y: -0.171296}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ea231a5e8593bc4fad7c6acd65bb6b5
+      internalID: 6674426831623370286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishMiss_22
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1080
+        width: 186
+        height: 216
+      alignment: 9
+      pivot: {x: 0.483871, y: -0.171296}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5adab589feb879e4db79f3c4299ce52f
+      internalID: -7203439702192931644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishMiss_23
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 1080
+        width: 186
+        height: 216
+      alignment: 9
+      pivot: {x: 0.483871, y: -0.171296}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01e05535ee0b476449fe1d0005f60b1d
+      internalID: 1379075807199075769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishMiss_24
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 1080
+        width: 186
+        height: 216
+      alignment: 9
+      pivot: {x: 0.483871, y: -0.171296}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f55db43d51252eb44a89941b50df2cd2
+      internalID: 7707561648728051586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishMiss_25
+      rect:
+        serializedVersion: 2
+        x: 558
+        y: 1080
+        width: 186
+        height: 216
+      alignment: 9
+      pivot: {x: 0.483871, y: -0.171296}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c05a768c2848ab94ca5db573709e5c10
+      internalID: -2591782676359336848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishMiss_26
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 1080
+        width: 186
+        height: 216
+      alignment: 9
+      pivot: {x: 0.483871, y: -0.171296}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a15afbb0be47294d8449d28b147c6b9
+      internalID: 8444552947861544097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishMiss_27
+      rect:
+        serializedVersion: 2
+        x: 930
+        y: 1080
+        width: 186
+        height: 216
+      alignment: 9
+      pivot: {x: 0.483871, y: -0.171296}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48b97ca98c184364488703c26df2f949
+      internalID: -6437551559781069903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishMiss_28
+      rect:
+        serializedVersion: 2
+        x: 1116
+        y: 1080
+        width: 186
+        height: 216
+      alignment: 9
+      pivot: {x: 0.483871, y: -0.171296}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0d024b2aec3a864fba334283e98d28c
+      internalID: -6428287905955922141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishMiss_29
+      rect:
+        serializedVersion: 2
+        x: 1302
+        y: 1080
+        width: 186
+        height: 216
+      alignment: 9
+      pivot: {x: 0.483871, y: -0.171296}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f115b0b8cce9654abe1703d1af16b58
+      internalID: 4219888372230579441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishMiss_30
+      rect:
+        serializedVersion: 2
+        x: 1488
+        y: 1080
+        width: 186
+        height: 216
+      alignment: 9
+      pivot: {x: 0.483871, y: -0.171296}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 012944f1c8bb5b542a97eb4987f4296b
+      internalID: -2876184528617305773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishMiss_31
+      rect:
+        serializedVersion: 2
+        x: 1674
+        y: 1080
+        width: 186
+        height: 216
+      alignment: 9
+      pivot: {x: 0.483871, y: -0.171296}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e9ee47ba0408b645a86351e3ff39a8f
+      internalID: -6849985708518809126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishMiss_32
+      rect:
+        serializedVersion: 2
+        x: 1860
+        y: 1080
+        width: 186
+        height: 216
+      alignment: 9
+      pivot: {x: 0.483871, y: -0.171296}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae9fe4f6f01988c45a89d70c15b32743
+      internalID: 9125407751723987046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishMiss_33
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 864
+        width: 186
+        height: 216
+      alignment: 9
+      pivot: {x: 0.483871, y: -0.171296}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fd73e882f9a1a842975081f0534854a
+      internalID: 6713620906780605220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishMiss_34
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 864
+        width: 186
+        height: 216
+      alignment: 9
+      pivot: {x: 0.483871, y: -0.171296}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e6307d4d85f2ec43a7ccb3c0a6a2fe0
+      internalID: -5063739822552273333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishMiss_35
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 864
+        width: 186
+        height: 216
+      alignment: 9
+      pivot: {x: 0.483871, y: -0.171296}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7703349eb40f2fc4ca0fc62930c5e418
+      internalID: 8636262914323071982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishMiss_36
+      rect:
+        serializedVersion: 2
+        x: 558
+        y: 864
+        width: 186
+        height: 216
+      alignment: 9
+      pivot: {x: 0.483871, y: -0.171296}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1b8ef99c0966764bb838914411a0277
+      internalID: -8771700722586636273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishMiss_37
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 864
+        width: 186
+        height: 216
+      alignment: 9
+      pivot: {x: 0.483871, y: -0.171296}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f57db363c160b8b4b84799f98e240af9
+      internalID: 5212589688824518174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishMiss_38
+      rect:
+        serializedVersion: 2
+        x: 930
+        y: 864
+        width: 186
+        height: 216
+      alignment: 9
+      pivot: {x: 0.483871, y: -0.171296}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99cdb06c8e1ee294a9d091dd396a084b
+      internalID: -139979294623249453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishMiss_39
+      rect:
+        serializedVersion: 2
+        x: 1116
+        y: 864
+        width: 186
+        height: 216
+      alignment: 9
+      pivot: {x: 0.483871, y: -0.171296}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8ace22acfa2ec84e981e4b756b9ba35
+      internalID: -8979091670066278227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishMiss_40
+      rect:
+        serializedVersion: 2
+        x: 1302
+        y: 864
+        width: 186
+        height: 216
+      alignment: 9
+      pivot: {x: 0.483871, y: -0.171296}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6df8c3bd81f90b149a904f10c1ab44e0
+      internalID: -3376875851852638976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishMiss_41
+      rect:
+        serializedVersion: 2
+        x: 1488
+        y: 864
+        width: 186
+        height: 216
+      alignment: 9
+      pivot: {x: 0.483871, y: -0.171296}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e126b609d4f1bf042ad75b1bdb45b55c
+      internalID: 5212045277538828939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishMiss_42
+      rect:
+        serializedVersion: 2
+        x: 1674
+        y: 864
+        width: 186
+        height: 216
+      alignment: 9
+      pivot: {x: 0.483871, y: -0.171296}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8c9953432530f94f89aecdd73abd86c
+      internalID: -6299309294072410775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishMiss_43
+      rect:
+        serializedVersion: 2
+        x: 1860
+        y: 864
+        width: 186
+        height: 216
+      alignment: 9
+      pivot: {x: 0.483871, y: -0.171296}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f15c4187c590ffe4db5865f99b40cf16
+      internalID: -4388205240526284488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishMiss_44
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 648
+        width: 186
+        height: 216
+      alignment: 9
+      pivot: {x: 0.483871, y: -0.171296}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a921059365e99054094a4d86db99abe6
+      internalID: -5942758892285131542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishMiss_45
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 648
+        width: 186
+        height: 216
+      alignment: 9
+      pivot: {x: 0.483871, y: -0.171296}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77a41ae964cb4ee4880633b7c8b7e9ca
+      internalID: -2346906898986819004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishMiss_46
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 648
+        width: 186
+        height: 216
+      alignment: 9
+      pivot: {x: 0.483871, y: -0.171296}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5aadfae6385f0540a22682ba0505960
+      internalID: 1915018313316149644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishMiss_47
+      rect:
+        serializedVersion: 2
+        x: 558
+        y: 648
+        width: 186
+        height: 216
+      alignment: 9
+      pivot: {x: 0.483871, y: -0.171296}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5c173bef57a1554dbf562f86db33727
+      internalID: -7442104456087328772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishMiss_48
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 648
+        width: 186
+        height: 216
+      alignment: 9
+      pivot: {x: 0.483871, y: -0.171296}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e47ab3189db621a4d896058274c6948f
+      internalID: -4140361533663367689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishMiss_49
+      rect:
+        serializedVersion: 2
+        x: 930
+        y: 648
+        width: 186
+        height: 216
+      alignment: 9
+      pivot: {x: 0.483871, y: -0.171296}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6587ab337b10caa4c807e76291812466
+      internalID: -5979613716082064165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishMiss_50
+      rect:
+        serializedVersion: 2
+        x: 1116
+        y: 648
+        width: 186
+        height: 216
+      alignment: 9
+      pivot: {x: 0.483871, y: -0.171296}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25b6f1b5b5563ad43ba32869ab6299e7
+      internalID: 852193939582750152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishMiss_51
+      rect:
+        serializedVersion: 2
+        x: 1302
+        y: 648
+        width: 186
+        height: 216
+      alignment: 9
+      pivot: {x: 0.483871, y: -0.171296}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e6741a5bbadad34c90536031de5d36a
+      internalID: -3116629871828899614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishMiss_52
+      rect:
+        serializedVersion: 2
+        x: 1488
+        y: 648
+        width: 186
+        height: 216
+      alignment: 9
+      pivot: {x: 0.483871, y: -0.171296}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 123e0349c67b2554086085bd3ae4e9ad
+      internalID: 2006966804737121770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishMiss_53
+      rect:
+        serializedVersion: 2
+        x: 1674
+        y: 648
+        width: 186
+        height: 216
+      alignment: 9
+      pivot: {x: 0.483871, y: -0.171296}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21f0d6034a9f8c840bc7f151e3575bd8
+      internalID: 7516910712889677758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishMiss_54
+      rect:
+        serializedVersion: 2
+        x: 1860
+        y: 648
+        width: 186
+        height: 216
+      alignment: 9
+      pivot: {x: 0.483871, y: -0.171296}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 211fcfcff76e7ee4cac6066d6dbdb22c
+      internalID: -3867619605947266035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishMiss_55
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 432
+        width: 186
+        height: 216
+      alignment: 9
+      pivot: {x: 0.483871, y: -0.171296}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f83d571333965e488f1eadd9eb2b997
+      internalID: -1813190252790649016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishMiss_56
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 432
+        width: 186
+        height: 216
+      alignment: 9
+      pivot: {x: 0.483871, y: -0.171296}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d22f3a2b8eeae9c4da018b31c7bd941d
+      internalID: 6702734059483253946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishMiss_57
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 432
+        width: 186
+        height: 216
+      alignment: 9
+      pivot: {x: 0.483871, y: -0.171296}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24670872fd10efb40b60314100074c8e
+      internalID: -5852440120401948348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishMiss_58
+      rect:
+        serializedVersion: 2
+        x: 558
+        y: 432
+        width: 186
+        height: 216
+      alignment: 9
+      pivot: {x: 0.483871, y: -0.171296}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5526c43d549eb0948bd8b262e48c08e1
+      internalID: 1227791113681322858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishMiss_59
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 432
+        width: 186
+        height: 216
+      alignment: 9
+      pivot: {x: 0.483871, y: -0.171296}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdbd406fe41448a4cbc718d5436447f5
+      internalID: 2231444790415385890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishMiss_60
+      rect:
+        serializedVersion: 2
+        x: 930
+        y: 432
+        width: 186
+        height: 216
+      alignment: 9
+      pivot: {x: 0.483871, y: -0.171296}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 554bb092f19b9834fa04d3e2a3e97e42
+      internalID: -9064254161462460783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishMiss_61
+      rect:
+        serializedVersion: 2
+        x: 1116
+        y: 432
+        width: 186
+        height: 216
+      alignment: 9
+      pivot: {x: 0.483871, y: -0.171296}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45893dc7e25e46646be11c25bbcbae0c
+      internalID: -8405941545318420669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishMiss_62
+      rect:
+        serializedVersion: 2
+        x: 1302
+        y: 432
+        width: 186
+        height: 216
+      alignment: 9
+      pivot: {x: 0.483871, y: -0.171296}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd9e5afa31bb6e240bd19d46e7168588
+      internalID: 1676749346750532009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishMiss_63
+      rect:
+        serializedVersion: 2
+        x: 1488
+        y: 432
+        width: 186
+        height: 216
+      alignment: 9
+      pivot: {x: 0.483871, y: -0.171296}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07fcbbb14e1bb1d4195c8947018d0e62
+      internalID: -6644816691497455185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishMiss_64
+      rect:
+        serializedVersion: 2
+        x: 1674
+        y: 432
+        width: 186
+        height: 216
+      alignment: 9
+      pivot: {x: 0.483871, y: -0.171296}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95287552748806d409c05abec7a7ebd5
+      internalID: 8744595685827573910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishMiss_65
+      rect:
+        serializedVersion: 2
+        x: 1860
+        y: 432
+        width: 186
+        height: 216
+      alignment: 9
+      pivot: {x: 0.483871, y: -0.171296}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5023aceeb15ef4547a0f86e44f54230b
+      internalID: -6648853259946175034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishMiss_66
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 216
+        width: 186
+        height: 216
+      alignment: 9
+      pivot: {x: 0.483871, y: -0.171296}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3418d41f1fedcb4a87300afb67fdd66
+      internalID: -5890628321265226856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishMiss_67
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 216
+        width: 186
+        height: 216
+      alignment: 9
+      pivot: {x: 0.483871, y: -0.171296}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8df686281b1204041b985c8dfac001cb
+      internalID: 3781420140542345826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishMiss_68
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 216
+        width: 186
+        height: 216
+      alignment: 9
+      pivot: {x: 0.483871, y: -0.171296}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 519e9df55ffdf3548b1854d4a5f20fc6
+      internalID: 1482677549044714514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishMiss_69
+      rect:
+        serializedVersion: 2
+        x: 558
+        y: 216
+        width: 186
+        height: 216
+      alignment: 9
+      pivot: {x: 0.483871, y: -0.171296}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cdb13ee9b6b837468466a4a1cc20cf3
+      internalID: 7191926178829169484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishMiss_70
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 216
+        width: 186
+        height: 216
+      alignment: 9
+      pivot: {x: 0.483871, y: -0.171296}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16190ef85be17844fa11f7d613f6577c
+      internalID: 4709307185993621465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishMiss_71
+      rect:
+        serializedVersion: 2
+        x: 930
+        y: 216
+        width: 186
+        height: 216
+      alignment: 9
+      pivot: {x: 0.483871, y: -0.171296}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06673a564f5f8a04886bf2caf99581c3
+      internalID: 6097902542736429808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishMiss_72
+      rect:
+        serializedVersion: 2
+        x: 1116
+        y: 216
+        width: 186
+        height: 216
+      alignment: 9
+      pivot: {x: 0.483871, y: -0.171296}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71805e36b0d53994ea37869580cf754b
+      internalID: 3996070683073528571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishMiss_73
+      rect:
+        serializedVersion: 2
+        x: 1302
+        y: 216
+        width: 186
+        height: 216
+      alignment: 9
+      pivot: {x: 0.483871, y: -0.171296}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0bac4c9b6544a04aa19a4022aaf1c71
+      internalID: -7850775307240168042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishMiss_74
+      rect:
+        serializedVersion: 2
+        x: 1488
+        y: 216
+        width: 186
+        height: 216
+      alignment: 9
+      pivot: {x: 0.483871, y: -0.171296}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02704f89fbe7f7746a13d9c1e39fb900
+      internalID: -6415885112378387846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishMiss_75
+      rect:
+        serializedVersion: 2
+        x: 1674
+        y: 216
+        width: 186
+        height: 216
+      alignment: 9
+      pivot: {x: 0.483871, y: -0.171296}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be251cb5da4dea84ea097b01c86920ef
+      internalID: -8605028429138221998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishMiss_76
+      rect:
+        serializedVersion: 2
+        x: 1860
+        y: 216
+        width: 186
+        height: 216
+      alignment: 9
+      pivot: {x: 0.483871, y: -0.171296}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36d69542cf3fbd143af0095e544137ed
+      internalID: 6173426822953660776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishMiss_77
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 186
+        height: 216
+      alignment: 9
+      pivot: {x: 0.483871, y: -0.171296}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4228bec7e0b2e44abf49ee62efea04c
+      internalID: 1012010295658363765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishMiss_78
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 0
+        width: 186
+        height: 216
+      alignment: 9
+      pivot: {x: 0.483871, y: -0.171296}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 706c3c281b82f3842aa564320aba95a6
+      internalID: -776268841026934430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishMiss_79
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 0
+        width: 186
+        height: 216
+      alignment: 9
+      pivot: {x: 0.483871, y: -0.171296}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70cfab3d1b0da0c4eb2713ed63739fb5
+      internalID: 8075751015051166777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishMiss_80
+      rect:
+        serializedVersion: 2
+        x: 558
+        y: 0
+        width: 186
+        height: 216
+      alignment: 9
+      pivot: {x: 0.483871, y: -0.171296}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbfebf279dc7c9a479b7564817bfd275
+      internalID: -7345907463610325117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishMiss_81
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 0
+        width: 186
+        height: 216
+      alignment: 9
+      pivot: {x: 0.483871, y: -0.171296}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59a4355791ef89742b16d826d4f1a873
+      internalID: -1361951577246712476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishMiss_82
+      rect:
+        serializedVersion: 2
+        x: 930
+        y: 0
+        width: 186
+        height: 216
+      alignment: 9
+      pivot: {x: 0.483871, y: -0.171296}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 711fd9bed5834f64dada22ce5cf53d90
+      internalID: -7782230963203839232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishMiss_83
+      rect:
+        serializedVersion: 2
+        x: 1116
+        y: 0
+        width: 186
+        height: 216
+      alignment: 9
+      pivot: {x: 0.483871, y: -0.171296}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4af836466e130145bfdc8767293b72f
+      internalID: 1066181809843462154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 6fdaaaa9a4e5632439a8734cc1cdeeef
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      PenguinOutfitFishMiss_0: 8152761365326779851
+      PenguinOutfitFishMiss_1: -4285753047749846146
+      PenguinOutfitFishMiss_10: -112590239021541218
+      PenguinOutfitFishMiss_11: 5392075282512890089
+      PenguinOutfitFishMiss_12: -4710666571471808204
+      PenguinOutfitFishMiss_13: 3235607181782558589
+      PenguinOutfitFishMiss_14: -7355709358473974808
+      PenguinOutfitFishMiss_15: -2426583613104855937
+      PenguinOutfitFishMiss_16: 1912968836173648151
+      PenguinOutfitFishMiss_17: -926175476578973221
+      PenguinOutfitFishMiss_18: 8503181332849147768
+      PenguinOutfitFishMiss_19: -4945451249371619396
+      PenguinOutfitFishMiss_2: 7791385474985562610
+      PenguinOutfitFishMiss_20: 6739554146554467963
+      PenguinOutfitFishMiss_21: 6674426831623370286
+      PenguinOutfitFishMiss_22: -7203439702192931644
+      PenguinOutfitFishMiss_23: 1379075807199075769
+      PenguinOutfitFishMiss_24: 7707561648728051586
+      PenguinOutfitFishMiss_25: -2591782676359336848
+      PenguinOutfitFishMiss_26: 8444552947861544097
+      PenguinOutfitFishMiss_27: -6437551559781069903
+      PenguinOutfitFishMiss_28: -6428287905955922141
+      PenguinOutfitFishMiss_29: 4219888372230579441
+      PenguinOutfitFishMiss_3: 6982102409159743335
+      PenguinOutfitFishMiss_30: -2876184528617305773
+      PenguinOutfitFishMiss_31: -6849985708518809126
+      PenguinOutfitFishMiss_32: 9125407751723987046
+      PenguinOutfitFishMiss_33: 6713620906780605220
+      PenguinOutfitFishMiss_34: -5063739822552273333
+      PenguinOutfitFishMiss_35: 8636262914323071982
+      PenguinOutfitFishMiss_36: -8771700722586636273
+      PenguinOutfitFishMiss_37: 5212589688824518174
+      PenguinOutfitFishMiss_38: -139979294623249453
+      PenguinOutfitFishMiss_39: -8979091670066278227
+      PenguinOutfitFishMiss_4: -6017812598241142060
+      PenguinOutfitFishMiss_40: -3376875851852638976
+      PenguinOutfitFishMiss_41: 5212045277538828939
+      PenguinOutfitFishMiss_42: -6299309294072410775
+      PenguinOutfitFishMiss_43: -4388205240526284488
+      PenguinOutfitFishMiss_44: -5942758892285131542
+      PenguinOutfitFishMiss_45: -2346906898986819004
+      PenguinOutfitFishMiss_46: 1915018313316149644
+      PenguinOutfitFishMiss_47: -7442104456087328772
+      PenguinOutfitFishMiss_48: -4140361533663367689
+      PenguinOutfitFishMiss_49: -5979613716082064165
+      PenguinOutfitFishMiss_5: -5606710361939714043
+      PenguinOutfitFishMiss_50: 852193939582750152
+      PenguinOutfitFishMiss_51: -3116629871828899614
+      PenguinOutfitFishMiss_52: 2006966804737121770
+      PenguinOutfitFishMiss_53: 7516910712889677758
+      PenguinOutfitFishMiss_54: -3867619605947266035
+      PenguinOutfitFishMiss_55: -1813190252790649016
+      PenguinOutfitFishMiss_56: 6702734059483253946
+      PenguinOutfitFishMiss_57: -5852440120401948348
+      PenguinOutfitFishMiss_58: 1227791113681322858
+      PenguinOutfitFishMiss_59: 2231444790415385890
+      PenguinOutfitFishMiss_6: 6687041183779648222
+      PenguinOutfitFishMiss_60: -9064254161462460783
+      PenguinOutfitFishMiss_61: -8405941545318420669
+      PenguinOutfitFishMiss_62: 1676749346750532009
+      PenguinOutfitFishMiss_63: -6644816691497455185
+      PenguinOutfitFishMiss_64: 8744595685827573910
+      PenguinOutfitFishMiss_65: -6648853259946175034
+      PenguinOutfitFishMiss_66: -5890628321265226856
+      PenguinOutfitFishMiss_67: 3781420140542345826
+      PenguinOutfitFishMiss_68: 1482677549044714514
+      PenguinOutfitFishMiss_69: 7191926178829169484
+      PenguinOutfitFishMiss_7: 2558031415463213552
+      PenguinOutfitFishMiss_70: 4709307185993621465
+      PenguinOutfitFishMiss_71: 6097902542736429808
+      PenguinOutfitFishMiss_72: 3996070683073528571
+      PenguinOutfitFishMiss_73: -7850775307240168042
+      PenguinOutfitFishMiss_74: -6415885112378387846
+      PenguinOutfitFishMiss_75: -8605028429138221998
+      PenguinOutfitFishMiss_76: 6173426822953660776
+      PenguinOutfitFishMiss_77: 1012010295658363765
+      PenguinOutfitFishMiss_78: -776268841026934430
+      PenguinOutfitFishMiss_79: 8075751015051166777
+      PenguinOutfitFishMiss_8: 6293327904701677364
+      PenguinOutfitFishMiss_80: -7345907463610325117
+      PenguinOutfitFishMiss_81: -1361951577246712476
+      PenguinOutfitFishMiss_82: -7782230963203839232
+      PenguinOutfitFishMiss_83: 1066181809843462154
+      PenguinOutfitFishMiss_9: -3078178964505087617
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

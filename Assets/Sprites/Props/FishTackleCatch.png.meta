@@ -1,0 +1,2077 @@
+fileFormatVersion: 2
+guid: 78d6398e459e30e479b92732d176df72
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8882599502554211951
+    second: FishTackleCatch_0
+  - first:
+      213: -6365134585078470127
+    second: FishTackleCatch_1
+  - first:
+      213: -9040118731227925966
+    second: FishTackleCatch_2
+  - first:
+      213: -8931072795455873191
+    second: FishTackleCatch_3
+  - first:
+      213: 3593041500640910072
+    second: FishTackleCatch_4
+  - first:
+      213: 598691684683951889
+    second: FishTackleCatch_5
+  - first:
+      213: -713902342188865930
+    second: FishTackleCatch_6
+  - first:
+      213: 3954081482688639417
+    second: FishTackleCatch_7
+  - first:
+      213: -7042464476230365745
+    second: FishTackleCatch_8
+  - first:
+      213: 5993034003254439629
+    second: FishTackleCatch_9
+  - first:
+      213: 2129547873753434912
+    second: FishTackleCatch_10
+  - first:
+      213: 8124471200178166874
+    second: FishTackleCatch_11
+  - first:
+      213: -351382799703584661
+    second: FishTackleCatch_12
+  - first:
+      213: -5253286000661700764
+    second: FishTackleCatch_13
+  - first:
+      213: 4082901960319963102
+    second: FishTackleCatch_14
+  - first:
+      213: -5957329118168026733
+    second: FishTackleCatch_15
+  - first:
+      213: 6602557218255240148
+    second: FishTackleCatch_16
+  - first:
+      213: -2121809006084641866
+    second: FishTackleCatch_17
+  - first:
+      213: -8065219603407395267
+    second: FishTackleCatch_18
+  - first:
+      213: -9060556534769122660
+    second: FishTackleCatch_19
+  - first:
+      213: -6278437213619960329
+    second: FishTackleCatch_20
+  - first:
+      213: 4519070899836731439
+    second: FishTackleCatch_21
+  - first:
+      213: -4223561118870910287
+    second: FishTackleCatch_22
+  - first:
+      213: -5458470942726071137
+    second: FishTackleCatch_23
+  - first:
+      213: -8033040025135769742
+    second: FishTackleCatch_24
+  - first:
+      213: 2202528418133953001
+    second: FishTackleCatch_25
+  - first:
+      213: 2577952839999083494
+    second: FishTackleCatch_26
+  - first:
+      213: -6642076480902696704
+    second: FishTackleCatch_27
+  - first:
+      213: -2396673453881524788
+    second: FishTackleCatch_28
+  - first:
+      213: -1326082742092832750
+    second: FishTackleCatch_29
+  - first:
+      213: 2643533142687410407
+    second: FishTackleCatch_30
+  - first:
+      213: -4924464159388151773
+    second: FishTackleCatch_31
+  - first:
+      213: 6433963927436695668
+    second: FishTackleCatch_32
+  - first:
+      213: -825120847007114804
+    second: FishTackleCatch_33
+  - first:
+      213: -5718340963958416407
+    second: FishTackleCatch_34
+  - first:
+      213: -607081029876415214
+    second: FishTackleCatch_35
+  - first:
+      213: -4918393542654069653
+    second: FishTackleCatch_36
+  - first:
+      213: -9214731227396385292
+    second: FishTackleCatch_37
+  - first:
+      213: 1415170111299948730
+    second: FishTackleCatch_38
+  - first:
+      213: -8839376719367473672
+    second: FishTackleCatch_39
+  - first:
+      213: 8858277513365021618
+    second: FishTackleCatch_40
+  - first:
+      213: -3462345540443439493
+    second: FishTackleCatch_41
+  - first:
+      213: 6968115396025382958
+    second: FishTackleCatch_42
+  - first:
+      213: 2190863518460751125
+    second: FishTackleCatch_43
+  - first:
+      213: 4249389298068883670
+    second: FishTackleCatch_44
+  - first:
+      213: 221234897954045174
+    second: FishTackleCatch_45
+  - first:
+      213: 7194432097492688753
+    second: FishTackleCatch_46
+  - first:
+      213: -3255883204268890106
+    second: FishTackleCatch_47
+  - first:
+      213: 4700176797332183610
+    second: FishTackleCatch_48
+  - first:
+      213: 5486498999790818918
+    second: FishTackleCatch_49
+  - first:
+      213: 9193876008574262622
+    second: FishTackleCatch_50
+  - first:
+      213: 217023331271601755
+    second: FishTackleCatch_51
+  - first:
+      213: 8748724501384147396
+    second: FishTackleCatch_52
+  - first:
+      213: -1033192909588259997
+    second: FishTackleCatch_53
+  - first:
+      213: 7971421228636147540
+    second: FishTackleCatch_54
+  - first:
+      213: -6601495991596128164
+    second: FishTackleCatch_55
+  - first:
+      213: 2631747537903424637
+    second: FishTackleCatch_56
+  - first:
+      213: -3521874354370867209
+    second: FishTackleCatch_57
+  - first:
+      213: -8059444614627187759
+    second: FishTackleCatch_58
+  - first:
+      213: 3289096532253263516
+    second: FishTackleCatch_59
+  - first:
+      213: 3994039538389619107
+    second: FishTackleCatch_60
+  - first:
+      213: -1220294641829354083
+    second: FishTackleCatch_61
+  - first:
+      213: -4711235384958437741
+    second: FishTackleCatch_62
+  - first:
+      213: -4518673627200324220
+    second: FishTackleCatch_63
+  - first:
+      213: -8936128203834176750
+    second: FishTackleCatch_64
+  - first:
+      213: 5982211976622894631
+    second: FishTackleCatch_65
+  - first:
+      213: 1669596634283181800
+    second: FishTackleCatch_66
+  - first:
+      213: -2655326347612997585
+    second: FishTackleCatch_67
+  - first:
+      213: -301601845901070769
+    second: FishTackleCatch_68
+  - first:
+      213: -9180647866117943225
+    second: FishTackleCatch_69
+  - first:
+      213: -1289912137165295475
+    second: FishTackleCatch_70
+  - first:
+      213: -3675923349680220628
+    second: FishTackleCatch_71
+  - first:
+      213: 5994567818793691073
+    second: FishTackleCatch_72
+  - first:
+      213: 8637547645917799728
+    second: FishTackleCatch_73
+  - first:
+      213: -2471067081851178182
+    second: FishTackleCatch_74
+  - first:
+      213: 4403365963167314360
+    second: FishTackleCatch_75
+  - first:
+      213: 8122372013951831922
+    second: FishTackleCatch_76
+  - first:
+      213: 8875119876267576484
+    second: FishTackleCatch_77
+  - first:
+      213: 8328264612931141241
+    second: FishTackleCatch_78
+  - first:
+      213: -3657187259425090846
+    second: FishTackleCatch_79
+  - first:
+      213: 4347342027615481963
+    second: FishTackleCatch_80
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 312.5
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: FishTackleCatch_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1422
+        width: 165
+        height: 237
+      alignment: 9
+      pivot: {x: -0.375758, y: 0.033755}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50be12e5c0a63b1429341f6b25b89245
+      internalID: 8882599502554211951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleCatch_1
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 1422
+        width: 165
+        height: 237
+      alignment: 9
+      pivot: {x: -0.375758, y: 0.033755}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dee5c6ee2591ae745b04dea3861530a7
+      internalID: -6365134585078470127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleCatch_2
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 1422
+        width: 165
+        height: 237
+      alignment: 9
+      pivot: {x: -0.375758, y: 0.033755}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd68b69e75fd03f408065f431bfe4cd0
+      internalID: -9040118731227925966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleCatch_3
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 1422
+        width: 165
+        height: 237
+      alignment: 9
+      pivot: {x: -0.375758, y: 0.033755}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbee4b4526f98974e8aff70c73b4b483
+      internalID: -8931072795455873191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleCatch_4
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 1422
+        width: 165
+        height: 237
+      alignment: 9
+      pivot: {x: -0.375758, y: 0.033755}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01830fb42253bf74f9b1a599f9ed6033
+      internalID: 3593041500640910072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleCatch_5
+      rect:
+        serializedVersion: 2
+        x: 825
+        y: 1422
+        width: 165
+        height: 237
+      alignment: 9
+      pivot: {x: -0.375758, y: 0.033755}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 966192bde4283e648a280e40910a498c
+      internalID: 598691684683951889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleCatch_6
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 1422
+        width: 165
+        height: 237
+      alignment: 9
+      pivot: {x: -0.375758, y: 0.033755}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bf5df1e5b722e14c8afc05e5b28e3dc
+      internalID: -713902342188865930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleCatch_7
+      rect:
+        serializedVersion: 2
+        x: 1155
+        y: 1422
+        width: 165
+        height: 237
+      alignment: 9
+      pivot: {x: -0.375758, y: 0.033755}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d81f0c93db613b49a8219abfb62f769
+      internalID: 3954081482688639417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleCatch_8
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 1422
+        width: 165
+        height: 237
+      alignment: 9
+      pivot: {x: -0.375758, y: 0.033755}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea0e2076abe573b44b002fdba23e3acf
+      internalID: -7042464476230365745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleCatch_9
+      rect:
+        serializedVersion: 2
+        x: 1485
+        y: 1422
+        width: 165
+        height: 237
+      alignment: 9
+      pivot: {x: -0.375758, y: 0.033755}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b7849c1384305b4cb748ef2e779379b
+      internalID: 5993034003254439629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleCatch_10
+      rect:
+        serializedVersion: 2
+        x: 1650
+        y: 1422
+        width: 165
+        height: 237
+      alignment: 9
+      pivot: {x: -0.375758, y: 0.033755}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec5711d3d5b93394ca62a36e00266cf7
+      internalID: 2129547873753434912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleCatch_11
+      rect:
+        serializedVersion: 2
+        x: 1815
+        y: 1422
+        width: 165
+        height: 237
+      alignment: 9
+      pivot: {x: -0.375758, y: 0.033755}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db0ce40ef9d2dce48a9efade99173b4a
+      internalID: 8124471200178166874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleCatch_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1185
+        width: 165
+        height: 237
+      alignment: 9
+      pivot: {x: -0.375758, y: 0.033755}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a9e2a30941615e41a57ec093bfa0bf7
+      internalID: -351382799703584661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleCatch_13
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 1185
+        width: 165
+        height: 237
+      alignment: 9
+      pivot: {x: -0.375758, y: 0.033755}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6929abfbf768bda4fb89791450f3c681
+      internalID: -5253286000661700764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleCatch_14
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 1185
+        width: 165
+        height: 237
+      alignment: 9
+      pivot: {x: -0.375758, y: 0.033755}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07abe6c82aead7c429bd9e8b44ac4a06
+      internalID: 4082901960319963102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleCatch_15
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 1185
+        width: 165
+        height: 237
+      alignment: 9
+      pivot: {x: -0.375758, y: 0.033755}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93c42325eb8ab304ebf88d35fa924ef0
+      internalID: -5957329118168026733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleCatch_16
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 1185
+        width: 165
+        height: 237
+      alignment: 9
+      pivot: {x: -0.375758, y: 0.033755}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 566e7e00ac591e64d8170b8d16aed898
+      internalID: 6602557218255240148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleCatch_17
+      rect:
+        serializedVersion: 2
+        x: 825
+        y: 1185
+        width: 165
+        height: 237
+      alignment: 9
+      pivot: {x: -0.375758, y: 0.033755}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea9fcd5606ccc5947ac4a3c3e994c7f1
+      internalID: -2121809006084641866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleCatch_18
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 1185
+        width: 165
+        height: 237
+      alignment: 9
+      pivot: {x: -0.375758, y: 0.033755}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58394a9f5789647459e8d5590896b1d0
+      internalID: -8065219603407395267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleCatch_19
+      rect:
+        serializedVersion: 2
+        x: 1155
+        y: 1185
+        width: 165
+        height: 237
+      alignment: 9
+      pivot: {x: -0.375758, y: 0.033755}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecaf15c78ad877f48a94b0b77f427b0b
+      internalID: -9060556534769122660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleCatch_20
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 1185
+        width: 165
+        height: 237
+      alignment: 9
+      pivot: {x: -0.375758, y: 0.033755}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fd7a061bd230194b88bd27af8133edc
+      internalID: -6278437213619960329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleCatch_21
+      rect:
+        serializedVersion: 2
+        x: 1485
+        y: 1185
+        width: 165
+        height: 237
+      alignment: 9
+      pivot: {x: -0.375758, y: 0.033755}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5439ec751a1298b4c952be362af36f27
+      internalID: 4519070899836731439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleCatch_22
+      rect:
+        serializedVersion: 2
+        x: 1650
+        y: 1185
+        width: 165
+        height: 237
+      alignment: 9
+      pivot: {x: -0.375758, y: 0.033755}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1f4ed2b15f0c744580af7e51974b477
+      internalID: -4223561118870910287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleCatch_23
+      rect:
+        serializedVersion: 2
+        x: 1815
+        y: 1185
+        width: 165
+        height: 237
+      alignment: 9
+      pivot: {x: -0.375758, y: 0.033755}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be89011d1e403bb4c9002493571a349e
+      internalID: -5458470942726071137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleCatch_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 948
+        width: 165
+        height: 237
+      alignment: 9
+      pivot: {x: -0.375758, y: 0.033755}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 538d2c0a58947f846bbe096f0f9cc61b
+      internalID: -8033040025135769742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleCatch_25
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 948
+        width: 165
+        height: 237
+      alignment: 9
+      pivot: {x: -0.375758, y: 0.033755}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 109b221163455994588fad79fc435e7b
+      internalID: 2202528418133953001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleCatch_26
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 948
+        width: 165
+        height: 237
+      alignment: 9
+      pivot: {x: -0.375758, y: 0.033755}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b461dc47d3a6d4d4bafbaa63734fed67
+      internalID: 2577952839999083494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleCatch_27
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 948
+        width: 165
+        height: 237
+      alignment: 9
+      pivot: {x: -0.375758, y: 0.033755}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84f139b2c8a05164194ddc89e1672bd2
+      internalID: -6642076480902696704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleCatch_28
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 948
+        width: 165
+        height: 237
+      alignment: 9
+      pivot: {x: -0.375758, y: 0.033755}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cddd10d17a6a1434797fbd0dc004f68f
+      internalID: -2396673453881524788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleCatch_29
+      rect:
+        serializedVersion: 2
+        x: 825
+        y: 948
+        width: 165
+        height: 237
+      alignment: 9
+      pivot: {x: -0.375758, y: 0.033755}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a59e0bf60e469bb45aea49254dec6a2c
+      internalID: -1326082742092832750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleCatch_30
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 948
+        width: 165
+        height: 237
+      alignment: 9
+      pivot: {x: -0.375758, y: 0.033755}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b39c7210b2352245bd39b28116c4be8
+      internalID: 2643533142687410407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleCatch_31
+      rect:
+        serializedVersion: 2
+        x: 1155
+        y: 948
+        width: 165
+        height: 237
+      alignment: 9
+      pivot: {x: -0.375758, y: 0.033755}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c40b0f4a76d89e64f91279f7f303857e
+      internalID: -4924464159388151773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleCatch_32
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 948
+        width: 165
+        height: 237
+      alignment: 9
+      pivot: {x: -0.375758, y: 0.033755}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 424c6ca547e7ab84690565af7955a4c4
+      internalID: 6433963927436695668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleCatch_33
+      rect:
+        serializedVersion: 2
+        x: 1485
+        y: 948
+        width: 165
+        height: 237
+      alignment: 9
+      pivot: {x: -0.375758, y: 0.033755}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c88b966e9dd62842b561cdfaf6a7156
+      internalID: -825120847007114804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleCatch_34
+      rect:
+        serializedVersion: 2
+        x: 1650
+        y: 948
+        width: 165
+        height: 237
+      alignment: 9
+      pivot: {x: -0.375758, y: 0.033755}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4a06faf55f996c419a7ac0474e6c922
+      internalID: -5718340963958416407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleCatch_35
+      rect:
+        serializedVersion: 2
+        x: 1815
+        y: 948
+        width: 165
+        height: 237
+      alignment: 9
+      pivot: {x: -0.375758, y: 0.033755}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03e1b466fc244f440ad7bd440bbf2ad4
+      internalID: -607081029876415214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleCatch_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 711
+        width: 165
+        height: 237
+      alignment: 9
+      pivot: {x: -0.375758, y: 0.033755}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcedee78aae989b4798e6e52f20a8326
+      internalID: -4918393542654069653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleCatch_37
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 711
+        width: 165
+        height: 237
+      alignment: 9
+      pivot: {x: -0.375758, y: 0.033755}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43647302768983740b16f423bce22af8
+      internalID: -9214731227396385292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleCatch_38
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 711
+        width: 165
+        height: 237
+      alignment: 9
+      pivot: {x: -0.375758, y: 0.033755}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d4e37681f8707e48adb4587c3ddb3ac
+      internalID: 1415170111299948730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleCatch_39
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 711
+        width: 165
+        height: 237
+      alignment: 9
+      pivot: {x: -0.375758, y: 0.033755}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1d623318aa04dd48836c7efc0dc8b72
+      internalID: -8839376719367473672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleCatch_40
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 711
+        width: 165
+        height: 237
+      alignment: 9
+      pivot: {x: -0.375758, y: 0.033755}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7763421abfcf7a4991fc4efc12ee613
+      internalID: 8858277513365021618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleCatch_41
+      rect:
+        serializedVersion: 2
+        x: 825
+        y: 711
+        width: 165
+        height: 237
+      alignment: 9
+      pivot: {x: -0.375758, y: 0.033755}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2490c4392b74c7b418e0dd5ee1640512
+      internalID: -3462345540443439493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleCatch_42
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 711
+        width: 165
+        height: 237
+      alignment: 9
+      pivot: {x: -0.375758, y: 0.033755}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca45aa01fd9cde242ba7dbb510c028b6
+      internalID: 6968115396025382958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleCatch_43
+      rect:
+        serializedVersion: 2
+        x: 1155
+        y: 711
+        width: 165
+        height: 237
+      alignment: 9
+      pivot: {x: -0.375758, y: 0.033755}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90b769ed89b203f429e52253641678cb
+      internalID: 2190863518460751125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleCatch_44
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 711
+        width: 165
+        height: 237
+      alignment: 9
+      pivot: {x: -0.375758, y: 0.033755}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0066eaaeaeeafc34a97b4f562d847629
+      internalID: 4249389298068883670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleCatch_45
+      rect:
+        serializedVersion: 2
+        x: 1485
+        y: 711
+        width: 165
+        height: 237
+      alignment: 9
+      pivot: {x: -0.375758, y: 0.033755}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f1abe35c4c26044aa85bc618403053f
+      internalID: 221234897954045174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleCatch_46
+      rect:
+        serializedVersion: 2
+        x: 1650
+        y: 711
+        width: 165
+        height: 237
+      alignment: 9
+      pivot: {x: -0.375758, y: 0.033755}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1a05bf0fb6480940b047aa367931a60
+      internalID: 7194432097492688753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleCatch_47
+      rect:
+        serializedVersion: 2
+        x: 1815
+        y: 711
+        width: 165
+        height: 237
+      alignment: 9
+      pivot: {x: -0.375758, y: 0.033755}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 913e358847ebabc4593d6a0f1b195cc8
+      internalID: -3255883204268890106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleCatch_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 474
+        width: 165
+        height: 237
+      alignment: 9
+      pivot: {x: -0.375758, y: 0.033755}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd7723518f0a6dd4ba449c631537c279
+      internalID: 4700176797332183610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleCatch_49
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 474
+        width: 165
+        height: 237
+      alignment: 9
+      pivot: {x: -0.375758, y: 0.033755}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e01a4763bca17824087eb29db86fe52c
+      internalID: 5486498999790818918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleCatch_50
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 474
+        width: 165
+        height: 237
+      alignment: 9
+      pivot: {x: -0.375758, y: 0.033755}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a7426614d87d364c90af22a62578eb4
+      internalID: 9193876008574262622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleCatch_51
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 474
+        width: 165
+        height: 237
+      alignment: 9
+      pivot: {x: -0.375758, y: 0.033755}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bd5747f391d8514aae6121c0d1c8d2a
+      internalID: 217023331271601755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleCatch_52
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 474
+        width: 165
+        height: 237
+      alignment: 9
+      pivot: {x: -0.375758, y: 0.033755}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23d989c856c9e8644bbe4bbb4610c531
+      internalID: 8748724501384147396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleCatch_53
+      rect:
+        serializedVersion: 2
+        x: 825
+        y: 474
+        width: 165
+        height: 237
+      alignment: 9
+      pivot: {x: -0.375758, y: 0.033755}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d098318c1f74c440b1599e02afd3a29
+      internalID: -1033192909588259997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleCatch_54
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 474
+        width: 165
+        height: 237
+      alignment: 9
+      pivot: {x: -0.375758, y: 0.033755}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4b8294b2af5316459fae39bb2134bb0
+      internalID: 7971421228636147540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleCatch_55
+      rect:
+        serializedVersion: 2
+        x: 1155
+        y: 474
+        width: 165
+        height: 237
+      alignment: 9
+      pivot: {x: -0.375758, y: 0.033755}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 248d8892b27faec49a3f6606ea17d044
+      internalID: -6601495991596128164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleCatch_56
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 474
+        width: 165
+        height: 237
+      alignment: 9
+      pivot: {x: -0.375758, y: 0.033755}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2c9493087175f041a7ed13ee39f38a4
+      internalID: 2631747537903424637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleCatch_57
+      rect:
+        serializedVersion: 2
+        x: 1485
+        y: 474
+        width: 165
+        height: 237
+      alignment: 9
+      pivot: {x: -0.375758, y: 0.033755}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 484b07112b990cc419dd0347facdbd71
+      internalID: -3521874354370867209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleCatch_58
+      rect:
+        serializedVersion: 2
+        x: 1650
+        y: 474
+        width: 165
+        height: 237
+      alignment: 9
+      pivot: {x: -0.375758, y: 0.033755}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80ff623e491c45d4a81e4ccb1acd3eed
+      internalID: -8059444614627187759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleCatch_59
+      rect:
+        serializedVersion: 2
+        x: 1815
+        y: 474
+        width: 165
+        height: 237
+      alignment: 9
+      pivot: {x: -0.375758, y: 0.033755}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12cfeb1eb8558d843abc1ff682ff81b6
+      internalID: 3289096532253263516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleCatch_60
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 237
+        width: 165
+        height: 237
+      alignment: 9
+      pivot: {x: -0.375758, y: 0.033755}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 387ab08a4030f3344be674b9fed63dbc
+      internalID: 3994039538389619107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleCatch_61
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 237
+        width: 165
+        height: 237
+      alignment: 9
+      pivot: {x: -0.375758, y: 0.033755}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d578645b487ec34ea6b84c16247809b
+      internalID: -1220294641829354083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleCatch_62
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 237
+        width: 165
+        height: 237
+      alignment: 9
+      pivot: {x: -0.375758, y: 0.033755}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4b8f0ab00af58e409da865baacb8729
+      internalID: -4711235384958437741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleCatch_63
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 237
+        width: 165
+        height: 237
+      alignment: 9
+      pivot: {x: -0.375758, y: 0.033755}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10b881b312f35a14ea541743b6ebcdfd
+      internalID: -4518673627200324220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleCatch_64
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 237
+        width: 165
+        height: 237
+      alignment: 9
+      pivot: {x: -0.375758, y: 0.033755}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96ff11f93e51e3a4c9657036d29e4268
+      internalID: -8936128203834176750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleCatch_65
+      rect:
+        serializedVersion: 2
+        x: 825
+        y: 237
+        width: 165
+        height: 237
+      alignment: 9
+      pivot: {x: -0.375758, y: 0.033755}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0621895eba279fa48bf2869199e4f9b1
+      internalID: 5982211976622894631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleCatch_66
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 237
+        width: 165
+        height: 237
+      alignment: 9
+      pivot: {x: -0.375758, y: 0.033755}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c26739ecd2208a040962afc1c8db0cd4
+      internalID: 1669596634283181800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleCatch_67
+      rect:
+        serializedVersion: 2
+        x: 1155
+        y: 237
+        width: 165
+        height: 237
+      alignment: 9
+      pivot: {x: -0.375758, y: 0.033755}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28fdc2dda0ed6984c96e90d1b6003204
+      internalID: -2655326347612997585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleCatch_68
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 237
+        width: 165
+        height: 237
+      alignment: 9
+      pivot: {x: -0.375758, y: 0.033755}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3781aa12c3da25541a243c36ed49d557
+      internalID: -301601845901070769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleCatch_69
+      rect:
+        serializedVersion: 2
+        x: 1485
+        y: 237
+        width: 165
+        height: 237
+      alignment: 9
+      pivot: {x: -0.375758, y: 0.033755}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13c9092a85fe7c84ca3c68d4ab80a3cc
+      internalID: -9180647866117943225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleCatch_70
+      rect:
+        serializedVersion: 2
+        x: 1650
+        y: 237
+        width: 165
+        height: 237
+      alignment: 9
+      pivot: {x: -0.375758, y: 0.033755}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 439baeed7862de14295750898cdf304c
+      internalID: -1289912137165295475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleCatch_71
+      rect:
+        serializedVersion: 2
+        x: 1815
+        y: 237
+        width: 165
+        height: 237
+      alignment: 9
+      pivot: {x: -0.375758, y: 0.033755}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffc4b0a0109bb8c4687d078263695939
+      internalID: -3675923349680220628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleCatch_72
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 165
+        height: 237
+      alignment: 9
+      pivot: {x: -0.375758, y: 0.033755}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cfaffeb9357eef4bbf44d1227c53492
+      internalID: 5994567818793691073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishTackleCatch_73
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 0
+        width: 165
+        height: 237
+      alignment: 9
+      pivot: {x: -0.375758, y: 0.033755}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e110c67e296f2e40a93be4706c4a63e
+      internalID: 8637547645917799728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: a7ce5b06d604e1540b62573ac743a126
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      FishTackleCatch_0: 8882599502554211951
+      FishTackleCatch_1: -6365134585078470127
+      FishTackleCatch_10: 2129547873753434912
+      FishTackleCatch_11: 8124471200178166874
+      FishTackleCatch_12: -351382799703584661
+      FishTackleCatch_13: -5253286000661700764
+      FishTackleCatch_14: 4082901960319963102
+      FishTackleCatch_15: -5957329118168026733
+      FishTackleCatch_16: 6602557218255240148
+      FishTackleCatch_17: -2121809006084641866
+      FishTackleCatch_18: -8065219603407395267
+      FishTackleCatch_19: -9060556534769122660
+      FishTackleCatch_2: -9040118731227925966
+      FishTackleCatch_20: -6278437213619960329
+      FishTackleCatch_21: 4519070899836731439
+      FishTackleCatch_22: -4223561118870910287
+      FishTackleCatch_23: -5458470942726071137
+      FishTackleCatch_24: -8033040025135769742
+      FishTackleCatch_25: 2202528418133953001
+      FishTackleCatch_26: 2577952839999083494
+      FishTackleCatch_27: -6642076480902696704
+      FishTackleCatch_28: -2396673453881524788
+      FishTackleCatch_29: -1326082742092832750
+      FishTackleCatch_3: -8931072795455873191
+      FishTackleCatch_30: 2643533142687410407
+      FishTackleCatch_31: -4924464159388151773
+      FishTackleCatch_32: 6433963927436695668
+      FishTackleCatch_33: -825120847007114804
+      FishTackleCatch_34: -5718340963958416407
+      FishTackleCatch_35: -607081029876415214
+      FishTackleCatch_36: -4918393542654069653
+      FishTackleCatch_37: -9214731227396385292
+      FishTackleCatch_38: 1415170111299948730
+      FishTackleCatch_39: -8839376719367473672
+      FishTackleCatch_4: 3593041500640910072
+      FishTackleCatch_40: 8858277513365021618
+      FishTackleCatch_41: -3462345540443439493
+      FishTackleCatch_42: 6968115396025382958
+      FishTackleCatch_43: 2190863518460751125
+      FishTackleCatch_44: 4249389298068883670
+      FishTackleCatch_45: 221234897954045174
+      FishTackleCatch_46: 7194432097492688753
+      FishTackleCatch_47: -3255883204268890106
+      FishTackleCatch_48: 4700176797332183610
+      FishTackleCatch_49: 5486498999790818918
+      FishTackleCatch_5: 598691684683951889
+      FishTackleCatch_50: 9193876008574262622
+      FishTackleCatch_51: 217023331271601755
+      FishTackleCatch_52: 8748724501384147396
+      FishTackleCatch_53: -1033192909588259997
+      FishTackleCatch_54: 7971421228636147540
+      FishTackleCatch_55: -6601495991596128164
+      FishTackleCatch_56: 2631747537903424637
+      FishTackleCatch_57: -3521874354370867209
+      FishTackleCatch_58: -8059444614627187759
+      FishTackleCatch_59: 3289096532253263516
+      FishTackleCatch_6: -713902342188865930
+      FishTackleCatch_60: 3994039538389619107
+      FishTackleCatch_61: -1220294641829354083
+      FishTackleCatch_62: -4711235384958437741
+      FishTackleCatch_63: -4518673627200324220
+      FishTackleCatch_64: -8936128203834176750
+      FishTackleCatch_65: 5982211976622894631
+      FishTackleCatch_66: 1669596634283181800
+      FishTackleCatch_67: -2655326347612997585
+      FishTackleCatch_68: -301601845901070769
+      FishTackleCatch_69: -9180647866117943225
+      FishTackleCatch_7: 3954081482688639417
+      FishTackleCatch_70: -1289912137165295475
+      FishTackleCatch_71: -3675923349680220628
+      FishTackleCatch_72: 5994567818793691073
+      FishTackleCatch_73: 8637547645917799728
+      FishTackleCatch_8: -7042464476230365745
+      FishTackleCatch_9: 5993034003254439629
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

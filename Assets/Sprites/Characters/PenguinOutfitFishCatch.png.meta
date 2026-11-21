@@ -1,0 +1,2481 @@
+fileFormatVersion: 2
+guid: e1bf5a93bed56864fa06c7b6f04e008b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 432129990667496633
+    second: PenguinOutfitFishCatch_0
+  - first:
+      213: 1833204901585872103
+    second: PenguinOutfitFishCatch_1
+  - first:
+      213: 4360216239838320530
+    second: PenguinOutfitFishCatch_2
+  - first:
+      213: -6276800503793251161
+    second: PenguinOutfitFishCatch_3
+  - first:
+      213: 2780135823766601784
+    second: PenguinOutfitFishCatch_4
+  - first:
+      213: 2881050253125313931
+    second: PenguinOutfitFishCatch_5
+  - first:
+      213: -5234987421392651183
+    second: PenguinOutfitFishCatch_6
+  - first:
+      213: -5299851726299276289
+    second: PenguinOutfitFishCatch_7
+  - first:
+      213: -7379776024244138856
+    second: PenguinOutfitFishCatch_8
+  - first:
+      213: -4484343555786611945
+    second: PenguinOutfitFishCatch_9
+  - first:
+      213: -8545131898560113498
+    second: PenguinOutfitFishCatch_10
+  - first:
+      213: 5514332976155499990
+    second: PenguinOutfitFishCatch_11
+  - first:
+      213: 6755678750961978858
+    second: PenguinOutfitFishCatch_12
+  - first:
+      213: 8507781337350642537
+    second: PenguinOutfitFishCatch_13
+  - first:
+      213: -3027559621491293822
+    second: PenguinOutfitFishCatch_14
+  - first:
+      213: 8666751986487597917
+    second: PenguinOutfitFishCatch_15
+  - first:
+      213: -4452216220117484496
+    second: PenguinOutfitFishCatch_16
+  - first:
+      213: 293624684194781664
+    second: PenguinOutfitFishCatch_17
+  - first:
+      213: -9127000783014013538
+    second: PenguinOutfitFishCatch_18
+  - first:
+      213: 7202644572787994730
+    second: PenguinOutfitFishCatch_19
+  - first:
+      213: 5963682173735271821
+    second: PenguinOutfitFishCatch_20
+  - first:
+      213: -2533503827260033150
+    second: PenguinOutfitFishCatch_21
+  - first:
+      213: 2722157200279434144
+    second: PenguinOutfitFishCatch_22
+  - first:
+      213: -26811932164889520
+    second: PenguinOutfitFishCatch_23
+  - first:
+      213: 359708825874196674
+    second: PenguinOutfitFishCatch_24
+  - first:
+      213: 1539088123841854671
+    second: PenguinOutfitFishCatch_25
+  - first:
+      213: -6755240829082328745
+    second: PenguinOutfitFishCatch_26
+  - first:
+      213: 6510637822025527755
+    second: PenguinOutfitFishCatch_27
+  - first:
+      213: -9216622089594218856
+    second: PenguinOutfitFishCatch_28
+  - first:
+      213: 298665164418095379
+    second: PenguinOutfitFishCatch_29
+  - first:
+      213: -6789247309688555800
+    second: PenguinOutfitFishCatch_30
+  - first:
+      213: 1068893492487029424
+    second: PenguinOutfitFishCatch_31
+  - first:
+      213: 1033285957388763515
+    second: PenguinOutfitFishCatch_32
+  - first:
+      213: 5693349095250276568
+    second: PenguinOutfitFishCatch_33
+  - first:
+      213: -3115750368816619984
+    second: PenguinOutfitFishCatch_34
+  - first:
+      213: -83261083350214081
+    second: PenguinOutfitFishCatch_35
+  - first:
+      213: 6736252602777568236
+    second: PenguinOutfitFishCatch_36
+  - first:
+      213: -7274295028108526746
+    second: PenguinOutfitFishCatch_37
+  - first:
+      213: 7858263208105569195
+    second: PenguinOutfitFishCatch_38
+  - first:
+      213: -5493389004326011771
+    second: PenguinOutfitFishCatch_39
+  - first:
+      213: 7527907956693106662
+    second: PenguinOutfitFishCatch_40
+  - first:
+      213: -7767115798074676566
+    second: PenguinOutfitFishCatch_41
+  - first:
+      213: -6356014285098711550
+    second: PenguinOutfitFishCatch_42
+  - first:
+      213: -8604626450803592019
+    second: PenguinOutfitFishCatch_43
+  - first:
+      213: -2237616649531496865
+    second: PenguinOutfitFishCatch_44
+  - first:
+      213: -1568167533544589900
+    second: PenguinOutfitFishCatch_45
+  - first:
+      213: -8313837080987584152
+    second: PenguinOutfitFishCatch_46
+  - first:
+      213: 1745037381322524392
+    second: PenguinOutfitFishCatch_47
+  - first:
+      213: 5030645537785277621
+    second: PenguinOutfitFishCatch_48
+  - first:
+      213: 2423411375136260538
+    second: PenguinOutfitFishCatch_49
+  - first:
+      213: 3632689692921281313
+    second: PenguinOutfitFishCatch_50
+  - first:
+      213: -2800768177432787520
+    second: PenguinOutfitFishCatch_51
+  - first:
+      213: 7251898178423341601
+    second: PenguinOutfitFishCatch_52
+  - first:
+      213: -6086137417199498597
+    second: PenguinOutfitFishCatch_53
+  - first:
+      213: -2950336835212497196
+    second: PenguinOutfitFishCatch_54
+  - first:
+      213: -8994331460299693011
+    second: PenguinOutfitFishCatch_55
+  - first:
+      213: 2886536146662059529
+    second: PenguinOutfitFishCatch_56
+  - first:
+      213: -8726621260405267415
+    second: PenguinOutfitFishCatch_57
+  - first:
+      213: -3686650825141978297
+    second: PenguinOutfitFishCatch_58
+  - first:
+      213: -5765734649679238279
+    second: PenguinOutfitFishCatch_59
+  - first:
+      213: 7927185988647704859
+    second: PenguinOutfitFishCatch_60
+  - first:
+      213: 4384911248351013144
+    second: PenguinOutfitFishCatch_61
+  - first:
+      213: 1098711095426435095
+    second: PenguinOutfitFishCatch_62
+  - first:
+      213: -4955359341864519876
+    second: PenguinOutfitFishCatch_63
+  - first:
+      213: 8570957959367780181
+    second: PenguinOutfitFishCatch_64
+  - first:
+      213: -1646639903596083420
+    second: PenguinOutfitFishCatch_65
+  - first:
+      213: 1638574987653896181
+    second: PenguinOutfitFishCatch_66
+  - first:
+      213: -4291800082466279281
+    second: PenguinOutfitFishCatch_67
+  - first:
+      213: -7615310832657779146
+    second: PenguinOutfitFishCatch_68
+  - first:
+      213: -6343223991618762654
+    second: PenguinOutfitFishCatch_69
+  - first:
+      213: -3393029489304965657
+    second: PenguinOutfitFishCatch_70
+  - first:
+      213: 5683355291748160885
+    second: PenguinOutfitFishCatch_71
+  - first:
+      213: 7732462706337150787
+    second: PenguinOutfitFishCatch_72
+  - first:
+      213: -499086007959751387
+    second: PenguinOutfitFishCatch_73
+  - first:
+      213: -6129222680967207165
+    second: PenguinOutfitFishCatch_74
+  - first:
+      213: 6816979616303750095
+    second: PenguinOutfitFishCatch_75
+  - first:
+      213: -4862970083387428035
+    second: PenguinOutfitFishCatch_76
+  - first:
+      213: -5354741577957269787
+    second: PenguinOutfitFishCatch_77
+  - first:
+      213: 4475613076978175202
+    second: PenguinOutfitFishCatch_78
+  - first:
+      213: -1341577738912646551
+    second: PenguinOutfitFishCatch_79
+  - first:
+      213: 4882021341463984619
+    second: PenguinOutfitFishCatch_80
+  - first:
+      213: -5048513477908396572
+    second: PenguinOutfitFishCatch_81
+  - first:
+      213: -3511236359240965064
+    second: PenguinOutfitFishCatch_82
+  - first:
+      213: -2158809755724945134
+    second: PenguinOutfitFishCatch_83
+  - first:
+      213: -8162946049483604829
+    second: PenguinOutfitFishCatch_84
+  - first:
+      213: -4906149610364216173
+    second: PenguinOutfitFishCatch_85
+  - first:
+      213: -6443729832749597733
+    second: PenguinOutfitFishCatch_86
+  - first:
+      213: -3903322863467316424
+    second: PenguinOutfitFishCatch_87
+  - first:
+      213: 8301997838354454633
+    second: PenguinOutfitFishCatch_88
+  - first:
+      213: -8945801425160362129
+    second: PenguinOutfitFishCatch_89
+  - first:
+      213: 8096787207063694675
+    second: PenguinOutfitFishCatch_90
+  - first:
+      213: -5493402024550021585
+    second: PenguinOutfitFishCatch_91
+  - first:
+      213: -7448439614520055608
+    second: PenguinOutfitFishCatch_92
+  - first:
+      213: -2577797450739520915
+    second: PenguinOutfitFishCatch_93
+  - first:
+      213: 1929047654497625658
+    second: PenguinOutfitFishCatch_94
+  - first:
+      213: -6946483807848360702
+    second: PenguinOutfitFishCatch_95
+  - first:
+      213: 133779055654935869
+    second: PenguinOutfitFishCatch_96
+  - first:
+      213: -2099631551157580374
+    second: PenguinOutfitFishCatch_97
+  - first:
+      213: -728463373798241964
+    second: PenguinOutfitFishCatch_98
+  - first:
+      213: 4598735057527770246
+    second: PenguinOutfitFishCatch_99
+  - first:
+      213: -4294689207581017512
+    second: PenguinOutfitFishCatch_100
+  - first:
+      213: -3370660524910297175
+    second: PenguinOutfitFishCatch_101
+  - first:
+      213: 5325762802344871334
+    second: PenguinOutfitFishCatch_102
+  - first:
+      213: 1175130284256645374
+    second: PenguinOutfitFishCatch_103
+  - first:
+      213: -7253067981978224089
+    second: PenguinOutfitFishCatch_104
+  - first:
+      213: -4079923230081238109
+    second: PenguinOutfitFishCatch_105
+  - first:
+      213: 2419487704049901940
+    second: PenguinOutfitFishCatch_106
+  - first:
+      213: 3986717624190523727
+    second: PenguinOutfitFishCatch_107
+  - first:
+      213: -4829922249417493622
+    second: PenguinOutfitFishCatch_108
+  - first:
+      213: 5565744601920999933
+    second: PenguinOutfitFishCatch_109
+  - first:
+      213: 6318788896614508374
+    second: PenguinOutfitFishCatch_110
+  - first:
+      213: -8692677916671630988
+    second: PenguinOutfitFishCatch_111
+  - first:
+      213: -1627788936820769555
+    second: PenguinOutfitFishCatch_112
+  - first:
+      213: 8258172195664200040
+    second: PenguinOutfitFishCatch_113
+  - first:
+      213: -1774436003292868682
+    second: PenguinOutfitFishCatch_114
+  - first:
+      213: 8636340899091827426
+    second: PenguinOutfitFishCatch_115
+  - first:
+      213: -5448940819521102148
+    second: PenguinOutfitFishCatch_116
+  - first:
+      213: 5666508647220623396
+    second: PenguinOutfitFishCatch_117
+  - first:
+      213: -1620828492102619592
+    second: PenguinOutfitFishCatch_118
+  - first:
+      213: -274486415706417816
+    second: PenguinOutfitFishCatch_119
+  - first:
+      213: -7899682756885943136
+    second: PenguinOutfitFishCatch_120
+  - first:
+      213: -7179945410417282528
+    second: PenguinOutfitFishCatch_121
+  - first:
+      213: 5656872757121555347
+    second: PenguinOutfitFishCatch_122
+  - first:
+      213: 5169442439767761355
+    second: PenguinOutfitFishCatch_123
+  - first:
+      213: 7859689985514502384
+    second: PenguinOutfitFishCatch_124
+  - first:
+      213: 3169138605843293037
+    second: PenguinOutfitFishCatch_125
+  - first:
+      213: 916429421358930089
+    second: PenguinOutfitFishCatch_126
+  - first:
+      213: 5212527372819469110
+    second: PenguinOutfitFishCatch_127
+  - first:
+      213: -886395962354986860
+    second: PenguinOutfitFishCatch_128
+  - first:
+      213: -3636717756915175550
+    second: PenguinOutfitFishCatch_129
+  - first:
+      213: -3107867571654604236
+    second: PenguinOutfitFishCatch_130
+  - first:
+      213: 3413881436331497411
+    second: PenguinOutfitFishCatch_131
+  - first:
+      213: -7944696254820071225
+    second: PenguinOutfitFishCatch_132
+  - first:
+      213: 9215681555652020200
+    second: PenguinOutfitFishCatch_133
+  - first:
+      213: 5100589082936856099
+    second: PenguinOutfitFishCatch_134
+  - first:
+      213: 7046934611976272294
+    second: PenguinOutfitFishCatch_135
+  - first:
+      213: -475520281357449679
+    second: PenguinOutfitFishCatch_136
+  - first:
+      213: -5997389199643853188
+    second: PenguinOutfitFishCatch_137
+  - first:
+      213: 818134268555368694
+    second: PenguinOutfitFishCatch_138
+  - first:
+      213: -8694560024614330308
+    second: PenguinOutfitFishCatch_139
+  - first:
+      213: -5167846097852657941
+    second: PenguinOutfitFishCatch_140
+  - first:
+      213: -1055257091565546960
+    second: PenguinOutfitFishCatch_141
+  - first:
+      213: -8812807677444163642
+    second: PenguinOutfitFishCatch_142
+  - first:
+      213: 3380738749790391100
+    second: PenguinOutfitFishCatch_143
+  - first:
+      213: -511984423026395131
+    second: PenguinOutfitFishCatch_144
+  - first:
+      213: -8467965424440577419
+    second: PenguinOutfitFishCatch_145
+  - first:
+      213: -9014432798989412018
+    second: PenguinOutfitFishCatch_146
+  - first:
+      213: 2063305578306603122
+    second: PenguinOutfitFishCatch_147
+  - first:
+      213: 3931094799956728793
+    second: PenguinOutfitFishCatch_148
+  - first:
+      213: -3908964558656537608
+    second: PenguinOutfitFishCatch_149
+  - first:
+      213: -1954693407558173861
+    second: PenguinOutfitFishCatch_150
+  - first:
+      213: 5564976261570834413
+    second: PenguinOutfitFishCatch_151
+  - first:
+      213: -1860664770072470765
+    second: PenguinOutfitFishCatch_152
+  - first:
+      213: 3635036220775527301
+    second: PenguinOutfitFishCatch_153
+  - first:
+      213: -4834187033974822942
+    second: PenguinOutfitFishCatch_154
+  - first:
+      213: -8132823889918190815
+    second: PenguinOutfitFishCatch_155
+  - first:
+      213: -2232852255628002655
+    second: PenguinOutfitFishCatch_156
+  - first:
+      213: -1581275373681567338
+    second: PenguinOutfitFishCatch_157
+  - first:
+      213: 619704400092340486
+    second: PenguinOutfitFishCatch_158
+  - first:
+      213: -4248739623803094060
+    second: PenguinOutfitFishCatch_159
+  - first:
+      213: 3168480082022377993
+    second: PenguinOutfitFishCatch_160
+  - first:
+      213: -6363008458499727109
+    second: PenguinOutfitFishCatch_161
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 312.5
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PenguinOutfitFishCatch_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1728
+        width: 187
+        height: 216
+      alignment: 9
+      pivot: {x: 0.486631, y: -0.185185}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 857cf540dc0a3ff4eb34786961e958a5
+      internalID: 432129990667496633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishCatch_1
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 1728
+        width: 187
+        height: 216
+      alignment: 9
+      pivot: {x: 0.486631, y: -0.185185}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc56058623348ed4cb6c864080400e51
+      internalID: 1833204901585872103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishCatch_2
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 1728
+        width: 187
+        height: 216
+      alignment: 9
+      pivot: {x: 0.486631, y: -0.185185}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 133c742b9ececa4439ff25a31a396c24
+      internalID: 4360216239838320530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishCatch_3
+      rect:
+        serializedVersion: 2
+        x: 561
+        y: 1728
+        width: 187
+        height: 216
+      alignment: 9
+      pivot: {x: 0.486631, y: -0.185185}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb125b3663f3a444483f6a696de2e3b1
+      internalID: -6276800503793251161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishCatch_4
+      rect:
+        serializedVersion: 2
+        x: 748
+        y: 1728
+        width: 187
+        height: 216
+      alignment: 9
+      pivot: {x: 0.486631, y: -0.185185}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60e603b7888888a4fa1ab97c1f6c5aff
+      internalID: 2780135823766601784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishCatch_5
+      rect:
+        serializedVersion: 2
+        x: 935
+        y: 1728
+        width: 187
+        height: 216
+      alignment: 9
+      pivot: {x: 0.486631, y: -0.185185}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab3ebfeb4b36e294daae1c872e6473c3
+      internalID: 2881050253125313931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishCatch_6
+      rect:
+        serializedVersion: 2
+        x: 1122
+        y: 1728
+        width: 187
+        height: 216
+      alignment: 9
+      pivot: {x: 0.486631, y: -0.185185}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 628e300e218cb72488373e8ed060699e
+      internalID: -5234987421392651183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishCatch_7
+      rect:
+        serializedVersion: 2
+        x: 1309
+        y: 1728
+        width: 187
+        height: 216
+      alignment: 9
+      pivot: {x: 0.486631, y: -0.185185}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7859780c61a53944e9889ff1fdc54e4a
+      internalID: -5299851726299276289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishCatch_8
+      rect:
+        serializedVersion: 2
+        x: 1496
+        y: 1728
+        width: 187
+        height: 216
+      alignment: 9
+      pivot: {x: 0.486631, y: -0.185185}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 008468caa26c376498ac2753c70f6211
+      internalID: -7379776024244138856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishCatch_9
+      rect:
+        serializedVersion: 2
+        x: 1683
+        y: 1728
+        width: 187
+        height: 216
+      alignment: 9
+      pivot: {x: 0.486631, y: -0.185185}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2767cec65d0dc4d4c9b2fe39c4291c99
+      internalID: -4484343555786611945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishCatch_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1512
+        width: 187
+        height: 216
+      alignment: 9
+      pivot: {x: 0.486631, y: -0.185185}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 578a62385697e54409ef66529b57b294
+      internalID: -8545131898560113498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishCatch_11
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 1512
+        width: 187
+        height: 216
+      alignment: 9
+      pivot: {x: 0.486631, y: -0.185185}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07201046d2ad7a342a27a75865436630
+      internalID: 5514332976155499990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishCatch_12
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 1512
+        width: 187
+        height: 216
+      alignment: 9
+      pivot: {x: 0.486631, y: -0.185185}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6d662d946dfd564db09ca7b335c8323
+      internalID: 6755678750961978858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishCatch_13
+      rect:
+        serializedVersion: 2
+        x: 561
+        y: 1512
+        width: 187
+        height: 216
+      alignment: 9
+      pivot: {x: 0.486631, y: -0.185185}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f530613ef5ac183449a0799881d4b029
+      internalID: 8507781337350642537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishCatch_14
+      rect:
+        serializedVersion: 2
+        x: 748
+        y: 1512
+        width: 187
+        height: 216
+      alignment: 9
+      pivot: {x: 0.486631, y: -0.185185}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37b1f0f57a19c6549b04c184dbd1d9a0
+      internalID: -3027559621491293822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishCatch_15
+      rect:
+        serializedVersion: 2
+        x: 935
+        y: 1512
+        width: 187
+        height: 216
+      alignment: 9
+      pivot: {x: 0.486631, y: -0.185185}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebcccec252a826645955ebfeb3a768b1
+      internalID: 8666751986487597917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishCatch_16
+      rect:
+        serializedVersion: 2
+        x: 1122
+        y: 1512
+        width: 187
+        height: 216
+      alignment: 9
+      pivot: {x: 0.486631, y: -0.185185}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31934dddd7c9e9c4fabdf3ceb92e2b7b
+      internalID: -4452216220117484496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishCatch_17
+      rect:
+        serializedVersion: 2
+        x: 1309
+        y: 1512
+        width: 187
+        height: 216
+      alignment: 9
+      pivot: {x: 0.486631, y: -0.185185}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8313ea06f6332e44b59ed6659000faa
+      internalID: 293624684194781664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishCatch_18
+      rect:
+        serializedVersion: 2
+        x: 1496
+        y: 1512
+        width: 187
+        height: 216
+      alignment: 9
+      pivot: {x: 0.486631, y: -0.185185}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a12a0e22c8ed57f4188a7e235ead7b21
+      internalID: -9127000783014013538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishCatch_19
+      rect:
+        serializedVersion: 2
+        x: 1683
+        y: 1512
+        width: 187
+        height: 216
+      alignment: 9
+      pivot: {x: 0.486631, y: -0.185185}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0bd268deffb6f548b07f78ebe549938
+      internalID: 7202644572787994730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishCatch_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1296
+        width: 187
+        height: 216
+      alignment: 9
+      pivot: {x: 0.486631, y: -0.185185}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b7e4d85ade1c7d4182f54312a21e710
+      internalID: 5963682173735271821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishCatch_21
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 1296
+        width: 187
+        height: 216
+      alignment: 9
+      pivot: {x: 0.486631, y: -0.185185}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b61e658da7480548a89c7c7b06b7c71
+      internalID: -2533503827260033150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishCatch_22
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 1296
+        width: 187
+        height: 216
+      alignment: 9
+      pivot: {x: 0.486631, y: -0.185185}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10dd54188f021c247aa9fe1bb2c2e117
+      internalID: 2722157200279434144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishCatch_23
+      rect:
+        serializedVersion: 2
+        x: 561
+        y: 1296
+        width: 187
+        height: 216
+      alignment: 9
+      pivot: {x: 0.486631, y: -0.185185}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5d7aee121e48ca428d0eaefc2d56bfb
+      internalID: -26811932164889520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishCatch_24
+      rect:
+        serializedVersion: 2
+        x: 748
+        y: 1296
+        width: 187
+        height: 216
+      alignment: 9
+      pivot: {x: 0.486631, y: -0.185185}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ec6612dd50c2264da16ecfb61ebb7a5
+      internalID: 359708825874196674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishCatch_25
+      rect:
+        serializedVersion: 2
+        x: 935
+        y: 1296
+        width: 187
+        height: 216
+      alignment: 9
+      pivot: {x: 0.486631, y: -0.185185}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab38ec9a12c89e94396fd8038b4fc9d8
+      internalID: 1539088123841854671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishCatch_26
+      rect:
+        serializedVersion: 2
+        x: 1122
+        y: 1296
+        width: 187
+        height: 216
+      alignment: 9
+      pivot: {x: 0.486631, y: -0.185185}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88612c9d210e70c49be804ec5964f7d0
+      internalID: -6755240829082328745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishCatch_27
+      rect:
+        serializedVersion: 2
+        x: 1309
+        y: 1296
+        width: 187
+        height: 216
+      alignment: 9
+      pivot: {x: 0.486631, y: -0.185185}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4853148c31b11bd40a342034c5e3de3b
+      internalID: 6510637822025527755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishCatch_28
+      rect:
+        serializedVersion: 2
+        x: 1496
+        y: 1296
+        width: 187
+        height: 216
+      alignment: 9
+      pivot: {x: 0.486631, y: -0.185185}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16d9fe193d2cc9249974223a5c8197f7
+      internalID: -9216622089594218856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishCatch_29
+      rect:
+        serializedVersion: 2
+        x: 1683
+        y: 1296
+        width: 187
+        height: 216
+      alignment: 9
+      pivot: {x: 0.486631, y: -0.185185}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac63b2721e5a2a2479f3c33b5aa1ddf4
+      internalID: 298665164418095379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishCatch_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1080
+        width: 187
+        height: 216
+      alignment: 9
+      pivot: {x: 0.486631, y: -0.185185}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b0710a7583bfe24b96a7c1db4acbccf
+      internalID: -6789247309688555800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishCatch_31
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 1080
+        width: 187
+        height: 216
+      alignment: 9
+      pivot: {x: 0.486631, y: -0.185185}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6a155700c97c8046a739f935f986458
+      internalID: 1068893492487029424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishCatch_32
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 1080
+        width: 187
+        height: 216
+      alignment: 9
+      pivot: {x: 0.486631, y: -0.185185}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28fc7637e55a0b643ba4d05d534927ea
+      internalID: 1033285957388763515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishCatch_33
+      rect:
+        serializedVersion: 2
+        x: 561
+        y: 1080
+        width: 187
+        height: 216
+      alignment: 9
+      pivot: {x: 0.486631, y: -0.185185}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc2e701bf58eb8b4ea1ac21c7b3db00a
+      internalID: 5693349095250276568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishCatch_34
+      rect:
+        serializedVersion: 2
+        x: 748
+        y: 1080
+        width: 187
+        height: 216
+      alignment: 9
+      pivot: {x: 0.486631, y: -0.185185}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 525a8d334c54fe94292c7c0a4b7292e5
+      internalID: -3115750368816619984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishCatch_35
+      rect:
+        serializedVersion: 2
+        x: 935
+        y: 1080
+        width: 187
+        height: 216
+      alignment: 9
+      pivot: {x: 0.486631, y: -0.185185}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e519f691097141e4aad224f94de7c229
+      internalID: -83261083350214081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishCatch_36
+      rect:
+        serializedVersion: 2
+        x: 1122
+        y: 1080
+        width: 187
+        height: 216
+      alignment: 9
+      pivot: {x: 0.486631, y: -0.185185}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c075c913a31640844b2302b179e63986
+      internalID: 6736252602777568236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishCatch_37
+      rect:
+        serializedVersion: 2
+        x: 1309
+        y: 1080
+        width: 187
+        height: 216
+      alignment: 9
+      pivot: {x: 0.486631, y: -0.185185}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f78be3ccf9c61914bb533e1dc9640799
+      internalID: -7274295028108526746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishCatch_38
+      rect:
+        serializedVersion: 2
+        x: 1496
+        y: 1080
+        width: 187
+        height: 216
+      alignment: 9
+      pivot: {x: 0.486631, y: -0.185185}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 697f793568c928a4e90d9c42770055e8
+      internalID: 7858263208105569195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishCatch_39
+      rect:
+        serializedVersion: 2
+        x: 1683
+        y: 1080
+        width: 187
+        height: 216
+      alignment: 9
+      pivot: {x: 0.486631, y: -0.185185}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74252212e08b7bd458128b1d146434c3
+      internalID: -5493389004326011771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishCatch_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 864
+        width: 187
+        height: 216
+      alignment: 9
+      pivot: {x: 0.486631, y: -0.185185}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a89a975814b2a0d4191d889158b6ea3e
+      internalID: 7527907956693106662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishCatch_41
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 864
+        width: 187
+        height: 216
+      alignment: 9
+      pivot: {x: 0.486631, y: -0.185185}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0d08e4823e6e9f4c8884a5a0042386c
+      internalID: -7767115798074676566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishCatch_42
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 864
+        width: 187
+        height: 216
+      alignment: 9
+      pivot: {x: 0.486631, y: -0.185185}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b68a55ab5543b7e4b91daa44d76cd559
+      internalID: -6356014285098711550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishCatch_43
+      rect:
+        serializedVersion: 2
+        x: 561
+        y: 864
+        width: 187
+        height: 216
+      alignment: 9
+      pivot: {x: 0.486631, y: -0.185185}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93a3304f604789842907ae98c0f092b4
+      internalID: -8604626450803592019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishCatch_44
+      rect:
+        serializedVersion: 2
+        x: 748
+        y: 864
+        width: 187
+        height: 216
+      alignment: 9
+      pivot: {x: 0.486631, y: -0.185185}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 853f8b2374f64554ea4a92894efcd275
+      internalID: -2237616649531496865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishCatch_45
+      rect:
+        serializedVersion: 2
+        x: 935
+        y: 864
+        width: 187
+        height: 216
+      alignment: 9
+      pivot: {x: 0.486631, y: -0.185185}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b72bf6ca3c05b264589c5e7b011abdb7
+      internalID: -1568167533544589900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishCatch_46
+      rect:
+        serializedVersion: 2
+        x: 1122
+        y: 864
+        width: 187
+        height: 216
+      alignment: 9
+      pivot: {x: 0.486631, y: -0.185185}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f9c8d04136930a43bb88a84b79e73ac
+      internalID: -8313837080987584152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishCatch_47
+      rect:
+        serializedVersion: 2
+        x: 1309
+        y: 864
+        width: 187
+        height: 216
+      alignment: 9
+      pivot: {x: 0.486631, y: -0.185185}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3974379224f4beb45bd56174aec0a7a4
+      internalID: 1745037381322524392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishCatch_48
+      rect:
+        serializedVersion: 2
+        x: 1496
+        y: 864
+        width: 187
+        height: 216
+      alignment: 9
+      pivot: {x: 0.486631, y: -0.185185}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8d7f6e0d68eafc419b727c405ffc421
+      internalID: 5030645537785277621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishCatch_49
+      rect:
+        serializedVersion: 2
+        x: 1683
+        y: 864
+        width: 187
+        height: 216
+      alignment: 9
+      pivot: {x: 0.486631, y: -0.185185}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c7b0137594b33a4aa62b88f730ae641
+      internalID: 2423411375136260538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishCatch_50
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 648
+        width: 187
+        height: 216
+      alignment: 9
+      pivot: {x: 0.486631, y: -0.185185}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d00219b3b1d3abf449dc01212947eefd
+      internalID: 3632689692921281313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishCatch_51
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 648
+        width: 187
+        height: 216
+      alignment: 9
+      pivot: {x: 0.486631, y: -0.185185}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14d9f66f468a3da46bc0e80cc8e62b49
+      internalID: -2800768177432787520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishCatch_52
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 648
+        width: 187
+        height: 216
+      alignment: 9
+      pivot: {x: 0.486631, y: -0.185185}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14d69f43a15b58840b13958c22d101b1
+      internalID: 7251898178423341601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishCatch_53
+      rect:
+        serializedVersion: 2
+        x: 561
+        y: 648
+        width: 187
+        height: 216
+      alignment: 9
+      pivot: {x: 0.486631, y: -0.185185}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf2b8a8776fdb774382b37ec2ab67766
+      internalID: -6086137417199498597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishCatch_54
+      rect:
+        serializedVersion: 2
+        x: 748
+        y: 648
+        width: 187
+        height: 216
+      alignment: 9
+      pivot: {x: 0.486631, y: -0.185185}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2824609174ef4dc439a26ee8ff811ae9
+      internalID: -2950336835212497196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishCatch_55
+      rect:
+        serializedVersion: 2
+        x: 935
+        y: 648
+        width: 187
+        height: 216
+      alignment: 9
+      pivot: {x: 0.486631, y: -0.185185}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 086d9474cf1140a4086bd1938773eb90
+      internalID: -8994331460299693011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishCatch_56
+      rect:
+        serializedVersion: 2
+        x: 1122
+        y: 648
+        width: 187
+        height: 216
+      alignment: 9
+      pivot: {x: 0.486631, y: -0.185185}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf179c95240173d4b8b042f3fbc8c241
+      internalID: 2886536146662059529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishCatch_57
+      rect:
+        serializedVersion: 2
+        x: 1309
+        y: 648
+        width: 187
+        height: 216
+      alignment: 9
+      pivot: {x: 0.486631, y: -0.185185}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63546fa34a6c5ff45863ffefa40af059
+      internalID: -8726621260405267415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishCatch_58
+      rect:
+        serializedVersion: 2
+        x: 1496
+        y: 648
+        width: 187
+        height: 216
+      alignment: 9
+      pivot: {x: 0.486631, y: -0.185185}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e06c563a61502734b8ad6db1632f812b
+      internalID: -3686650825141978297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishCatch_59
+      rect:
+        serializedVersion: 2
+        x: 1683
+        y: 648
+        width: 187
+        height: 216
+      alignment: 9
+      pivot: {x: 0.486631, y: -0.185185}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7e90120b0e6c714c9b8243f6d3c3534
+      internalID: -5765734649679238279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishCatch_60
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 432
+        width: 187
+        height: 216
+      alignment: 9
+      pivot: {x: 0.486631, y: -0.185185}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b67f642e82ea704082b76a74d7cee2e
+      internalID: 7927185988647704859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishCatch_61
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 432
+        width: 187
+        height: 216
+      alignment: 9
+      pivot: {x: 0.486631, y: -0.185185}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1849a4ac2f903347b29906fddf02bf9
+      internalID: 4384911248351013144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishCatch_62
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 432
+        width: 187
+        height: 216
+      alignment: 9
+      pivot: {x: 0.486631, y: -0.185185}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fb9dc87948403040b552deded8142ec
+      internalID: 1098711095426435095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishCatch_63
+      rect:
+        serializedVersion: 2
+        x: 561
+        y: 432
+        width: 187
+        height: 216
+      alignment: 9
+      pivot: {x: 0.486631, y: -0.185185}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbe0d2a11038dab4aaacb4ad7bbc4476
+      internalID: -4955359341864519876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishCatch_64
+      rect:
+        serializedVersion: 2
+        x: 748
+        y: 432
+        width: 187
+        height: 216
+      alignment: 9
+      pivot: {x: 0.486631, y: -0.185185}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd0179f1a4f9e93469a4946a74036483
+      internalID: 8570957959367780181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishCatch_65
+      rect:
+        serializedVersion: 2
+        x: 935
+        y: 432
+        width: 187
+        height: 216
+      alignment: 9
+      pivot: {x: 0.486631, y: -0.185185}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 492707b5f1204164f8bae28aaca20d7d
+      internalID: -1646639903596083420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishCatch_66
+      rect:
+        serializedVersion: 2
+        x: 1122
+        y: 432
+        width: 187
+        height: 216
+      alignment: 9
+      pivot: {x: 0.486631, y: -0.185185}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6ada13ed46257649baf5432c96420d8
+      internalID: 1638574987653896181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishCatch_67
+      rect:
+        serializedVersion: 2
+        x: 1309
+        y: 432
+        width: 187
+        height: 216
+      alignment: 9
+      pivot: {x: 0.486631, y: -0.185185}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59310bd6332e0914ba3426d1378d310a
+      internalID: -4291800082466279281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishCatch_68
+      rect:
+        serializedVersion: 2
+        x: 1496
+        y: 432
+        width: 187
+        height: 216
+      alignment: 9
+      pivot: {x: 0.486631, y: -0.185185}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8291b1477b2f42448edcf2ab327b1f9
+      internalID: -7615310832657779146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishCatch_69
+      rect:
+        serializedVersion: 2
+        x: 1683
+        y: 432
+        width: 187
+        height: 216
+      alignment: 9
+      pivot: {x: 0.486631, y: -0.185185}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ddb0ac0b82572a49954aaca024e6968
+      internalID: -6343223991618762654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishCatch_70
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 216
+        width: 187
+        height: 216
+      alignment: 9
+      pivot: {x: 0.486631, y: -0.185185}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e83a0553902ff8468df4fa53ff68fc8
+      internalID: -3393029489304965657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishCatch_71
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 216
+        width: 187
+        height: 216
+      alignment: 9
+      pivot: {x: 0.486631, y: -0.185185}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06edac5707f17b845ad4d917121133a7
+      internalID: 5683355291748160885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishCatch_72
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 216
+        width: 187
+        height: 216
+      alignment: 9
+      pivot: {x: 0.486631, y: -0.185185}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f552e216a8df2c24992aa4775542e13d
+      internalID: 7732462706337150787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishCatch_73
+      rect:
+        serializedVersion: 2
+        x: 561
+        y: 216
+        width: 187
+        height: 216
+      alignment: 9
+      pivot: {x: 0.486631, y: -0.185185}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d798f10200c2154dbda9d0ecea5b800
+      internalID: -499086007959751387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishCatch_74
+      rect:
+        serializedVersion: 2
+        x: 748
+        y: 216
+        width: 187
+        height: 216
+      alignment: 9
+      pivot: {x: 0.486631, y: -0.185185}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33a69ee25f75ee64a86fbbb5f3715350
+      internalID: -6129222680967207165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishCatch_75
+      rect:
+        serializedVersion: 2
+        x: 935
+        y: 216
+        width: 187
+        height: 216
+      alignment: 9
+      pivot: {x: 0.486631, y: -0.185185}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c49493ba161c8cd409abc8b9f170e13b
+      internalID: 6816979616303750095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishCatch_76
+      rect:
+        serializedVersion: 2
+        x: 1122
+        y: 216
+        width: 187
+        height: 216
+      alignment: 9
+      pivot: {x: 0.486631, y: -0.185185}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9687d3ee70f85774595fbd83d4c324e9
+      internalID: -4862970083387428035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishCatch_77
+      rect:
+        serializedVersion: 2
+        x: 1309
+        y: 216
+        width: 187
+        height: 216
+      alignment: 9
+      pivot: {x: 0.486631, y: -0.185185}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d648523d6832924283be97e1fdbf759
+      internalID: -5354741577957269787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishCatch_78
+      rect:
+        serializedVersion: 2
+        x: 1496
+        y: 216
+        width: 187
+        height: 216
+      alignment: 9
+      pivot: {x: 0.486631, y: -0.185185}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a29e274b51d668488545f77d58b4e11
+      internalID: 4475613076978175202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishCatch_79
+      rect:
+        serializedVersion: 2
+        x: 1683
+        y: 216
+        width: 187
+        height: 216
+      alignment: 9
+      pivot: {x: 0.486631, y: -0.185185}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57e2b77824d64794a9c0c36ae0f48766
+      internalID: -1341577738912646551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PenguinOutfitFishCatch_80
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 187
+        height: 216
+      alignment: 9
+      pivot: {x: 0.486631, y: -0.185185}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1c78d7149ab7044f8f42a72c9c2136a
+      internalID: 4882021341463984619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 4d8f992519b1d4543b4daee413dcf035
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      PenguinOutfitFishCatch_0: 432129990667496633
+      PenguinOutfitFishCatch_1: 1833204901585872103
+      PenguinOutfitFishCatch_10: -8545131898560113498
+      PenguinOutfitFishCatch_11: 5514332976155499990
+      PenguinOutfitFishCatch_12: 6755678750961978858
+      PenguinOutfitFishCatch_13: 8507781337350642537
+      PenguinOutfitFishCatch_14: -3027559621491293822
+      PenguinOutfitFishCatch_15: 8666751986487597917
+      PenguinOutfitFishCatch_16: -4452216220117484496
+      PenguinOutfitFishCatch_17: 293624684194781664
+      PenguinOutfitFishCatch_18: -9127000783014013538
+      PenguinOutfitFishCatch_19: 7202644572787994730
+      PenguinOutfitFishCatch_2: 4360216239838320530
+      PenguinOutfitFishCatch_20: 5963682173735271821
+      PenguinOutfitFishCatch_21: -2533503827260033150
+      PenguinOutfitFishCatch_22: 2722157200279434144
+      PenguinOutfitFishCatch_23: -26811932164889520
+      PenguinOutfitFishCatch_24: 359708825874196674
+      PenguinOutfitFishCatch_25: 1539088123841854671
+      PenguinOutfitFishCatch_26: -6755240829082328745
+      PenguinOutfitFishCatch_27: 6510637822025527755
+      PenguinOutfitFishCatch_28: -9216622089594218856
+      PenguinOutfitFishCatch_29: 298665164418095379
+      PenguinOutfitFishCatch_3: -6276800503793251161
+      PenguinOutfitFishCatch_30: -6789247309688555800
+      PenguinOutfitFishCatch_31: 1068893492487029424
+      PenguinOutfitFishCatch_32: 1033285957388763515
+      PenguinOutfitFishCatch_33: 5693349095250276568
+      PenguinOutfitFishCatch_34: -3115750368816619984
+      PenguinOutfitFishCatch_35: -83261083350214081
+      PenguinOutfitFishCatch_36: 6736252602777568236
+      PenguinOutfitFishCatch_37: -7274295028108526746
+      PenguinOutfitFishCatch_38: 7858263208105569195
+      PenguinOutfitFishCatch_39: -5493389004326011771
+      PenguinOutfitFishCatch_4: 2780135823766601784
+      PenguinOutfitFishCatch_40: 7527907956693106662
+      PenguinOutfitFishCatch_41: -7767115798074676566
+      PenguinOutfitFishCatch_42: -6356014285098711550
+      PenguinOutfitFishCatch_43: -8604626450803592019
+      PenguinOutfitFishCatch_44: -2237616649531496865
+      PenguinOutfitFishCatch_45: -1568167533544589900
+      PenguinOutfitFishCatch_46: -8313837080987584152
+      PenguinOutfitFishCatch_47: 1745037381322524392
+      PenguinOutfitFishCatch_48: 5030645537785277621
+      PenguinOutfitFishCatch_49: 2423411375136260538
+      PenguinOutfitFishCatch_5: 2881050253125313931
+      PenguinOutfitFishCatch_50: 3632689692921281313
+      PenguinOutfitFishCatch_51: -2800768177432787520
+      PenguinOutfitFishCatch_52: 7251898178423341601
+      PenguinOutfitFishCatch_53: -6086137417199498597
+      PenguinOutfitFishCatch_54: -2950336835212497196
+      PenguinOutfitFishCatch_55: -8994331460299693011
+      PenguinOutfitFishCatch_56: 2886536146662059529
+      PenguinOutfitFishCatch_57: -8726621260405267415
+      PenguinOutfitFishCatch_58: -3686650825141978297
+      PenguinOutfitFishCatch_59: -5765734649679238279
+      PenguinOutfitFishCatch_6: -5234987421392651183
+      PenguinOutfitFishCatch_60: 7927185988647704859
+      PenguinOutfitFishCatch_61: 4384911248351013144
+      PenguinOutfitFishCatch_62: 1098711095426435095
+      PenguinOutfitFishCatch_63: -4955359341864519876
+      PenguinOutfitFishCatch_64: 8570957959367780181
+      PenguinOutfitFishCatch_65: -1646639903596083420
+      PenguinOutfitFishCatch_66: 1638574987653896181
+      PenguinOutfitFishCatch_67: -4291800082466279281
+      PenguinOutfitFishCatch_68: -7615310832657779146
+      PenguinOutfitFishCatch_69: -6343223991618762654
+      PenguinOutfitFishCatch_7: -5299851726299276289
+      PenguinOutfitFishCatch_70: -3393029489304965657
+      PenguinOutfitFishCatch_71: 5683355291748160885
+      PenguinOutfitFishCatch_72: 7732462706337150787
+      PenguinOutfitFishCatch_73: -499086007959751387
+      PenguinOutfitFishCatch_74: -6129222680967207165
+      PenguinOutfitFishCatch_75: 6816979616303750095
+      PenguinOutfitFishCatch_76: -4862970083387428035
+      PenguinOutfitFishCatch_77: -5354741577957269787
+      PenguinOutfitFishCatch_78: 4475613076978175202
+      PenguinOutfitFishCatch_79: -1341577738912646551
+      PenguinOutfitFishCatch_8: -7379776024244138856
+      PenguinOutfitFishCatch_80: 4882021341463984619
+      PenguinOutfitFishCatch_9: -4484343555786611945
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,797 @@
+fileFormatVersion: 2
+guid: bf486ea6df4d3f945a804d19a9789bd4
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8512450892899918569
+    second: FishEffectCatchFlipped_0
+  - first:
+      213: -1696604791347766690
+    second: FishEffectCatchFlipped_1
+  - first:
+      213: 4570696061782016708
+    second: FishEffectCatchFlipped_2
+  - first:
+      213: 6111372496275949678
+    second: FishEffectCatchFlipped_3
+  - first:
+      213: -8747743668824085568
+    second: FishEffectCatchFlipped_4
+  - first:
+      213: 8444480416578719180
+    second: FishEffectCatchFlipped_5
+  - first:
+      213: 8782641735329289709
+    second: FishEffectCatchFlipped_6
+  - first:
+      213: 7078287122620512486
+    second: FishEffectCatchFlipped_7
+  - first:
+      213: 717914839753134918
+    second: FishEffectCatchFlipped_8
+  - first:
+      213: -2909094209066711172
+    second: FishEffectCatchFlipped_9
+  - first:
+      213: -7054100486961235265
+    second: FishEffectCatchFlipped_10
+  - first:
+      213: 6461899554870248708
+    second: FishEffectCatchFlipped_11
+  - first:
+      213: -8294480060122128295
+    second: FishEffectCatchFlipped_12
+  - first:
+      213: 2023932467274144361
+    second: FishEffectCatchFlipped_13
+  - first:
+      213: 1421551093268679005
+    second: FishEffectCatchFlipped_14
+  - first:
+      213: 3462453804710862711
+    second: FishEffectCatchFlipped_15
+  - first:
+      213: -4502598881917985584
+    second: FishEffectCatchFlipped_16
+  - first:
+      213: 2150288797781838740
+    second: FishEffectCatchFlipped_17
+  - first:
+      213: 63708049030221743
+    second: FishEffectCatchFlipped_18
+  - first:
+      213: -7952105132475882836
+    second: FishEffectCatchFlipped_19
+  - first:
+      213: -7495478866477811883
+    second: FishEffectCatchFlipped_20
+  - first:
+      213: 4442512628741719117
+    second: FishEffectCatchFlipped_21
+  - first:
+      213: -4191481750357933525
+    second: FishEffectCatchFlipped_22
+  - first:
+      213: 5695188142991161651
+    second: FishEffectCatchFlipped_23
+  - first:
+      213: -2226129033578615097
+    second: FishEffectCatchFlipped_24
+  - first:
+      213: 6615484233804013563
+    second: FishEffectCatchFlipped_25
+  - first:
+      213: 1614929511849418156
+    second: FishEffectCatchFlipped_26
+  - first:
+      213: 6260196904035910761
+    second: FishEffectCatchFlipped_27
+  - first:
+      213: 2515452065434678241
+    second: FishEffectCatchFlipped_28
+  - first:
+      213: 3180284254018584275
+    second: FishEffectCatchFlipped_29
+  - first:
+      213: 8010365082935741923
+    second: FishEffectCatchFlipped_30
+  - first:
+      213: -3643595137277057084
+    second: FishEffectCatchFlipped_31
+  - first:
+      213: 8060005825608303071
+    second: FishEffectCatchFlipped_32
+  - first:
+      213: 1373631017373699949
+    second: FishEffectCatchFlipped_33
+  - first:
+      213: -5092374246752686434
+    second: FishEffectCatchFlipped_34
+  - first:
+      213: -1293376552276604980
+    second: FishEffectCatchFlipped_35
+  - first:
+      213: -5695799470266289230
+    second: FishEffectCatchFlipped_36
+  - first:
+      213: 4190298360265267556
+    second: FishEffectCatchFlipped_37
+  - first:
+      213: -8275628709185666321
+    second: FishEffectCatchFlipped_38
+  - first:
+      213: 6680497962370944715
+    second: FishEffectCatchFlipped_39
+  - first:
+      213: 7726076833099747370
+    second: FishEffectCatchFlipped_40
+  - first:
+      213: -9176920529957616398
+    second: FishEffectCatchFlipped_41
+  - first:
+      213: 2802049027129864523
+    second: FishEffectCatchFlipped_42
+  - first:
+      213: 4209372478860331424
+    second: FishEffectCatchFlipped_43
+  - first:
+      213: -2378281599689538188
+    second: FishEffectCatchFlipped_44
+  - first:
+      213: -5630456183797800396
+    second: FishEffectCatchFlipped_45
+  - first:
+      213: 8692240781181887759
+    second: FishEffectCatchFlipped_46
+  - first:
+      213: -4058287665844472770
+    second: FishEffectCatchFlipped_47
+  - first:
+      213: 5591657086325238736
+    second: FishEffectCatchFlipped_48
+  - first:
+      213: -7204483098161382395
+    second: FishEffectCatchFlipped_49
+  - first:
+      213: -1199111268187760470
+    second: FishEffectCatchFlipped_50
+  - first:
+      213: -4946177268201064352
+    second: FishEffectCatchFlipped_51
+  - first:
+      213: 5421225435372778411
+    second: FishEffectCatchFlipped_52
+  - first:
+      213: 3433631803465985054
+    second: FishEffectCatchFlipped_53
+  - first:
+      213: 8439269491455926724
+    second: FishEffectCatchFlipped_54
+  - first:
+      213: -2909554542592465213
+    second: FishEffectCatchFlipped_55
+  - first:
+      213: 8992688289047512477
+    second: FishEffectCatchFlipped_56
+  - first:
+      213: 3672146495218852102
+    second: FishEffectCatchFlipped_57
+  - first:
+      213: -5117258487663051646
+    second: FishEffectCatchFlipped_58
+  - first:
+      213: 3225706030094854401
+    second: FishEffectCatchFlipped_59
+  - first:
+      213: 3138130657904249647
+    second: FishEffectCatchFlipped_60
+  - first:
+      213: -299674217560309153
+    second: FishEffectCatchFlipped_61
+  - first:
+      213: 1854686504090676790
+    second: FishEffectCatchFlipped_62
+  - first:
+      213: 8026777883759830453
+    second: FishEffectCatchFlipped_63
+  - first:
+      213: 6953158413779943980
+    second: FishEffectCatchFlipped_64
+  - first:
+      213: -6083759978580467535
+    second: FishEffectCatchFlipped_65
+  - first:
+      213: 6291284983152056041
+    second: FishEffectCatchFlipped_66
+  - first:
+      213: 4476937943937925549
+    second: FishEffectCatchFlipped_67
+  - first:
+      213: -246628685984039199
+    second: FishEffectCatchFlipped_68
+  - first:
+      213: 476114430622117333
+    second: FishEffectCatchFlipped_69
+  - first:
+      213: 3153544511997259319
+    second: FishEffectCatchFlipped_70
+  - first:
+      213: 1820175212299154168
+    second: FishEffectCatchFlipped_71
+  - first:
+      213: 5743702521862585134
+    second: FishEffectCatchFlipped_72
+  - first:
+      213: 6032701994348789444
+    second: FishEffectCatchFlipped_73
+  - first:
+      213: -3616870955717985885
+    second: FishEffectCatchFlipped_74
+  - first:
+      213: -6473203803215025691
+    second: FishEffectCatchFlipped_75
+  - first:
+      213: 4599552604566548243
+    second: FishEffectCatchFlipped_76
+  - first:
+      213: -4791874916765910460
+    second: FishEffectCatchFlipped_77
+  - first:
+      213: 5679279436486451284
+    second: FishEffectCatchFlipped_78
+  - first:
+      213: 4565323258813352152
+    second: FishEffectCatchFlipped_79
+  - first:
+      213: 13974893496400666
+    second: FishEffectCatchFlipped_80
+  - first:
+      213: -8379792403213431539
+    second: FishEffectCatchFlipped_81
+  - first:
+      213: 2296781144389604603
+    second: FishEffectCatchFlipped_82
+  - first:
+      213: 2020172902573463031
+    second: FishEffectCatchFlipped_83
+  - first:
+      213: -3248185876294869565
+    second: FishEffectCatchFlipped_84
+  - first:
+      213: -9148911805604449434
+    second: FishEffectCatchFlipped_85
+  - first:
+      213: -7237330532378209897
+    second: FishEffectCatchFlipped_86
+  - first:
+      213: -5505787996038126695
+    second: FishEffectCatchFlipped_87
+  - first:
+      213: 488032184441584621
+    second: FishEffectCatchFlipped_88
+  - first:
+      213: -3661060753889905142
+    second: FishEffectCatchFlipped_89
+  - first:
+      213: 6180986795760840289
+    second: FishEffectCatchFlipped_90
+  - first:
+      213: -2441468181256792640
+    second: FishEffectCatchFlipped_91
+  - first:
+      213: -412790893070905467
+    second: FishEffectCatchFlipped_92
+  - first:
+      213: 7035595482670461800
+    second: FishEffectCatchFlipped_93
+  - first:
+      213: 1388752394498092123
+    second: FishEffectCatchFlipped_94
+  - first:
+      213: -2897823822713746859
+    second: FishEffectCatchFlipped_95
+  - first:
+      213: 8103877253315359919
+    second: FishEffectCatchFlipped_96
+  - first:
+      213: -464653714305791053
+    second: FishEffectCatchFlipped_97
+  - first:
+      213: 267242039488461366
+    second: FishEffectCatchFlipped_98
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 312.5
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: FishEffectCatchFlipped_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 358
+        width: 270
+        height: 179
+      alignment: 9
+      pivot: {x: 0.107407, y: -0.329609}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d86ec2220a27af048a585b08b5ff2b0c
+      internalID: -8512450892899918569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishEffectCatchFlipped_1
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 358
+        width: 270
+        height: 179
+      alignment: 9
+      pivot: {x: 0.107407, y: -0.329609}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d357d0880875f6343a2ae918047e8779
+      internalID: -1696604791347766690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishEffectCatchFlipped_2
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 358
+        width: 270
+        height: 179
+      alignment: 9
+      pivot: {x: 0.107407, y: -0.329609}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d86595f06cd21eb4a8767b9b9308caee
+      internalID: 4570696061782016708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishEffectCatchFlipped_3
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 358
+        width: 270
+        height: 179
+      alignment: 9
+      pivot: {x: 0.107407, y: -0.329609}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b94188f5197091346a76da43a0674433
+      internalID: 6111372496275949678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishEffectCatchFlipped_4
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 358
+        width: 270
+        height: 179
+      alignment: 9
+      pivot: {x: 0.107407, y: -0.329609}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63f320df21242b34ca42644bf8bae580
+      internalID: -8747743668824085568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishEffectCatchFlipped_5
+      rect:
+        serializedVersion: 2
+        x: 1350
+        y: 358
+        width: 270
+        height: 179
+      alignment: 9
+      pivot: {x: 0.107407, y: -0.329609}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53aab34381479d54cbaf63d219c00845
+      internalID: 8444480416578719180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishEffectCatchFlipped_6
+      rect:
+        serializedVersion: 2
+        x: 1620
+        y: 358
+        width: 270
+        height: 179
+      alignment: 9
+      pivot: {x: 0.107407, y: -0.329609}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edbaca5b27e8f7f47a3ee95c5462a614
+      internalID: 8782641735329289709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishEffectCatchFlipped_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 179
+        width: 270
+        height: 179
+      alignment: 9
+      pivot: {x: 0.107407, y: -0.329609}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3148b1588e8f4f042b06347358d6dd3d
+      internalID: 7078287122620512486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishEffectCatchFlipped_8
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 179
+        width: 270
+        height: 179
+      alignment: 9
+      pivot: {x: 0.107407, y: -0.329609}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eebf45bdcfba0c448a0b1768b1163eb4
+      internalID: 717914839753134918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishEffectCatchFlipped_9
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 179
+        width: 270
+        height: 179
+      alignment: 9
+      pivot: {x: 0.107407, y: -0.329609}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ee767018d6918d4dbb630f38b0b433d
+      internalID: -2909094209066711172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishEffectCatchFlipped_10
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 179
+        width: 270
+        height: 179
+      alignment: 9
+      pivot: {x: 0.107407, y: -0.329609}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65eead9e4f102754280bf10da3073530
+      internalID: -7054100486961235265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishEffectCatchFlipped_11
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 179
+        width: 270
+        height: 179
+      alignment: 9
+      pivot: {x: 0.107407, y: -0.329609}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc5b16c251b608c41a32a51f60cbe766
+      internalID: 6461899554870248708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishEffectCatchFlipped_12
+      rect:
+        serializedVersion: 2
+        x: 1350
+        y: 179
+        width: 270
+        height: 179
+      alignment: 9
+      pivot: {x: 0.107407, y: -0.329609}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7931d1b5e569e88418d45b2a45281fe4
+      internalID: -8294480060122128295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishEffectCatchFlipped_13
+      rect:
+        serializedVersion: 2
+        x: 1620
+        y: 179
+        width: 270
+        height: 179
+      alignment: 9
+      pivot: {x: 0.107407, y: -0.329609}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85112182281b79349bb7a1076fbe39b9
+      internalID: 2023932467274144361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishEffectCatchFlipped_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 270
+        height: 179
+      alignment: 9
+      pivot: {x: 0.107407, y: -0.329609}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 542bbef1eaf469d45a81dbeb11a24679
+      internalID: 1421551093268679005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishEffectCatchFlipped_15
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 0
+        width: 270
+        height: 179
+      alignment: 9
+      pivot: {x: 0.107407, y: -0.329609}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b0158a7ee6350d40ba76719dfe6a897
+      internalID: 3462453804710862711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: c3cb237649bf500488ec048829230fae
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      FishEffectCatchFlipped_0: -8512450892899918569
+      FishEffectCatchFlipped_1: -1696604791347766690
+      FishEffectCatchFlipped_10: -7054100486961235265
+      FishEffectCatchFlipped_11: 6461899554870248708
+      FishEffectCatchFlipped_12: -8294480060122128295
+      FishEffectCatchFlipped_13: 2023932467274144361
+      FishEffectCatchFlipped_14: 1421551093268679005
+      FishEffectCatchFlipped_15: 3462453804710862711
+      FishEffectCatchFlipped_2: 4570696061782016708
+      FishEffectCatchFlipped_3: 6111372496275949678
+      FishEffectCatchFlipped_4: -8747743668824085568
+      FishEffectCatchFlipped_5: 8444480416578719180
+      FishEffectCatchFlipped_6: 8782641735329289709
+      FishEffectCatchFlipped_7: 7078287122620512486
+      FishEffectCatchFlipped_8: 717914839753134918
+      FishEffectCatchFlipped_9: -2909094209066711172
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
