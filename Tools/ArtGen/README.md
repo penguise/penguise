@@ -28,6 +28,8 @@ folders you pass, so write to a scratch folder and copy the results into `Assets
 | `faint.py` | Knocked-out clips on the idle rig: dizzy walk loop (spiral eyes, stars), the fall backwards, lying down. Timings must match `PenguinRunner.cs` |
 | `export_faint.py <work> <out>` | Renders the knocked-out frames into `<work>/tmp` and packs `PenguinDizzy/Faint/Down.png` and their `PenguinOutfit…` sheets (cropped cells). Prints each sheet's cell size and feet pivot, and the timings |
 | `preview_faint.py <work> [loops] [color]` | After `export_faint.py`: the dizzy walk, fall and lying as one GIF plus a contact sheet |
+| `fish_catch.py <work> [color] [game]` | Ice fishing clips on the idle rig: catch (fish pops into a "+1") and miss (bare hook, sad). Previews them at a drawn hole, or with `game` at the background hole's geometry |
+| `export_fishing.py <work> <out> [GameGround.png]` | Renders the fishing clips at the game's hole and packs `PenguinFishCatch/Miss` (body with rod), `PenguinOutfitFishCatch/Miss`, `FishTackleCatch/Miss` (line, float, fish; untinted, in front) and `FishEffectCatch` / `FishEffectCatchFlipped` (sparkles and "+1", unlit; the flipped sheet's "+1" is pre-mirrored). Prints cell sizes, pivots and each layer's first frame; with the background, also writes GIFs of both sides on the real hole |
 | `check_run_cover.py <work> [frames]` | Run frames: counts body pixels showing where the sweater should cover |
 | `check_face.py <work>` | Run frames: the outfit never covers the beak or the eyes |
 | `check_idle_cover.py <work>` | After `export_idle.py`: counts body pixels showing below the collar in every idle frame |
@@ -41,6 +43,10 @@ Every body and outfit layer shares one canvas and pivot. Unity imports them with
   - Run sheets: `PenguinRun_00..15`.
   - Idle sheets: `PenguinIdle_000..251`, numbered across sheets.
 - Clip order and frame counts must match `PenguinIdle.cs`; frame timings must match `PenguinRunner.cs`.
+- Fishing sheets: cells cropped per clip and layer (printed by `export_fishing.py`), 312.5 pixels per unit, sliced
+  `<sheet>_0..n` numbered across a layer's sheets (`PenguinFishCatch_0.png`, `_1.png`). Tackle and effect sheets
+  leave out empty frames: their sprite 0 is clip frame `first` (`PenguinRunner.CatchTackleFirst` and so on). The
+  stand distance (`GAME_STAND`) must match `GameLayout.FishingStand`; frame counts must match `PenguinRunner.cs`.
 - Knocked-out sheets: cells cropped per clip (sizes and pivots printed by `export_faint.py`), sliced
   `PenguinDizzy_00..23`, `PenguinFaint_00..28`, `PenguinDown_00..35` (outfit sheets alike), same 312.5 pixels per unit
   and feet pivot.
